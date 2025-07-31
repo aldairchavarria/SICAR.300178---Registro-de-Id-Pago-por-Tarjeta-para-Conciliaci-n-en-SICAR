@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://localhost:20000/DesactivacionContratoCBIOWS/ebsDesactivacionContratoCBIOSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="desactivarContratoWSRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="idTransaccion" type="xsd:string" />
+        <xsd:element name="cs_id" type="xsd:integer" />
+        <xsd:element name="co_id" type="xsd:integer" />
+        <xsd:element name="msisdn" type="xsd:string" />
+        <xsd:element name="motivo" type="xsd:integer" />
+        <xsd:element name="p_observaciones" type="xsd:string" />
+        <xsd:element name="flag_occ_apadece" type="xsd:string" />
+        <xsd:element name="flag_ND_PCS" type="xsd:string" />
+        <xsd:element name="NDArea" type="xsd:string" />
+        <xsd:element name="NDMotivo" type="xsd:string" />
+        <xsd:element name="NDSubMotivo" type="xsd:string" />
+        <xsd:element name="CacDac" type="xsd:string" />
+        <xsd:element name="cicloFact" type="xsd:string" />
+        <xsd:element name="idTipoCliente" type="xsd:string" />
+        <xsd:element name="numDoc" type="xsd:string" />
+        <xsd:element name="clienteCta" type="xsd:string" />
+        <xsd:element name="montoPCS" type="xsd:double" />
+        <xsd:element name="mto_fidelizacion" type="xsd:double" />
+        <xsd:element name="fecha_ejecucion" type="xsd:string" />
+        <xsd:element name="trace" type="xsd:string" />
+        <xsd:element name="usuario_sistema" type="xsd:string" />
+        <xsd:element name="usuario_aplicacion" type="xsd:string" />
+        <xsd:element name="password_usuario" type="xsd:string" />
+        <xsd:element name="fecha_actual" type="xsd:string" />
+        <xsd:element name="poId" type="xsd:string" />
+        <xsd:element name="billCycleId" type="xsd:string" />
+        <xsd:element name="cuentaAsesor" type="xsd:string" />
+        <xsd:element name="nombresCliente" type="xsd:string" />
+        <xsd:element name="apellidosCliente" type="xsd:string" />
+        <xsd:element name="emailCliente" type="xsd:string" />
+        <xsd:element name="coIdPub" type="xsd:string" />
+        <xsd:element name="csIdPub" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="desactivarContratoWSResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="trace" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:clc="http://claro.com.pe/SOA/message/consultalineacuentaws" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/SOA/message/consultalineacuentaws" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="consultarLineaCuentaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="tipoConsulta" type="xsd:string" />
+        <xsd:element name="valorConsulta" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="consultarLineaCuentaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="rptaConsulta" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

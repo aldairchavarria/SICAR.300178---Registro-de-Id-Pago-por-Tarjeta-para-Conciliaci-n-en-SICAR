@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/esb/ventas/BSS_ProcesoPortabilidad/v1/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/esb/ventas/BSS_ProcesoPortabilidad/v1/" name="BSS_ProcesoPortabilidad_v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:client="http://claro.com.pe/esb/ventas/MED_ConsultaAnulacion/v1/" xmlns:ns1="http://claro.com.pe/esb/data/ventas/consulta/anulacion/v1/">
+      <s:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FvalidaCPVigenciaRepositorio_v1" namespace="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/validaCPVigenciaRepositorio/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FobtenerEstadoCP_v1" namespace="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/obtenerEstadoCP/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FrealizarProgramacion_v1" namespace="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/realizarProgramacion/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FcomprobarDeuda_v1" namespace="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/comprobarDeuda/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FClaroFault_v1" namespace="http://claro.com.pe/esb/data/generico/claroFault/v1/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FClaroGenericHeaders_v1" namespace="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validaCPVigenciaRepositorioRequestMessage">
+    <wsdl:part name="validaCPVigenciaRepositorioReq" xmlns:q1="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/validaCPVigenciaRepositorio/" element="q1:validaCPVigenciaRepositorioRequest" />
+  </wsdl:message>
+  <wsdl:message name="validaCPVigenciaRepositorioResponseMessage">
+    <wsdl:part name="validaCPVigenciaRepositorioRes" xmlns:q2="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/validaCPVigenciaRepositorio/" element="q2:validaCPVigenciaRepositorioResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerEstadoCPRequestMessage">
+    <wsdl:part name="obtenerEstadoCPReq" xmlns:q3="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/obtenerEstadoCP/" element="q3:obtenerEstadoCPRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerEstadoCPResponseMessage">
+    <wsdl:part name="obtenerEstadoCPRes" xmlns:q4="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/obtenerEstadoCP/" element="q4:obtenerEstadoCPResponse" />
+  </wsdl:message>
+  <wsdl:message name="realizarProgramacionRequestMessage">
+    <wsdl:part name="realizarProgramacionReq" xmlns:q5="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/realizarProgramacion/" element="q5:realizarProgramacionRequest" />
+  </wsdl:message>
+  <wsdl:message name="realizarProgramacionResponseMessage">
+    <wsdl:part name="realizarProgramacionRes" xmlns:q6="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/realizarProgramacion/" element="q6:realizarProgramacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="comprobarDeudaRequestMessage">
+    <wsdl:part name="comprobarDeudaReq" xmlns:q7="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/comprobarDeuda/" element="q7:comprobarDeudaRequest" />
+  </wsdl:message>
+  <wsdl:message name="comprobarDeudaResponseMessage">
+    <wsdl:part name="comprobarDeudaRes" xmlns:q8="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/comprobarDeuda/" element="q8:comprobarDeudaResponse" />
+  </wsdl:message>
+  <wsdl:message name="claroFault">
+    <wsdl:part name="claroFault" xmlns:q9="http://claro.com.pe/esb/data/generico/claroFault/v1/" type="q9:claroFault" />
+  </wsdl:message>
+  <wsdl:message name="headerRequest">
+    <wsdl:part name="headerRequest" xmlns:q10="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" element="q10:headerRequest" />
+  </wsdl:message>
+  <wsdl:message name="headerResponse">
+    <wsdl:part name="headerResponse" xmlns:q11="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" element="q11:headerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BSS_ProcesoPortabilidadPort">
+    <wsdl:operation name="validaCPVigenciaRepositorio">
+      <wsdl:input message="tns:validaCPVigenciaRepositorioRequestMessage" />
+      <wsdl:output message="tns:validaCPVigenciaRepositorioResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerEstadoCP">
+      <wsdl:input message="tns:obtenerEstadoCPRequestMessage" />
+      <wsdl:output message="tns:obtenerEstadoCPResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+    <wsdl:operation name="realizarProgramacion">
+      <wsdl:input message="tns:realizarProgramacionRequestMessage" />
+      <wsdl:output message="tns:realizarProgramacionResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+    <wsdl:operation name="comprobarDeuda">
+      <wsdl:input message="tns:comprobarDeudaRequestMessage" />
+      <wsdl:output message="tns:comprobarDeudaResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BSS_ProcesoPortabilidadSOAP11Binding" type="tns:BSS_ProcesoPortabilidadPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="validaCPVigenciaRepositorio">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/BSS_ProcesoPortabilidad/v1/validaCPVigenciaRepositorio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="validaCPVigenciaRepositorioReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="validaCPVigenciaRepositorioRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerEstadoCP">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/BSS_ProcesoPortabilidad/v1/obtenerEstadoCP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="obtenerEstadoCPReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="obtenerEstadoCPRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="realizarProgramacion">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/BSS_ProcesoPortabilidad/v1/realizarProgramacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="realizarProgramacionReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="realizarProgramacionRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="comprobarDeuda">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/BSS_ProcesoPortabilidad/v1/comprobarDeuda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="comprobarDeudaReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="comprobarDeudaRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BSS_ProcesoPortabilidadSOAP11BindingQSService">
+    <wsdl:documentation>OSB Service</wsdl:documentation>
+    <wsdl:port name="BSS_ProcesoPortabilidadSOAP11BindingQSPort" binding="tns:BSS_ProcesoPortabilidadSOAP11Binding">
+      <soap:address location="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

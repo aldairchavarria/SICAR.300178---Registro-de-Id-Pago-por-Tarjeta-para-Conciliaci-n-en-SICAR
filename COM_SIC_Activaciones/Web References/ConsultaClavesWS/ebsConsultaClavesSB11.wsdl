@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ebs/operaciones/consultaclaves" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/operaciones/consultaclaves" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/operaciones/consultaclaves">
+      <s:element name="desencriptarRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="ipTransicion" type="s:string" />
+            <s:element name="usrAplicacion" type="s:string" />
+            <s:element name="idAplicacion" type="s:string" />
+            <s:element name="codigoAplicacion" type="s:string" />
+            <s:element name="usuarioAplicacionEncriptado" type="s:string" />
+            <s:element name="claveEncriptado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="desencriptarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoResultado" type="s:string" />
+            <s:element name="mensajeResultado" type="s:string" />
+            <s:element name="usuarioAplicacion" type="s:string" />
+            <s:element name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="desencriptarRequestMsg">
+    <wsdl:part name="parameters" element="tns:desencriptarRequest" />
+  </wsdl:message>
+  <wsdl:message name="desencriptarResponseMsg">
+    <wsdl:part name="parameters" element="tns:desencriptarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ebsConsultaClavesPortType">
+    <wsdl:operation name="desencriptar">
+      <wsdl:input message="tns:desencriptarRequestMsg" />
+      <wsdl:output message="tns:desencriptarResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ebsConsultaClavesPortTypeSOAP11Binding" type="tns:ebsConsultaClavesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="desencriptar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/operaciones/consultaclaves/desencriptar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ebsConsultaClavesPortTypeSOAP12Binding" type="tns:ebsConsultaClavesPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="desencriptar">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/operaciones/consultaclaves/desencriptar" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsConsultaClavesService">
+    <wsdl:port name="ebsConsultaClavesSB11" binding="tns:ebsConsultaClavesPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv30.tim.com.pe:8909/ConsultaClavesWS/ebsConsultaClavesSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsConsultaClavesSB12" binding="tns:ebsConsultaClavesPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv30.tim.com.pe:8909/ConsultaClavesWS/ebsConsultaClavesSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/esb/venta/BSS_MobileNumberService/v1/types" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/esb/venta/BSS_MobileNumberService/v1/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/esb/venta/BSS_MobileNumberService/v1/" name="BSS_MobileNumberService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:he="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ef="http://claro.com.pe/esb/data/commonBusinessEntities/claroFault/v2/" xmlns:ns1="http://claro.com.pe/esb/data/BSS_MobileNumberService/listMobileNumbers/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/venta/BSS_MobileNumberService/v1/types">
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService?SCHEMA%2FBSS_MobileNumberService%2FSRV_MobileNumberService%2FResources%2FXSD%2FlistMobileNumbers_v1" namespace="http://claro.com.pe/esb/data/BSS_MobileNumberService/listMobileNumbers/v1/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FClaroFault_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/claroFault/v2/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FClaroGenericHeaders_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="listMobileNumbersRequestMsg">
+    <wsdl:part name="listMobileNumbersReq" xmlns:q1="http://claro.com.pe/esb/data/BSS_MobileNumberService/listMobileNumbers/v1/" element="q1:listMobileNumbersRequest" />
+  </wsdl:message>
+  <wsdl:message name="listMobileNumbersResponseMsg">
+    <wsdl:part name="listMobileNumbersRes" xmlns:q2="http://claro.com.pe/esb/data/BSS_MobileNumberService/listMobileNumbers/v1/" element="q2:listMobileNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="claroFault">
+    <wsdl:part name="claroFault" xmlns:q3="http://claro.com.pe/esb/data/commonBusinessEntities/claroFault/v2/" element="q3:claroFault" />
+  </wsdl:message>
+  <wsdl:message name="headerRequest">
+    <wsdl:part name="headerRequest" xmlns:q4="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" element="q4:headerRequest" />
+  </wsdl:message>
+  <wsdl:message name="headerResponse">
+    <wsdl:part name="headerResponse" xmlns:q5="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" element="q5:headerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MobileNumberServicePortType">
+    <wsdl:operation name="listMobileNumbers">
+      <wsdl:input message="tns:listMobileNumbersRequestMsg" />
+      <wsdl:output message="tns:listMobileNumbersResponseMsg" />
+      <wsdl:fault name="fault" message="tns:claroFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobileNumberServicePortTypeSOAP11Binding" type="tns:MobileNumberServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="listMobileNumbers">
+      <soap:operation soapAction="http://claro.com.pe/esb/venta/BSS_MobileNumberService/v1/listMobileNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="listMobileNumbersReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="listMobileNumbersRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BSS_MobileNumberService">
+    <WL5G3N0:documentation xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">OSB Service</WL5G3N0:documentation>
+    <wsdl:port name="ebsMobileNumberServiceSB11" binding="tns:MobileNumberServicePortTypeSOAP11Binding">
+      <soap:address location="http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial">
+      <s:complexType name="InfoDeTransaccionType">
+        <s:sequence>
+          <s:element name="usrApp" type="s:string" />
+          <s:element name="usrName" type="s:string" />
+          <s:element name="aplicacion" type="s:string" />
+          <s:element name="estacion" type="s:string" />
+          <s:element name="ipAplicacion" type="s:string" />
+          <s:element name="fechaHora" type="s:string" />
+          <s:element name="idTransaccion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosClienteyPuntoDeVentaType">
+        <s:sequence>
+          <s:element name="msisdn" type="s:string" />
+          <s:element name="tipoCliente" type="s:string" />
+          <s:element name="nombreCliente" type="s:string" />
+          <s:element name="customerId" type="s:string" />
+          <s:element name="tipoDocumento" type="s:string" />
+          <s:element name="nroDocumento" type="s:string" />
+          <s:element name="coId" type="s:string" />
+          <s:element name="cacDac" type="s:string" />
+          <s:element name="idSolicitud" type="s:string" />
+          <s:element name="codigoCliente" type="s:string" />
+          <s:element name="puntoDeVenta" type="s:string" />
+          <s:element name="textoNotas" type="s:string" />
+          <s:element name="codSegmento" type="s:string" />
+          <s:element name="usraSegmento" type="s:string" />
+          <s:element name="codTipoCanje" type="s:string" />
+          <s:element name="codTPremioCanje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosClienteFijaType">
+        <s:sequence>
+          <s:element name="msisdn" type="s:string" />
+          <s:element name="tipoLinea" type="s:string" />
+          <s:element name="tipoCliente" type="s:string" />
+          <s:element name="nombreCliente" type="s:string" />
+          <s:element name="customerId" type="s:string" />
+          <s:element name="tipoDocumento" type="s:string" />
+          <s:element name="nroDocumento" type="s:string" />
+          <s:element name="coId" type="s:string" />
+          <s:element name="codigoCliente" type="s:string" />
+          <s:element name="puntoDeVenta" type="s:string" />
+          <s:element name="textoNotas" type="s:string" />
+          <s:element name="codClaroClubFija" type="s:string" />
+          <s:element name="codServicioFija" type="s:string" />
+          <s:element name="direccionServicioFija" type="s:string" />
+          <s:element name="palabraClaveSMS" type="s:string" />
+          <s:element name="codSegmento" type="s:string" />
+          <s:element name="usraSegmento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosDeProductoCanjeType">
+        <s:sequence>
+          <s:element name="proId" type="s:string" />
+          <s:element name="proDes" type="s:string" />
+          <s:element name="campana" type="s:string" />
+          <s:element name="puntos" type="s:string" />
+          <s:element name="pago" type="s:string" />
+          <s:element name="cantidad" type="s:string" />
+          <s:element name="coSer" type="s:string" />
+          <s:element name="montoRecarga" type="s:string" />
+          <s:element name="flagModificaSaldo" type="s:string" />
+          <s:element name="tipoProducto" type="s:string" />
+          <s:element name="codPaqDat" type="s:string" />
+          <s:element name="valSegmento" type="s:string" />
+          <s:element name="ptosDscto" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosDeProductoCanjeFijaType">
+        <s:sequence>
+          <s:element name="proId" type="s:string" />
+          <s:element name="proDes" type="s:string" />
+          <s:element name="campana" type="s:string" />
+          <s:element name="puntos" type="s:string" />
+          <s:element name="pago" type="s:string" />
+          <s:element name="cantidad" type="s:string" />
+          <s:element name="coSer" type="s:string" />
+          <s:element name="montoRecarga" type="s:string" />
+          <s:element name="tipoProducto" type="s:string" />
+          <s:element name="codPaqDat" type="s:string" />
+          <s:element name="codPaqueteFija" type="s:string" />
+          <s:element name="nroDias" type="s:int" />
+          <s:element name="valSegmento" type="s:string" />
+          <s:element name="ptosDscto" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosCanjeType">
+        <s:sequence>
+          <s:element name="proId" type="s:string" />
+          <s:element name="proDes" type="s:string" />
+          <s:element name="campana" type="s:string" />
+          <s:element name="puntos" type="s:int" />
+          <s:element name="pago" type="s:int" />
+          <s:element name="cantidad" type="s:int" />
+          <s:element name="idCanje" type="s:int" />
+          <s:element name="idCanjeSec" type="s:int" />
+          <s:element name="tipoPremio" type="s:string" />
+          <s:element name="servComercial" type="s:int" />
+          <s:element name="montoRecarga" type="s:int" />
+          <s:element name="codTipoCliente" type="s:string" />
+          <s:element name="telefono" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaDeProductosCanjeType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="datosDeProductoCanje" type="s0:DatosDeProductoCanjeType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaDeProductosCanjeFijaType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="datosProductoCanjeFija" type="s0:DatosDeProductoCanjeFijaType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="canjeServicioComercialRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="infoDeTransaccion" type="s0:InfoDeTransaccionType" />
+            <s:element name="datosClienteyPuntoDeVenta" type="s0:DatosClienteyPuntoDeVentaType" />
+            <s:element name="listaDeProductosCanje" type="s0:ListaDeProductosCanjeType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="devolucionDescuentoEquipoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="infoDeTransaccion" type="s0:InfoDeTransaccionType" />
+            <s:element name="idSolicitud" type="s:string" />
+            <s:element name="puntoVenta" type="s:string" />
+            <s:element name="idVenta" type="s:string" />
+            <s:element name="proceso" type="s:string" />
+            <s:element name="linea" type="s:string" />
+            <s:element name="tipoDoc" type="s:string" />
+            <s:element name="numDoc" type="s:string" />
+            <s:element name="ptosDevueltos" type="s:string" />
+            <s:element name="solesDevueltos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="devolucionDescuentoEquipoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+            <s:element name="saldo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="canjeDescuentoEquipoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="infoDeTransaccion" type="s0:InfoDeTransaccionType" />
+            <s:element name="nombreCliente" type="s:string" />
+            <s:element name="tipoDocumento" type="s:string" />
+            <s:element name="numDocumento" type="s:string" />
+            <s:element name="puntoVenta" type="s:string" />
+            <s:element name="codAplicacion" type="s:string" />
+            <s:element name="codAsesor" type="s:string" />
+            <s:element name="nomAsesor" type="s:string" />
+            <s:element name="idVenta" type="s:string" />
+            <s:element name="idProceso" type="s:string" />
+            <s:element name="puntosVenta" type="s:int" />
+            <s:element name="solesVenta" type="s:int" />
+            <s:element name="idCampana" type="s:string" />
+            <s:element name="usuario" type="s:string" />
+            <s:element name="codigoCliente" type="s:string" />
+            <s:element name="segmento" type="s:string" />
+            <s:element name="lineaTipificacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="canjeDescuentoEquipoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+            <s:element name="listaCanje" type="s0:ListaCanjeType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListaCanjeType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="datosCanje" type="s0:DatosCanjeType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="canjeServicioComercialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="canjeServicioComercialFijaRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="infoDeTransaccion" type="s0:InfoDeTransaccionType" />
+            <s:element name="datosClienteyPuntoDeVenta" type="s0:DatosClienteFijaType" />
+            <s:element name="listaDeProductosCanje" type="s0:ListaDeProductosCanjeFijaType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="canjeServicioComercialFijaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+            <s:element name="idCanjeClaroClub" type="s:string" />
+            <s:element name="idInteraccionClarify" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DatosDeProductoDevolucionType">
+        <s:sequence>
+          <s:element name="proId" type="s:string" />
+          <s:element name="proDes" type="s:string" />
+          <s:element name="campana" type="s:string" />
+          <s:element name="puntos" type="s:string" />
+          <s:element name="pago" type="s:string" />
+          <s:element name="cantidad" type="s:string" />
+          <s:element name="coSer" type="s:string" />
+          <s:element name="montoExtorno" type="s:string" />
+          <s:element name="flagModificaSaldo" type="s:string" />
+          <s:element name="tipoProducto" type="s:string" />
+          <s:element name="idCanje" type="s:string" />
+          <s:element name="idCanjeSec" type="s:string" />
+          <s:element name="idCanjeLoyalti" type="s:string" />
+          <s:element name="codPaqDat" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaDeProductosDevolucionType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="datosDeProductoDevolucion" type="s0:DatosDeProductoDevolucionType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="devolucionServicioComercialRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="infoDeTransaccion" type="s0:InfoDeTransaccionType" />
+            <s:element name="datosClienteyPuntoDeVenta" type="s0:DatosClienteyPuntoDeVentaType" />
+            <s:element name="listaDeProductosDevolucion" type="s0:ListaDeProductosDevolucionType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="devolucionServicioComercialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="canjeServicioComercialRequestMsg">
+    <part name="parameters" element="s0:canjeServicioComercialRequest" />
+  </message>
+  <message name="canjeServicioComercialResponseMsg">
+    <part name="parameters" element="s0:canjeServicioComercialResponse" />
+  </message>
+  <message name="devolucionServicioComercialRequestMsg">
+    <part name="parameters" element="s0:devolucionServicioComercialRequest" />
+  </message>
+  <message name="devolucionServicioComercialResponseMsg">
+    <part name="parameters" element="s0:devolucionServicioComercialResponse" />
+  </message>
+  <message name="canjeServicioComercialFijaRequestMsg">
+    <part name="parameters" element="s0:canjeServicioComercialFijaRequest" />
+  </message>
+  <message name="canjeServicioComercialFijaResponseMsg">
+    <part name="parameters" element="s0:canjeServicioComercialFijaResponse" />
+  </message>
+  <message name="devolucionDescuentoEquipoRequestMsg">
+    <part name="parameters" element="s0:devolucionDescuentoEquipoRequest" />
+  </message>
+  <message name="devolucionDescuentoEquipoResponseMsg">
+    <part name="parameters" element="s0:devolucionDescuentoEquipoResponse" />
+  </message>
+  <message name="canjeDescuentoEquipoRequestMsg">
+    <part name="parameter" element="s0:canjeDescuentoEquipoRequest" />
+  </message>
+  <message name="canjeDescuentoEquipoResponseMsg">
+    <part name="parameter" element="s0:canjeDescuentoEquipoResponse" />
+  </message>
+  <portType name="ebsCanjeDevolucionServicioComercialPortType">
+    <operation name="canjeServicioComercial">
+      <input message="s0:canjeServicioComercialRequestMsg" />
+      <output message="s0:canjeServicioComercialResponseMsg" />
+    </operation>
+    <operation name="devolucionServicioComercial">
+      <input message="s0:devolucionServicioComercialRequestMsg" />
+      <output message="s0:devolucionServicioComercialResponseMsg" />
+    </operation>
+    <operation name="canjeServicioComercialFija">
+      <input message="s0:canjeServicioComercialFijaRequestMsg" />
+      <output message="s0:canjeServicioComercialFijaResponseMsg" />
+    </operation>
+    <operation name="canjeDescuentoEquipo">
+      <input message="s0:canjeDescuentoEquipoRequestMsg" />
+      <output message="s0:canjeDescuentoEquipoResponseMsg" />
+    </operation>
+    <operation name="devolucionDescuentoEquipo">
+      <input message="s0:devolucionDescuentoEquipoRequestMsg" />
+      <output message="s0:devolucionDescuentoEquipoResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsCanjeDevolucionServicioComercialPortTypeSOAP11Binding" type="s0:ebsCanjeDevolucionServicioComercialPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="canjeServicioComercial">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial/canjeServicioComercial" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="devolucionServicioComercial">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial/devolucionServicioComercial" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="canjeServicioComercialFija">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial/canjeServicioComercialFija" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="canjeDescuentoEquipo">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial/canjeDescuentoEquipo" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameter" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameter" />
+      </output>
+    </operation>
+    <operation name="devolucionDescuentoEquipo">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CanjeDevolucionServicioComercial/devolucionDescuentoEquipo" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsCanjeDevolucionServicioComercialService">
+    <port name="ebsCanjeDevolucionServicioComercial" binding="s0:ebsCanjeDevolucionServicioComercialPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/CanjeDevolucionServicioComercial/ebsCanjeDevolucionServicioComercial" />
+    </port>
+  </service>
+</definitions>

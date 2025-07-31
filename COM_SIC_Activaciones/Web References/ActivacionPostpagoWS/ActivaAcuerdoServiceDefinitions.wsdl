@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://pe/com/claro/esb/services/activacionespostpago/ws" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://temp.openuri.org/ocs/callService" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/activacionespostpago/ws" name="ActivaAcuerdoServiceDefinitions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" elementFormDefault="unqualified" targetNamespace="http://temp.openuri.org/ocs/callService" version="01">
+      <xsd:element name="callservice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="header">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="cliente">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="servicio" type="xsd:string" />
+                        <xsd:element name="timeout" type="xsd:integer" />
+                        <xsd:element name="usuario" type="xsd:string" />
+                        <xsd:element name="clave" type="xsd:string" />
+                        <xsd:element name="aplicacion" type="xsd:string" />
+                        <xsd:element name="timestamp" type="xsd:string" />
+                        <xsd:element name="idsrv" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="filterClass" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="servicio">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="retcode">
+                          <xsd:complexType>
+                            <xsd:attribute name="modo" type="xsd:string" />
+                            <xsd:attribute name="valor" type="xsd:byte" />
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="errdesc" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" maxOccurs="1" name="datos">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametro">
+                    <xsd:complexType>
+                      <xsd:attribute name="nombre" type="xsd:string" />
+                      <xsd:attribute name="valor" type="xsd:string" />
+                      <xsd:attribute name="modo" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="tabla">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="fila">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametro">
+                                <xsd:complexType>
+                                  <xsd:attribute name="nombre" type="xsd:string" />
+                                  <xsd:attribute name="valor" type="xsd:string" />
+                                  <xsd:attribute name="modo" type="xsd:string" />
+                                </xsd:complexType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                      <xsd:attribute name="nombre" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/activacionespostpago/ws">
+      <xs:import namespace="http://temp.openuri.org/ocs/callService" />
+      <xs:element name="activaAcuerdo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:cal="http://temp.openuri.org/ocs/callService" ref="cal:callservice" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="activaAcuerdoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </types>
+  <message name="activaAcuerdo">
+    <part name="parameters" element="s1:activaAcuerdo" />
+  </message>
+  <message name="activaAcuerdoResponse">
+    <part name="parameters" element="s1:activaAcuerdoResponse" />
+  </message>
+  <portType name="ActivaAcuerdo">
+    <operation name="activaAcuerdo" parameterOrder="parameters">
+      <input message="s1:activaAcuerdo" />
+      <output message="s1:activaAcuerdoResponse" />
+    </operation>
+  </portType>
+  <binding name="ActivaAcuerdoServiceSoapBinding" type="s1:ActivaAcuerdo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="activaAcuerdo">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ActivaAcuerdoService">
+    <port name="ActivaAcuerdoSoapPort" binding="s1:ActivaAcuerdoServiceSoapBinding">
+      <soap:address location="http://limdeseaiv06.tim.com.pe:8909/ActivacionesPostpagoProcess/ActivaAcuerdo" />
+    </port>
+  </service>
+</definitions>

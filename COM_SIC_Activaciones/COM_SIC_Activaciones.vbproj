@@ -1,0 +1,2993 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{036E4776-8EE8-4287-9BFD-2233F65AFD1C}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "COM_SIC_Activaciones"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "COM_SIC_Activaciones"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.EnterpriseServices"
+                    AssemblyName = "System.EnterpriseServices"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.EnterpriseServices.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Promociones"
+                    Project = "{2960C9DE-5355-46E8-A29A-AB16E2AD9B36}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "DAAB"
+                    Project = "{D0401205-6585-43C5-B7A9-C435EA36C3E2}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "COM_SIC_Seguridad"
+                    Project = "{AB67AAC2-FC43-4077-A099-7C64605E32A2}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Interop.Scripting"
+                    AssemblyName = "Interop.Scripting"
+                    HintPath = "..\COM_SIC_Cajas\bin\Interop.Scripting.dll"
+                />
+                <Reference
+                    Name = "AjaxPro"
+                    AssemblyName = "AjaxPro"
+                    HintPath = "bin\AjaxPro.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Log4Net"
+                    Project = "{C7B330DB-6553-45EC-8D30-6DB2BDB29D42}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "log4net"
+                    AssemblyName = "log4net"
+                    HintPath = "..\COM_SIC_Log4Net\Log4Net\log4net.dll"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Seguridad"
+                    Project = "{AB67AAC2-FC43-4077-A099-7C64605E32A2}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Diagnostics" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AppSettings.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEEnviarMensajeResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AuditoriaEWS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BeEnvioTransacPOS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWEnvioTransacPOS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEHeaderDataPower.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsTransaccionPOS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BECambioPlanCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ConsultaClavesNegocio.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEContratoCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEAcuerdoHP.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+<File
+                    RelPath = "BEAuditoria.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEDocumentosGenerados.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEExpedienteVenta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEObtenerDatosPedidoAccCuotas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEParametros.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEPorttConfiguracion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BERegistrarTrazabilidadAuditoria.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BERegistrarTrazabilidadRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BERegistrarTrazabilidadResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+<File
+                    RelPath = "BERequestDesactivacionContratoCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEResponseDocumentosGenerados.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BETipiChipSuelto.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEVentasContingencia.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BEZonaMovilidadIFI.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BLDatosCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWActivarCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWActualizaEquipoContrato.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWBonosServicios.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWAjustePedidoProteccionMovil.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWBorrarProgramacionCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                /> 
+                <File
+                    RelPath = "BWCancelarOrdenTOA.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobertura.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWConsultaIGV.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWConsultarDocumentosHP.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWConsultasProcesos_IOT.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWConsultarProgramacionesCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWContrato.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWDesactivacionContratoCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWDocumentosGenerados.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWEncolarTransaccionesCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWEnvioCorreo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWEnvioPortal.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWGenericEntityService.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWGestionaPostventaProteccionMovil.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWGestionaProteccionMovil.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWGestionarToa.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWMobileNumberService.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWNoBiometria.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWObtenerDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWObtenerOrdenToa.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWProcesaVentaActivacionOlo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+<File
+                    RelPath = "BWProcesoPortabilidad.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWRecargasOlo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+<File
+                    RelPath = "BWRegistraPorta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWRegistrarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWRegistrarTrazabilidad.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWServicesCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWSimcards.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWSIMPOST.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWTipificaciones.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWVentaContingencia.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWVentaCuotas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CambioPlanPostpago.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsActivacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsActivacionCBIO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsActivacionPel.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsAuditoriaWS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsBDSiscajas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsBonoComboAnualBB.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsBonoRenovaPrepago.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsCambioPlanPostpago.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsClarify.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsCliente.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsClienteBSCS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsConsultaIgv.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsConsultaMsSap.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsConsultaProgramacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsConsultaPvu.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsConsultaSIA.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsCuenta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsDatosInteraccion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsDatosPostpagoNegocios.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsDetallePedidoMsSap.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsDOL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsEmpleadoWS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsKeyOLO.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsLinea.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsMigracionSaldoGSMWS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsPagosWS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsPortabilidad.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsProteccionMovil.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsPuntosClaroClub.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsRecaudacionDAC.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsReposicion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsSolicitudPersona.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsTarjetasPOS.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsTrsMsSap.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsTrsPvu.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsUsuario.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsWConsultaIGV.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Contrato.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DetalleVentaPrepago.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Funciones.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ItemGenerico.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "InteraccionTipificacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ListaOpcional.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistroDatosVentaPrepago.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ReservaNumero.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ResponseAudit.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ResServiceGeneral.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SGAPromocion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SGAResponseVenta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SGAServicio.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SGATransaction.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SGAVenta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SICAR_Log.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWRegistrarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+		<File
+                    RelPath = "ActivarServiciosAdicionalesCBIORest\ActivarServiciosAdicionalesRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActivarServiciosAdicionalesCBIORest\ActivarServiciosAdicionalesResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DatosPostpagoNegocios.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "TipoDocumento.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarDatosFacturacion\ActualizarDatosFacturacionRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DES.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+		<File
+                    RelPath = "ResService.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarDatosFacturacion\ActualizarDatosFacturacionResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarDatosFacturacion\HeaderRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarDatosFacturacion\ListaOpcional.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarDatosFacturacion\ResponseAudit.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarParticipante\ActualizarParticipanteRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarParticipante\ActualizarParticipanteResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarParticipante\ClaroFault.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarParticipante\HeaderRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\BECancelarOrdenRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\BECancelarOrdenResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\bodyRequestCancelarOrden.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\BodyResponseCancelarOrden.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\CancelarOrdenRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\CancelarOrdenResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\MessageRequestCancelarOrden.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "cancelarOrdenToa\MessageResponseCancelarOrden.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarParticipante\ParticipanteRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeaderRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeaderResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_int_consultaclienteCBIORest\consultarDatosLineaCta\consultarDatosLineaCtaRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_int_consultaclienteCBIORest\consultarDatosLineaCta\consultarDatosLineaCtaResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_int_consultaclienteCBIORest\consultarDatosLineaCta\RequestConsultarDatosLineaCta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_int_consultaclienteCBIORest\consultarDatosLineaCta\ResponseConsultarDatosLineaCta.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\BodyRequestObtenerDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\BodyResponseObtenerDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\MessageRequestObtenerDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\MessageResponseObtenerDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\ObtenerDocumentoResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\ObtenerDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\ObtenerDocumentosRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\ObtenerDocumentosResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ContratosOpsitelRest\RepositorioDocumentos.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_int_consultaclienteCBIORest\consultarDatosLineaCta\ResponseData.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\Status.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\BEAuditRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\BEAuditResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\BodyRequestRegistrarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\BodyResponseRegistrarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\ListaResponseOpcional.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\MessageRequestRegistarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\MessageResponseRegistarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\RegistrarCampania.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\RegistrarCampaniaRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\RegistrarCampaniaResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\RegistrarCampaniasRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\RegistrarCampaniasResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ActualizarParticipante\ParticipanteResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\BElistaOpcional.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\BESmartWatchDataResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\BESmartWatchErrorDetails.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\BESmartWatchRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\BESmartWatchResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\BESmartWatchStatusResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\bodyRequestSmartWatch.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\bodyResponseSmartWatch.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\MessageRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\MessageResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\SmartWatchRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SmartWatch_Rest\SmartWatchResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "borrarProgramacionCBIORest\BorrarProgramacionRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "borrarProgramacionCBIORest\BorrarProgramacionResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "borrarProgramacionCBIORest\MessageRequestBorrarProgramacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "borrarProgramacionCBIORest\MessageResponseBorrarProgramacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "borrarProgramacionCBIORest\ResponseDataBorrarProgramacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "consultarProgramacionCBIORest\consultarProgramacionesRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "consultarProgramacionCBIORest\consultarProgramacionesResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "consultarProgramacionCBIORest\listaProgramaciones.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "consultarProgramacionCBIORest\MessageRequestConsultarProgramaciones.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "consultarProgramacionCBIORest\MessageResponseConsultarProgramaciones.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "consultarProgramacionCBIORest\ResponseDataProgramaciones.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EncolarTransaccionesCBIORest\EncolarTransaccionRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EncolarTransaccionesCBIORest\EncolarTransaccionResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EncolarTransaccionesCBIORest\ResponseData.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EncolarTransaccionesCBIORest\TransaccionAuditRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "EncolarTransaccionesCBIORest\TransaccionAuditResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OrdenToaRest\BElistaDetalleActividadType.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OrdenToaRest\BodyResponseObtenerOrdenTOA.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OrdenToaRest\MessageResponseObtenerOrdenTOA.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OrdenToaRest\ObtenerOrdenToaResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OrdenToaRest\ResponseDataTOA.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "OrdenToaRest\RestService.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarCampaniaRest\BEAuditRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\datosCliente.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\datosLinea.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\datosMigracionPlan.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\programarMigracionPlanRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\programarMigracionPlanResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\RequestMigracionPlan.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\ResponseMigracionPlan.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistrarMigracionPlanRest\serviciosAdicionales.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "VentaCuotas\consultar\BodyResponseObtenerDatosPedidoAcc.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "VentaCuotas\consultar\MessageResponseObtenerPedido.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "VentaCuotas\consultar\ObtenerDatosPedidoAccCuotasResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "VentaCuotas\consultar\ObtenerDatosPedidoAccCuotasTypeResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\consultarventascontingencia\BodyResponseConsultarVentCont.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\consultarventascontingencia\ConsultarVentaContResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\consultarventascontingencia\MessageResponseConsultarVentCont.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\registrarventacontingencia\Request\BodyRequestRegistrarVentaCont.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\registrarventacontingencia\Request\MessageRequestRegistrarVentaCont.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\registrarventacontingencia\Request\RegistrarVentaContRequest.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\registrarventacontingencia\Response\MessageResponseRegistrarVentaCont.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ventasContingencia\registrarventacontingencia\Response\RegistrarVentaContResponse.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ActivacionPostpagoWS\ActivaAcuerdoServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ActivacionPostpagoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ActivacionPostpagoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ActivacionPostpagoWS\"
+                    WebReferenceUrl = "http://limdeseaiv06.tim.com.pe:8909/ActivacionesPostpagoProcess/ActivaAcuerdo?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ActivosPostpagoConvergenteWS\ebsActivosPostpagoConvergente.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ActivosPostpagoConvergenteWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ActivosPostpagoConvergenteWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ActivosPostpagoConvergenteWS\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/ActivosPostpagoConvergenteWS/ebsActivosPostpagoConvergenteSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ActualizaEquipoContratoWS\ActualizaEquipoContratoSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ActualizaEquipoContratoWS\ActualizaEquipoContratoSB110.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ActualizaEquipoContratoWS\ActualizaEquipoContratoWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ActualizaEquipoContratoWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ActualizaEquipoContratoWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\AjustePedidoAsurionWS\AjustePedidoAsurionWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AjustePedidoAsurionWS\ebsAjustePedidoAsurionSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AjustePedidoAsurionWS\ebsAjustePedidoAsurionSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AjustePedidoAsurionWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\AjustePedidoAsurionWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\AjustePedidoAsurionWS\"
+                    WebReferenceUrl = "http://172.19.74.31:8903/AjustePedidoAsurionWS/ebsAjustePedidoAsurionSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\AlertaNotificacionWS\ebsAlertaNotificacionSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AlertaNotificacionWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\AlertaNotificacionWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\AlertaNotificacionWS\"
+                    WebReferenceUrl = "http://172.19.74.219:8909/AlertaNotificacion/ebsAlertaNotificacionSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\AuditoriaWS\EbsAuditoriaServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AuditoriaWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\AuditoriaWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\AuditoriaWS\"
+                    WebReferenceUrl = "http://172.19.73.62:8909/AuditoriaWS/EbsAuditoria?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\BonoAnualTFIWS\ebsBonoAnualTFI.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BonoAnualTFIWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\BonoAnualTFIWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\BonoAnualTFIWS\"
+                    WebReferenceUrl = "http://172.19.73.62:8903/BonoAnualTFI/ebsBonoAnualTFI?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\BonoRenovacionReposicion\BonoRenovacionReposicion.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BonoRenovacionReposicion\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\BonoRenovacionReposicion\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\BonoRenovacionReposicion\"
+                    WebReferenceUrl = "http://172.19.74.125:7909/Prepaid_Services/Transaction/BonoRenovacionReposicion?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\BonoRenovacionReposicionPrepagoWS\BonoRenovacionReposicionWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BonoRenovacionReposicionPrepagoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\BonoRenovacionReposicionPrepagoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\BonoRenovacionReposicionPrepagoWS\"
+                    WebReferenceUrl = "http://172.19.74.219:8909/BonoRenovacionReposicionApp/BonoRenovacionReposicionWS?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\CambioSIMPostWS\CambioSIMPostpagoWSDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\CambioSIMPostWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\CambioSIMPostWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\CambioSIMPostWS\"
+                    WebReferenceUrl = "http://172.19.74.202:8909/CambioSIMPostpagoWS/CambioSIMPostpagoWS?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\CambioSimWS\ebsCambioSimPrepagoSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\CambioSimWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\CambioSimWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\CambioSimWS\"
+                    WebReferenceUrl = "http://172.19.74.118:7903/CambioSimPrepago/ebsCambioSimPrepagoSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\CanjeDescuentoEquipoWS\ebsCanjeDevolucionServicioComercial.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\CanjeDescuentoEquipoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\CanjeDescuentoEquipoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\CanjeDescuentoEquipoWS\"
+                    WebReferenceUrl = "http://172.19.74.117:7903/CanjeDevolucionServicioComercial/ebsCanjeDevolucionServicioComercial?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultaClavesWS\ebsConsultaClavesSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaClavesWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaClavesWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaClavesWS\"
+                    WebReferenceUrl = "http://172.19.74.225:8903/ConsultaClavesWS/ebsConsultaClavesSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultaIGVWS\BaseSchema.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaIGVWS\ConsultaIGV.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaIGVWS\ConsultaIGVWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaIGVWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaIGVWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaIGVWS\"
+                    WebReferenceUrl = "http://172.19.74.189:8901/PRS_ConsultaIGV/proxy_services/ConsultaIGV?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultaLineaCuentaWS\ConsultaLineaCuentaWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaLineaCuentaWS\ebsConsultaLineaCuentaWSSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaLineaCuentaWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaLineaCuentaWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaLineaCuentaWS\"
+                    WebReferenceUrl = "http://localhost:20000/ConsultaLineaCuentaWS/ebsConsultaLineaCuentaWSSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultaPostpagoWS\ConsultasPostpagoSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaPostpagoWS\ConsultasPostpagoSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaPostpagoWS\ConsultasPostpagoWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaPostpagoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaPostpagoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaPostpagoWS\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/ConsultasPostpagoWS/ConsultasPostpagoSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\ConsultaProgramacion.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\ebsConsultaProgramacionSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaProgramacion\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/ConsultaProgramacion/ebsConsultaProgramacionSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultarPuntosWS\Audit.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ConsultarPuntosWS\ConsultaPuntos.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ConsultarPuntosWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ConsultarPuntosWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ConsultasPostpagoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultasPostpagoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\ConsultasPostpagoWS\SIACPostpagoConsultasWSServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultasPostpagoWS\"
+                    WebReferenceUrl = "http://172.19.74.202:8909/SIACPostpagoWS/SIACPostpagoConsultasWS?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\DesactivacionContratoCBIOWS\DesactivacionContratoCBIOWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\DesactivacionContratoCBIOWS\ebsDesactivacionContratoCBIOSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\DesactivacionContratoCBIOWS\ebsDesactivacionContratoCBIOSB110.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ \Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\DesactivacionContratoCBIOWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\ConsultaProgramacion.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\ebsConsultaProgramacionSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaProgramacion\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaProgramacion\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/ConsultaProgramacion/ebsConsultaProgramacionSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\CuentasClienteWS\ObtieneCuentasClienteServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\CuentasClienteWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\CuentasClienteWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\CuentasClienteWS\"
+                    WebReferenceUrl = "http://172.19.74.66:8909/ActivacionesPostpagoProcess/ObtieneCuentasCliente?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\EmpleadoWS\EbsDatosEmpleadoServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EmpleadoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\EmpleadoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\EmpleadoWS\"
+                    WebReferenceUrl = "http://172.19.74.66:8909/DatosEmpleadoWS/EbsDatosEmpleado?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\EnviarCorreoWS\envioCorreoWSPortSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnviarCorreoWS\envioCorreoWSService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnviarCorreoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\EnviarCorreoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\EnviarCorreoWS\"
+                    WebReferenceUrl = "http://172.19.74.223:8909/EnvioCorreoWS/envioCorreoWSPortSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\EnvioPortalWS\ebsEnvioPortaSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnvioPortalWS\ebsEnvioPortaSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnvioPortalWS\EnvioPortaWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnvioPortalWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\EnvioPortalWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\EnvioPortalWS\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/EnvioPortaWS/ebsEnvioPortaSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\EnvioTransacPagosPosWS\EnvioTransacPagosPOS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnvioTransacPagosPosWS\EnvioTransacPagosPOSSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnvioTransacPagosPosWS\EnvioTransacPagosPOSSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EnvioTransacPagosPosWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\EnvioTransacPagosPosWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\EnvioTransacPagosPosWS\"
+                    WebReferenceUrl = "http://172.19.74.31:8903/EnvioTransacPagosPOS/EnvioTransacPagosPOSSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\EstablecimientoSUNATWS\ebsestablecimientoSUNATSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EstablecimientoSUNATWS\ebsestablecimientoSUNATSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EstablecimientoSUNATWS\EstablecimientoSUNATWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\EstablecimientoSUNATWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\EstablecimientoSUNATWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\EstablecimientoSUNATWS\"
+                    WebReferenceUrl = "http://172.17.26.38:20000/EstablecimientoSUNATWS/ebsestablecimientoSUNATSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\GestionaPostventaProteccionMovilWS\ebsGestionaPostventaProteccionMovilSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionaPostventaProteccionMovilWS\ebsGestionaPostventaProteccionMovilSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionaPostventaProteccionMovilWS\GestionaPostventaProteccionMovilWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionaPostventaProteccionMovilWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\GestionaPostventaProteccionMovilWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\GestionaPostventaProteccionMovilWS\"
+                    WebReferenceUrl = "http://172.19.91.49:8909/GestionaPostventaProteccionMovilWS/ebsGestionaPostventaProteccionMovilSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\GestionaProteccionMovilWS\GestionaProteccionMovilWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionaProteccionMovilWS\GestionaProteccionMovilWSSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionaProteccionMovilWS\GestionaProteccionMovilWSSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionaProteccionMovilWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\GestionaProteccionMovilWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\GestionaProteccionMovilWS\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/GestionaProteccionMovilWS/GestionaProteccionMovilWSSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\GestionarPuntosClaroClubWS\Audit.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionarPuntosClaroClubWS\PuntosClaroClub.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\GestionarPuntosClaroClubWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\GestionarPuntosClaroClubWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\GestionarPuntosClaroClubWS\"
+                    WebReferenceUrl = "http://limdesosbv03.tim.com.pe:7909/ClaroClub_Services/Transaction/GPCC/Transaction/GestionarPuntosClaroClub/proxy_services/GestionarPuntosClaroClubLocal?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\GestionCambioSIMWS\ConsultaDatosIMSWSService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionCambioSIMWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\GestionCambioSIMWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\GestionCambioSIMWS\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/GestionCambioSIM/ebsGestionCambioSIMSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+ <File
+                    RelPath = "Web References\GestionReposicionWS\ConsultaDatosIMSWSService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\GestionReposicionWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\GestionReposicionWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\GestionReposicionWS\"
+                    WebReferenceUrl = "http://172.19.74.222:8903/GestionCambioSIM/ebsGestionCambioSIMSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\MigracionSaldoGSMWS\ebsMigracionSaldoGSMSB12.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\MigracionSaldoGSMWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\MigracionSaldoGSMWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\MigracionSaldoGSMWS\"
+                    WebReferenceUrl = "http://172.19.74.118:7909/MigracionSaldoGSM/ebsMigracionSaldoGSMSB12?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\PagosWS\ebsPagosSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\PagosWS\ebsPagosSB11.xsx"
+                    DependentUpon = "ebsPagosSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\PagosWS\ebsPagoWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\PagosWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\PagosWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\BSS_ProcesoPortabilidad_v1.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\ClaroFault_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\ClaroGenericHeaders_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\comprobarDeuda_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\obtenerEstadoCP_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\Opcionales_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\realizarProgramacion_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\ResponseStatus_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ProcesoPortabilidadWS\validaCPVigenciaRepositorio_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\RegistraPortaWS\ebsRegistraPortaSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\RegistraPortaWS\ebsRegistraPortaSB110.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\RegistraPortaWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\RegistraPortaWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\RegistraPortaWS\RegistraPortaWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\RegistroMetricasVentaWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\RegistroMetricasVentaWS\Reference.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\RegistroMetricasVentaWS\RegistroMetricasVentaWS.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\RegistroMetricasVentaWS\"
+                    WebReferenceUrl = "http://limdeseaiv28.tim.com.pe:8909/RegistroMetricaVentaWS/RegistroMetricasVentasPortSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\RenovacionModemPrepagoWS\ebsRenovacionModemPrepago.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\RenovacionModemPrepagoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\RenovacionModemPrepagoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\RenovacionModemPrepagoWS\"
+                    WebReferenceUrl = "http://172.19.74.118:7909/RenovacionModemPrepagoWS/ebsRenovacionModemPrepago?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ServicioNuevoPEL\ActivarNuevoPEL.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServicioNuevoPEL\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServicioNuevoPEL\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ServicioPEL\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServicioPEL\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ServicioPEL\TransaccionService.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServicioPEL\TransaccionService.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\BaseSchema.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\CommonsException.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\HeaderGeneric_v1.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\ServiciosyBonosMigrar.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\ServiciosyBonosMigrarWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\ServiciosBonosWS\WSESoapHeader.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\SGATransactionWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\SGATransactionWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\SGATransactionWS\TransaccionVenta.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\SGATransactionWS\"
+                    WebReferenceUrl = "http://172.19.74.138:8903/SGA_Services/SOT/Transaction/TransaccionVenta?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\TipificacionFijaWS\ebsTipificacionFijaSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\TipificacionFijaWS\ebsTipificacionFijaSB110.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\TipificacionFijaWS\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\TipificacionFijaWS\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\TipificacionFijaWS\TipificacionFijaWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WS_Bono_BlackAnual\EbsActivacionBonoBBServiceDefinitions.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WS_Bono_BlackAnual\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WS_Bono_BlackAnual\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WS_IN\InWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WS_IN\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WS_IN\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WS_IN_BONO\ActivacionWSServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WS_IN_BONO\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WS_IN_BONO\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WS_IN_BONO\"
+                    WebReferenceUrl = "http://limdeseaiv03:8909/ActivacionBBAWS/ActivacionWS?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WS_IN2\EbsTfiWSDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WS_IN2\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WS_IN2\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WS_IN2\"
+                    WebReferenceUrl = "http://limdeseaiv03.tim.com.pe:8909/TFIWS/EbsTfiWS?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WS_INS\EbsActDescPrepagoServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WS_INS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WS_INS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WS_INS\"
+                    WebReferenceUrl = "http://limdeseaiv03.tim.com.pe:8909/ActivarDesactivarPrepagoWS/EbsActDescPrepago?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSActivacionPostPagoCBIO\ActivacionPostpagoCBIOWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSActivacionPostPagoCBIO\ActivacionPostpagoCBIOWS.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSActivacionPostPagoCBIO\BaseSchema.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSActivacionPostPagoCBIO\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSActivacionPostPagoCBIO\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WSClarify\clarifyWSServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSClarify\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSClarify\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSClarify\"
+                    WebReferenceUrl = "http://limdeseaiv22.tim.com.pe:8909/ClarifyWS/clarifyWS?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSCobertura\CcppWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSCobertura\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSCobertura\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSCobertura\"
+                    WebReferenceUrl = "http://limdeseaiv13.tim.com.pe:7909/ccppConsultasWS/BuscarCcppPortSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSConsultaIGV\BaseSchema.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSConsultaIGV\ConsulIGV.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSConsultaIGV\ConsulIGV.xsx"
+                    DependentUpon = "ConsulIGV.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSConsultaIGV\ConsultaIGVWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSConsultaIGV\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSConsultaIGV\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSConsultaIGV\"
+                    WebReferenceUrl = "http://172.19.74.189:8901/ConsultIGVSBP/proxy_services/ConsultIGV?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSconsultarDocumentosHP\consultarDocumentosHPSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSconsultarDocumentosHP\consultarDocumentosHPSB110.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSconsultarDocumentosHP\ConsultarDocumentosHPWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSconsultarDocumentosHP\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSconsultarDocumentosHP\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WSContrato\ebsProcesaDOLSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSContrato\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSContrato\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSContrato\"
+                    WebReferenceUrl = "http://limdeseaiv13.tim.com.pe:7909/ProcesaDOLWS/ebsProcesaDOLSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSDOL\EbsDolWSDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSDOL\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSDOL\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSDOL\"
+                    WebReferenceUrl = "http://limdeseaiv03.tim.com.pe:8909/ServiceDolWS/EbsDolWS?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSNoBiometria\ebsIdentificacionClienteSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSNoBiometria\IdentificacionClienteWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSNoBiometria\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSNoBiometria\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSNoBiometria\"
+                    WebReferenceUrl = "http://limdeseaiv26.tim.com.pe:8909/IdentificacionClienteWS/ebsIdentificacionClienteSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\BaseTypes_v2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\BSS_ConsultaEquipoMovil_v1.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\ClaroFault_v2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\ClaroGenericHeaders_v2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\GenericEntityService_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\WSGenericEntityService\ResponseStatus_v2.xsd"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WSGenericEntityService\"
+                    WebReferenceUrl = "http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\BaseTypes_v2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\BSS_MobileNumberService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\ClaroFault_v2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\ClaroGenericHeaders_v2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\listMobileNumbers_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\WSMobileNumberService\ResponseStatus_v2.xsd"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WSMobileNumberService\"
+                    WebReferenceUrl = "http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService?wsdl"
+                    UrlBehavior = "Static"
+                />
+				<File
+                    RelPath = "Web References\WSProcesaVentaActivacionOlo\procesaVentaActivacionOloSOAP11Port.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSProcesaVentaActivacionOlo\procesaVentaActivacionOloSOAP11Port0.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSProcesaVentaActivacionOlo\ProcesaVentaActivacionOloWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSProcesaVentaActivacionOlo\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSProcesaVentaActivacionOlo\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSProcesaVentaActivacionOlo\"
+                    WebReferenceUrl = "http://192.168.100.152:8901/ProcesaVentaActivacionOloWS/procesaVentaActivacionOloSOAP11Port?wsdl"
+                    UrlBehavior = "Static"
+                />
+				<File
+                    RelPath = "Web References\WSRecargasOlo\anularRecarga_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\buscarPlanesRecarga_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\ClaroFault_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\ClaroGenericHeaders_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\consultarRecarga_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\MED_RecargasOlo_v1.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\Opcionales_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\recargar_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\WSRecargasOlo\ResponseStatus_v1.xsd"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\WSRecargasOlo\"
+                    WebReferenceUrl = "http://172.19.91.205:22000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSPlanPrepagoEspecial\ebsCambioPlanPrepagoEspecialPort11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSPlanPrepagoEspecial\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSPlanPrepagoEspecial\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSPlanPrepagoEspecial\"
+                    WebReferenceUrl = "http://172.19.74.118:7909/CambioPlanPrepagoEspecialWS/ebsCambioPlanPrepagoEspecialPort11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSRegistroDatosVentaPrepago\ebsRegistroDatosVentaPreSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRegistroDatosVentaPrepago\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSRegistroDatosVentaPrepago\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSRegistroDatosVentaPrepago\"
+                    WebReferenceUrl = "http://172.19.74.117:7903/RegistroDatosVentaPrepago/ebsRegistroDatosVentaPreSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\WSSimCards\ebsSimcards.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSSimCards\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSSimCards\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WSRegistrarTrazabilidad\ebsRegistrarTrazabilidadSB11.xsd"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSRegistrarTrazabilidad\Reference.map"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSRegistrarTrazabilidad\Reference.vb"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\WSRegistrarTrazabilidad\RegistrarTrazabilidadWS.wsdl"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web References\WSRegistroDatosVentaPrepago\ebsRegistroDatosVentaPreSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSRegistroDatosVentaPrepago\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSEmpleado\ConsultaOpcionesAuditoriaPortSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSEmpleado\ConsultaOpcionesAuditoriaService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\WSEmpleado\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\WSEmpleado\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\WSEmpleado\"
+                    WebReferenceUrl = "http://172.19.74.206:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+                  <File
+                    RelPath = "Web References\DevolucionClaroPuntosWS\DevolucionPuntosClaroClubWS.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\DevolucionClaroPuntosWS\ebsDevolucionPuntosClaroClubSB11.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\DevolucionClaroPuntosWS\ebsDevolucionPuntosClaroClubSB110.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\DevolucionClaroPuntosWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\DevolucionClaroPuntosWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\DevolucionClaroPuntosWS\"
+                    WebReferenceUrl = "http://172.19.74.89:8909/DevolucionPuntosClaroClubWS/ebsDevolucionPuntosClaroClubSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

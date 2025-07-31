@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ClassName="SAP_SIC_Pagos" TargetDirectory="D:\1-Luis-Hualtibamba\[SISACT]-[PP-XXXXX-X]-Recarga-Virtual-DTH\QA\Fuentes_dth\SAP_SIC_Pagos" Namespace="SAP_SIC_Pagos" Type="JavaMetaDataProvider" ToolsDir="C:\Archivos de programa\SAP\SAP .NET Connector for VisualStudio 2003\" xmlns="http://tempuri.org/ProxyAppInput.xsd">
+  <Destination>
+    <Client>200</Client>
+    <AppServerHost>172.19.43.34</AppServerHost>
+    <Language />
+    <Username>usrpvu</Username>
+    <SystemNumber>0</SystemNumber>
+    <LogonGroup />
+    <MsgServerHost />
+    <SAPSystemName />
+    <Type>3</Type>
+    <DestinationName>DES : CLARO Development</DestinationName>
+  </Destination>
+  <Modules Name="ZPVU_RFC_MAE_VIAS_PAGO" />
+  <Modules Name="ZPVU_RFC_TRS_PAGOS" />
+  <Modules Name="ZPVU_RFC_TRS_SET_NRO_SUNAT" />
+  <Modules Name="ZPVU_RFC_TRS_GET_NRO_SUNAT" />
+  <Modules Name="ZPVU_RFC_TRS_PAGOS_CON_NC" />
+  <Modules Name="ZPVU_RFC_TRS_ANULAC_COMPENS_NC" />
+  <Modules Name="ZPVU_RFC_MAE_TIP_DOC_CLTE" />
+  <Modules Name="ZPVU_RFC_CON_PEDIDO" />
+  <Modules Name="ZPVU_RFC_CON_TRIACION_PRE_POST" />
+  <Modules Name="ZPVU_RFC_TRS_TRIACION_PRE_POST" />
+  <Modules Name="ZPVU_RFC_TRS_LOG_VARIACION" />
+  <Modules Name="ZPVU_RFC_TRS_ACTIVACION_CHIP" />
+  <Modules Name="ZPVU_RFC_CON_ACUERDO_PEDIDO" />
+  <Modules Name="ZPVU_RFC_CON_ACUERDO" />
+  <Modules Name="ZPVU_RFC_CON_ESTADO_PCS" />
+  <Modules Name="ZPVU_RFC_TRS_ACT_ESTADO_PCS" />
+  <Modules Name="ZPVU_RFC_ADM_PARAM_OF_VTA" />
+  <Modules Name="ZPVU_RFC_MAE_CAJERO_X_OFICINA" />
+  <Modules Name="ZPVU_RFC_TRS_MOD_DEP_GARAN" />
+  <Modules Name="ZPVU_RFC_TRS_GET_NRO_COR_GARAN" />
+  <Modules Name="ZPVU_RFC_TRS_DEPOS_GARANTIA" />
+  <Modules Name="ZPVU_RFC_CON_CIERRE_ANT" />
+  <Modules Name="ZPVU_RFC_REP_CUADRE_PROCESO" />
+  <Modules Name="ZPVU_RFC_REP_CUADRE_RESUM_DIA" />
+  <Modules Name="ZPVU_RFC_CON_LOG_ANULAC_FACT" />
+  <Modules Name="ZPVU_RFC_CON_PAGOS" />
+  <Modules Name="ZPVU_RFC_TRS_PAGOS_ANULACION" />
+  <Modules Name="ZPVU_RFC_TRS_ANULA_PEDIDO_SAP" />
+  <Modules Name="ZPVU_RFC_CON_VEND_RECARGA" />
+  <Modules Name="ZPVU_RFC_CON_TELEF_FACTURA" />
+  <Modules Name="ZPVU_RFC_TRS_ACT_VTA_RECARGA" />
+  <Modules Name="ZPVU_RFC_TRS_SUNAT_ANUL_PREV" />
+  <Modules Name="ZPVU_RFC_TRS_SUNAT_ANUL_REUTIL" />
+  <Modules Name="ZPVU_RFC_MAE_DATOS_VENDEDOR" />
+  <Modules Name="ZPVU_RFC_MAE_OFICINA_VENTA" />
+  <Modules Name="ZPVU_RFC_CON_CLIENTE" />
+  <Modules Name="ZPVU_RFC_TRS_PRINT_DOCUMENTO" />
+  <Modules Name="ZPVU_RFC_TRS_COMPROBANTE" />
+  <Modules Name="ZPVU_RFC_MAE_DISTRITO" />
+  <Modules Name="ZPVU_RFC_TRS_DEVOL_EFECTIVO" />
+  <Modules Name="ZPVU_RFC_TRS_DEVOL_DEPOS_GARAN" />
+  <Modules Name="ZPVU_RFC_MAE_TARJETA_CREDITO" />
+  <Modules Name="ZPVU_RFC_CON_TIPO_CAMBIO" />
+  <Modules Name="ZPVU_RFC_CON_USUARIO" />
+  <Modules Name="ZPVU_RFC_PRT_LISTA_IMPRESORAS" />
+  <Modules Name="ZPVU_RFC_REP_CUADRE_VTAS_FACT" />
+  <Modules Name="ZPVU_RFC_REP_CUADRE_MATER_FACT" />
+  <Modules Name="ZPVU_RFC_PRT_ACT_USO_IMPRES" />
+  <Modules Name="ZPVU_RFC_CON_PAGOS_USUARIO" />
+  <Modules Name="ZPVU_RFC_TRS_PRINT_FORMULARIO" />
+  <Modules Name="ZPVU_RFC_CON_DEP_GARAN" />
+  <Modules Name="ZPVU_RFC_TRS_ANUL_DEP_GARANTIA" />
+  <Modules Name="ZPRVT_CON_DOC" />
+  <Modules Name="ZPRVT_TRS_PROCESS" />
+  <Modules Name="ZPVU_RFC_TRS_ACT_CONTRATO_ENT" />
+  <Modules Name="ZPVU_RFC_CON_CAMP_ETNO" />
+  <Modules Name="ZPVU_RFC_TRS_POOL_FACTURAS" />
+  <Modules Name="ZPVU_RFC_CON_TELEFONO_SANS" />
+  <Modules Name="ZPVU_RFC_CON_TELEFONO_SANS_ZS" />
+</Settings>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/baseschema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="auditRequestType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="nombreAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="auditResponseType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="codigoRespuesta" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="objetoClienteType">
+    <xsd:sequence>
+      <xsd:element name="customerId" type="xsd:string" />
+      <xsd:element name="cuenta" type="xsd:string" />
+      <xsd:element name="nombre" type="xsd:string" />
+      <xsd:element name="apellidos" type="xsd:string" />
+      <xsd:element name="razonSocial" type="xsd:string" />
+      <xsd:element name="tip_doc" type="xsd:string" />
+      <xsd:element name="num_doc" type="xsd:string" />
+      <xsd:element name="titulo" type="xsd:string" />
+      <xsd:element name="telef_principal" type="xsd:string" />
+      <xsd:element name="estado_civil" type="xsd:string" />
+      <xsd:element name="fecha_nac" type="xsd:string" />
+      <xsd:element name="lug_nac" type="xsd:string" />
+      <xsd:element name="ruc_dni" type="xsd:string" />
+      <xsd:element name="nomb_comercial" type="xsd:string" />
+      <xsd:element name="contacto_cliente" type="xsd:string" />
+      <xsd:element name="rep_legal" type="xsd:string" />
+      <xsd:element name="telef_contacto" type="xsd:string" />
+      <xsd:element name="fax" type="xsd:string" />
+      <xsd:element name="email" type="xsd:string" />
+      <xsd:element name="cargo" type="xsd:string" />
+      <xsd:element name="consultor" type="xsd:string" />
+      <xsd:element name="asesor" type="xsd:string" />
+      <xsd:element name="direccion_fac" type="xsd:string" />
+      <xsd:element name="urbanizacion_fac" type="xsd:string" />
+      <xsd:element name="distrito_fac" type="xsd:string" />
+      <xsd:element name="provincia_fac" type="xsd:string" />
+      <xsd:element name="cod_postal_fac" type="xsd:string" />
+      <xsd:element name="departamento_fac" type="xsd:string" />
+      <xsd:element name="pais_fac" type="xsd:string" />
+      <xsd:element name="direccion_leg" type="xsd:string" />
+      <xsd:element name="urbanizacion_leg" type="xsd:string" />
+      <xsd:element name="distrito_leg" type="xsd:string" />
+      <xsd:element name="provincia_leg" type="xsd:string" />
+      <xsd:element name="cod_postal_leg" type="xsd:string" />
+      <xsd:element name="departamento_leg" type="xsd:string" />
+      <xsd:element name="pais_leg" type="xsd:string" />
+      <xsd:element name="co_id" type="xsd:string" />
+      <xsd:element name="nicho_id" type="xsd:string" />
+      <xsd:element name="num_cuentas" type="xsd:string" />
+      <xsd:element name="num_lineas" type="xsd:string" />
+      <xsd:element name="ciclo_fac" type="xsd:string" />
+      <xsd:element name="status_cuenta" type="xsd:string" />
+      <xsd:element name="modalidad" type="xsd:string" />
+      <xsd:element name="tipo_cliente" type="xsd:string" />
+      <xsd:element name="fecha_act" type="xsd:string" />
+      <xsd:element name="limite_credito" type="xsd:string" />
+      <xsd:element name="segmento" type="xsd:string" />
+      <xsd:element name="respon_pago" type="xsd:string" />
+      <xsd:element name="credit_score" type="xsd:string" />
+      <xsd:element name="forma_pago" type="xsd:string" />
+      <xsd:element name="codigo_tipo_cliente" type="xsd:string" />
+      <xsd:element name="sexo" type="xsd:string" />
+      <xsd:element name="nacionalidad" type="xsd:string" />
+      <xsd:element name="estado_civil_id" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="objetoContratoType">
+    <xsd:sequence>
+      <xsd:element name="telefono" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="motivo" type="xsd:string" />
+      <xsd:element name="fec_estado" type="xsd:string" />
+      <xsd:element name="plan" type="xsd:string" />
+      <xsd:element name="plazo_contrato" type="xsd:string" />
+      <xsd:element name="iccid" type="xsd:string" />
+      <xsd:element name="imsi" type="xsd:string" />
+      <xsd:element name="campania" type="xsd:string" />
+      <xsd:element name="p_venta" type="xsd:string" />
+      <xsd:element name="nicho_id" type="xsd:string" />
+      <xsd:element name="vendedor" type="xsd:string" />
+      <xsd:element name="co_id" type="xsd:string" />
+      <xsd:element name="fecha_act" type="xsd:string" />
+      <xsd:element name="flag_plataforma" type="xsd:string" />
+      <xsd:element name="pin1" type="xsd:string" />
+      <xsd:element name="puk1" type="xsd:string" />
+      <xsd:element name="pin2" type="xsd:string" />
+      <xsd:element name="puk2" type="xsd:string" />
+      <xsd:element name="codigo_plan_tarifario" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="objetoServicioType">
+    <xsd:sequence>
+      <xsd:element name="codigo" type="xsd:string" />
+      <xsd:element name="descripcion" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="fecha_estado" type="xsd:string" />
+      <xsd:element name="fecha_solicitud" type="xsd:string" />
+      <xsd:element name="cuota" type="xsd:string" />
+      <xsd:element name="paquete" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaDatosClientes">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="objetoCliente" type="objetoClienteType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaDatosContratos">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="objetoContrato" type="objetoContratoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaDatosServicios">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="objetoServicio" type="objetoServicioType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datosClienteType">
+    <xsd:sequence>
+      <xsd:element name="listaDatosClientes" type="ListaDatosClientes" />
+      <xsd:element name="errorsql" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datosContratoType">
+    <xsd:sequence>
+      <xsd:element name="listaDatosContratos" type="ListaDatosContratos" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="datosServicioType">
+    <xsd:sequence>
+      <xsd:element name="listaDatosServicios" type="ListaDatosServicios" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

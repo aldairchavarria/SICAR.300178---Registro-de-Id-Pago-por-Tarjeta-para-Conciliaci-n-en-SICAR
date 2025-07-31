@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/esb/data/BSS_MobileNumberService/listMobileNumbers/v1/" xmlns:bastyp="http://claro.com.pe/esb/data/commonBusinessEntities/baseTypes/v2/" xmlns:data="http://claro.com.pe/esb/data/commonBusinessEntities/responseStatus/v2/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/BSS_MobileNumberService/listMobileNumbers/v1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FBaseTypes_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/baseTypes/v2/" />
+  <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_MobileNumberService/SRV_MobileNumberService/Service/MED_MobileNumberService?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FResponseStatus_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/responseStatus/v2/" />
+  <xsd:element name="listMobileNumbersRequest" type="base:ListMobileNumbersRequestType" />
+  <xsd:complexType name="ListMobileNumbersRequestType">
+    <xsd:sequence>
+      <xsd:element name="username" type="xsd:string" />
+      <xsd:element name="password" type="xsd:string" />
+      <xsd:element name="agentID" type="xsd:string" />
+      <xsd:element name="groupID" type="xsd:string" />
+      <xsd:element name="state" type="xsd:string" />
+      <xsd:element name="pageKey" type="xsd:string" />
+      <xsd:element name="limit" type="xsd:string" />
+      <xsd:element name="isAscending" type="xsd:string" />
+      <xsd:element name="paidType" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="listaRequestOpcional" type="base:ListaRequestOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="listMobileNumbersResponse" type="base:ListMobileNumbersResponseType" />
+  <xsd:complexType name="ListMobileNumbersResponseType">
+    <xsd:sequence>
+      <xsd:element name="responseStatus" type="data:ResponseStatus" />
+      <xsd:element name="responseData" type="base:ResponseData" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseData">
+    <xsd:sequence>
+      <xsd:element name="pageKey" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="parametersBody" type="base:ListaRequest" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="listaResponseOpcional" type="base:ListaResponseOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequestOpcionalType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional" type="bastyp:AttributeValuePair" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaResponseOpcionalType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional" type="bastyp:AttributeValuePair" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoRequest" type="base:ListaParametros" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListaParametros">
+    <xsd:sequence>
+      <xsd:element name="groupID" type="xsd:string" />
+      <xsd:element name="identifier" type="xsd:string" />
+      <xsd:element name="paidType" type="xsd:string" />
+      <xsd:element name="spid" type="xsd:string" />
+      <xsd:element name="state" type="xsd:string" />
+      <xsd:element name="technology" type="xsd:string" />
+      <xsd:element name="feeAmount" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

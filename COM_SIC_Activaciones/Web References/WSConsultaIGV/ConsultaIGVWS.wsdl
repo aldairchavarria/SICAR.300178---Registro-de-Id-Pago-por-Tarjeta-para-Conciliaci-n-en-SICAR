@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" name="ConsultaIGVWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:types="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws" />
+    <s:schema xmlns:types="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/">
+      <xsd:import schemaLocation="http://172.19.74.189:8901/ConsultIGVSBP/proxy_services/ConsultIGV?SCHEMA%2FConsultIGVSBP%2Fxsd%2FConsulIGV" namespace="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarIGVRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" element="q1:consultarIGVRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarIGVResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/types" element="q2:consultarIGVResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaIGVWSPortType">
+    <wsdl:operation name="consultarIGV">
+      <wsdl:input message="tns:consultarIGVRequestMsg" />
+      <wsdl:output message="tns:consultarIGVResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaIGVWSPortTypeSOAP11Binding" type="tns:ConsultaIGVWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="consultarIGV">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaigv/consultaigvws/consultarIGV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaIGVWSService">
+    <WL5G3N0:documentation xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">OSB Service</WL5G3N0:documentation>
+    <wsdl:port name="ebsConsultaIGVSB11" binding="tns:ConsultaIGVWSPortTypeSOAP11Binding">
+      <soap:address location="http://172.19.74.189:8901/ConsultIGVSBP/proxy_services/ConsultIGV" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv19.tim.com.pe:8909/EnvioTransacPagosPOS/EnvioTransacPagosPOSSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="actualizarTransacRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="flagPago" type="xsd:string" />
+        <xsd:element name="trnsnIdCab" type="xsd:string" />
+        <xsd:element name="trnsvNumpedido" type="xsd:string" />
+        <xsd:element name="trnsvEstado" type="xsd:string" />
+        <xsd:element name="trnsnId" type="xsd:string" />
+        <xsd:element name="trnsvTransaccionPos" type="xsd:string" />
+        <xsd:element name="idConftipMoneda" type="xsd:string" />
+        <xsd:element name="trnsnMonto" type="xsd:string" />
+        <xsd:element name="posnId" type="xsd:string" />
+        <xsd:element name="trnsvIdRef" type="xsd:string" />
+        <xsd:element name="trnsnIdAutoriz" type="xsd:string" />
+        <xsd:element name="trnsvRespTrans" type="xsd:string" />
+        <xsd:element name="trnsvResultTrans" type="xsd:string" />
+        <xsd:element name="trnsvCodAprob" type="xsd:string" />
+        <xsd:element name="trnsvTipoTarjetaPos" type="xsd:string" />
+        <xsd:element name="trnsvNroTarjeta" type="xsd:string" />
+        <xsd:element name="fechaTransaccionPos" type="xsd:string" />
+        <xsd:element name="horaTransaccionPos" type="xsd:string" />
+        <xsd:element name="trnsvFecExpiracion" type="xsd:string" />
+        <xsd:element name="trnsvCliente" type="xsd:string" />
+        <xsd:element name="trnsvVoucher" type="xsd:string" />
+        <xsd:element name="usuavAnulador" type="xsd:string" />
+        <xsd:element name="posvCodTerminal" type="xsd:string" />
+        <xsd:element name="trnsvIdRefAnul" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="actualizarTransacResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="detalleReporteTransacRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="codPtoVenta" type="xsd:string" />
+        <xsd:element name="tipoTarjeta" type="xsd:string" />
+        <xsd:element name="nroCaja" type="xsd:string" />
+        <xsd:element name="fecIniTransaccion" type="xsd:string" />
+        <xsd:element name="fecFinTransaccion" type="xsd:string" />
+        <xsd:element name="codCajero" type="xsd:string" />
+        <xsd:element name="tipoTransaccion" type="xsd:string" />
+        <xsd:element name="codOperacion" type="xsd:string" />
+        <xsd:element name="estadoTransaccion" type="xsd:string" />
+        <xsd:element name="idRef" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="detalleReporteTransacResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="listaReporteDet" type="ListaReporteDetType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="ListaReporteDetType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="reporteDet" type="ReporteDetType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReporteDetType">
+    <xsd:sequence>
+      <xsd:element name="trnsnIdCab" type="xsd:string" />
+      <xsd:element name="trnsnId" type="xsd:string" />
+      <xsd:element name="trnsdFecRegistro" type="xsd:string" />
+      <xsd:element name="codPdv" type="xsd:string" />
+      <xsd:element name="trnscTipoTarjeta" type="xsd:string" />
+      <xsd:element name="posvNroCaja" type="xsd:string" />
+      <xsd:element name="posvCodTerminal" type="xsd:string" />
+      <xsd:element name="posvCodEquipo" type="xsd:string" />
+      <xsd:element name="trnsvUsuario" type="xsd:string" />
+      <xsd:element name="usuavCajero" type="xsd:string" />
+      <xsd:element name="usuavCajeroId" type="xsd:string" />
+      <xsd:element name="trnsvTipoTrans" type="xsd:string" />
+      <xsd:element name="trnscOperacion" type="xsd:string" />
+      <xsd:element name="trnsvTipoPago" type="xsd:string" />
+      <xsd:element name="trnsvNumPedido" type="xsd:string" />
+      <xsd:element name="idConftipMoneda" type="xsd:string" />
+      <xsd:element name="trnsnMonto" type="xsd:string" />
+      <xsd:element name="trnsvIdRef" type="xsd:string" />
+      <xsd:element name="posnId" type="xsd:string" />
+      <xsd:element name="trnsnIdAutoriz" type="xsd:string" />
+      <xsd:element name="trnsvRespTrans" type="xsd:string" />
+      <xsd:element name="trnsvResulTrans" type="xsd:string" />
+      <xsd:element name="trnsvCodAprob" type="xsd:string" />
+      <xsd:element name="trnsvTipoTarjetaPos" type="xsd:string" />
+      <xsd:element name="trnsvNroTarjeta" type="xsd:string" />
+      <xsd:element name="fechaTransaccionPos" type="xsd:string" />
+      <xsd:element name="horaTransaccionPos" type="xsd:string" />
+      <xsd:element name="trnsvEstado" type="xsd:string" />
+      <xsd:element name="posvNroTienda" type="xsd:string" />
+      <xsd:element name="posvIdestablec" type="xsd:string" />
+      <xsd:element name="posvNombreCliente" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="guardarTransacRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="trnsnIdCab" type="xsd:string" />
+        <xsd:element name="trnsvNumpedido" type="xsd:string" />
+        <xsd:element name="codPdv" type="xsd:string" />
+        <xsd:element name="posvNrotienda" type="xsd:string" />
+        <xsd:element name="posvNrocaja" type="xsd:string" />
+        <xsd:element name="posvIdestablec" type="xsd:string" />
+        <xsd:element name="posvIpcaja" type="xsd:string" />
+        <xsd:element name="usuavCajero" type="xsd:string" />
+        <xsd:element name="usuavAnulador" type="xsd:string" />
+        <xsd:element name="posvCodTerminal" type="xsd:string" />
+        <xsd:element name="posvCodEquipo" type="xsd:string" />
+        <xsd:element name="posvIpCliente" type="xsd:string" />
+        <xsd:element name="posvIpServidor" type="xsd:string" />
+        <xsd:element name="posvNombreCliente" type="xsd:string" />
+        <xsd:element name="posvNombreServidor" type="xsd:string" />
+        <xsd:element name="trnsvTransaccionPos" type="xsd:string" />
+        <xsd:element name="trnsvNroReferencia" type="xsd:string" />
+        <xsd:element name="trnsvNroAprobacion" type="xsd:string" />
+        <xsd:element name="trnscOperacionId" type="xsd:string" />
+        <xsd:element name="trnsvDesOperacion" type="xsd:string" />
+        <xsd:element name="trnscTipoOperacion" type="xsd:string" />
+        <xsd:element name="trnsnMonto" type="xsd:string" />
+        <xsd:element name="idConftipMoneda" type="xsd:string" />
+        <xsd:element name="trnsdFecTrans" type="xsd:string" />
+        <xsd:element name="trnsvNroTarjeta" type="xsd:string" />
+        <xsd:element name="trnsvFecExpiracion" type="xsd:string" />
+        <xsd:element name="trnscObsAnulacion" type="xsd:string" />
+        <xsd:element name="trnsvCliente" type="xsd:string" />
+        <xsd:element name="trnsnIdAnulacion" type="xsd:string" />
+        <xsd:element name="trnscTipoTarjeta" type="xsd:string" />
+        <xsd:element name="trnsvVoucher" type="xsd:string" />
+        <xsd:element name="trnsvUsuario" type="xsd:string" />
+        <xsd:element name="trnsvTipoPago" type="xsd:string" />
+        <xsd:element name="trnsvEstado" type="xsd:string" />
+        <xsd:element name="trnsvRespTrans" type="xsd:string" />
+        <xsd:element name="trnsvCodAprob" type="xsd:string" />
+        <xsd:element name="trnsvResultTrans" type="xsd:string" />
+        <xsd:element name="trnsvIdRef" type="xsd:string" />
+        <xsd:element name="trnsnIdAutoriz" type="xsd:string" />
+        <xsd:element name="trnsvTipoTarjetaPos" type="xsd:string" />
+        <xsd:element name="trnsvTipoTrans" type="xsd:string" />
+        <xsd:element name="fechaTransaccionPos" type="xsd:string" />
+        <xsd:element name="horaTransaccionPos" type="xsd:string" />
+        <xsd:element name="posnId" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="guardarTransacResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="codTransaccion" type="xsd:string" />
+        <xsd:element name="codTransaccionCab" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="guardarTransacAperturaCierreRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="nroRegistro" type="xsd:string" />
+        <xsd:element name="fechaMovimiento" type="xsd:string" />
+        <xsd:element name="tipoMovimiento" type="xsd:string" />
+        <xsd:element name="tipoEstado" type="xsd:string" />
+        <xsd:element name="detalleError" type="xsd:string" />
+        <xsd:element name="usrRegistro" type="xsd:string" />
+        <xsd:element name="fechaRegistro" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="guardarTransacAperturaCierreResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="detaPagoRecTransacRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="pedido" type="xsd:string" />
+        <xsd:element name="monto" type="xsd:string" />
+        <xsd:element name="tipoTarjeta" type="xsd:string" />
+        <xsd:element name="tipoPago" type="xsd:string" />
+        <xsd:element name="fechaPago" type="xsd:string" />
+        <xsd:element name="codPdv" type="xsd:string" />
+        <xsd:element name="numeroCaja" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="detaPagoRecTransacResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="listaDetaPagoRecTransac" type="ListaDetaPagoRecTransacType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="ListaDetaPagoRecTransacType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="detaPagoRecTransac" type="DetaPagoRecTransacType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DetaPagoRecTransacType">
+    <xsd:sequence>
+      <xsd:element name="TrnsnIdCab" type="xsd:string" />
+      <xsd:element name="PosvCodTerminal" type="xsd:string" />
+      <xsd:element name="TrnsnId" type="xsd:string" />
+      <xsd:element name="OficinaVenta" type="xsd:string" />
+      <xsd:element name="PosvNroCaja" type="xsd:string" />
+      <xsd:element name="UsuavCajero" type="xsd:string" />
+      <xsd:element name="TrnsvNumPedido" type="xsd:string" />
+      <xsd:element name="TrnsvRef" type="xsd:string" />
+      <xsd:element name="TrnsvIdRef" type="xsd:string" />
+      <xsd:element name="CodClaseFactura" type="xsd:string" />
+      <xsd:element name="DescDocumento" type="xsd:string" />
+      <xsd:element name="IdConftipMoneda" type="xsd:string" />
+      <xsd:element name="NumeroTelefono" type="xsd:string" />
+      <xsd:element name="TrnsvTipoTarjetaPos" type="xsd:string" />
+      <xsd:element name="TrnsvNroTarjeta" type="xsd:string" />
+      <xsd:element name="TrnscTipoTarjeta" type="xsd:string" />
+      <xsd:element name="FormaPago" type="xsd:string" />
+      <xsd:element name="FechaTransaccionPos" type="xsd:string" />
+      <xsd:element name="TrnsnMonto" type="xsd:string" />
+      <xsd:element name="EstadoAnulacion" type="xsd:string" />
+      <xsd:element name="ResultadoProceso" type="xsd:string" />
+      <xsd:element name="NumeroIntentos" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

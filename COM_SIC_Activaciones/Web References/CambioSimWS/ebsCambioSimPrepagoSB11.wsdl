@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/ws/postventa/CambioSimPrepago" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/CambioSimPrepago" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/CambioSimPrepago">
+      <s:element name="ejecutarCambioSimRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="usuarioApp" type="s:string" />
+            <s:element name="tipoDocumento" type="s:string" />
+            <s:element name="numeroDocumento" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="iccidNuevo" type="s:string" />
+            <s:element name="codigoBloqueo" type="s:string" />
+            <s:element name="canalAtencion" type="s:string" />
+            <s:element name="tipoBloqueo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejecutarCambioSimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="ejecutarCambioSimRequestMsg">
+    <part name="parameters" element="s0:ejecutarCambioSimRequest" />
+  </message>
+  <message name="ejecutarCambioSimResponseMsg">
+    <part name="parameters" element="s0:ejecutarCambioSimResponse" />
+  </message>
+  <portType name="ebsCambioSimPrepagoPortType">
+    <operation name="ejecutarCambioSim">
+      <input message="s0:ejecutarCambioSimRequestMsg" />
+      <output message="s0:ejecutarCambioSimResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsCambioSimPrepagoPortTypeSOAP11Binding" type="s0:ebsCambioSimPrepagoPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ejecutarCambioSim">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CambioSimPrepago/ejecutarCambioSim" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ebsCambioSimPrepagoPortTypeSOAP12Binding" type="s0:ebsCambioSimPrepagoPortType">
+    <soap12:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="ejecutarCambioSim">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/postventa/CambioSimPrepago/ejecutarCambioSim" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsCambioSimPrepagoService">
+    <port name="ebsCambioSimPrepagoSB11" binding="s0:ebsCambioSimPrepagoPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/CambioSimPrepago/ebsCambioSimPrepagoSB11" />
+    </port>
+    <port name="ebsCambioSimPrepagoSB12" binding="s0:ebsCambioSimPrepagoPortTypeSOAP12Binding">
+      <soap12:address location="http://localhost/CambioSimPrepagoWS/ebsCambioSimPrepagoSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

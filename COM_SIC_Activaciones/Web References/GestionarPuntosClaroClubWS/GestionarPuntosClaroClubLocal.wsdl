@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/claroclubservices/gestionarpuntosclaroclub" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/claroclubservices/gestionarpuntosclaroclub" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:Q1="http://claro.com.pe/eai/servicecommons/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/claroclubservices/gestionarpuntosclaroclub">
+      <xsd:import schemaLocation="http://limdesosbv03.tim.com.pe:7909/ClaroClub_Services/Transaction/GPCC/Transaction/GestionarPuntosClaroClub/proxy_services/GestionarPuntosClaroClubLocal?SCHEMA%2FUtilities%2Fxsd%2FAudit" namespace="http://claro.com.pe/eai/servicecommons/" />
+      <xsd:element name="bloquearPuntosRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="ipAplicacion" type="xsd:string" />
+            <xsd:element name="aplicacion" type="xsd:string" />
+            <xsd:element name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="tipoDoc" type="xsd:string" />
+            <xsd:element name="numDoc" type="xsd:string" />
+            <xsd:element name="tipoClie" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="bloquearPuntosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q1:AuditType" />
+            <xsd:element name="tipoDoc2" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="liberarPuntosRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="ipAplicacion" type="xsd:string" />
+            <xsd:element name="aplicacion" type="xsd:string" />
+            <xsd:element name="usuarioAplicacion" type="xsd:string" />
+            <xsd:element name="tipoDoc" type="xsd:string" />
+            <xsd:element name="numDoc" type="xsd:string" />
+            <xsd:element name="tipoClie" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="liberarPuntosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="Q1:AuditType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="liberarPuntosRequestMessage">
+    <wsdl:part name="parameter" element="tns:liberarPuntosRequest" />
+  </wsdl:message>
+  <wsdl:message name="liberarPuntosResponseMessage">
+    <wsdl:part name="parameter" element="tns:liberarPuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="bloquearPuntosRequestMessage">
+    <wsdl:part name="parameter" element="tns:bloquearPuntosRequest" />
+  </wsdl:message>
+  <wsdl:message name="bloquearPuntosResponseMessage">
+    <wsdl:part name="parameter" element="tns:bloquearPuntosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ebsGestionarPuntosPortType">
+    <wsdl:operation name="liberarPuntos">
+      <wsdl:input message="tns:liberarPuntosRequestMessage" />
+      <wsdl:output message="tns:liberarPuntosResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bloquearPuntos">
+      <wsdl:input message="tns:bloquearPuntosRequestMessage" />
+      <wsdl:output message="tns:bloquearPuntosResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ebsGestionarPuntosPortTypeSOAP11Binding" type="tns:ebsGestionarPuntosPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="liberarPuntos">
+      <soap:operation soapAction="urn:ebsGestionarPuntosClaroClub/liberarPuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameter" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameter" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bloquearPuntos">
+      <soap:operation soapAction="urn:ebsGestionarPuntosClaroClub/bloquearPuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameter" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameter" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsGestionarPuntosService">
+    <wsdl:port name="ebsGestionarPuntos" binding="tns:ebsGestionarPuntosPortTypeSOAP11Binding">
+      <soap:address location="http://limdesosbv03.tim.com.pe:7909/ClaroClub_Services/Transaction/GPCC/Transaction/GestionarPuntosClaroClub/proxy_services/GestionarPuntosClaroClubLocal" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

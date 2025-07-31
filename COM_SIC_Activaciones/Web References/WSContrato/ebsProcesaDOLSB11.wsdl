@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS">
+      <s:complexType name="RequestOpcionalComplexType">
+        <s:sequence>
+          <s:element name="clave" type="s:string" />
+          <s:element name="valor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="requestOpcional">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="listaRequest">
+            <s:complexType>
+              <s:sequence>
+                <s:element name="clave" type="s:string" />
+                <s:element name="valor" type="s:string" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="responseOpcional">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="listaResponse">
+            <s:complexType>
+              <s:sequence>
+                <s:element name="clave" type="s:string" />
+                <s:element name="valor" type="s:string" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuditTypeRequest">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="ipAplicacion" type="s:string" />
+          <s:element name="aplicacion" type="s:string" />
+          <s:element name="usrAplicacion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuditTypeResponse">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="codigoRespuesta" type="s:string" />
+          <s:element name="mensajeRespuesta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="procesarDOLRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="aplicacion" type="s:string" />
+            <s:element name="usrApp" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="estadoContrato" type="s:string" />
+            <s:element name="respuestaConfirmacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListaRequestOpcional">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcional" type="tns:RequestOpcionalComplexType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaResponseOpcional">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ResponseOpcional" type="tns:ResponseOpcionalComplexType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResponseOpcionalComplexType">
+        <s:sequence>
+          <s:element name="clave" type="s:string" />
+          <s:element name="valor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="procesarDOLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarIMGRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="tns:AuditTypeRequest" />
+            <s:element name="numeroLinea" type="s:string" />
+            <s:element name="archivo" type="s:base64Binary" />
+            <s:element name="fechaEnvio" type="s:string" />
+            <s:element name="nombreArchivo" type="s:string" />
+            <s:element name="listaRequestOpcional" type="tns:requestOpcional" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarIMGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="tns:AuditTypeResponse" />
+            <s:element name="listaResponseOpcional" type="tns:responseOpcional" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarContratoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="aplicacion" type="s:string" />
+            <s:element name="usrApp" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="nroDocumento" type="s:string" />
+            <s:element name="listaOpcionalRequest" type="tns:ListaRequestOpcional" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarContratoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+            <s:element name="mensajeContrato" type="s:string" />
+            <s:element name="listaOpcionalResponse" type="tns:ListaResponseOpcional" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="procesarDOLRequestMsg">
+    <wsdl:part name="parameters" element="tns:procesarDOLRequest" />
+  </wsdl:message>
+  <wsdl:message name="procesarDOLResponseMsg">
+    <wsdl:part name="parameters" element="tns:procesarDOLResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarIMGRequestMsg">
+    <wsdl:part name="parameters" element="tns:registrarIMGRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarIMGResponseMsg">
+    <wsdl:part name="parameters" element="tns:registrarIMGResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarContratoRequestMsg">
+    <wsdl:part name="parameters" element="tns:validarContratoRequest" />
+  </wsdl:message>
+  <wsdl:message name="validarContratoResponseMsg">
+    <wsdl:part name="parameters" element="tns:validarContratoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ebsProcesaDOLWSPortType">
+    <wsdl:operation name="procesarDOL">
+      <wsdl:input message="tns:procesarDOLRequestMsg" />
+      <wsdl:output message="tns:procesarDOLResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarIMG">
+      <wsdl:input message="tns:registrarIMGRequestMsg" />
+      <wsdl:output message="tns:registrarIMGResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="validarContrato">
+      <wsdl:input message="tns:validarContratoRequestMsg" />
+      <wsdl:output message="tns:validarContratoResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ebsProcesaDOLWSPortTypeSOAP11Binding" type="tns:ebsProcesaDOLWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="procesarDOL">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS/procesarDOL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarIMG">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS/registrarIMG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS/validarContrato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ebsProcesaDOLWSPortTypeSOAP12Binding" type="tns:ebsProcesaDOLWSPortType">
+    <soap12:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="procesarDOL">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS/procesarDOL" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarIMG">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS/registrarIMG" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarContrato">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/venta/ProcesaDOLWS/validarContrato" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsProcesaDOLWS">
+    <wsdl:port name="ebsProcesaDOLSB11" binding="tns:ebsProcesaDOLWSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/ProcesaDOLWS/ebsProcesaDOLSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsProcesaDOLSB12" binding="tns:ebsProcesaDOLWSPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv13.tim.com.pe:7909/ProcesaDOLWS/ebsProcesaDOLSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:MgVta="http://claro.com.pe/SOA/message/ventas" xmlns:Q1="http://claro.com.pe/xsd/comun" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/SOA/message/ventas" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv07.tim.com.pe:8909/SB007_VENTAS/interfaces/proxyServices/PS_VentasSAP?SCHEMA%2FSB_COMUN%2Fdata%2FComun" namespace="http://claro.com.pe/xsd/comun" />
+  <xsd:complexType name="itemHistClienteType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="referencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descTipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreVendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descClaseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseFactura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descFactura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombres" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descTipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="factura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cuotas" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="importeMoneda" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemMensajesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="tipo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="id" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numero" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mensaje" type="xsd:string" />
+      <xsd:element minOccurs="0" name="logNro" type="xsd:string" />
+      <xsd:element minOccurs="0" name="logMsgNro" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mensajeVariable1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mensajeVariable2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mensajeVariable3" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mensajeVariable4" type="xsd:string" />
+      <xsd:element minOccurs="0" name="parametro" type="xsd:string" />
+      <xsd:element name="lista">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="-2147483648" />
+            <xsd:maxInclusive value="2147483647" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="campo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sistema" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemDocumentosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="motivoPedido" type="xsd:string" />
+      <xsd:element minOccurs="0" name="moneda" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoOperacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="totalMercaderia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="totalImpuesto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="totalDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaRegistro" type="xsd:string" />
+      <xsd:element minOccurs="0" name="impreso" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacion1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacion2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroReferencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioRegistro" type="xsd:string" />
+      <xsd:element minOccurs="0" name="anulado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroDocVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaOferta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroDocReferencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroCuotas" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroClarify" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="vendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indMalaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descClaseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="motivoMalaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="referencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="historico" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroHelpdesk" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroPCS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroPedidoAsociadoChip" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContratoAlquiler" type="xsd:string" />
+      <xsd:element minOccurs="0" name="transfGratuita" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fidelizacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dniVendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroSolicitud" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serieRecibida" type="xsd:string" />
+      <xsd:element minOccurs="0" name="operador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoProdOperador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseDocVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroFactura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="orgVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="canal" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemLineaDocType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="consecutivo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="articulo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descArticulo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="utilizacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descUtilizacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="campana" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descCampana" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serie" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cantidad" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precioTotal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descuento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="porcentajeDescuento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descuentoAdicional" type="xsd:string" />
+      <xsd:element minOccurs="0" name="subtotal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="impuesto1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="impuesto2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="planTarifario" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanTarifario" type="xsd:string" />
+      <xsd:element minOccurs="0" name="centroCosto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="motivoDevolucion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="asociado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="consecutivoPadre" type="xsd:string" />
+      <xsd:element minOccurs="0" name="articuloAsociado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroClarify" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indicadorPosicion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroSerie" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoMonto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="montoPagar" type="xsd:string" />
+      <xsd:element minOccurs="0" name="periodo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemLineaDocIMEIType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="consecutivo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serieInicial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serieFinal" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemContratoServicioType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="consecutivo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoServicio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="valorSeleccionado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoMontoDescuento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="montoPagar" type="xsd:string" />
+      <xsd:element minOccurs="0" name="periodo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemHistoricoAcuerdoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroPCS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoAsignacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioAsignacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreUsuarioAsignacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaAsignacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="horaAsignacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoPendiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaPendiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="horaPendiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioPendiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreUsuarioPendiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoActivacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaActivacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="horaActivacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioActivacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreUsuarioActivacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="horaRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreUsuarioRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoAnulador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioAnulador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreUsuarioAnulador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaAnulador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="horaAnulador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoBSCS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descEstado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indicadorVentaEquipo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoClienteSAP" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoPlanTarifario1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanTarifario1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoPlanTarifario2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanTarifario2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono3" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoPlanTarifario3" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanTarifario3" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoAprobacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroHDC" type="xsd:string" />
+      <xsd:element minOccurs="0" name="planAnterior" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanAnterior" type="xsd:string" />
+      <xsd:element minOccurs="0" name="plazoAcuerdo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descripcionPlazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoRenovacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="vendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreVendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descripcionClaseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacionRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacionAnulado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacionPendiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoActivacionCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="activacionLinea" type="xsd:string" />
+      <xsd:element minOccurs="0" name="servicioBlackberry" type="xsd:string" />
+      <xsd:element minOccurs="0" name="motivoMigracion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemAsientoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="stype" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bldat" type="xsd:string" />
+      <xsd:element minOccurs="0" name="blart" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bukrs" type="xsd:string" />
+      <xsd:element minOccurs="0" name="budat" type="xsd:string" />
+      <xsd:element minOccurs="0" name="wwert" type="xsd:string" />
+      <xsd:element minOccurs="0" name="waers" type="xsd:string" />
+      <xsd:element minOccurs="0" name="xblnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="bktxt" type="xsd:string" />
+      <xsd:element minOccurs="0" name="newbs" type="xsd:string" />
+      <xsd:element minOccurs="0" name="newko" type="xsd:string" />
+      <xsd:element minOccurs="0" name="newum" type="xsd:string" />
+      <xsd:element minOccurs="0" name="wrbtr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="zterm" type="xsd:string" />
+      <xsd:element minOccurs="0" name="zfbdt" type="xsd:string" />
+      <xsd:element minOccurs="0" name="zlspr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="zuonr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sgtxt" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kostl" type="xsd:string" />
+      <xsd:element minOccurs="0" name="prctr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kkber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="aufnr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="kursf" type="xsd:string" />
+      <xsd:element minOccurs="0" name="xmwst" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mwskz" type="xsd:string" />
+      <xsd:element minOccurs="0" name="qsskz" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fipos" type="xsd:string" />
+      <xsd:element minOccurs="0" name="monat" type="xsd:string" />
+      <xsd:element minOccurs="0" name="zlsch" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fistl" type="xsd:string" />
+      <xsd:element minOccurs="0" name="gsber" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dmbtr" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dmbe2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="projk" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoVentaPorDocumentoLocal">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_HIST_CLIENTE</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="desde" type="xsd:string" />
+      <xsd:element minOccurs="0" name="hasta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroResultados" type="xsd:string" />
+      <xsd:element minOccurs="0" name="flag" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="esDevolucion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoVentaPorDocumentoLocalResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_HIST_CLIENTE</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaHistCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemHistCliente" type="MgVta:itemHistClienteType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMensajes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemMensajes" type="MgVta:itemMensajesType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoVentaPorTelefonoLocal">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_HIST_X_NRO_TELEF</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="0" name="nroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="flag" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoVentaPorTelefonoLocalResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_HIST_X_NRO_TELEF</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaHistCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemHistCliente" type="MgVta:itemHistClienteType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMensajes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemMensajes" type="MgVta:itemMensajesType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarDetallePedidoLocal">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_PEDIDO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="0" name="referencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficina" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroSAP" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocumento" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarDetallePedidoLocalResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_PEDIDO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaDocumentos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemDocumentos" type="MgVta:itemDocumentosType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaLineaDoc">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemLineaDoc" type="MgVta:itemLineaDocType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaLineaDocIMEI">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemLineaDocIMEI" type="MgVta:itemLineaDocIMEIType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaContratoServicio">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemContratoServicio" type="MgVta:itemContratoServicioType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMensajes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemMensajes" type="MgVta:itemMensajesType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoAcuerdoLocal">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_REP_HISTO_ACUERDO_PCS</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="0" name="fechaInicioContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaFinContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContratoInicial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContratoFinal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="opcionMenu" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indicadorVentaEquipo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="usuarioAsignacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cantidadAcuerdos" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaAlternativa" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroPCSInicial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroPCSFinal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indicadorPosicion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoAcuerdoLocalResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_REP_HISTO_ACUERDO_PCS</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaHistoricoAcuerdo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemHistoricoAcuerdo" type="MgVta:itemHistoricoAcuerdoType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMensajes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemMensajes" type="MgVta:itemMensajesType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemAcuerdosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroPCS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descEstado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="vendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreVendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoVendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="campana" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descCampana" type="xsd:string" />
+      <xsd:element minOccurs="0" name="plazoAcuerdo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="migracion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="debitoAutomatico" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="monedaTarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lineaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaVencimientoTarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="analistaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreAnalista" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoObservacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descripcionObservacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="Observaciones" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroAprobacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descripcionTipoRechazo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indicadorPosicion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="resultado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoRenovacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codBSCS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="planRenovacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoBanco" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacionBanco" type="xsd:string" />
+      <xsd:element minOccurs="0" name="renovacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroClarify" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroHelpdeskComercial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="indicadorAlquiler" type="xsd:string" />
+      <xsd:element minOccurs="0" name="reposicion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="aprobador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="liminteCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="evaluacionCrediticiaManual" type="xsd:string" />
+      <xsd:element minOccurs="0" name="scoreCrediticio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="controlFraude" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroCarpetaObservada" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContratoAnterior" type="xsd:string" />
+      <xsd:element minOccurs="0" name="documentoSustento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="operador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacionOperador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoProductoOperador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="textoBreveExplicativo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="planAnterior" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanAnterior" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descTipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descClaseVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoBSCSCuenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoBSCSSubCuenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="limiteCreditoMaximo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sumaPlanesActualesDevueltoBSCS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sumaPlanesAVenderAcuerdo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="responsablePago" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroReferencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoArea" type="xsd:string" />
+      <xsd:element minOccurs="0" name="campoAdicionalDireccion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoActivacionCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="activacionLinea" type="xsd:string" />
+      <xsd:element minOccurs="0" name="acuerdoManual" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoClienteActivacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="servicioBlackberry" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVentaOri" type="xsd:string" />
+      <xsd:element minOccurs="0" name="motivoMigracion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="comentario" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoMonto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="montoAPagar" type="xsd:string" />
+      <xsd:element minOccurs="0" name="periodo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemDetalleAcuerdoType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="linea" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroSerie" type="xsd:string" />
+      <xsd:element minOccurs="0" name="asociado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoEquipo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serieEquipo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cuotas" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precioVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precioLista" type="xsd:string" />
+      <xsd:element minOccurs="0" name="planTarifario" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descPlanTarifario" type="xsd:string" />
+      <xsd:element minOccurs="0" name="serie20DigitosSIMCARD" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoMonto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="montoAPagar" type="xsd:string" />
+      <xsd:element minOccurs="0" name="periodo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemServiciosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="consecutivo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoServicio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descripcion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="valorSeleccionado" type="xsd:string" />
+      <xsd:element minOccurs="0" name="orden" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoMonto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="montoAPagar" type="xsd:string" />
+      <xsd:element minOccurs="0" name="periodo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="itemClienteType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" name="apellidoPaterno" type="xsd:string" />
+      <xsd:element minOccurs="0" name="apellidoMaterno" type="xsd:string" />
+      <xsd:element minOccurs="0" name="razonSocial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaNacimiento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fax" type="xsd:string" />
+      <xsd:element minOccurs="0" name="email" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreConyuge" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cargaFamiliar" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sexo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="calle" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoUbigeo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="calleFactura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoUbigeoFactura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroDocRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="apellidoPaternoRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="apellidoMaternoRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoDocContacto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroDocContacto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreContacto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="apellidoPaternoContacto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="apellidoMaternoContacto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoContacto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cargo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="dependiente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreEmpresa" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cargoEmpresa" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoEmpresa" type="xsd:string" />
+      <xsd:element minOccurs="0" name="actividad" type="xsd:string" />
+      <xsd:element minOccurs="0" name="ingresoBruto" type="xsd:string" />
+      <xsd:element minOccurs="0" name="otrosIngresos" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroTarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="monedaTarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="lineaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaVencimientoTarjetaCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" name="clasificacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseRamoIndustrial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="observacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoCivil" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tituloCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tituloRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaNacimientoRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sexoRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="estadoCivilRepresentanteLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupoCuentasDeudor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="campoAdicionalDireccion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoPref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="faxPref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="operador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacionOperador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoProductoOperador" type="xsd:string" />
+      <xsd:element minOccurs="0" name="textoBreveExplicativo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="telefonoLegalPref" type="xsd:string" />
+      <xsd:element minOccurs="0" name="campoAdicionalDireccionLegal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroCliente" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarDetalleAcuerdoLocal">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_ACUERDO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="0" name="nroContrato" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroContratoPCS" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarDetalleAcuerdoLocalResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_ACUERDO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaAcuerdos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemAcuerdos" type="MgVta:itemAcuerdosType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaDetalleAcuerdo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemDetalleAcuerdo" type="MgVta:itemDetalleAcuerdoType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaServicios">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemServicios" type="MgVta:itemServiciosType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMensajes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemMensajes" type="MgVta:itemMensajesType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemCliente" type="MgVta:itemClienteType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoVtaClientePorDoc">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_HISTORIA_CLIENTE</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="0" name="tipoDocCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="desde" type="xsd:string" />
+      <xsd:element minOccurs="0" name="hasta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nroResultados" type="xsd:string" />
+      <xsd:element minOccurs="0" name="flag" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="esDevolucion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarHistoricoVtaClientePorDocResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_HISTORIA_CLIENTE</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaHistCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemHistCliente" type="MgVta:itemHistClienteType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMensajes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemMensajes" type="MgVta:itemMensajesType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerarAsientoControlCredito">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSISACT_GENERA_ASIENTO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element name="listaAsiento">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemAsiento" type="MgVta:itemAsientoType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerarAsientoControlCreditoResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSISACT_GENERA_ASIENTO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="listaAsiento">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="itemAsiento" type="MgVta:itemAsientoType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Bapiret2Bean">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="Bapiret2Bean" type="Q1:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="consultarHistoricoVentaPorDocumentoLocalRequest" type="MgVta:ConsultarHistoricoVentaPorDocumentoLocal" />
+  <xsd:element name="consultarHistoricoVentaPorDocumentoLocalResponse" type="MgVta:ConsultarHistoricoVentaPorDocumentoLocalResponse" />
+  <xsd:element name="consultarHistoricoVentaPorTelefonoLocalRequest" type="MgVta:ConsultarHistoricoVentaPorTelefonoLocal" />
+  <xsd:element name="consultarHistoricoVentaPorTelefonoLocalResponse" type="MgVta:ConsultarHistoricoVentaPorTelefonoLocalResponse" />
+  <xsd:element name="consultarDetallePedidoLocalRequest" type="MgVta:ConsultarDetallePedidoLocal" />
+  <xsd:element name="consultarDetallePedidoLocalResponse" type="MgVta:ConsultarDetallePedidoLocalResponse" />
+  <xsd:element name="consultarHistoricoAcuerdoLocalRequest" type="MgVta:ConsultarHistoricoAcuerdoLocal" />
+  <xsd:element name="consultarHistoricoAcuerdoLocalResponse" type="MgVta:ConsultarHistoricoAcuerdoLocalResponse" />
+  <xsd:element name="consultarDetalleAcuerdoLocalRequest" type="MgVta:ConsultarDetalleAcuerdoLocal" />
+  <xsd:element name="consultarDetalleAcuerdoLocalResponse" type="MgVta:ConsultarDetalleAcuerdoLocalResponse" />
+  <xsd:element name="consultarHistoricoVtaClientePorDocRequest" type="MgVta:ConsultarHistoricoVtaClientePorDoc" />
+  <xsd:element name="consultarHistoricoVtaClientePorDocResponse" type="MgVta:ConsultarHistoricoVtaClientePorDocResponse" />
+  <xsd:element name="generarAsientoControlCreditoRequest" type="MgVta:GenerarAsientoControlCredito" />
+  <xsd:element name="generarAsientoControlCreditoResponse" type="MgVta:GenerarAsientoControlCreditoResponse" />
+</xsd:schema>

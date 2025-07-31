@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/oac/consultapagodra/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/oac/consultapagodra/" name="ConsultaPagoDRA" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/oac/consultapagodra/">
+      <xsd:element name="consultaPagoDRA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="COD_APLICACION" type="xsd:string" />
+            <xsd:element name="USUARIO_APLICACION" type="xsd:string" />
+            <xsd:element name="COD_PAGO_DRA" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultaPagoDRAResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="CABECERA_DRA" type="tns:CabeceraDRAArrayType" />
+            <xsd:element name="DETALLE_DRA" type="tns:DetalleDRAArrayType" />
+            <xsd:element name="COD_RPTA" type="xsd:string" />
+            <xsd:element name="MSG_RPTA" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="CabeceraDRAArrayType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="cabeceraDRA" type="tns:CabeceraDRAType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DetalleDRAArrayType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="detalleDRA" type="tns:DetalleDRAType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CabeceraDRAType">
+        <xsd:sequence>
+          <xsd:element name="DOCID_CLIENTE" nillable="true" type="xsd:string" />
+          <xsd:element name="RAZON_SOCIAL_CLIENTE" nillable="true" type="xsd:string" />
+          <xsd:element name="IMPORTE_DRA" nillable="true" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DetalleDRAType">
+        <xsd:sequence>
+          <xsd:element name="TIPO_DOCUMENTO" nillable="true" type="xsd:string" />
+          <xsd:element name="NRO_DOCUMENTO" nillable="true" type="xsd:string" />
+          <xsd:element name="DESCRIPCION_DOCUMENTO" nillable="true" type="xsd:string" />
+          <xsd:element name="IMPORTE" nillable="true" type="xsd:decimal" />
+          <xsd:element name="FEC_EMISION" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="FEC_VENC" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="LINEA" nillable="true" type="xsd:string" />
+          <xsd:element name="NRO_CONTRATO_SISACT" nillable="true" type="xsd:string" />
+          <xsd:element name="ORIGEN_CUENTA" nillable="true" type="xsd:string" />
+          <xsd:element name="COD_CUENTA" nillable="true" type="xsd:string" />
+          <xsd:element name="COD_CLIENTE_SAP" nillable="true" type="xsd:string" />
+          <xsd:element name="NRO_REFERENCIA_SAP" nillable="true" type="xsd:string" />
+          <xsd:element name="ESTADO" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="consultaPagoDRARequest">
+    <wsdl:part name="parameters" element="tns:consultaPagoDRA" />
+  </wsdl:message>
+  <wsdl:message name="consultaPagoDRAResponse">
+    <wsdl:part name="parameters" element="tns:consultaPagoDRAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaPagoDRA">
+    <wsdl:operation name="consultaPagoDRA">
+      <wsdl:input message="tns:consultaPagoDRARequest" />
+      <wsdl:output message="tns:consultaPagoDRAResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaPagoDRA" type="tns:ConsultaPagoDRA">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="consultaPagoDRA">
+      <soap:operation soapAction="http://claro.com.pe/eai/oac/consultapagodra/consultaPagoDRA" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaPagoDRA">
+    <wsdl:port name="ConsultaPagoDRA" binding="tns:ConsultaPagoDRA">
+      <soap:address location="http://limdeseaiv15.tim.com.pe:8901/OAC_Services/Inquiry/ConsultaPagoDocRentaAdelantada" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

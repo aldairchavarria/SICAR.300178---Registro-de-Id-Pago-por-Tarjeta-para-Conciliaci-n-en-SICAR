@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s1="http://claro.com.pe/postpago/validacambiosimrequest" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/postpago/cambiosimrequest" xmlns:s3="http://claro.com.pe/postpago/validacambiosimresponse" xmlns:s2="http://claro.com.pe/postpago/cambiosimresponse" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://pe.com.claro.esb.services" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe.com.claro.esb.services" name="CambioSIMPostpagoWSDefinitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe.com.claro.esb.services" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://claro.com.pe/postpago/cambiosimrequest" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/postpago/cambiosimrequest">
+      <xs:element name="CAMBIO_SIM_REQUEST">
+        <xs:annotation>
+          <xs:documentation>Estructura del XML de entrada para realizar un cambio de SIM en Post Pago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CS_ID" type="CS_IDType" />
+            <xs:element name="CO_ID" type="CO_IDType" />
+            <xs:element name="SERIAL_NUMBER_NEW" type="SERIAL_NUMBERType" />
+            <xs:element name="FECHA_EJECUCION" type="FECHAType" />
+            <xs:element name="MOTIVO_CAMBIO" type="MOTIVO_CAMBIOType" />
+            <xs:element name="METODO_CONTACTO" type="METODO_CONTACTOType" />
+            <xs:element name="MSISDN" type="MSISDNType" />
+            <xs:element name="TRACE" type="TRACEType" />
+            <xs:element name="USUARIO_SISTEMA" type="USUARIO_SISTEMAType" />
+            <xs:element name="USUARIO_APLICACION" type="USUARIO_APLICACIONType" />
+            <xs:element name="PASSWORD_USUARIO" type="PASSWORD_USUARIOType" />
+            <xs:element name="FECHA" type="FECHAType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="CS_IDType">
+        <xs:restriction base="xs:long" />
+      </xs:simpleType>
+      <xs:simpleType name="CO_IDType">
+        <xs:restriction base="xs:long" />
+      </xs:simpleType>
+      <xs:simpleType name="SERIAL_NUMBERType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="MOTIVO_CAMBIOType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="100" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="METODO_CONTACTOType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="60" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="MSISDNType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="20" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TRACEType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="USUARIO_SISTEMAType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="USUARIO_APLICACIONType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PASSWORD_USUARIOType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="FECHAType">
+        <xs:restriction base="xs:dateTime" />
+      </xs:simpleType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe.com.claro.esb.services" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://claro.com.pe/postpago/validacambiosimrequest" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/postpago/validacambiosimrequest">
+      <xs:element name="VALIDA_CAMBIO_SIM_REQUEST">
+        <xs:annotation>
+          <xs:documentation>Estructura del XML de entrada que valida si procede el cambio de SIM en Post Pago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CS_ID" type="CS_IDType" />
+            <xs:element name="CO_ID" type="CO_IDType" />
+            <xs:element name="SERIAL_NUMBER_NEW" type="SERIAL_NUMBERType" />
+            <xs:element name="MSISDN" type="MSISDNType" />
+            <xs:element name="TRACE" type="TRACEType" />
+            <xs:element name="USUARIO_SISTEMA" type="USUARIO_SISTEMAType" />
+            <xs:element name="USUARIO_APLICACION" type="USUARIO_APLICACIONType" />
+            <xs:element name="PASSWORD_USUARIO" type="PASSWORD_USUARIOType" />
+            <xs:element name="FECHA" type="FECHAType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:simpleType name="CS_IDType">
+        <xs:restriction base="xs:long" />
+      </xs:simpleType>
+      <xs:simpleType name="CO_IDType">
+        <xs:restriction base="xs:long" />
+      </xs:simpleType>
+      <xs:simpleType name="SERIAL_NUMBERType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="MSISDNType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="20" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="TRACEType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="USUARIO_SISTEMAType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="USUARIO_APLICACIONType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="PASSWORD_USUARIOType">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="12" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="FECHAType">
+        <xs:restriction base="xs:dateTime" />
+      </xs:simpleType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe.com.claro.esb.services" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://claro.com.pe/postpago/cambiosimresponse" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/postpago/cambiosimresponse">
+      <xs:element name="CAMBIO_SIM_RESPONSE">
+        <xs:annotation>
+          <xs:documentation>Estructura del XML de salida que retorna el estado de ejecución del cambio de SIM</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MOTIVOS" type="MOTIVOS_Type" />
+            <xs:element name="TRACE" type="TRACEType" />
+            <xs:element name="CODIGO_RETORNO" type="CODIGO_RETORNOType" />
+            <xs:element name="DESCRIPCION_RETORNO" type="DESCRIPCION_RETORNOType" />
+            <xs:element name="IDENTIFICADOREAI" type="IDENTIFICADOREAIType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="MOTIVOS_Type">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MOTIVO" type="MOTIVO_Type" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MOTIVO_Type">
+        <xs:sequence>
+          <xs:element name="COD_MOTIVO" type="CODMOTIVO_Type" />
+          <xs:element name="DESC_MOTIVO" type="DESCMOTIVO_Type" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="CODMOTIVO_Type">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="DESCMOTIVO_Type">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="TRACEType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="CODIGO_RETORNOType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="DESCRIPCION_RETORNOType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="IDENTIFICADOREAIType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe.com.claro.esb.services" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://claro.com.pe/postpago/validacambiosimresponse" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/postpago/validacambiosimresponse">
+      <xs:element name="VALIDA_CAMBIO_SIM_RESPONSE">
+        <xs:annotation>
+          <xs:documentation>Estructura del XML de salida que retorna si procede o no el cambio en SIM</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="FLAG_VAL_CAMBIO_SIM" type="s3:FLAGVALCAMBIOSIMType" />
+            <xs:element name="DESC_FLAG_VAL_CAMBIO_SIM" type="s3:DESCFLAGVALCAMBIOSIMType" />
+            <xs:element name="FLAG_BLQ_ROB" type="s3:FLAGBLQROBType" />
+            <xs:element name="DESC_FLAG_FLAG_BLQ_ROB" type="s3:DESCFLAG_BLQ_ROBType" />
+            <xs:element name="MOTIVOS" type="s3:MOTIVOS_Type" />
+            <xs:element name="TRACE" type="s3:TRACEType" />
+            <xs:element name="CODIGO_RETORNO" type="s3:CODIGO_RETORNOType" />
+            <xs:element name="DESCRIPCION_RETORNO" type="s3:DESCRIPCION_RETORNOType" />
+            <xs:element name="IDENTIFICADOREAI" type="s3:IDENTIFICADOREAIType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="MOTIVOS_Type">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MOTIVO" type="s3:MOTIVO_Type" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="FLAGVALCAMBIOSIMType">
+        <xs:restriction base="xs:byte" />
+      </xs:simpleType>
+      <xs:simpleType name="DESCFLAGVALCAMBIOSIMType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="FLAGBLQROBType">
+        <xs:restriction base="xs:byte" />
+      </xs:simpleType>
+      <xs:simpleType name="DESCFLAG_BLQ_ROBType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="TRACEType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="CODIGO_RETORNOType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="DESCRIPCION_RETORNOType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="IDENTIFICADOREAIType">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:complexType name="MOTIVO_Type">
+        <xs:sequence>
+          <xs:element name="COD_MOTIVO" type="s3:CODMOTIVO_Type" />
+          <xs:element name="DESC_MOTIVO" type="s3:DESCMOTIVO_Type" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="CODMOTIVO_Type">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+      <xs:simpleType name="DESCMOTIVO_Type">
+        <xs:restriction base="xs:string" />
+      </xs:simpleType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe.com.claro.esb.services" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe.com.claro.esb.services">
+      <xs:import namespace="http://claro.com.pe/postpago/cambiosimresponse" />
+      <xs:import namespace="http://claro.com.pe/postpago/validacambiosimresponse" />
+      <xs:import namespace="http://claro.com.pe/postpago/validacambiosimrequest" />
+      <xs:import namespace="http://claro.com.pe/postpago/cambiosimrequest" />
+      <xs:element name="validarCambioDeSIM">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:val="http://claro.com.pe/postpago/validacambiosimrequest" ref="val:VALIDA_CAMBIO_SIM_REQUEST" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validarCambioDeSIMResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:val="http://claro.com.pe/postpago/validacambiosimresponse" ref="val:VALIDA_CAMBIO_SIM_RESPONSE" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cambioSIMPostPago">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:cam="http://claro.com.pe/postpago/cambiosimrequest" ref="cam:CAMBIO_SIM_REQUEST" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cambioSIMPostPagoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:cam="http://claro.com.pe/postpago/cambiosimresponse" ref="cam:CAMBIO_SIM_RESPONSE" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validarCambioDeSIM">
+    <wsdl:part name="parameters" element="tns:validarCambioDeSIM" />
+  </wsdl:message>
+  <wsdl:message name="validarCambioDeSIMResponse">
+    <wsdl:part name="parameters" element="tns:validarCambioDeSIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="cambioSIMPostPago">
+    <wsdl:part name="parameters" element="tns:cambioSIMPostPago" />
+  </wsdl:message>
+  <wsdl:message name="cambioSIMPostPagoResponse">
+    <wsdl:part name="parameters" element="tns:cambioSIMPostPagoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CambioSIMPostpagoWSPort">
+    <wsdl:operation name="validarCambioDeSIM" parameterOrder="parameters">
+      <wsdl:input message="tns:validarCambioDeSIM" />
+      <wsdl:output message="tns:validarCambioDeSIMResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cambioSIMPostPago" parameterOrder="parameters">
+      <wsdl:input message="tns:cambioSIMPostPago" />
+      <wsdl:output message="tns:cambioSIMPostPagoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CambioSIMPostpagoWSSoapBinding" type="tns:CambioSIMPostpagoWSPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="validarCambioDeSIM">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambioSIMPostPago">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CambioSIMPostpagoWS">
+    <wsdl:port name="CambioSIMPostpagoWSPort" binding="tns:CambioSIMPostpagoWSSoapBinding">
+      <soap:address location="http://limdeseaiv22.tim.com.pe:8909/CambioSIMPostpagoWS/CambioSIMPostpagoWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

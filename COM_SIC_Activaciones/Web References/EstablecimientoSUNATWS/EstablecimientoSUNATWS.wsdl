@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ventas/establecimientosunat/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ventas/establecimientosunat/ws" name="EstablecimientoSUNATWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ventas/establecimientosunat/ws" />
+    <s:schema>
+      <s:import schemaLocation="http://172.17.26.38:20000/EstablecimientoSUNATWS/ebsestablecimientoSUNATSB11?xsd=2" namespace="http://claro.com.pe/eai/ventas/establecimientosunat/ws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="establecimientoSUNATRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ventas/establecimientosunat/ws/types" element="q1:establecimientoSUNATRequest" />
+  </wsdl:message>
+  <wsdl:message name="establecimientoSUNATResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ventas/establecimientosunat/ws/types" element="q2:establecimientoSUNATResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerCodigoProductoSUNATRequestMsg">
+    <wsdl:part name="request" xmlns:q3="http://claro.com.pe/eai/ventas/establecimientosunat/ws/types" element="q3:obtenerCodigoProductoSUNATRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerCodigoProductoSUNATResponseMsg">
+    <wsdl:part name="response" xmlns:q4="http://claro.com.pe/eai/ventas/establecimientosunat/ws/types" element="q4:obtenerCodigoProductoSUNATResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EstablecimientoSUNATWSPortType">
+    <wsdl:operation name="establecerSUNAT">
+      <wsdl:input message="tns:establecimientoSUNATRequestMsg" />
+      <wsdl:output message="tns:establecimientoSUNATResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCodigoProductoSUNAT">
+      <wsdl:input message="tns:obtenerCodigoProductoSUNATRequestMsg" />
+      <wsdl:output message="tns:obtenerCodigoProductoSUNATResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EstablecimientoSUNATWSPortTypeSOAP11Binding" type="tns:EstablecimientoSUNATWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="establecerSUNAT">
+      <soap:operation soapAction="http://claro.com.pe/eai/ventas/establecimientosunat/ws/establecerSUNAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCodigoProductoSUNAT">
+      <soap:operation soapAction="http://claro.com.pe/eai/ventas/establecimientosunat/ws/obtenerCodigoProductoSUNAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EstablecimientoSUNATWSPortTypeSOAP12Binding" type="tns:EstablecimientoSUNATWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="establecerSUNAT">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ventas/establecimientosunat/ws/establecerSUNAT" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCodigoProductoSUNAT">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ventas/establecimientosunat/ws/obtenerCodigoProductoSUNAT" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EstablecimientoSUNATWSService">
+    <wsdl:port name="ebsestablecimientoSUNATSB11" binding="tns:EstablecimientoSUNATWSPortTypeSOAP11Binding">
+      <soap:address location="http://172.17.26.38:20000/EstablecimientoSUNATWS/ebsestablecimientoSUNATSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsestablecimientoSUNATSB12" binding="tns:EstablecimientoSUNATWSPortTypeSOAP12Binding">
+      <soap12:address location="http://172.17.26.38:20000/EstablecimientoSUNATWS/ebsestablecimientoSUNATSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

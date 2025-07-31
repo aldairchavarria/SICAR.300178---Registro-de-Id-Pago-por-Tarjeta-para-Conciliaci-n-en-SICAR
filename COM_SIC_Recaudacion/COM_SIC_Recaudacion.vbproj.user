@@ -1,0 +1,48 @@
+<VisualStudioProject>
+    <VisualBasic LastOpenVersion = "7.10.3077" >
+        <Build>
+            <Settings ReferencePath = "D:\Manuel\SICAR\Recaudación TELMEX - Mejoras\SICAR_MEJORAS_RECTELMEX\COM_SIC_Recaudacion\bin\;D:\Erick\HARVEST\SICAR\COM_SIC_Recaudacion\bin\;D:\Harvest\SICAR_PP\SICAR\COM_SIC_Recaudacion\bin\;D:\IGNACIO\SICAR_HARVEST_20131122\SICAR\COM_SIC_Recaudacion\bin\;F:\2015.01.12 Cobertura\alineacion SICAR\SICAR\COM_SIC_Recaudacion\bin\;D:\Manuel\2015.01.20 VentaCuotas + Renov Unificada\SICAR\Fuentes\SICAR\COM_SIC_Recaudacion\bin\;C:\Warner\2015.02.16\urgente\f1\Fuentes\SICAR\COM_SIC_Recaudacion\bin\" >
+                <Config
+                    Name = "Debug"
+                    EnableASPDebugging = "false"
+                    EnableASPXDebugging = "false"
+                    EnableUnmanagedDebugging = "false"
+                    EnableSQLServerDebugging = "false"
+                    RemoteDebugEnabled = "false"
+                    RemoteDebugMachine = ""
+                    StartAction = "Project"
+                    StartArguments = ""
+                    StartPage = ""
+                    StartProgram = ""
+                    StartURL = ""
+                    StartWorkingDirectory = ""
+                    StartWithIE = "true"
+                />
+                <Config
+                    Name = "Release"
+                    EnableASPDebugging = "false"
+                    EnableASPXDebugging = "false"
+                    EnableUnmanagedDebugging = "false"
+                    EnableSQLServerDebugging = "false"
+                    RemoteDebugEnabled = "false"
+                    RemoteDebugMachine = ""
+                    StartAction = "Project"
+                    StartArguments = ""
+                    StartPage = ""
+                    StartProgram = ""
+                    StartURL = ""
+                    StartWorkingDirectory = ""
+                    StartWithIE = "true"
+                />
+            </Settings>
+        </Build>
+        <OtherProjectSettings
+            CopyProjectDestinationFolder = ""
+            CopyProjectUncPath = ""
+            CopyProjectOption = "0"
+            ProjectView = "ShowAllFiles"
+            ProjectTrust = "0"
+        />
+    </VisualBasic>
+</VisualStudioProject>
+

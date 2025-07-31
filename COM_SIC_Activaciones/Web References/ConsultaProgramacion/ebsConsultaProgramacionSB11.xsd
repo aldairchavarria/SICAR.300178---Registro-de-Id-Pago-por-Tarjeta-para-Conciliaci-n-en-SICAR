@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="ConsultarServicioProgramadoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="parametrosAuditRequest" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="Msisdn" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="FechaDesde" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="FechaHasta" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="Estado" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="Asesor" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="Cuenta" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="TipoTransaccion" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="CodInteraccion" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="CadDac" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="TipoServicio" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="SerCod" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="parametrosRequest" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ConsultarServicioProgramadoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="parametrosAuditResponse" />
+        <xsd:element name="ListaConsultaServicioProgramado" type="TypeListaConsultaServicioProgramado" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="parametrosResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TypeListaConsultaServicioProgramado">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ServicioProgramado" type="TypeServicioProgramado" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TypeServicioProgramado">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="CoId" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FechaProg" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FechaReg" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FechaEjec" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Estado" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="DescEstado" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Batch" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="MenError" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="CodError" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="UsuarioSistema" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="IdEaiSW" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="ServiCod" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="DescServi" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="MSISDN" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="IdBatch" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="UsuarioAplicacion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="EmailUsuarioApp" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="XmlEntrada" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="NroCuenta" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="CodigoInteraccion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PuntoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="tipoServ" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="coSer" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="tipoReg" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="descCoSer" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditRequest">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipAplicacion" type="xsd:string" />
+      <xsd:element name="nombreAplicacion" type="xsd:string" />
+      <xsd:element name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosAuditResponse">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string" />
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="parametrosResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional">
+        <xsd:complexType>
+          <xsd:attribute name="campo" type="xsd:string" />
+          <xsd:attribute name="valor" type="xsd:string" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

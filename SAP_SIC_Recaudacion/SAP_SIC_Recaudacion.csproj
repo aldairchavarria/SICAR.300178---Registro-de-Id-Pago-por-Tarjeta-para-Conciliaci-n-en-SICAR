@@ -1,0 +1,325 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{6C259589-DF62-464A-A53C-63B25F8753D9}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "SAP_SIC_Recaudacion"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "SAP_SIC_Recaudacion"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "System.EnterpriseServices"
+                    AssemblyName = "System.EnterpriseServices"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.EnterpriseServices.dll"
+                />
+                <Reference
+                    Name = "SAP.Connector"
+                    AssemblyName = "SAP.Connector"
+                    HintPath = "bin\Debug\SAP.Connector.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsRecaudacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Recaudacion.sapwsdl"
+                    BuildAction = "None"
+                    Generator = "SAPConnectorGenerator"
+                    LastGenOutput = "SAP_SIC_Recaudacion.cs"
+                />
+                <File
+                    RelPath = "BAPIRET2.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BAPIRET2Table.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Recaudacion.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "ZST_CON_CUADRE_CAJERO.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_CON_CUADRE_CAJEROTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_DATA_VENTAS_TELEF.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_DATA_VENTAS_TELEFTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_DEUDA_RECAUDACION.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_DEUDA_RECAUDACIONTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PAGO_RECAUD.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PAGO_RECAUDTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PAGOS_RECAUDACION.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PAGOS_RECAUDACIONTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_POOL_PAGOS_RECAUD.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_POOL_PAGOS_RECAUDTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_POOL_RECAUDACION.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_POOL_RECAUDACIONTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_BANCOS.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_BANCOSTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_REC_LOG_DOCUM_PO.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_REC_LOG_DOCUM_POTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_REC_LOG_RECAUDACION.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_REC_LOG_RECAUDACIONTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RECIBO_RECAUDACION.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RECIBO_RECAUDACIONTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_COMP.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_COMP_M.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_COMP_MTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_COMP_TELEF.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_COMP_TELEFTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_COMPTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_TELF_DEU.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_RFC_TELF_DEUTable.cs"
+                    DependentUpon = "SAP_SIC_Recaudacion.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

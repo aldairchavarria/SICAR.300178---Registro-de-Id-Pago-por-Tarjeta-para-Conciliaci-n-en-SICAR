@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://pe/com/claro/esb/services/activdesc/ws" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/activdesc/ws" name="EbsActDescPrepagoServiceDefinitions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:tns="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago">
+      <s:element name="INDatosLineaRequest">
+        <s:annotation>
+          <s:documentation>Datos requeridos para leer los datos del telefono en la IN</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element name="telefono" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="INDatosLineaResponse">
+        <s:annotation>
+          <s:documentation>Validacion de datos para lineas activas</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element name="resultado" type="s:string" />
+            <s:element name="mensaje" type="s:string" />
+            <s:element name="transaccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/activdesc/ws">
+      <xs:import namespace="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" />
+      <xs:element name="ejecutarActivacion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:act="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" ref="act:INDatosLineaRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarActivacionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:act="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" ref="act:INDatosLineaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarDesactivacion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:act="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" ref="act:INDatosLineaRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarDesactivacionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:act="http://pe/com/claro/esb/services/actDescPrepago/schemas/ActDescPrepago" ref="act:INDatosLineaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </types>
+  <message name="ejecutarActivacion">
+    <part name="parameters" element="s1:ejecutarActivacion" />
+  </message>
+  <message name="ejecutarActivacionResponse">
+    <part name="parameters" element="s1:ejecutarActivacionResponse" />
+  </message>
+  <message name="ejecutarDesactivacion">
+    <part name="parameters" element="s1:ejecutarDesactivacion" />
+  </message>
+  <message name="ejecutarDesactivacionResponse">
+    <part name="parameters" element="s1:ejecutarDesactivacionResponse" />
+  </message>
+  <portType name="EbsActDescPrepago">
+    <operation name="ejecutarActivacion" parameterOrder="parameters">
+      <input message="s1:ejecutarActivacion" />
+      <output message="s1:ejecutarActivacionResponse" />
+    </operation>
+    <operation name="ejecutarDesactivacion" parameterOrder="parameters">
+      <input message="s1:ejecutarDesactivacion" />
+      <output message="s1:ejecutarDesactivacionResponse" />
+    </operation>
+  </portType>
+  <binding name="EbsActDescPrepagoServiceSoapBinding" type="s1:EbsActDescPrepago">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ejecutarActivacion">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="ejecutarDesactivacion">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EbsActDescPrepagoService">
+    <port name="EbsActDescPrepagoSoapPort" binding="s1:EbsActDescPrepagoServiceSoapBinding">
+      <soap:address location="http://limdeseaiv03.tim.com.pe:8909/ActivarDesactivarPrepagoWS/EbsActDescPrepago" />
+    </port>
+  </service>
+</definitions>

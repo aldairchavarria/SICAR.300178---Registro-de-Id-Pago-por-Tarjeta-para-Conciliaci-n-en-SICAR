@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/ws/postventa/RegistroDatosVentaPrepago" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/RegistroDatosVentaPrepago" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/RegistroDatosVentaPrepago">
+      <s:element name="registrarVentaRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="nombreAplicacion" type="s:string" />
+            <s:element name="chippack" type="s:string" />
+            <s:element name="opcion" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="numeroin" type="s:string" />
+            <s:element name="promocion" type="s:string" />
+            <s:element name="tipoActivacion" type="s:string" />
+            <s:element name="tipoProducto" type="s:string" />
+            <s:element name="adicional1" type="s:string" />
+            <s:element name="adicional2" type="s:string" />
+            <s:element name="puntoVenta" type="s:string" />
+            <s:element name="departamento" type="s:string" />
+            <s:element name="fechaRegistro" type="s:date" />
+            <s:element name="origen" type="s:string" />
+            <s:element name="imei" type="s:string" />
+            <s:element name="iccid" type="s:string" />
+            <s:element name="codpromo" type="s:string" />
+            <s:element name="offer" type="s:string" />
+            <s:element name="subscriberstatusFinal" type="s:string" />
+            <s:element name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="registrarVentaRequestMsg">
+    <part name="parameters" element="s0:registrarVentaRequest" />
+  </message>
+  <message name="registrarVentaResponseMsg">
+    <part name="parameters" element="s0:registrarVentaResponse" />
+  </message>
+  <portType name="ebsRegistroDatosVentaPrePortType">
+    <operation name="registrarVenta">
+      <input message="s0:registrarVentaRequestMsg" />
+      <output message="s0:registrarVentaResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsRegistroDatosVentaPrePortTypeSOAP11Binding" type="s0:ebsRegistroDatosVentaPrePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="registrarVenta">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/RegistroDatosVentaPrepago/registrarVenta" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ebsRegistroDatosVentaPrePortTypeSOAP12Binding" type="s0:ebsRegistroDatosVentaPrePortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="registrarVenta">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/postventa/RegistroDatosVentaPrepago/registrarVenta" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsRegistroDatosVentaPreService">
+    <port name="ebsRegistroDatosVentaPreSB11" binding="s0:ebsRegistroDatosVentaPrePortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/RegistroDatosVentaPrepago/ebsRegistroDatosVentaPreSB11" />
+    </port>
+    <port name="ebsRegistroDatosVentaPreSB12" binding="s0:ebsRegistroDatosVentaPrePortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv13.tim.com.pe:7909/RegistroDatosVentaPrepago/ebsRegistroDatosVentaPreSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

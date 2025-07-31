@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/util/enviocorreo" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/util/enviocorreo" name="envioCorreoWSService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/EnvioCorreoWS/envioCorreoWSPortSB11?xsd=1" namespace="http://claro.com.pe/eai/util/enviocorreo" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="enviarCorreo">
+    <wsdl:part name="parameters" element="tns:enviarCorreoRequest" />
+  </wsdl:message>
+  <wsdl:message name="enviarCorreoResponse">
+    <wsdl:part name="parameters" element="tns:enviarCorreoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="envioCorreoWSPortType">
+    <wsdl:operation name="enviarCorreo">
+      <wsdl:input message="tns:enviarCorreo" />
+      <wsdl:output message="tns:enviarCorreoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="envioCorreoWSPortSB11Binding" type="tns:envioCorreoWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="enviarCorreo">
+      <soap:operation soapAction="http://claro.com.pe/eai/util/enviocorreo/enviarCorreo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="envioCorreoWSService">
+    <wsdl:port name="envioCorreoWSPortSB11" binding="tns:envioCorreoWSPortSB11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/EnvioCorreoWS/envioCorreoWSPortSB11" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

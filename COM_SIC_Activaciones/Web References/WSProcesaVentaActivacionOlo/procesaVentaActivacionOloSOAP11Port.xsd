@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/ws/baseschema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/procesaventaactivacion/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://192.168.100.152:8901/ProcesaVentaActivacionOloWS/procesaVentaActivacionOloSOAP11Port?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="procesarVentaActivacionRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="tipoDocumento" type="xsd:string" />
+        <xsd:element name="nroDocumento" type="xsd:string" />
+        <xsd:element name="idPedido" type="xsd:string" />
+        <xsd:element name="idVenta" type="xsd:string" />
+        <xsd:element name="idRecarga" type="xsd:string" />
+        <xsd:element name="tipoOperacion" type="xsd:string" />
+        <xsd:element name="serviceId" type="xsd:string" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="procesarVentaActivacionResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

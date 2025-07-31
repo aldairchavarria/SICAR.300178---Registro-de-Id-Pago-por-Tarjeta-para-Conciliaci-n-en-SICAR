@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/serviciosybonosmigrar/ws/baseschema" xmlns="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="BaseSchema.xsd" namespace="http://claro.com.pe/eai/serviciosybonosmigrar/ws/baseschema" />
+  <xsd:element name="obtenerServiciosyBonosRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:AuditRequestType" />
+        <xsd:element name="msisdn" type="xsd:string" />
+        <xsd:element name="codPlanBscs" type="xsd:string" />
+        <xsd:element name="codPlanPvu" type="xsd:string" />
+        <xsd:element name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerServiciosyBonosResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:AuditResponseType" />
+        <xsd:element name="Bonos" type="BonosType" />
+        <xsd:element name="ServiciosComercialesAdicionales" type="ServiciosComercialesAdicionalesType" />
+        <xsd:element name="flagOperacion" type="xsd:string" />
+        <xsd:element name="flagDesOperacion" type="xsd:string" />
+        <xsd:element name="flagProgramacion" type="xsd:string" />
+        <xsd:element name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerCargosFijosRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:AuditRequestType" />
+        <xsd:element name="codPlanActual" type="xsd:string" />
+        <xsd:element name="codPlanNuevo" type="xsd:string" />
+        <xsd:element name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerCargosFijosResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:AuditResponseType" />
+        <xsd:element name="cargoFijoAnt" type="xsd:string" />
+        <xsd:element name="cargoFijoNuevo" type="xsd:string" />
+        <xsd:element name="flagOperacion" type="xsd:string" />
+        <xsd:element name="flagDesOperacion" type="xsd:string" />
+        <xsd:element name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarBonosContratarRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:AuditRequestType" />
+        <xsd:element name="fechaProgramacion" type="xsd:date" />
+        <xsd:element name="BonosPvu" type="BonosPvuType" />
+        <xsd:element name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarBonosContratarResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:AuditResponseType" />
+        <xsd:element name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerBonosContratarRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:AuditRequestType" />
+        <xsd:element name="codSolicitud" type="xsd:string" />
+        <xsd:element name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="obtenerBonosContratarResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:AuditResponseType" />
+        <xsd:element name="BonosPvu" type="BonosPvuType" />
+        <xsd:element name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarBonosMantenerRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:AuditRequestType" />
+        <xsd:element name="codSolicitud" type="xsd:string" />
+        <xsd:element name="fechaProgramacion" type="xsd:date" />
+        <xsd:element name="flagRegistraBono" type="xsd:string" />
+        <xsd:element name="BonosBscs" type="BonosBscsType" />
+        <xsd:element name="listaRequestOpcional" type="base:RequestOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarBonosMantenerResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:AuditResponseType" />
+        <xsd:element name="listaResponseOpcional" type="base:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="BonosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Bono" type="BonoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BonoType">
+    <xsd:sequence>
+      <xsd:element name="idBono" type="xsd:string" />
+      <xsd:element name="idContrato" type="xsd:string" />
+      <xsd:element name="codPlan" type="xsd:string" />
+      <xsd:element name="desBono" type="xsd:string" />
+      <xsd:element name="fechaActivacion" type="xsd:date" />
+      <xsd:element name="fechaVigencia" type="xsd:date" />
+      <xsd:element name="fechaEstado" type="xsd:date" />
+      <xsd:element name="estadoBono" type="xsd:string" />
+      <xsd:element name="fechaActContrato" type="xsd:date" />
+      <xsd:element name="idServicio" type="xsd:string" />
+      <xsd:element name="periodos" type="xsd:string" />
+      <xsd:element name="flagTipoBono" type="xsd:string" />
+      <xsd:element name="flagDesTipoBono" type="xsd:string" />
+      <xsd:element name="flagDuracionBono" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ServiciosComercialesAdicionalesType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ServicioComercialAdicional" type="ServicioComercialAdicionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ServicioComercialAdicionalType">
+    <xsd:sequence>
+      <xsd:element name="codGrupo" type="xsd:string" />
+      <xsd:element name="desGrupo" type="xsd:string" />
+      <xsd:element name="codSer" type="xsd:string" />
+      <xsd:element name="desServicio" type="xsd:string" />
+      <xsd:element name="codExcluyente" type="xsd:string" />
+      <xsd:element name="desExcluyente" type="xsd:string" />
+      <xsd:element name="codPlanBscs" type="xsd:string" />
+      <xsd:element name="idServicioPvu" type="xsd:string" />
+      <xsd:element name="idServicioBscs" type="xsd:string" />
+      <xsd:element name="codGrupoServicio" type="xsd:string" />
+      <xsd:element name="ordenPrioridad" type="xsd:string" />
+      <xsd:element name="codPaquete" type="xsd:string" />
+      <xsd:element name="cargoFijo" type="xsd:double" />
+      <xsd:element name="flagSeleccionable" type="xsd:string" />
+      <xsd:element name="flagServicioMostrar" type="xsd:string" />
+      <xsd:element name="flagTipoServicio" type="xsd:string" />
+      <xsd:element name="flagDesTipoServicio" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BonosBscsType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="BonoBscs" type="BonoBscsType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BonosPvuType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="BonoPvu" type="BonoPvuType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BonoBscsType">
+    <xsd:sequence>
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="sncode" type="xsd:integer" />
+      <xsd:element name="tmcode" type="xsd:integer" />
+      <xsd:element name="idBono" type="xsd:integer" />
+      <xsd:element name="fecActBono" type="xsd:date" />
+      <xsd:element name="fecEstado" type="xsd:date" />
+      <xsd:element name="fecVigencia" type="xsd:date" />
+      <xsd:element name="estadoBono" type="xsd:string" />
+      <xsd:element name="fecActContrato" type="xsd:date" />
+      <xsd:element name="flagCompatible" type="xsd:integer" />
+      <xsd:element name="fecProgramacion" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BonoPvuType">
+    <xsd:sequence>
+      <xsd:element name="codSolicitud" type="xsd:double" />
+      <xsd:element name="idBono" type="xsd:double" />
+      <xsd:element name="msisdn" type="xsd:string" />
+      <xsd:element name="tmcode" type="xsd:double" />
+      <xsd:element name="sncode" type="xsd:double" />
+      <xsd:element name="fecActBono" type="xsd:date" />
+      <xsd:element name="fecEstado" type="xsd:date" />
+      <xsd:element name="fecVigencia" type="xsd:date" />
+      <xsd:element name="estadoBono" type="xsd:string" />
+      <xsd:element name="fecActContrato" type="xsd:date" />
+      <xsd:element name="flagBono" type="xsd:string" />
+      <xsd:element name="usuCreacion" type="xsd:string" />
+      <xsd:element name="fecCreacion" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

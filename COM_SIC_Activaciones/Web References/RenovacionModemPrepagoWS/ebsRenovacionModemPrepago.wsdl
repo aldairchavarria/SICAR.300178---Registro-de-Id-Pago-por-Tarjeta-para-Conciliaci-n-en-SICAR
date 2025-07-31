@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/esb/services/postventa/renovacionmodemprepago" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/esb/services/postventa/renovacionmodemprepago" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/esb/services/postventa/renovacionmodemprepago">
+      <s:element name="renovarPlanModemRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="nombreAplicacion" type="s:string" />
+            <s:element name="usrAplicacion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="codigoPromocion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="renovarPlanModemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="renovarPlanModemRequestMsg">
+    <part name="input" element="s0:renovarPlanModemRequest" />
+  </message>
+  <message name="renovarPlanModemResponseMsg">
+    <part name="output" element="s0:renovarPlanModemResponse" />
+  </message>
+  <portType name="ebsRenovacionModemPrepagoPortType">
+    <operation name="renovarPlanModem">
+      <input message="s0:renovarPlanModemRequestMsg" />
+      <output message="s0:renovarPlanModemResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsRenovacionModemPrepagoPortTypeSOAP11Binding" type="s0:ebsRenovacionModemPrepagoPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="renovarPlanModem">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/postventa/renovacionmodemprepago/renovarPlanModem" style="document" />
+      <input>
+        <soap:body use="literal" parts="input" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="output" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsRenovacionModemPrepagoService">
+    <port name="ebsRenovacionModemPrepago" binding="s0:ebsRenovacionModemPrepagoPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/RenovacionModemPrepagoWS/ebsRenovacionModemPrepago" />
+    </port>
+  </service>
+</definitions>

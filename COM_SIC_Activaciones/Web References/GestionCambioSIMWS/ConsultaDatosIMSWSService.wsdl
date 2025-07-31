@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ws/types" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ws" name="ConsultaDatosIMSWSService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ws/types" targetNamespace="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ws/types">
+      <xsd:complexType name="parametrosAuditRequest">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="ipAplicacion" type="xsd:string" />
+          <xsd:element name="nombreAplicacion" type="xsd:string" />
+          <xsd:element name="usuarioAplicacion" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="parametrosAuditResponse">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="codigoRespuesta" type="xsd:string" />
+          <xsd:element name="mensajeRespuesta" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="parametrosRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional">
+            <xsd:complexType>
+              <xsd:attribute name="campo" type="xsd:string" />
+              <xsd:attribute name="valor" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="parametrosResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional">
+            <xsd:complexType>
+              <xsd:attribute name="campo" type="xsd:string" />
+              <xsd:attribute name="valor" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CampoType">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="campo">
+            <xsd:complexType>
+              <xsd:attribute name="nombre" type="xsd:string" />
+              <xsd:attribute name="valor" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="validarNuevoSIMRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditRequest" type="s0:parametrosAuditRequest" />
+            <xsd:element name="iccid" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="s0:parametrosRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validarNuevoSIMResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditResponse" type="s0:parametrosAuditResponse" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="s0:parametrosResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ejecutarReposicionRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditRequest" type="s0:parametrosAuditRequest" />
+            <xsd:element name="msisdn" type="xsd:string" />
+            <xsd:element name="tipoDoc" type="xsd:string" />
+            <xsd:element name="nroDoc" type="xsd:string" />
+            <xsd:element name="iccid" type="xsd:string" />
+            <xsd:element name="flagEjecucionReposicion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="s0:parametrosRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ejecutarReposicionResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditResponse" type="s0:parametrosAuditResponse" />
+            <xsd:element name="codigoRespuestaValidacion" type="xsd:string" />
+            <xsd:element name="mensajeRespuestaValidacion" type="xsd:string" />
+            <xsd:element name="codigoRespuestaReposicion" type="xsd:string" />
+            <xsd:element name="mensajeRespuestaReposicion" type="xsd:string" />
+            <xsd:element name="coId" type="xsd:string" />
+            <xsd:element name="customerId" type="xsd:string" />
+            <xsd:element name="tipoBloqueo" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="s0:parametrosResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validar4GRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditRequest" type="s0:parametrosAuditRequest" />
+            <xsd:element name="msisdn" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="s0:parametrosRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validar4GResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditResponse" type="s0:parametrosAuditResponse" />
+            <xsd:element name="hlr" type="xsd:string" />
+            <xsd:element name="estado4GLinea" type="xsd:string" />
+            <xsd:element name="compatibilidad" type="xsd:string" />
+            <xsd:element name="codigoRespuestaValidacion4G" type="xsd:string" />
+            <xsd:element name="mensajeRespuestaValidacion4G" type="xsd:string" />
+            <xsd:element name="flagActiva4G" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="s0:parametrosResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="encolarReposicionesRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditRequest" type="s0:parametrosAuditRequest" />
+            <xsd:element name="datosLineas" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="s0:parametrosRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="encolarReposicionesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="auditResponse" type="s0:parametrosAuditResponse" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="s0:parametrosResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validarNuevoSIMRequestMsg">
+    <wsdl:part name="request" element="s0:validarNuevoSIMRequest" />
+  </wsdl:message>
+  <wsdl:message name="validarNuevoSIMResponseMsg">
+    <wsdl:part name="response" element="s0:validarNuevoSIMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ejecutarReposicionRequestMsg">
+    <wsdl:part name="request" element="s0:ejecutarReposicionRequest" />
+  </wsdl:message>
+  <wsdl:message name="ejecutarReposicionResponseMsg">
+    <wsdl:part name="response" element="s0:ejecutarReposicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="validar4GRequestMsg">
+    <wsdl:part name="request" element="s0:validar4GRequest" />
+  </wsdl:message>
+  <wsdl:message name="validar4GResponseMsg">
+    <wsdl:part name="response" element="s0:validar4GResponse" />
+  </wsdl:message>
+  <wsdl:message name="encolarReposicionesRequestMsg">
+    <wsdl:part name="request" element="s0:encolarReposicionesRequest" />
+  </wsdl:message>
+  <wsdl:message name="encolarReposicionesResponseMsg">
+    <wsdl:part name="response" element="s0:encolarReposicionesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GestionCambioSIMPortType">
+    <wsdl:operation name="validarNuevoSIM">
+      <wsdl:input message="tns:validarNuevoSIMRequestMsg" />
+      <wsdl:output message="tns:validarNuevoSIMResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="ejecutarReposicion">
+      <wsdl:input message="tns:ejecutarReposicionRequestMsg" />
+      <wsdl:output message="tns:ejecutarReposicionResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="validar4G">
+      <wsdl:input message="tns:validar4GRequestMsg" />
+      <wsdl:output message="tns:validar4GResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="encolarReposiciones">
+      <wsdl:input message="tns:encolarReposicionesRequestMsg" />
+      <wsdl:output message="tns:encolarReposicionesResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GestionCambioSIMPortTypeSOAP11Binding" type="tns:GestionCambioSIMPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="validarNuevoSIM">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/validarNuevoSIM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutarReposicion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ejecutarReposicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validar4G">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/validar4G" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encolarReposiciones">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/encolarReposiciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GestionCambioSIMPortTypeSOAP12Binding" type="tns:GestionCambioSIMPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="validarNuevoSIM">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/validarNuevoSIM" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejecutarReposicion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/ejecutarReposicion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validar4G">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/validar4G" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encolarReposiciones">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/postventa/hlr/gestioncambiosim/encolarReposiciones" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GestionCambioSIMService">
+    <wsdl:port name="ebsGestionCambioSIMSB11" binding="tns:GestionCambioSIMPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/GestionCambioSIM/ebsGestionCambioSIMSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsGestionCambioSIMSB12" binding="tns:GestionCambioSIMPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv28.tim.com.pe:8909/GestionCambioSIM/ebsGestionCambioSIMSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

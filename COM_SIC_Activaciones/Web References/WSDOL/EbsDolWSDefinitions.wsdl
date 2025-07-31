@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://pe.com.claro.esb.services" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe.com.claro.esb.services" name="EbsDolWSDefinitions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:conv="http://www.openuri.org/2002/04/soap/conversation/" xmlns:s0="http://www.openuri.org/" xmlns:cw="http://www.openuri.org/2002/04/wsdl/conversation/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:jms="http://www.openuri.org/2002/04/wsdl/jms/" xmlns:tns="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd">
+      <xs:element name="InteraccionRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion de una interaccion</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objId" type="xs:string" />
+            <xs:element name="siteObjId" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="clase" type="xs:string" />
+            <xs:element name="subClase" type="xs:string" />
+            <xs:element name="metodoContacto" type="xs:string" />
+            <xs:element name="tipoInteraccion" type="xs:string" />
+            <xs:element name="codigoEmpleado" type="xs:string" />
+            <xs:element name="codigoSistema" type="xs:string" />
+            <xs:element name="hechoEnUno" type="xs:string" />
+            <xs:element name="notas" type="xs:string" />
+            <xs:element name="flagCaso" type="xs:string" />
+            <xs:element name="textResultado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InteraccionTfiRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion de una interaccion de unn TFI</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="texto" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InteraccionResponse">
+        <xs:annotation>
+          <xs:documentation>Registro de cliente en SIAC - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="idInteraccion" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DOLRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion del DOL</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nroTransaccion" type="xs:string" />
+            <xs:element name="msisdn" type="xs:string" />
+            <xs:element name="nombres" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="tipoDocumento" type="xs:string" />
+            <xs:element name="numeroDocumento" type="xs:string" />
+            <xs:element name="telefonoReferencia" type="xs:string" />
+            <xs:element name="fechaNacimiento" type="xs:string" />
+            <xs:element name="lugarNacimiento" type="xs:string" />
+            <xs:element name="motivoRegistro" type="xs:string" />
+            <xs:element name="direccionCompleta" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="codigoEmpleado" type="xs:string" />
+            <xs:element name="codigoSistema" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="texto" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DOLResponse">
+        <xs:annotation>
+          <xs:documentation>Registro de cliente en SIAC - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="descripcion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClienteRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objId" type="xs:string" />
+            <xs:element name="siteObjId" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="nombres" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="tipo_doc" type="xs:string" />
+            <xs:element name="num_doc" type="xs:string" />
+            <xs:element name="sexo" type="xs:string" />
+            <xs:element name="fecha_nac" type="xs:string" />
+            <xs:element name="lugar_nac" type="xs:string" />
+            <xs:element name="telefono_ref" type="xs:string" />
+            <xs:element name="estado_civil" type="xs:string" />
+            <xs:element name="fax" type="xs:string" />
+            <xs:element name="mail" type="xs:string" />
+            <xs:element name="ocupacion" type="xs:string" />
+            <xs:element name="domicilio" type="xs:string" />
+            <xs:element name="distrito" type="xs:string" />
+            <xs:element name="zipcode" type="xs:string" />
+            <xs:element name="urbanizacion" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="departamento" type="xs:string" />
+            <xs:element name="referencia" type="xs:string" />
+            <xs:element name="flag_mail" type="xs:string" />
+            <xs:element name="flag_registrado" type="xs:string" />
+            <xs:element name="motivo_registrado" type="xs:string" />
+            <xs:element name="cargo" type="xs:string" />
+            <xs:element name="funcion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClienteResponse">
+        <xs:annotation>
+          <xs:documentation>Actualización de datos del Cliente - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClientePostpagoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente Postpago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="CustomerID" type="xs:string" />
+            <xs:element name="Direccion" type="xs:string" />
+            <xs:element name="NotasDireccion" type="xs:string" />
+            <xs:element name="Distrito" type="xs:string" />
+            <xs:element name="Provincia" type="xs:string" />
+            <xs:element name="CodigoPostal" type="xs:string" />
+            <xs:element name="Departamento" type="xs:string" />
+            <xs:element name="Pais" type="xs:string" />
+            <xs:element name="Telefono_ref" type="xs:string" />
+            <xs:element name="Contacto_cliente" type="xs:string" />
+            <xs:element name="Email" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClientePostpagoResponse">
+        <xs:annotation>
+          <xs:documentation>Actualización de datos del Cliente - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrearCasoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente Postpago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="contactobjid1" type="xs:string" />
+            <xs:element name="siteobjid1" type="xs:string" />
+            <xs:element name="account" type="xs:string" />
+            <xs:element name="phone" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="clase" type="xs:string" />
+            <xs:element name="subclase" type="xs:string" />
+            <xs:element name="metodo_contacto" type="xs:string" />
+            <xs:element name="prioridad" type="xs:string" />
+            <xs:element name="severidad" type="xs:string" />
+            <xs:element name="cola" type="xs:string" />
+            <xs:element name="flag_interact" type="xs:string" />
+            <xs:element name="usr_proceso" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="tipo_interaccion" type="xs:string" />
+            <xs:element name="notas" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrearCasoResponse">
+        <xs:annotation>
+          <xs:documentation>Creación de Caso Clarify - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="caso" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DatosType">
+        <xs:sequence>
+          <xs:element name="objId" type="xs:string" />
+          <xs:element name="siteObjId" type="xs:string" />
+          <xs:element name="telefono" type="xs:string" />
+          <xs:element name="cuenta" type="xs:string" />
+          <xs:element name="modalidad" type="xs:string" />
+          <xs:element name="segmento" type="xs:string" />
+          <xs:element name="rol_contacto" type="xs:string" />
+          <xs:element name="estado_contacto" type="xs:string" />
+          <xs:element name="estado_contrato" type="xs:string" />
+          <xs:element name="estado_site" type="xs:string" />
+          <xs:element name="s_nombres" type="xs:string" />
+          <xs:element name="s_apellidos" type="xs:string" />
+          <xs:element name="nombres" type="xs:string" />
+          <xs:element name="domicilio" type="xs:string" />
+          <xs:element name="urbanizacion" type="xs:string" />
+          <xs:element name="referencia" type="xs:string" />
+          <xs:element name="ciudad" type="xs:string" />
+          <xs:element name="distrito" type="xs:string" />
+          <xs:element name="departamento" type="xs:string" />
+          <xs:element name="zipcode" type="xs:string" />
+          <xs:element name="email" type="xs:string" />
+          <xs:element name="telef_referencia" type="xs:string" />
+          <xs:element name="fax" type="xs:string" />
+          <xs:element name="fecha_nac" type="xs:string" />
+          <xs:element name="sexo" type="xs:string" />
+          <xs:element name="estado_civil" type="xs:string" />
+          <xs:element name="tipo_doc" type="xs:string" />
+          <xs:element name="nro_doc" type="xs:string" />
+          <xs:element name="fecha_act" type="xs:string" />
+          <xs:element name="punto_venta" type="xs:string" />
+          <xs:element name="flag_registrado" type="xs:string" />
+          <xs:element name="ocupacion" type="xs:string" />
+          <xs:element name="cant_reg" type="xs:string" />
+          <xs:element name="flag_email" type="xs:string" />
+          <xs:element name="motivo_registro" type="xs:string" />
+          <xs:element name="funcion" type="xs:string" />
+          <xs:element name="cargo" type="xs:string" />
+          <xs:element name="lugar_nacimiento" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConsultaDatosUsuarioRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la Consulta de datos de usuario</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="contactobjid_1" type="xs:string" />
+            <xs:element name="flag_registrado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaDatosUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="usLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="DatosUsuario" type="tns:DatosType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="CasoType">
+        <xs:sequence>
+          <xs:element name="id_caso" type="xs:string" />
+          <xs:element name="codigo_cliente" type="xs:string" />
+          <xs:element name="sitio" type="xs:string" />
+          <xs:element name="fecha_creacion" type="xs:string" />
+          <xs:element name="telefono" type="xs:string" />
+          <xs:element name="tipificacion" type="xs:string" />
+          <xs:element name="origen" type="xs:string" />
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="prioridad" type="xs:string" />
+          <xs:element name="severidad" type="xs:string" />
+          <xs:element name="fase" type="xs:string" />
+          <xs:element name="nro_reporte" type="xs:string" />
+          <xs:element name="nro_reclamo" type="xs:string" />
+          <xs:element name="condicion" type="xs:string" />
+          <xs:element name="cola" type="xs:string" />
+          <xs:element name="propietario" type="xs:string" />
+          <xs:element name="nombre_agente" type="xs:string" />
+          <xs:element name="apellido_agente" type="xs:string" />
+          <xs:element name="resultado" type="xs:string" />
+          <xs:element name="resolucion" type="xs:string" />
+          <xs:element name="bandeja" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConsultaCasoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la Consulta de datos de usuario</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="contact_objid1" type="xs:string" />
+            <xs:element name="tipificacion" type="xs:string" />
+            <xs:element name="estado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaCasoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="casosLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="DatosCaso" type="tns:CasoType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaEquiposRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la consulta de equipos asociados a una línea</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NroLinea" type="xs:string" />
+            <xs:element name="Transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="InfoType">
+        <xs:sequence>
+          <xs:element name="resultado" type="xs:string" />
+          <xs:element name="transaccion" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EquipoType">
+        <xs:sequence>
+          <xs:element name="IdTerMovimiento" type="xs:string" />
+          <xs:element name="NumeroImei" type="xs:string" />
+          <xs:element name="TerDescripcion" type="xs:string" />
+          <xs:element name="TerEstado" type="xs:string" />
+          <xs:element name="FechaMovimiento" type="xs:string" />
+          <xs:element name="FechaRegistro" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConsultaEquiposResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="equiposLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="Equipos" type="tns:EquipoType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe.com.claro.esb.services">
+      <xs:import namespace="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" />
+      <xs:element name="dol">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:DOLRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="dolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:DOLResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </types>
+  <message name="dol">
+    <part name="parameters" element="s1:dol" />
+  </message>
+  <message name="dolResponse">
+    <part name="parameters" element="s1:dolResponse" />
+  </message>
+  <portType name="EbsDolWSPort">
+    <operation name="dol" parameterOrder="parameters">
+      <input message="s1:dol" />
+      <output message="s1:dolResponse" />
+    </operation>
+  </portType>
+  <binding name="EbsDolWSSoapBinding" type="s1:EbsDolWSPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="dol">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EbsDolWS">
+    <port name="EbsDolWSPort" binding="s1:EbsDolWSSoapBinding">
+      <soap:address location="http://limdeseaiv03.tim.com.pe:8909/ServiceDolWS/EbsDolWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,287 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{88D7264A-616A-4911-B773-90B7F1E910F1}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "COM_SIC_INActChip"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "COM_SIC_INActChip"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.EnterpriseServices"
+                    AssemblyName = "System.EnterpriseServices"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.EnterpriseServices.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "DAAB"
+                    Project = "{D0401205-6585-43C5-B7A9-C435EA36C3E2}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Microsoft.Web.Services2"
+                    AssemblyName = "Microsoft.Web.Services2"
+                    HintPath = "components\Microsoft.Web.Services2.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Diagnostics" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsActivacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsBDSiscajas.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsBloqueoDesbloqueo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsCambioSIM.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsDatosLinea.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsRecarga.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsTipificacion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ConsultarClave.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Interaccion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PlantillaInteraccion.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\BaseSchema.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\BSS_CambioSimPrepago_v1.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\ClaroFault_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\ClaroGenericHeaders_V1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\CommonsException.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\ejecutarCambioSimPre.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\HeaderGeneric_v1.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\BSS_CambioSimPrepago\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\BSS_CambioSimPrepago\"
+                    WebReferenceUrl = "http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService?wsdl"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ConsultaClavesWS\ebsConsultaClavesSB11.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ConsultaClavesWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ConsultaClavesWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ConsultaClavesWS\"
+                    WebReferenceUrl = "http://172.19.74.225:8903/ConsultaClavesWS/ebsConsultaClavesSB11?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\DatosPrepagoWS\EbsDatosPrepagoServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\DatosPrepagoWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\DatosPrepagoWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\DatosPrepagoWS\"
+                    WebReferenceUrl = "http://limdeseaiv03.tim.com.pe:8909/ConsultaDatosPrepagoWS/EbsDatosPrepago?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ESBTransaccionesWS\ebsTransaccionesServiceDefinitions.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ESBTransaccionesWS\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ESBTransaccionesWS\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ESBTransaccionesWS\"
+                    WebReferenceUrl = "http://limdeseaiv03.tim.com.pe:8909/TransaccionesWS/ebsTransacciones?WSDL"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

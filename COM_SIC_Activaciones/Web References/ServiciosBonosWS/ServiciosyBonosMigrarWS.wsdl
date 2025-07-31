@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/serviciosybonosmigrar/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/serviciosybonosmigrar/ws" name="ServiciosyBonosMigrarWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema>
+      <s:import schemaLocation="../esquemas/ServiciosyBonosMigrar.xsd" namespace="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" />
+      <s:import schemaLocation="../esquemas/CommonsException.xsd" namespace="http://claro.com.pe/eai/ebs/xsd/CommonsException" />
+      <s:import schemaLocation="../esquemas/HeaderGeneric_v1.0.xsd" namespace="http://claro.com.pe/generic/messageFormat/v1.0/" />
+    </s:schema>
+    <s:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <s:include schemaLocation="../esquemas/WSESoapHeader.xsd" />
+      <s:element name="Security" type="s1:SecurityType" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="requestHeaderMessage">
+    <wsdl:part name="headerRequest" xmlns:q1="http://claro.com.pe/generic/messageFormat/v1.0/" element="q1:HeaderRequest" />
+  </wsdl:message>
+  <wsdl:message name="Security">
+    <wsdl:part name="Security" element="s1:Security" />
+  </wsdl:message>
+  <wsdl:message name="responseHeaderMessage">
+    <wsdl:part name="headerResponse" xmlns:q2="http://claro.com.pe/generic/messageFormat/v1.0/" element="q2:HeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerServiciosyBonosRequestMsg">
+    <wsdl:part name="request" xmlns:q3="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q3:obtenerServiciosyBonosRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerServiciosyBonosResponseMsg">
+    <wsdl:part name="response" xmlns:q4="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q4:obtenerServiciosyBonosResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerCargosFijosRequestMsg">
+    <wsdl:part name="request" xmlns:q5="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q5:obtenerCargosFijosRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerCargosFijosResponseMsg">
+    <wsdl:part name="response" xmlns:q6="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q6:obtenerCargosFijosResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarBonosContratarRequestMsg">
+    <wsdl:part name="request" xmlns:q7="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q7:registrarBonosContratarRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarBonosContratarResponsetMsg">
+    <wsdl:part name="response" xmlns:q8="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q8:registrarBonosContratarResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerBonosContratarRequestMsg">
+    <wsdl:part name="request" xmlns:q9="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q9:obtenerBonosContratarRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerBonosContratarResponsetMsg">
+    <wsdl:part name="response" xmlns:q10="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q10:obtenerBonosContratarResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarBonosMantenerRequestMsg">
+    <wsdl:part name="request" xmlns:q11="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q11:registrarBonosMantenerRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarBonosMantenerResponsetMsg">
+    <wsdl:part name="response" xmlns:q12="http://claro.com.pe/eai/serviciosybonosmigrar/ws/types" element="q12:registrarBonosMantenerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiciosyBonosMigrarWSPortType">
+    <wsdl:operation name="obtenerServiciosyBonos">
+      <wsdl:input message="tns:obtenerServiciosyBonosRequestMsg" />
+      <wsdl:output message="tns:obtenerServiciosyBonosResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCargosFijos">
+      <wsdl:input message="tns:obtenerCargosFijosRequestMsg" />
+      <wsdl:output message="tns:obtenerCargosFijosResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarBonosContratar">
+      <wsdl:input message="tns:registrarBonosContratarRequestMsg" />
+      <wsdl:output message="tns:registrarBonosContratarResponsetMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerBonosContratar">
+      <wsdl:input message="tns:obtenerBonosContratarRequestMsg" />
+      <wsdl:output message="tns:obtenerBonosContratarResponsetMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarBonosMantener">
+      <wsdl:input message="tns:registrarBonosMantenerRequestMsg" />
+      <wsdl:output message="tns:registrarBonosMantenerResponsetMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiciosyBonosMigrarWSSOAP11Binding" type="tns:ServiciosyBonosMigrarWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="obtenerServiciosyBonos">
+      <soap:operation soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/obtenerServiciosyBonos" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:Security" part="Security" use="literal" />
+        <soap:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCargosFijos">
+      <soap:operation soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/obtenerCargosFijos" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:Security" part="Security" use="literal" />
+        <soap:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarBonosContratar">
+      <soap:operation soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/registrarBonosContratar" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:Security" part="Security" use="literal" />
+        <soap:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerBonosContratar">
+      <soap:operation soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/obtenerBonosContratar" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:Security" part="Security" use="literal" />
+        <soap:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarBonosMantener">
+      <soap:operation soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/registrarBonosMantener" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:Security" part="Security" use="literal" />
+        <soap:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" />
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" />
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiciosyBonosMigrarWSSOAP12Binding" type="tns:ServiciosyBonosMigrarWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="obtenerServiciosyBonos">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/obtenerServiciosyBonos" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:header message="impl:Security" part="Security" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCargosFijos">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/obtenerCargosFijos" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:header message="impl:Security" part="Security" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarBonosContratar">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/registrarBonosContratar" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:header message="impl:Security" part="Security" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerBonosContratar">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/obtenerBonosContratar" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:header message="impl:Security" part="Security" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarBonosMantener">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/serviciosybonosmigrar/registrarBonosMantener" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:header message="impl:Security" part="Security" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:header message="tns:requestHeaderMessage" part="headerRequest" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:header message="tns:responseHeaderMessage" part="headerResponse" use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiciosyBonosMigrarWSService">
+    <wsdl:port name="ServiciosyBonosMigrarSB11" binding="tns:ServiciosyBonosMigrarWSSOAP11Binding">
+      <soap:address location="http://127.0.0.1:7001/ServiciosyBonosMigrarWS/ServiciosyBonosMigrarWSB11" />
+    </wsdl:port>
+    <wsdl:port name="ServiciosyBonosMigrarSB12" binding="tns:ServiciosyBonosMigrarWSSOAP12Binding">
+      <soap12:address location="http://127.0.0.1:7001/ServiciosyBonosMigrarWS/ServiciosyBonosMigrarWSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

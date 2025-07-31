@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.37:20000/ConsultarDocumentosHPWS/consultarDocumentosHPSB11?xsd=1" filename="consultarDocumentosHPSB11.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.37:20000/ConsultarDocumentosHPWS/consultarDocumentosHPSB11?xsd=2" filename="consultarDocumentosHPSB110.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.17.26.37:20000/ConsultarDocumentosHPWS/consultarDocumentosHPSB11?WSDL" filename="ConsultarDocumentosHPWS.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

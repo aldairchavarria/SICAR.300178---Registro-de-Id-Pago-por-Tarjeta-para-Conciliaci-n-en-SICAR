@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:MgDist="http://claro.com.pe/SOA/message/distribuidores" xmlns:Q1="http://claro.com.pe/xsd/comun" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/SOA/message/distribuidores" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv07.tim.com.pe:8909/SB006_DISTRIBUIDORES/interfaces/proxyServices/PS_DistribuidoresSAP?SCHEMA%2FSB_COMUN%2Fdata%2FComun" namespace="http://claro.com.pe/xsd/comun" />
+  <xsd:complexType name="ResultadosBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="tipoDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoEstatus" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descricionEstatus" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Bapiret2Bean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="message" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="logNo" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="logMsgNo" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV1" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV2" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV3" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV4" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="parameter" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="row" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="field" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="system" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ParametrosBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="puntoEntrega" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoAlmacen" type="xsd:string" />
+      <xsd:element minOccurs="0" name="solicitante" type="xsd:string" />
+      <xsd:element minOccurs="0" name="destinatario" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoPedido" type="xsd:string" />
+      <xsd:element minOccurs="0" name="organizacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="canalDistribucion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sector" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaPrecio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaEntrega" type="xsd:string" />
+      <xsd:element minOccurs="0" name="referencia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cantidad" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroSerie" type="xsd:string" />
+      <xsd:element minOccurs="0" name="listaPrecio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupoMaterial1" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupoMaterial2" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cuota" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroTelefono" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claveCondicionPago" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupoVendedores" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResultadoPedioVentaBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="centro" type="xsd:string" />
+      <xsd:element minOccurs="0" name="almacen" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="docVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="posicionDocVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="entradaMercancia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="entrega" type="xsd:string" />
+      <xsd:element minOccurs="0" name="factura" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroSerie" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fecha" type="xsd:string" />
+      <xsd:element minOccurs="0" name="cantidad" type="xsd:string" />
+      <xsd:element minOccurs="0" name="mensaje" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusCrediticio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="statusStock" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombreSolicitante" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="denominacionAlmacen" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseCondicionPago" type="xsd:string" />
+      <xsd:element minOccurs="0" name="condicionPago" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="total" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RangosBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="signo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="opcion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="valorMenor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="valorMayor" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenSumResultadoBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="tipoMensaje" type="xsd:string" />
+      <xsd:element minOccurs="0" name="descripcionMensaje" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroMercaderia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroPedido" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentoVentaBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="flag" type="xsd:string" />
+      <xsd:element minOccurs="0" name="documentoVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="fechaCreacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="organizacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="canalDistribucion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sector" type="xsd:string" />
+      <xsd:element minOccurs="0" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="0" name="entradaMercancia" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupoVendedor" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="area" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="equipoResponsable" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claseRiesgo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="claveMoneda" type="xsd:string" />
+      <xsd:element minOccurs="0" name="posicion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="numeroMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="precio" type="xsd:string" />
+      <xsd:element minOccurs="0" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" name="total" type="xsd:string" />
+      <xsd:element minOccurs="0" name="comprometido" type="xsd:string" />
+      <xsd:element minOccurs="0" name="limiteCreditoCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" name="entrega" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CentrosBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="centros" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AlmacenBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="almacen" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GrupoArticulosBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="grupoArticulo" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MaterialesBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="codigoMaterial" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResumenStockBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="libreUtilizacion" type="xsd:string" />
+      <xsd:element minOccurs="0" name="stockReal" type="xsd:string" />
+      <xsd:element minOccurs="0" name="centro" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoAlmacen" type="xsd:string" />
+      <xsd:element minOccurs="0" name="grupoArticulo" type="xsd:string" />
+      <xsd:element minOccurs="0" name="codigoMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" name="unidadMedida" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="fields">
+    <xsd:sequence>
+      <xsd:element name="sign" type="xsd:string" />
+      <xsd:element name="option" type="xsd:string" />
+      <xsd:element name="low" type="xsd:string" />
+      <xsd:element name="high" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="cuentaDeudor">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="claseProducto" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="codigoProducto" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="clienteSuperior" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="limiteCredito" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="totalDeuda" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="totalVencida" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="totalVencer" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="porcentajeVencida" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="porcentajeVencer" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido0_7" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido8_14" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido15_30" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido31_60" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido61_90" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido91_120" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="vencido120_mas" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="pv01" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="pv08" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="pv15" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="pv31" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="score" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="status" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="region" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MaterialAlmacenBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="tipoDocumentoComercial" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="claseFactura" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fechaconsultaInicio" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fechaConsultaFin" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="codigoMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="codigoAlmacen" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="centro" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RatiosBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="indicador" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="codigoMaterial" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="almacen" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="centroDespacho" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="cantidadVendida" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="stockDisponible" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="ratioVentas" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="estado" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SaldoBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="sociedad" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="codigoSolicitante" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="numeroDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fechaDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="moneda" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="referenciaSunat" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="tipoDocumento" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="importe" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="cuentaContable" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PagoBean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="numeroOperacion" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="numeroCliente" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="fecha" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="monto" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="viaPago" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="numeroIdentificacionFiscal" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="documento" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="banco" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TxAnulaPedidoVenta">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_ANULA_PEDIDO_VTA</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element name="numeroPedido">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="solicitante">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="tipoProceso">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TxAnulaPedidoVentaResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_ANULA_PEDIDO_VTA</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="listaResultados">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaResultadosBean" type="MgDist:ResultadosBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TxCreacionPedidoVenta">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_CREACION_PEDIDO_VTA</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element name="listaParametros">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaResultadosBean" type="MgDist:ParametrosBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TxCreacionPedidoVentaResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_CREACION_PEDIDO_VTA</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="listaResultados">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaResultadosBean" type="MgDist:ResultadoPedioVentaBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TxGeneraSuministro">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_GENERA_SUMINISTRO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element minOccurs="0" name="tipoProceso" type="xsd:string" />
+      <xsd:element name="listaRangos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaRangosBean" type="MgDist:RangosBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TxGeneraSuministroResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_GENERA_SUMINISTRO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="listaGenSumResultado">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaGenSumResultadoBean" type="MgDist:GenSumResultadoBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaDocumento">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaDocumentoBean" type="MgDist:DocumentoVentaBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsStockAlmacen">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_STOCK_ALMACEN</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element minOccurs="1" name="tipoReporte" type="xsd:string" />
+      <xsd:element minOccurs="0" name="checkStock" type="xsd:string" />
+      <xsd:element name="listaAlmacen">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaAlmacenBean" type="MgDist:AlmacenBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaCentros">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaCentrosBean" type="MgDist:CentrosBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaGrupoArticulos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaGrupoArticulosBean" type="MgDist:GrupoArticulosBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaMateriales">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaMaterialesBean" type="MgDist:MaterialesBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsStockAlmacenResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_STOCK_ALMACEN</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="listaResumenStock">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaResumenStockBean" type="MgDist:ResumenStockBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsCuentaDeudor">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_CUENTAS_DEUDOR</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element minOccurs="0" name="sociedad" type="xsd:string" />
+      <xsd:element name="fechaContabilizacion">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d{4}-\d{2}-\d{2}" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="codigoProducto" type="MgDist:fields" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="tipoNif" type="MgDist:fields" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="claseDocumento" type="MgDist:fields" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="claseFactura" type="MgDist:fields" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="claseKum" type="MgDist:fields" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="claseUm" type="MgDist:fields" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsCuentaDeudorResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_CUENTAS_DEUDOR</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="datosCuentaDeudor" type="MgDist:cuentaDeudor" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsRatioVenta">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_RATIO_VENTAS</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element name="listaMaterialAlmacen">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaMaterialAlmacenBean" type="MgDist:MaterialAlmacenBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsRatioVentaResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_RATIO_VENTAS</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="listaRatios">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaRatiosBean" type="MgDist:RatiosBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsAbono">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_CONSULTA_ABONO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element minOccurs="1" name="codigoSociedad" type="xsd:string" />
+      <xsd:element minOccurs="1" name="codigoSolicitante" type="xsd:string" />
+      <xsd:element minOccurs="1" name="fechaConsulta" type="xsd:string" />
+      <xsd:element minOccurs="1" name="monedaPedido" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsAbonoResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZSDAC_CONSULTA_ABONO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element minOccurs="1" name="saldoCuenta" type="xsd:string" />
+      <xsd:element name="listaSaldo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaSaldoBean" type="MgDist:SaldoBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarDeudaRequest">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_DEALER_DEUDA_TOT</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element minOccurs="1" name="numeroCliente" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ConsultarDeudaResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_CON_DEALER_DEUDA_TOT</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element minOccurs="1" name="monto" type="xsd:string" />
+      <xsd:element minOccurs="1" name="nombre" type="xsd:string" />
+      <xsd:element minOccurs="1" name="numeroIdentificacionFiscal" type="xsd:string" />
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PagarDeudaRequest">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_TRS_PAGO_DEALER_M</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element minOccurs="1" name="usuario" type="xsd:string" />
+      <xsd:element minOccurs="1" name="oficinaVenta" type="xsd:string" />
+      <xsd:element minOccurs="1" name="definir" type="xsd:string" />
+      <xsd:element name="listaPago">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaPagoBean" type="MgDist:PagoBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PagarDeudaResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZPVU_RFC_TRS_PAGO_DEALER_M</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element minOccurs="1" name="numeroAutorizacion" type="xsd:string" />
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="MgDist:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="txAnulaPedidoVentaRequest" type="MgDist:TxAnulaPedidoVenta" />
+  <xsd:element name="txAnulaPedidoVentaResponse" type="MgDist:TxAnulaPedidoVentaResponse" />
+  <xsd:element name="txCreacionPedidoVentaRequest" type="MgDist:TxCreacionPedidoVenta" />
+  <xsd:element name="txCreacionPedidoVentaResponse" type="MgDist:TxCreacionPedidoVentaResponse" />
+  <xsd:element name="txGeneraSuministroRequest" type="MgDist:TxGeneraSuministro" />
+  <xsd:element name="txGeneraSuministroResponse" type="MgDist:TxGeneraSuministroResponse" />
+  <xsd:element name="consStockAlmacenRequest" type="MgDist:ConsStockAlmacen" />
+  <xsd:element name="consStockAlmacenResponse" type="MgDist:ConsStockAlmacenResponse" />
+  <xsd:element name="consCuentaDeudorRequest" type="MgDist:ConsCuentaDeudor" />
+  <xsd:element name="consCuentaDeudorResponse" type="MgDist:ConsCuentaDeudorResponse" />
+  <xsd:element name="consRatioVentaRequest" type="MgDist:ConsRatioVenta" />
+  <xsd:element name="consRatioVentaResponse" type="MgDist:ConsRatioVentaResponse" />
+  <xsd:element name="consAbonoRequest" type="MgDist:ConsAbono" />
+  <xsd:element name="consAbonoResponse" type="MgDist:ConsAbonoResponse" />
+  <xsd:element name="consultarDeudaRequest" type="MgDist:ConsultarDeudaRequest" />
+  <xsd:element name="consultarDeudaResponse" type="MgDist:ConsultarDeudaResponse" />
+  <xsd:element name="pagarDeudaRequest" type="MgDist:PagarDeudaRequest" />
+  <xsd:element name="pagarDeudaResponse" type="MgDist:PagarDeudaResponse" />
+</xsd:schema>

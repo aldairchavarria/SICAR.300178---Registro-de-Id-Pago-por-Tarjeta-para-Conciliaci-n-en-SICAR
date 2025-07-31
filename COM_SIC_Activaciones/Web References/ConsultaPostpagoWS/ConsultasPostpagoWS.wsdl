@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/consultaspostpagows" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/consultaspostpagows" name="ConsultasPostpagoWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/consultaspostpagows" />
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ConsultasPostpagoWS/ConsultasPostpagoSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/consultaspostpagows/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="datosClienteRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q1:datosClienteRequest" />
+  </wsdl:message>
+  <wsdl:message name="datosClienteResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q2:datosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="datosContratoRequestMsg">
+    <wsdl:part name="request" xmlns:q3="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q3:datosContratoRequest" />
+  </wsdl:message>
+  <wsdl:message name="datosContratoResponseMsg">
+    <wsdl:part name="response" xmlns:q4="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q4:datosContratoResponse" />
+  </wsdl:message>
+  <wsdl:message name="serviciosLineaRequestMsg">
+    <wsdl:part name="request" xmlns:q5="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q5:serviciosLineaRequest" />
+  </wsdl:message>
+  <wsdl:message name="serviciosLineaResponseMsg">
+    <wsdl:part name="response" xmlns:q6="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q6:serviciosLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerCuentasMadreRequestMsg">
+    <wsdl:part name="request" xmlns:q7="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q7:leerCuentasMadreRequest" />
+  </wsdl:message>
+  <wsdl:message name="leerCuentasMadreResponseMsg">
+    <wsdl:part name="response" xmlns:q8="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q8:leerCuentasMadreResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosBloqueoLineaRequestMsg">
+    <wsdl:part name="request" xmlns:q9="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q9:leerDatosBloqueoLineaRequest" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosBloqueoLineaResponseMsg">
+    <wsdl:part name="response" xmlns:q10="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q10:leerDatosBloqueoLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerDetalleLlamadasNoFacturadoRequestMsg">
+    <wsdl:part name="request" xmlns:q11="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q11:leerDetalleLlamadasNoFacturadoRequest" />
+  </wsdl:message>
+  <wsdl:message name="leerDetalleLlamadasNoFacturadoResponseMsg">
+    <wsdl:part name="response" xmlns:q12="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q12:leerDetalleLlamadasNoFacturadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerIccidAsociadosALineaRequestMsg">
+    <wsdl:part name="request" xmlns:q13="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q13:leerIccidAsociadosALineaRequest" />
+  </wsdl:message>
+  <wsdl:message name="leerIccidAsociadosALineaResponseMsg">
+    <wsdl:part name="response" xmlns:q14="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q14:leerIccidAsociadosALineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerSubCuentasPorCuentaRequestMsg">
+    <wsdl:part name="request" xmlns:q15="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q15:leerSubCuentasPorCuentaRequest" />
+  </wsdl:message>
+  <wsdl:message name="leerSubCuentasPorCuentaResponseMsg">
+    <wsdl:part name="response" xmlns:q16="http://claro.com.pe/eai/ws/consultaspostpagows/types" element="q16:leerSubCuentasPorCuentaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultasPostpagoWSPortType">
+    <wsdl:operation name="consultarDatosCliente">
+      <wsdl:input message="tns:datosClienteRequestMsg" />
+      <wsdl:output message="tns:datosClienteResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosContrato">
+      <wsdl:input message="tns:datosContratoRequestMsg" />
+      <wsdl:output message="tns:datosContratoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarServiciosLinea">
+      <wsdl:input message="tns:serviciosLineaRequestMsg" />
+      <wsdl:output message="tns:serviciosLineaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="leerCuentasMadre">
+      <wsdl:input message="tns:leerCuentasMadreRequestMsg" />
+      <wsdl:output message="tns:leerCuentasMadreResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosBloqueoLinea">
+      <wsdl:input message="tns:leerDatosBloqueoLineaRequestMsg" />
+      <wsdl:output message="tns:leerDatosBloqueoLineaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="leerDetalleLlamadasNoFacturado">
+      <wsdl:input message="tns:leerDetalleLlamadasNoFacturadoRequestMsg" />
+      <wsdl:output message="tns:leerDetalleLlamadasNoFacturadoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="leerIccidAsociadosALinea">
+      <wsdl:input message="tns:leerIccidAsociadosALineaRequestMsg" />
+      <wsdl:output message="tns:leerIccidAsociadosALineaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="leerSubCuentasPorCuenta">
+      <wsdl:input message="tns:leerSubCuentasPorCuentaRequestMsg" />
+      <wsdl:output message="tns:leerSubCuentasPorCuentaResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultasPostpagoWSPortTypeSOAP11Binding" type="tns:ConsultasPostpagoWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="consultarDatosCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/consultarDatosCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/consultarDatosContrato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServiciosLinea">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/consultarServiciosLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerCuentasMadre">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerCuentasMadre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosBloqueoLinea">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerDatosBloqueoLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDetalleLlamadasNoFacturado">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerDetalleLlamadasNoFacturado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerIccidAsociadosALinea">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerIccidAsociadosALinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerSubCuentasPorCuenta">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerSubCuentasPorCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultasPostpagoWSPortTypeSOAP12Binding" type="tns:ConsultasPostpagoWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="consultarDatosCliente">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/consultarDatosCliente" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosContrato">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/consultarDatosContrato" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarServiciosLinea">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/consultarServiciosLinea" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerCuentasMadre">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerCuentasMadre" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosBloqueoLinea">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerDatosBloqueoLinea" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDetalleLlamadasNoFacturado">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerDetalleLlamadasNoFacturado" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerIccidAsociadosALinea">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerIccidAsociadosALinea" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerSubCuentasPorCuenta">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/consultaspostpagows/leerSubCuentasPorCuenta" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultasPostpagoWSService">
+    <wsdl:port name="ConsultasPostpagoWSSB11" binding="tns:ConsultasPostpagoWSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ConsultasPostpagoWS/ConsultasPostpagoSB11" />
+    </wsdl:port>
+    <wsdl:port name="ConsultasPostpagoWSSB12" binding="tns:ConsultasPostpagoWSPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv28.tim.com.pe:8909/ConsultasPostpagoWS/ConsultasPostpagoSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

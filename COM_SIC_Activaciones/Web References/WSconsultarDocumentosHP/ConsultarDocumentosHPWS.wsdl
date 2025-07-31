@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws" name="ConsultarDocumentosHPWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws" />
+    <s:schema>
+      <s:import schemaLocation="http://172.17.26.37:20000/ConsultarDocumentosHPWS/consultarDocumentosHPSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarDocumentosHPRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/types" element="q1:consultarDocumentosHPRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDocumentosHPResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/types" element="q2:consultarDocumentosHPResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarDocumentosHPRequestMsg">
+    <wsdl:part name="request" xmlns:q3="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/types" element="q3:enviarDocumentosHPRequest" />
+  </wsdl:message>
+  <wsdl:message name="enviarDocumentosHPResponseMsg">
+    <wsdl:part name="response" xmlns:q4="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/types" element="q4:enviarDocumentosHPResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultarDocumentosHPWSPortType">
+    <wsdl:operation name="consultarDocumentosHP">
+      <wsdl:input message="tns:consultarDocumentosHPRequestMsg" />
+      <wsdl:output message="tns:consultarDocumentosHPResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarDocumentosHP">
+      <wsdl:input message="tns:enviarDocumentosHPRequestMsg" />
+      <wsdl:output message="tns:enviarDocumentosHPResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultarDocumentosHPWSPortTypeSOAP11Binding" type="tns:ConsultarDocumentosHPWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="consultarDocumentosHP">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/consultarDocumentosHP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarDocumentosHP">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/enviarDocumentosHP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultarDocumentosHPWSPortTypeSOAP12Binding" type="tns:ConsultarDocumentosHPWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="consultarDocumentosHP">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/consultarDocumentosHP" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarDocumentosHP">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/consultarDocumentoshpws/enviarDocumentosHP" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultarDocumentosHPWSService">
+    <wsdl:port name="consultarDocumentosHPWSSB11" binding="tns:ConsultarDocumentosHPWSPortTypeSOAP11Binding">
+      <soap:address location="http://172.17.26.37:20000/ConsultarDocumentosHPWS/consultarDocumentosHPSB11" />
+    </wsdl:port>
+    <wsdl:port name="consultarDocumentosHPWSSB12" binding="tns:ConsultarDocumentosHPWSPortTypeSOAP12Binding">
+      <soap12:address location="http://172.17.26.37:20000/ConsultarDocumentosHPWS/consultarDocumentosHPSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

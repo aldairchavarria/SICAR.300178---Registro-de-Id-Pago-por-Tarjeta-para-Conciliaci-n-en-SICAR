@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ebs/consultaprogramacion/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/consultaprogramacion/ws" name="ConsultaProgramacion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/consultaprogramacion/ws">
+      <s:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ConsultaProgramacion/ebsConsultaProgramacionSB11?xsd=1" namespace="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarServicioProgramadoRequestMsg">
+    <wsdl:part name="parameters" xmlns:q1="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/types" element="q1:ConsultarServicioProgramadoRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarServicioProgramadoResponseMsg">
+    <wsdl:part name="parameters" xmlns:q2="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/types" element="q2:ConsultarServicioProgramadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EbsConsultaProgramacionPortTypeSOAP11">
+    <wsdl:operation name="consultarServicioProgramado">
+      <wsdl:input message="tns:ConsultarServicioProgramadoRequestMsg" />
+      <wsdl:output message="tns:ConsultarServicioProgramadoResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="EbsConsultaProgramacionPortTypeSOAP12">
+    <wsdl:operation name="consultarServicioProgramado">
+      <wsdl:input message="tns:ConsultarServicioProgramadoRequestMsg" />
+      <wsdl:output message="tns:ConsultarServicioProgramadoResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EbsConsultaProgramacionSOAP11Binding" type="tns:EbsConsultaProgramacionPortTypeSOAP11">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="consultarServicioProgramado">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/consultarServicioProgramado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EbsConsultaProgramacionSOAP12Binding" type="tns:EbsConsultaProgramacionPortTypeSOAP12">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="consultarServicioProgramado">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/consultaprogramacion/ws/consultarServicioProgramado" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="parameters" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaProgramacionService">
+    <wsdl:port name="ebsConsultaProgramacionSB11" binding="tns:EbsConsultaProgramacionSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ConsultaProgramacion/ebsConsultaProgramacionSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsConsultaProgramacionSB12" binding="tns:EbsConsultaProgramacionSOAP12Binding">
+      <soap12:address location="http://limdeseaiv28.tim.com.pe:8909/ConsultaProgramacion/ebsConsultaProgramacionSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

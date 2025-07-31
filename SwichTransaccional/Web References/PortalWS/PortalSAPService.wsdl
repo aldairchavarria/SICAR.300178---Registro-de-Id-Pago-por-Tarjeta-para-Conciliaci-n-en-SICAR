@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/SOA/service/portalSAP" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/SOA/service/portalSAP" name="PortalSAPService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mes="http://claro.com.pe/SOA/message/portal" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified">
+      <xsd:import schemaLocation="http://limdeseaiv07.tim.com.pe:8909/SB005_PORTAL/interfaces/proxyServices/PS_PortalSAP?SCHEMA%2FSB_COMUN%2Fmensajes%2FPortalMensajes" namespace="http://claro.com.pe/SOA/message/portal" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="generarAsientoRequestMessage">
+    <wsdl:part name="partgenerarAsientoRequest" xmlns:q1="http://claro.com.pe/SOA/message/portal" element="q1:generarAsientoRequest" />
+  </wsdl:message>
+  <wsdl:message name="generarAsientoResponseMessage">
+    <wsdl:part name="partgenerarAsientoResponse" xmlns:q2="http://claro.com.pe/SOA/message/portal" element="q2:generarAsientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="generarAsientoAFRequestMessage">
+    <wsdl:part name="partgenerarAsientoAFRequest" xmlns:q3="http://claro.com.pe/SOA/message/portal" element="q3:generarAsientoAFRequest" />
+  </wsdl:message>
+  <wsdl:message name="generarAsientoAFResponseMessage">
+    <wsdl:part name="partgenerarAsientoAFResponse" xmlns:q4="http://claro.com.pe/SOA/message/portal" element="q4:generarAsientoAFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="pt_portal">
+    <wsdl:operation name="generarAsiento">
+      <wsdl:input message="tns:generarAsientoRequestMessage" />
+      <wsdl:output message="tns:generarAsientoResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generarAsientoAF">
+      <wsdl:input message="tns:generarAsientoAFRequestMessage" />
+      <wsdl:output message="tns:generarAsientoAFResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="pt_portalSOAP11Binding" type="tns:pt_portal">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="generarAsiento">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/portalSAP/generarAsiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="partgenerarAsientoRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="partgenerarAsientoResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generarAsientoAF">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" parts="partgenerarAsientoAFRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="partgenerarAsientoAFResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="pt_portalSOAP11BindingQSService">
+    <WL5G3N0:documentation xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">OSB Service</WL5G3N0:documentation>
+    <wsdl:port name="pt_portalSOAP11BindingQSPort" binding="tns:pt_portalSOAP11Binding">
+      <soap:address location="http://limdeseaiv07.tim.com.pe:8909/SB005_PORTAL/interfaces/proxyServices/PS_PortalSAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

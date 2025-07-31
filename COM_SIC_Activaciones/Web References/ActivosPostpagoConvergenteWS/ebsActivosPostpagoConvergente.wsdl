@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ds/ws/ActivosPostpagoConvergenteWS" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ds/ws/ActivosPostpagoConvergenteWS" name="ebsActivosPostpagoConvergente" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ds/ws/ActivosPostpagoConvergenteWS">
+      <s:element name="GenericoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="auditResponse" type="s0:ParametrosAuditResponse" />
+            <s:element name="listaResponseOpcional" type="s0:ParametrosResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EjecutarActivacionRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="auditRequest" type="s0:ParametrosAuditRequest" />
+            <s:element name="numeroAcuerdo" type="s:string" />
+            <s:element name="tipoProducto" type="s:string" />
+            <s:element name="listaRequestOpcional" type="s0:ParametrosRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearClienteRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="auditRequest" type="s0:ParametrosAuditRequest" />
+            <s:element name="numeroAcuerdo" type="s:string" />
+            <s:element name="listaRequestOpcional" type="s0:ParametrosRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearContratoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="auditRequest" type="s0:ParametrosAuditRequest" />
+            <s:element name="listaContratos" type="s0:ListaContratoType" />
+            <s:element name="listaRequestOpcional" type="s0:ParametrosRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarContratoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="auditRequest" type="s0:ParametrosAuditRequest" />
+            <s:element name="actualizacionContrato" type="s0:ActualizacionContratoType" />
+            <s:element name="listaRequestOpcional" type="s0:ParametrosRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarServiciosContratoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="auditRequest" type="s0:ParametrosAuditRequest" />
+            <s:element name="listaServicios" type="s0:ListaServiciosContratoType" />
+            <s:element name="listaRequestOpcional" type="s0:ParametrosRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InformacionContratoType">
+        <s:sequence>
+          <s:element name="coId" type="s:long" />
+          <s:element name="listaCampos" type="s0:ListaCampoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DispositivoType">
+        <s:sequence>
+          <s:element name="coId" type="s:long" />
+          <s:element name="iccid" type="s:long" />
+          <s:element name="imei" type="s:long" />
+          <s:element name="idDispositivo" type="s:long" />
+          <s:element name="tipoDispositivo" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CampoType">
+        <s:sequence>
+          <s:element name="indice" type="s:int" />
+          <s:element name="tipo" type="s:int" />
+          <s:element name="valor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaCampoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="campo" type="s0:CampoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaDispositivosType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="dispositivo" type="s0:DispositivoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServicioContratoType">
+        <s:sequence>
+          <s:element name="coId" type="s:long" />
+          <s:element name="snCode" type="s:long" />
+          <s:element name="spCode" type="s:long" />
+          <s:element name="profileId" type="s:long" />
+          <s:element name="tipoCostoServicioAvanzado" type="s:string" />
+          <s:element name="costoServicioAvanzado" type="s:double" />
+          <s:element name="periodoCostoServicioAvanzado" type="s:int" />
+          <s:element name="tipoCostoServicio" type="s:string" />
+          <s:element name="costoServicio" type="s:double" />
+          <s:element name="periodoCostoServicio" type="s:int" />
+          <s:element name="listaNumerosDirectorio" type="s0:ListaNumerosDirectorioType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaServiciosContratoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="servicio" type="s0:ServicioContratoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContratoType">
+        <s:sequence>
+          <s:element name="customerId" type="s:long" />
+          <s:element name="planTarifario" type="s:long" />
+          <s:element name="tipoProducto" type="s:string" />
+          <s:element name="idSubMercado" type="s:long" />
+          <s:element name="idMercado" type="s:long" />
+          <s:element name="red" type="s:long" />
+          <s:element name="estadoUmbral" type="s:boolean" />
+          <s:element name="cantidadUmbral" type="s:double" />
+          <s:element name="archivoLlamadas" type="s:boolean" />
+          <s:element name="estado" type="s:int" />
+          <s:element name="razon" type="s:long" />
+          <s:element name="listaServicios" type="s0:ListaServiciosContratoType" />
+          <s:element name="listaDispositivos" type="s0:ListaDispositivosType" />
+          <s:element name="informacionContrato" type="s0:InformacionContratoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaContratoType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="contrato" type="s0:ContratoType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ActualizacionContratoType">
+        <s:sequence>
+          <s:element name="coId" type="s:long" />
+          <s:element name="estado" type="s:int" />
+          <s:element name="razon" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NumeroDirectorioType">
+        <s:sequence>
+          <s:element name="numeroTelefono" type="s:long" />
+          <s:element name="idNumeroTelefono" type="s:long" />
+          <s:element name="lineaPrincipal" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaNumerosDirectorioType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="numeroDirectorio" type="s0:NumeroDirectorioType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParametrosAuditRequest">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="ipAplicacion" type="s:string" />
+          <s:element name="nombreAplicacion" type="s:string" />
+          <s:element name="usuarioAplicacion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParametrosAuditResponse">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="codigoRespuesta" type="s:string" />
+          <s:element name="mensajeRespuesta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParametrosRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional">
+            <s:complexType>
+              <s:attribute name="campo" type="s:string" />
+              <s:attribute name="valor" type="s:string" />
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParametrosResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="unbounded" name="ObjetoResponseOpcional">
+            <s:complexType>
+              <s:attribute name="campo" type="s:string" />
+              <s:attribute name="valor" type="s:string" />
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="ejecutarActivacionRequestMsg">
+    <part name="parametersRequest" element="s0:EjecutarActivacionRequest" />
+  </message>
+  <message name="ejecutarActivacionResponseMsg">
+    <part name="parametersResponse" element="s0:GenericoResponse" />
+  </message>
+  <message name="crearClienteRequestMsg">
+    <part name="parametersRequest" element="s0:CrearClienteRequest" />
+  </message>
+  <message name="crearClienteResponseMsg">
+    <part name="parametersResponse" element="s0:GenericoResponse" />
+  </message>
+  <message name="crearContratoRequestMsg">
+    <part name="parametersRequest" element="s0:CrearContratoRequest" />
+  </message>
+  <message name="crearContratoResponseMsg">
+    <part name="parametersResponse" element="s0:GenericoResponse" />
+  </message>
+  <message name="actualizarContratoRequestMsg">
+    <part name="parametersRequest" element="s0:ActualizarContratoRequest" />
+  </message>
+  <message name="actualizarContratoResponseMsg">
+    <part name="parametersResponse" element="s0:GenericoResponse" />
+  </message>
+  <message name="agregarServiciosContratoRequestMsg">
+    <part name="parametersRequest" element="s0:AgregarServiciosContratoRequest" />
+  </message>
+  <message name="agregarServiciosContratoResponseMsg">
+    <part name="parametersResponse" element="s0:GenericoResponse" />
+  </message>
+  <portType name="ActivosPostpagoConvergenteWSPortType">
+    <operation name="ejecutarActivacion">
+      <input message="s0:ejecutarActivacionRequestMsg" />
+      <output message="s0:ejecutarActivacionResponseMsg" />
+    </operation>
+    <operation name="crearCliente">
+      <input message="s0:crearClienteRequestMsg" />
+      <output message="s0:crearClienteResponseMsg" />
+    </operation>
+    <operation name="crearContrato">
+      <input message="s0:crearContratoRequestMsg" />
+      <output message="s0:crearContratoResponseMsg" />
+    </operation>
+    <operation name="actualizarContrato">
+      <input message="s0:actualizarContratoRequestMsg" />
+      <output message="s0:actualizarContratoResponseMsg" />
+    </operation>
+    <operation name="agregarServiciosContrato">
+      <input message="s0:agregarServiciosContratoRequestMsg" />
+      <output message="s0:agregarServiciosContratoResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsActivosPostpagoConvergenteWSSOAP11Binding" type="s0:ActivosPostpagoConvergenteWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ejecutarActivacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/ejecutarActivacion" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/crearCliente" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/crearContrato" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/actualizarContrato" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarServiciosContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/agregarServiciosContrato" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ebsActivosPostpagoConvergenteWSSOAP12Binding" type="s0:ActivosPostpagoConvergenteWSPortType">
+    <soap12:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="ejecutarActivacion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/ejecutarActivacion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="crearCliente">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/crearCliente" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="crearContrato">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/crearContrato" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="actualizarContrato">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/actualizarContrato" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="agregarServiciosContrato">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/ActivosPostpagoConvergenteWS/agregarServiciosContrato" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsActivosPostpagoConvergente">
+    <port name="ebsActivosPostpagoConvergenteSB11" binding="s0:ebsActivosPostpagoConvergenteWSSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/ActivosPostpagoConvergenteWS/ebsActivosPostpagoConvergenteSB11" />
+    </port>
+    <port name="ebsActivosPostpagoConvergenteSB12" binding="s0:ebsActivosPostpagoConvergenteWSSOAP12Binding">
+      <soap12:address location="http://limdeseaiv28.tim.com.pe:8909/ActivosPostpagoConvergenteWS/ebsActivosPostpagoConvergenteSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

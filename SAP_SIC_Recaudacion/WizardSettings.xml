@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ClassName="SAP_SIC_Recaudacion" TargetDirectory="D:\Manuel\2013.03.11 Automatización de canje y nota de crédito-ClaroClub\FuentesQA\SICAR\SAP_SIC_Recaudacion" Namespace="SAP_SIC_Recaudacion" Type="JavaMetaDataProvider" ToolsDir="C:\Archivos de programa\SAP\SAP .NET Connector for VisualStudio 2003\" xmlns="http://tempuri.org/ProxyAppInput.xsd">
+  <Destination>
+    <Client>200</Client>
+    <AppServerHost>172.19.43.34</AppServerHost>
+    <Language />
+    <Username>T11498</Username>
+    <SystemNumber>0</SystemNumber>
+    <LogonGroup />
+    <MsgServerHost />
+    <SAPSystemName />
+    <Type>3</Type>
+    <DestinationName>DES : CLARO Development</DestinationName>
+  </Destination>
+  <Modules Name="ZPVU_RFC_TRS_REG_DEUDA" />
+  <Modules Name="ZPVU_RFC_CON_DEUDA" />
+  <Modules Name="ZPVU_RFC_CON_POOL_RECAUDACION" />
+  <Modules Name="ZPVU_RFC_TRS_ACT_EST_RECAUD" />
+  <Modules Name="ZPVU_RFC_TRS_LOG_RECAUDACION" />
+  <Modules Name="ZPVU_RFC_TRS_PAGO_DEALER" />
+  <Modules Name="ZPVU_RFC_CON_POOL_PAGOS_RECAUD" />
+  <Modules Name="ZPVU_RFC_CON_PAGO_RECAUDACION" />
+  <Modules Name="ZPVU_RFC_CON_DEALER_DEUDA_TOT" />
+  <Modules Name="ZPVU_RFC_TRS_PAGO_TELEF" />
+  <Modules Name="ZPVU_RFC_CON_TELEF_DEUDA" />
+  <Modules Name="ZPVU_RFC_CON_VENTA_X_TELEFONO" />
+  <Modules Name="ZPVU_RFC_TRS_PAGO_DEALER_M" />
+  <Modules Name="ZPVU_RFC_MAE_BANCOS" />
+  <Modules Name="ZPVU_RFC_CON_CUADRE_CAJERO" />
+  <Modules Name="ZPVU_RFC_CON_TELEF_DEUDA_ZS" />
+  <Modules Name="ZPVU_RFC_CON_VENTA_X_TELEFONOZ" />
+</Settings>

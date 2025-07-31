@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/operaciones/consultaclaves" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/operaciones/consultaclaves" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/operaciones/consultaclaves">
+      <s:element name="desencriptarRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="ipTransicion" type="s:string" />
+            <s:element name="usrAplicacion" type="s:string" />
+            <s:element name="idAplicacion" type="s:string" />
+            <s:element name="codigoAplicacion" type="s:string" />
+            <s:element name="usuarioAplicacionEncriptado" type="s:string" />
+            <s:element name="claveEncriptado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="desencriptarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoResultado" type="s:string" />
+            <s:element name="mensajeResultado" type="s:string" />
+            <s:element name="usuarioAplicacion" type="s:string" />
+            <s:element name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="desencriptarRequestMsg">
+    <part name="parameters" element="s0:desencriptarRequest" />
+  </message>
+  <message name="desencriptarResponseMsg">
+    <part name="parameters" element="s0:desencriptarResponse" />
+  </message>
+  <portType name="ebsConsultaClavesPortType">
+    <operation name="desencriptar">
+      <input message="s0:desencriptarRequestMsg" />
+      <output message="s0:desencriptarResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsConsultaClavesPortTypeSOAP11Binding" type="s0:ebsConsultaClavesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="desencriptar">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/operaciones/consultaclaves/desencriptar" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ebsConsultaClavesPortTypeSOAP12Binding" type="s0:ebsConsultaClavesPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="desencriptar">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/operaciones/consultaclaves/desencriptar" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsConsultaClavesService">
+    <port name="ebsConsultaClavesSB11" binding="s0:ebsConsultaClavesPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv30.tim.com.pe:8909/ConsultaClavesWS/ebsConsultaClavesSB11" />
+    </port>
+    <port name="ebsConsultaClavesSB12" binding="s0:ebsConsultaClavesPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv30.tim.com.pe:8909/ConsultaClavesWS/ebsConsultaClavesSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

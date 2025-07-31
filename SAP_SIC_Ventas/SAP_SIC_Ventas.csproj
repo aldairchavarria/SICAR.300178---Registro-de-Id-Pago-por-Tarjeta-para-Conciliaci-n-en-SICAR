@@ -1,0 +1,491 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{007AB86A-3735-4CD0-97F6-96C8FCC9DF9F}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "SAP_SIC_Ventas"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "SAP_SIC_Ventas"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "SAP.Connector"
+                    AssemblyName = "SAP.Connector"
+                    HintPath = "D:\Archivos de programa\SAP Net\SAP Net\SAP.Connector.dll"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "System.EnterpriseServices"
+                    AssemblyName = "System.EnterpriseServices"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.EnterpriseServices.dll"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsVentas.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PedidoFactura.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Ventas.sapwsdl"
+                    BuildAction = "None"
+                    Generator = "SAPConnectorGenerator"
+                    LastGenOutput = "SAP_SIC_Ventas.cs"
+                />
+                <File
+                    RelPath = "BAPIRET2.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BAPIRET2Table.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "MFORM.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Ventas.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "ZST_PV_ARTICULO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_ARTICULOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CAMPANA.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CAMPANA_ASOC.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CAMPANA_ASOCTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CAMPANATable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CENTRO_COSTO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CENTRO_COSTOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CLASE_PEDIDO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CLASE_PEDIDOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CLIENTE.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CLIENTETable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CONTRATO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CONTRATOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CUOTAS.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CUOTASTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DEPARTAMENTO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DEPARTAMENTOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DISTRITO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DISTRITOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DOCUMENTO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DOCUMENTOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_EST_CIVIL.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_EST_CIVILTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_GRUPO_ARTICULO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_GRUPO_ARTICULOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LIN_DOC_IMEI.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LIN_DOC_IMEITable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LINEA_DOC_VENTA.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LINEA_DOC_VENTATable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_MOTIVO_PEDIDO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_MOTIVO_PEDIDOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_PLAN_TARIFARIO.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_PLAN_TARIFARIOTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_PROVINCIA.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_PROVINCIATable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_SERVI_CONTRA.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_SERVI_CONTRATable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_TIP_DOC_CLIENTE.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_TIP_DOC_CLIENTETable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_UTILIZACION.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_UTILIZACIONTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_VENDEDOR.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_VENDEDORTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PVU_IMEIS.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PVU_IMEISTable.cs"
+                    DependentUpon = "SAP_SIC_Ventas.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZTI_CAB_PEDIDO.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZTI_CAB_PEDIDOTable.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZTI_DET_PEDIDO.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZTI_DET_PEDIDOTable.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZTI_PAGOS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZTI_PAGOSTable.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "bin\Debug\Seguridad_NET.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Release\SAP.Connector.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Release\SAP_SIC_Ventas.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Release\Seguridad_NET.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "obj\Debug\SAP_SIC_Ventas.pdb"
+                    BuildAction = "Content"
+                />
+                <Folder RelPath = "obj\Debug\temp\" />
+                <Folder RelPath = "obj\Debug\TempPE\" />
+                <File
+                    RelPath = "obj\Release\SAP_SIC_Ventas.dll"
+                    BuildAction = "Content"
+                />
+                <Folder RelPath = "obj\Release\temp\" />
+                <Folder RelPath = "obj\Release\TempPE\" />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s9="http://pe/com/claro/esb/services/hlr/schemas/ranges/RangosHLR.xsd" xmlns:s8="http://pe/com/claro/esb/services/auditoria/schemas/registro/Registro.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://pe/com/claro/esb/services/auditoria/schemas/jerarquias/Jerarquia.xsd" xmlns:s0="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" xmlns:s3="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/perfil.xsd" xmlns:s2="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd" xmlns:s5="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" xmlns:s4="http://pe/com/claro/esb/services/auditoria/schemas/accesos/paginaOpciones" xmlns:s7="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/aplicacion.xsd" xmlns:s6="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/UsuarioAppPerfil.xsd" xmlns:s10="java:pe.com.claro.esb.services.hlr.ranges.exceptions" xmlns:s11="java:java.lang" xmlns:tns="http://pe/com/claro/esb/services/auditoria/ws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://pe/com/claro/esb/services/auditoria/ws" name="EbsAuditoriaServiceDefinitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd">
+      <xs:complexType name="InfoType">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EmpleadoType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="codigoSap" type="xs:string" />
+          <xs:element name="login" type="xs:string" />
+          <xs:element name="nombres" type="xs:string" />
+          <xs:element name="paterno" type="xs:string" />
+          <xs:element name="materno" type="xs:string" />
+          <xs:element name="nombreCompleto" type="xs:string" />
+          <xs:element name="correo" type="xs:string" />
+          <xs:element name="codigoArea" type="xs:string" />
+          <xs:element name="descripcionArea" type="xs:string" />
+          <xs:element name="codigoCargo" type="xs:string" />
+          <xs:element name="descripcionCargo" type="xs:string" />
+          <xs:element name="codigoDireccion" type="xs:string" />
+          <xs:element name="descripcionDireccion" type="xs:string" />
+          <xs:element name="codigoJefe" type="xs:string" />
+          <xs:element name="descripcionJefe" type="xs:string" />
+          <xs:element name="telefono" type="xs:string" />
+          <xs:element name="dni" type="xs:string" />
+          <xs:element name="codModalidad" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AuditoriaType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="perfil" type="xs:string" />
+          <xs:element name="codigoVendedor" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AuditoriaLista">
+        <xs:sequence>
+          <xs:element name="AuditoriaItem">
+            <xs:complexType>
+              <xs:sequence maxOccurs="unbounded">
+                <xs:element name="item" type="tns:AuditoriaType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AccesoRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="aplicacion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AccesoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:InfoType" />
+            <xs:element name="auditoria" type="tns:AuditoriaLista" />
+            <xs:element name="empleado" type="tns:EmpleadoType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Empleados">
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element name="item" type="tns:EmpleadoType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="EmpleadoRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="gerencia" type="xs:string" />
+            <xs:element name="jefatura" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmpleadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:InfoType" />
+            <xs:element name="empleados" type="tns:Empleados" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmpPorModPorAreaRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="modalidad" type="xs:string" />
+            <xs:element name="area" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DatosGeneralesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:InfoType" />
+            <xs:element name="empleados" type="tns:Empleados" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DatosEmpleadoRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="login" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DatosEmpPorAreaPorModRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="login" type="xs:string" />
+            <xs:element name="area" type="xs:string" />
+            <xs:element name="modalidad" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/jerarquias/Jerarquia.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/jerarquias/Jerarquia.xsd">
+      <xs:element name="JerarquiaRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="direcion" type="xs:string" />
+            <xs:element name="gerencia" type="xs:string" />
+            <xs:element name="jefatura" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ResultadoType">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JerarquiaType">
+        <xs:sequence>
+          <xs:element name="codGeneral" type="xs:string" />
+          <xs:element name="codSapGeneral" type="xs:string" />
+          <xs:element name="desGeneral" type="xs:string" />
+          <xs:element name="codDireccion" type="xs:string" />
+          <xs:element name="codSapDireccion" type="xs:string" />
+          <xs:element name="desDireccion" type="xs:string" />
+          <xs:element name="codGerencia" type="xs:string" />
+          <xs:element name="codSapGerencia" type="xs:string" />
+          <xs:element name="desGerencia" type="xs:string" />
+          <xs:element name="codJefatura" type="xs:string" />
+          <xs:element name="codSapJefatura" type="xs:string" />
+          <xs:element name="desJefatura" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="JerarquiaLista">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="JerarquiaItem">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="item" type="tns:JerarquiaType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="JerarquiaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:ResultadoType" />
+            <xs:element name="jerarquias" type="tns:JerarquiaLista" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd">
+      <xs:complexType name="DatosType">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ModalidadType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="descripcion" type="xs:string" />
+          <xs:element name="estado" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ModalidadLista">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ModalidadItem">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="item" type="tns:ModalidadType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DireccionType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="descripcion" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DireccionLista">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="DireccionItem">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="item" type="tns:DireccionType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DireccionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:DatosType" />
+            <xs:element name="direcciones" type="tns:DireccionLista" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModalidadRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="area" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModalidadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:DatosType" />
+            <xs:element name="modalidades" type="tns:ModalidadLista" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/perfil.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/perfil.xsd">
+      <xs:complexType name="ResultType">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PerfilType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="descripcion" type="xs:string" />
+          <xs:element name="abreviatura" type="xs:string" />
+          <xs:element name="observacion" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Perfiles">
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element name="item" type="tns:PerfilType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PerfilRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="codAplicacion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PerfilResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:ResultType" />
+            <xs:element name="perfiles" type="tns:Perfiles" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/accesos/paginaOpciones" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/accesos/paginaOpciones">
+      <xs:element name="PaginaOpcionesUsuarioRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="user" type="xs:int" />
+            <xs:element name="aplicCod" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PaginaOpcionesUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="listaOpciones" type="tns:ListaPaginaOpcionesType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ListaPaginaOpcionesType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="opcion" type="tns:PaginaOpcionType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PaginaOpcionType">
+        <xs:sequence>
+          <xs:element name="opcicCod" type="xs:string" />
+          <xs:element name="clave" type="xs:string" />
+          <xs:element name="opcicDes" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd">
+      <xs:complexType name="StatusType">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="OpcionesUsuarioRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="aplicacion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OpcionesUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="menues" type="tns:MenuResponseType" />
+            <xs:element name="status" type="tns:StatusType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OpcionesUsuarioAppResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="info" type="tns:StatusType" />
+            <xs:element name="opciones" type="tns:OpcionesResponseType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="OpcionesResponseType">
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element name="menuItem" type="tns:OpcionType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MenuResponseType">
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element name="menuItem" type="tns:MenuType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MenuType">
+        <xs:sequence>
+          <xs:element name="datosMenu" type="tns:OpcionType" />
+          <xs:element name="padres">
+            <xs:complexType>
+              <xs:sequence maxOccurs="unbounded">
+                <xs:element name="padreItem" type="tns:PadreType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PadreType">
+        <xs:sequence>
+          <xs:element name="datosPadre" type="tns:OpcionType" />
+          <xs:element name="hijos">
+            <xs:complexType>
+              <xs:sequence maxOccurs="unbounded">
+                <xs:element name="hijoItem" type="tns:HijoType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="HijoType">
+        <xs:sequence>
+          <xs:element name="datosHijos" type="tns:OpcionType" />
+          <xs:element name="nietos">
+            <xs:complexType>
+              <xs:sequence maxOccurs="unbounded">
+                <xs:element name="nietoItem" type="tns:NietoType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NietoType">
+        <xs:sequence>
+          <xs:element name="nieto" type="tns:OpcionType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OpcionType">
+        <xs:sequence>
+          <xs:element name="abreviatura" type="xs:string" />
+          <xs:element name="aplicacion" type="xs:string" />
+          <xs:element name="descripcion" type="xs:string" />
+          <xs:element name="nivel" type="xs:string" />
+          <xs:element name="nivelPadre" type="xs:string" />
+          <xs:element name="opcion" type="xs:string" />
+          <xs:element name="orden" type="xs:string" />
+          <xs:element name="otro" type="xs:string" />
+          <xs:element name="padre" type="xs:string" />
+          <xs:element name="pagina" type="xs:string" />
+          <xs:element name="observacion" type="xs:string" />
+          <xs:element name="flag" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/UsuarioAppPerfil.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/UsuarioAppPerfil.xsd">
+      <xs:complexType name="UsuariosType">
+        <xs:sequence>
+          <xs:element name="codUsuario" type="xs:string" />
+          <xs:element name="loginUsuario" type="xs:string" />
+          <xs:element name="estadoUsuario" type="xs:string" />
+          <xs:element name="codPerfil" type="xs:string" />
+          <xs:element name="codEstado" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UsuariosAppPerfilRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la Consulta de usuarios por aplicacion y perfil</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="codAplicacion" type="xs:string" />
+            <xs:element name="codPerfil" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UsuariosAppPerfilResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="usuariosLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="DatosUsuario" type="tns:UsuariosType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/aplicacion.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/aplicacion.xsd">
+      <xs:complexType name="ResType">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AplicativoType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="descripcion" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AplicativoLista">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="AplicativoItem">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="item" type="tns:AplicativoType" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AplicativoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="tns:ResType" />
+            <xs:element name="aplicativos" type="tns:AplicativoLista" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/hlr/schemas/ranges/RangosHLR.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/schemas/registro/Registro.xsd">
+      <xs:element name="RegistroRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="servicio" type="xs:string" />
+            <xs:element name="ipCliente" type="xs:string" />
+            <xs:element name="nombreCliente" type="xs:string" />
+            <xs:element name="ipServidor" type="xs:string" />
+            <xs:element name="nombreServidor" type="xs:string" />
+            <xs:element name="cuentaUsuario" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="monto" type="xs:string" />
+            <xs:element name="texto" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RegistroResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="estado" type="xs:string" />
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/hlr/schemas/ranges/RangosHLR.xsd" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/hlr/schemas/ranges/RangosHLR.xsd">
+      <xs:complexType name="RangosHLRType">
+        <xs:sequence>
+          <xs:element name="inicio" type="xs:string" />
+          <xs:element name="fin" type="xs:string" />
+          <xs:element name="hlr" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RangosHLRResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="estado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="RangosHLRType" type="tns:RangosHLRType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:pe.com.claro.esb.services.hlr.ranges.exceptions">
+      <xs:import namespace="java:java.lang" />
+      <xs:complexType name="AuditoriaBDException">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:pe.com.claro.esb.services.hlr.ranges.exceptions" base="java:BaseException" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="BaseException">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Message" nillable="true" type="xs:string" />
+          <xs:element xmlns:java="java:java.lang" minOccurs="1" name="Exception" nillable="true" type="java:Exception" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element xmlns:java="java:pe.com.claro.esb.services.hlr.ranges.exceptions" name="AuditoriaBDException" type="java:AuditoriaBDException" />
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:java.lang">
+      <xs:complexType name="Exception">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:java.lang" base="java:Throwable" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Throwable" />
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/auditoria/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.hlr.ranges.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/auditoria/ws">
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/UsuarioAppPerfil.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/aplicacion.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/jerarquias/Jerarquia.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/hlr/schemas/ranges/RangosHLR.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/registro/Registro.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/accesos/paginaOpciones" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/perfil.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" />
+      <xs:element name="leerDatosEmpleado">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:DatosEmpleadoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDatosEmpleadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:EmpleadoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registroAuditoria">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:reg="http://pe/com/claro/esb/services/auditoria/schemas/registro/Registro.xsd" ref="reg:RegistroRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="registroAuditoriaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:reg="http://pe/com/claro/esb/services/auditoria/schemas/registro/Registro.xsd" ref="reg:RegistroResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerRangos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerRangosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ran="http://pe/com/claro/esb/services/hlr/schemas/ranges/RangosHLR.xsd" ref="ran:RangosHLRResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerAplicativos">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerAplicativosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:apl="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/aplicacion.xsd" ref="apl:AplicativoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDatosUsuario">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:AccesoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDatosUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:AccesoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerModalidadesPorArea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd" ref="dat:ModalidadRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerModalidadesPorAreaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd" ref="dat:ModalidadResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerOpcionesPorUsuarioPorApp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:opc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" ref="opc:OpcionesUsuarioRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerOpcionesPorUsuarioPorAppResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:opc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" ref="opc:OpcionesUsuarioAppResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerEmpleadosPorAreaModalidad">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:EmpPorModPorAreaRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerEmpleadosPorAreaModalidadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:EmpleadoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerJerarquias">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:jer="http://pe/com/claro/esb/services/auditoria/schemas/jerarquias/Jerarquia.xsd" ref="jer:JerarquiaRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerJerarquiasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:jer="http://pe/com/claro/esb/services/auditoria/schemas/jerarquias/Jerarquia.xsd" ref="jer:JerarquiaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDirecciones">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDireccionesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://pe/com/claro/esb/services/auditoria/schemas/datos/DatosGenerales.xsd" ref="dat:DireccionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerUsuariosPorAppPerfil">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:usu="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/UsuarioAppPerfil.xsd" ref="usu:UsuariosAppPerfilRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerUsuariosPorAppPerfilResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:usu="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/UsuarioAppPerfil.xsd" ref="usu:UsuariosAppPerfilResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerPaginaOpcionesPorUsuario">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:pag="http://pe/com/claro/esb/services/auditoria/schemas/accesos/paginaOpciones" ref="pag:PaginaOpcionesUsuarioRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerPaginaOpcionesPorUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:pag="http://pe/com/claro/esb/services/auditoria/schemas/accesos/paginaOpciones" ref="pag:PaginaOpcionesUsuarioResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerPerfilesPorApp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:per="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/perfil.xsd" ref="per:PerfilRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerPerfilesPorAppResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:per="http://pe/com/claro/esb/services/auditoria/schemas/aplicaciones/perfil.xsd" ref="per:PerfilResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerEmpleadosPorArea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:EmpleadoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerEmpleadosPorAreaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:EmpleadoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerOpcionesPorUsuario">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:opc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" ref="opc:OpcionesUsuarioRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerOpcionesPorUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:opc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/OpcionesUsuario.xsd" ref="opc:OpcionesUsuarioResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDatosEmpleadoPorAreaModalidad">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:DatosEmpPorAreaPorModRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="leerDatosEmpleadoPorAreaModalidadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:acc="http://pe/com/claro/esb/services/auditoria/schemas/accesos/Acceso.xsd" ref="acc:EmpleadoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="leerDatosEmpleado">
+    <wsdl:part name="parameters" element="tns:leerDatosEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosEmpleadoResponse">
+    <wsdl:part name="parameters" element="tns:leerDatosEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="registroAuditoria">
+    <wsdl:part name="parameters" element="tns:registroAuditoria" />
+  </wsdl:message>
+  <wsdl:message name="registroAuditoriaResponse">
+    <wsdl:part name="parameters" element="tns:registroAuditoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerRangos">
+    <wsdl:part name="parameters" element="tns:leerRangos" />
+  </wsdl:message>
+  <wsdl:message name="leerRangosResponse">
+    <wsdl:part name="parameters" element="tns:leerRangosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditoriaBDException">
+    <wsdl:part name="AuditoriaBDException" element="s10:AuditoriaBDException" />
+  </wsdl:message>
+  <wsdl:message name="leerAplicativos">
+    <wsdl:part name="parameters" element="tns:leerAplicativos" />
+  </wsdl:message>
+  <wsdl:message name="leerAplicativosResponse">
+    <wsdl:part name="parameters" element="tns:leerAplicativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosUsuario">
+    <wsdl:part name="parameters" element="tns:leerDatosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:leerDatosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerModalidadesPorArea">
+    <wsdl:part name="parameters" element="tns:leerModalidadesPorArea" />
+  </wsdl:message>
+  <wsdl:message name="leerModalidadesPorAreaResponse">
+    <wsdl:part name="parameters" element="tns:leerModalidadesPorAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerOpcionesPorUsuarioPorApp">
+    <wsdl:part name="parameters" element="tns:leerOpcionesPorUsuarioPorApp" />
+  </wsdl:message>
+  <wsdl:message name="leerOpcionesPorUsuarioPorAppResponse">
+    <wsdl:part name="parameters" element="tns:leerOpcionesPorUsuarioPorAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerEmpleadosPorAreaModalidad">
+    <wsdl:part name="parameters" element="tns:leerEmpleadosPorAreaModalidad" />
+  </wsdl:message>
+  <wsdl:message name="leerEmpleadosPorAreaModalidadResponse">
+    <wsdl:part name="parameters" element="tns:leerEmpleadosPorAreaModalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerJerarquias">
+    <wsdl:part name="parameters" element="tns:leerJerarquias" />
+  </wsdl:message>
+  <wsdl:message name="leerJerarquiasResponse">
+    <wsdl:part name="parameters" element="tns:leerJerarquiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerDirecciones">
+    <wsdl:part name="parameters" element="tns:leerDirecciones" />
+  </wsdl:message>
+  <wsdl:message name="leerDireccionesResponse">
+    <wsdl:part name="parameters" element="tns:leerDireccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerUsuariosPorAppPerfil">
+    <wsdl:part name="parameters" element="tns:leerUsuariosPorAppPerfil" />
+  </wsdl:message>
+  <wsdl:message name="leerUsuariosPorAppPerfilResponse">
+    <wsdl:part name="parameters" element="tns:leerUsuariosPorAppPerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerPaginaOpcionesPorUsuario">
+    <wsdl:part name="parameters" element="tns:leerPaginaOpcionesPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="leerPaginaOpcionesPorUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:leerPaginaOpcionesPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerPerfilesPorApp">
+    <wsdl:part name="parameters" element="tns:leerPerfilesPorApp" />
+  </wsdl:message>
+  <wsdl:message name="leerPerfilesPorAppResponse">
+    <wsdl:part name="parameters" element="tns:leerPerfilesPorAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerEmpleadosPorArea">
+    <wsdl:part name="parameters" element="tns:leerEmpleadosPorArea" />
+  </wsdl:message>
+  <wsdl:message name="leerEmpleadosPorAreaResponse">
+    <wsdl:part name="parameters" element="tns:leerEmpleadosPorAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerOpcionesPorUsuario">
+    <wsdl:part name="parameters" element="tns:leerOpcionesPorUsuario" />
+  </wsdl:message>
+  <wsdl:message name="leerOpcionesPorUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:leerOpcionesPorUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosEmpleadoPorAreaModalidad">
+    <wsdl:part name="parameters" element="tns:leerDatosEmpleadoPorAreaModalidad" />
+  </wsdl:message>
+  <wsdl:message name="leerDatosEmpleadoPorAreaModalidadResponse">
+    <wsdl:part name="parameters" element="tns:leerDatosEmpleadoPorAreaModalidadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EbsAuditoria">
+    <wsdl:operation name="leerDatosEmpleado" parameterOrder="parameters">
+      <wsdl:input message="tns:leerDatosEmpleado" />
+      <wsdl:output message="tns:leerDatosEmpleadoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registroAuditoria" parameterOrder="parameters">
+      <wsdl:input message="tns:registroAuditoria" />
+      <wsdl:output message="tns:registroAuditoriaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerRangos" parameterOrder="parameters">
+      <wsdl:input message="tns:leerRangos" />
+      <wsdl:output message="tns:leerRangosResponse" />
+      <wsdl:fault name="AuditoriaBDException" message="tns:AuditoriaBDException" />
+    </wsdl:operation>
+    <wsdl:operation name="leerAplicativos" parameterOrder="parameters">
+      <wsdl:input message="tns:leerAplicativos" />
+      <wsdl:output message="tns:leerAplicativosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosUsuario" parameterOrder="parameters">
+      <wsdl:input message="tns:leerDatosUsuario" />
+      <wsdl:output message="tns:leerDatosUsuarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerModalidadesPorArea" parameterOrder="parameters">
+      <wsdl:input message="tns:leerModalidadesPorArea" />
+      <wsdl:output message="tns:leerModalidadesPorAreaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerOpcionesPorUsuarioPorApp" parameterOrder="parameters">
+      <wsdl:input message="tns:leerOpcionesPorUsuarioPorApp" />
+      <wsdl:output message="tns:leerOpcionesPorUsuarioPorAppResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerEmpleadosPorAreaModalidad" parameterOrder="parameters">
+      <wsdl:input message="tns:leerEmpleadosPorAreaModalidad" />
+      <wsdl:output message="tns:leerEmpleadosPorAreaModalidadResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerJerarquias" parameterOrder="parameters">
+      <wsdl:input message="tns:leerJerarquias" />
+      <wsdl:output message="tns:leerJerarquiasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerDirecciones" parameterOrder="parameters">
+      <wsdl:input message="tns:leerDirecciones" />
+      <wsdl:output message="tns:leerDireccionesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerUsuariosPorAppPerfil" parameterOrder="parameters">
+      <wsdl:input message="tns:leerUsuariosPorAppPerfil" />
+      <wsdl:output message="tns:leerUsuariosPorAppPerfilResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerPaginaOpcionesPorUsuario" parameterOrder="parameters">
+      <wsdl:input message="tns:leerPaginaOpcionesPorUsuario" />
+      <wsdl:output message="tns:leerPaginaOpcionesPorUsuarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerPerfilesPorApp" parameterOrder="parameters">
+      <wsdl:input message="tns:leerPerfilesPorApp" />
+      <wsdl:output message="tns:leerPerfilesPorAppResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerEmpleadosPorArea" parameterOrder="parameters">
+      <wsdl:input message="tns:leerEmpleadosPorArea" />
+      <wsdl:output message="tns:leerEmpleadosPorAreaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerOpcionesPorUsuario" parameterOrder="parameters">
+      <wsdl:input message="tns:leerOpcionesPorUsuario" />
+      <wsdl:output message="tns:leerOpcionesPorUsuarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosEmpleadoPorAreaModalidad" parameterOrder="parameters">
+      <wsdl:input message="tns:leerDatosEmpleadoPorAreaModalidad" />
+      <wsdl:output message="tns:leerDatosEmpleadoPorAreaModalidadResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EbsAuditoriaServiceSoapBinding" type="tns:EbsAuditoria">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="leerDatosEmpleado">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registroAuditoria">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerRangos">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="AuditoriaBDException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="leerAplicativos">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosUsuario">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerModalidadesPorArea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerOpcionesPorUsuarioPorApp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerEmpleadosPorAreaModalidad">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerJerarquias">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDirecciones">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerUsuariosPorAppPerfil">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerPaginaOpcionesPorUsuario">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerPerfilesPorApp">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerEmpleadosPorArea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerOpcionesPorUsuario">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="leerDatosEmpleadoPorAreaModalidad">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EbsAuditoriaService">
+    <wsdl:port name="EbsAuditoriaSoapPort" binding="tns:EbsAuditoriaServiceSoapBinding">
+      <soap:address location="http://172.19.73.62:8901/AuditoriaWS/EbsAuditoria" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

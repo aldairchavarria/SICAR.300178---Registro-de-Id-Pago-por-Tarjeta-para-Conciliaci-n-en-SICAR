@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://services.eai.ventas.claro.com.pe/pagos/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://services.eai.ventas.claro.com.pe/pagos/ws" name="ebsPagoWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv26.tim.com.pe:8909/PagosWS/ebsPagosSB11?xsd=1" namespace="http://services.eai.ventas.claro.com.pe/pagos/ws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="registrarPago">
+    <wsdl:part name="request" xmlns:q1="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q1:registrarPagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarPagoResponse">
+    <wsdl:part name="response" xmlns:q2="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q2:registrarPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cambiarEstadoSeries">
+    <wsdl:part name="request" xmlns:q3="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q3:cambiarEstadoSeriesRequest" />
+  </wsdl:message>
+  <wsdl:message name="cambiarEstadoSeriesResponse">
+    <wsdl:part name="response" xmlns:q4="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q4:cambiarEstadoSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="anularPedidoPago">
+    <wsdl:part name="request" xmlns:q5="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q5:anularPedidoPagoRequest" />
+  </wsdl:message>
+  <wsdl:message name="anularPedidoPagoResponse">
+    <wsdl:part name="response" xmlns:q6="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q6:anularPedidoPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="devolverEfectivo">
+    <wsdl:part name="request" xmlns:q7="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q7:devolverEfectivoRequest" />
+  </wsdl:message>
+  <wsdl:message name="devolverEfectivoResponse">
+    <wsdl:part name="response" xmlns:q8="http://services.eai.ventas.claro.com.pe/pagos/ws/types" element="q8:devolverEfectivoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PagoWSPortType">
+    <wsdl:operation name="registrarPago">
+      <wsdl:input message="tns:registrarPago" />
+      <wsdl:output message="tns:registrarPagoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cambiarEstadoSeries">
+      <wsdl:input message="tns:cambiarEstadoSeries" />
+      <wsdl:output message="tns:cambiarEstadoSeriesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="anularPedidoPago">
+      <wsdl:input message="tns:anularPedidoPago" />
+      <wsdl:output message="tns:anularPedidoPagoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="devolverEfectivo">
+      <wsdl:input message="tns:devolverEfectivo" />
+      <wsdl:output message="tns:devolverEfectivoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ebsPagosSB11Binding" type="tns:PagoWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="registrarPago">
+      <soap:operation soapAction="http://services.eai.ventas.claro.com.pe/pagos/ws/registrarPago" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarEstadoSeries">
+      <soap:operation soapAction="http://services.eai.ventas.claro.com.pe/pagos/ws/cambiarEstadoSeries" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anularPedidoPago">
+      <soap:operation soapAction="http://services.eai.ventas.claro.com.pe/pagos/ws/anularPedidoPago" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="devolverEfectivo">
+      <soap:operation soapAction="http://services.eai.ventas.claro.com.pe/pagos/ws/devolverEfectivo" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsPagoWS">
+    <wsdl:port name="ebsPagosSB11" binding="tns:ebsPagosSB11Binding">
+      <soap:address location="http://limdeseaiv26.tim.com.pe:8909/PagosWS/ebsPagosSB11" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

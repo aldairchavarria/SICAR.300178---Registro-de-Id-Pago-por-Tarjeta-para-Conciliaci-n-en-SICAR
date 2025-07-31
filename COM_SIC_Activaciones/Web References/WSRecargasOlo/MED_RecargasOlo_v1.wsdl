@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/esb/ventas/recargasOlo/v1/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/esb/ventas/recargasOlo/v1/" name="MED_RecargasOlo_v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:ns1="http://claro.com.pe/esb/ventas/recargasOlo/v1/">
+      <s:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FanularRecarga_v1" namespace="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/anularRecarga/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FbuscarPlanesRecarga_v1" namespace="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/buscarPlanesRecarga/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FconsultarRecarga_v1" namespace="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/consultarRecarga/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2Frecargar_v1" namespace="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/recargar/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FClaroFault_v1" namespace="http://claro.com.pe/esb/data/generico/claroFault/v1/" />
+      <s:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FClaroGenericHeaders_v1" namespace="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="anularRecargaRequestMessage">
+    <wsdl:part name="anularRecargaReq" xmlns:q1="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/anularRecarga/" element="q1:anularRecargaRequest" />
+  </wsdl:message>
+  <wsdl:message name="anularRecargaResponseMessage">
+    <wsdl:part name="anularRecargaRes" xmlns:q2="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/anularRecarga/" element="q2:anularRecargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscarPlanesRecargaRequestMessage">
+    <wsdl:part name="buscarPlanesRecargaReq" xmlns:q3="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/buscarPlanesRecarga/" element="q3:buscarPlanesRecargaRequest" />
+  </wsdl:message>
+  <wsdl:message name="buscarPlanesRecargaResponseMessage">
+    <wsdl:part name="buscarPlanesRecargaRes" xmlns:q4="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/buscarPlanesRecarga/" element="q4:buscarPlanesRecargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarRecargaRequestMessage">
+    <wsdl:part name="consultarRecargaReq" xmlns:q5="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/consultarRecarga/" element="q5:consultarRecargaRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarRecargaResponseMessage">
+    <wsdl:part name="consultarRecargaRes" xmlns:q6="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/consultarRecarga/" element="q6:consultarRecargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="recargarRequestMessage">
+    <wsdl:part name="recargarReq" xmlns:q7="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/recargar/" element="q7:recargarRequest" />
+  </wsdl:message>
+  <wsdl:message name="recargarResponseMessage">
+    <wsdl:part name="recargarRes" xmlns:q8="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/recargar/" element="q8:recargarResponse" />
+  </wsdl:message>
+  <wsdl:message name="claroFault">
+    <wsdl:part name="claroFault" xmlns:q9="http://claro.com.pe/esb/data/generico/claroFault/v1/" type="q9:claroFault" />
+  </wsdl:message>
+  <wsdl:message name="headerRequest">
+    <wsdl:part name="headerRequest" xmlns:q10="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" element="q10:headerRequest" />
+  </wsdl:message>
+  <wsdl:message name="headerResponse">
+    <wsdl:part name="headerResponse" xmlns:q11="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" element="q11:headerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MED_RecargasOloPort">
+    <wsdl:operation name="anularRecarga">
+      <wsdl:input message="tns:anularRecargaRequestMessage" />
+      <wsdl:output message="tns:anularRecargaResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarPlanesRecarga">
+      <wsdl:input message="tns:buscarPlanesRecargaRequestMessage" />
+      <wsdl:output message="tns:buscarPlanesRecargaResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarRecarga">
+      <wsdl:input message="tns:consultarRecargaRequestMessage" />
+      <wsdl:output message="tns:consultarRecargaResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+    <wsdl:operation name="recargar">
+      <wsdl:input message="tns:recargarRequestMessage" />
+      <wsdl:output message="tns:recargarResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MED_RecargasOloSOAP11Binding" type="tns:MED_RecargasOloPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="anularRecarga">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/MED_RecargasOlo/v1/anularRecarga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="anularRecargaReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="anularRecargaRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="buscarPlanesRecarga">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/MED_RecargasOlo/v1/buscarPlanesRecarga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="buscarPlanesRecargaReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="buscarPlanesRecargaRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarRecarga">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/MED_RecargasOlo/v1/consultarRecarga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="consultarRecargaReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="consultarRecargaRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recargar">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/MED_RecargasOlo/v1/recargar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="recargarReq" />
+        <soap:header message="tns:headerRequest" part="headerRequest" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="recargarRes" />
+        <soap:header message="tns:headerResponse" part="headerResponse" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MED_RecargasOloSOAP11BindingQSService">
+    <wsdl:documentation>OSB Service</wsdl:documentation>
+    <wsdl:port name="MED_RecargasOloSOAP11BindingQSPort" binding="tns:MED_RecargasOloSOAP11Binding">
+      <soap:address location="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

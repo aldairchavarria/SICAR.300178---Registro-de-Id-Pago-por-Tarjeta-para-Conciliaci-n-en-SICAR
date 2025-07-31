@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:entressta="http://claro.com.pe/esb/data/commonBusinessEntities/responseStatus/v2/" xmlns:bastyp="http://claro.com.pe/esb/data/commonBusinessEntities/baseTypes/v2/" xmlns:enupenv1="http://claro.com.pe/esb/message/bssGenericEntityService/updateEntity/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/message/bssGenericEntityService/updateEntity/v1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FResponseStatus_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/responseStatus/v2/" />
+  <xs:import schemaLocation="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FBaseTypes_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/baseTypes/v2/" />
+  <xs:element name="updateEntityRequest" type="enupenv1:UpdateEntityRequestType" />
+  <xs:element name="updateEntityResponse" type="enupenv1:UpdateEntityResponseType" />
+  <xs:complexType name="UpdateEntityRequestType">
+    <xs:sequence>
+      <xs:element name="password" type="xs:string" />
+      <xs:element name="transactionID" type="xs:string" />
+      <xs:element name="username" type="xs:string" />
+      <xs:element name="agentID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="parametersHeader" type="enupenv1:ListaRequest" />
+      <xs:element minOccurs="0" maxOccurs="1" name="listaRequestOpcional" type="enupenv1:ListaRequestOpcionalType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateEntityResponseType">
+    <xs:sequence>
+      <xs:element name="responseStatus" type="entressta:ResponseStatus" />
+      <xs:element name="responseData" type="enupenv1:ResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseData">
+    <xs:sequence>
+      <xs:element name="statusCode" type="xs:string" />
+      <xs:element name="statusMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="parametersBodyResponse" type="enupenv1:ListaResponse" />
+      <xs:element minOccurs="0" maxOccurs="1" name="listaResponseOpcional" type="enupenv1:ListaResponseOpcionalType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaRequestOpcionalType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional" type="bastyp:AttributeValuePair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaResponseOpcionalType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional" type="bastyp:AttributeValuePair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Properties">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="msisdn" type="xs:anyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="reserveDays" type="xs:anyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="reserve" type="xs:anyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="spid" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AttributeValue2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="attributeName" type="xs:string" />
+      <xs:element name="attributeValue" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="objetoRequest" type="enupenv1:Properties" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="objetoResponse" type="enupenv1:AttributeValue2" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

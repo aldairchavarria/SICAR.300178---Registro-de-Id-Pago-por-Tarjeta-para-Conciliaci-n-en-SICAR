@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://temp.openuri.org/ocs/callService" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="wli/activaciones/datosListaCuentas" xmlns:s2="http://pe/com/claro/esb/services/activacionespostpago/ws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/activacionespostpago/ws" name="ObtieneCuentasClienteServiceDefinitions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:tns="wli/activaciones/datosListaCuentas" xmlns:s1="http://pe/com/claro/esb/services/activacionespostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="wli/activaciones/datosListaCuentas">
+      <s:element name="DATOS.LISTA.CUENTA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="RESPUESTA">
+              <s:complexType>
+                <s:sequence>
+                  <s:element name="TRANSACC_ID" type="s:string" />
+                  <s:element name="FLAG_PROCESO" type="s:string" />
+                  <s:element name="MENSAJE_PVU" type="s:string" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="CUENTA">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" name="CS_ID" type="s:string" />
+                  <s:element minOccurs="0" name="CODIGO_BSCS" type="s:string" />
+                  <s:element minOccurs="0" name="CS_LEVEL_CODE" type="s:string" />
+                  <s:element minOccurs="0" name="CS_ID_HIGH" type="s:string" />
+                  <s:element minOccurs="0" name="CODIGO_BSCS_HIGH" type="s:string" />
+                  <s:element minOccurs="0" name="NOMBRE_TITULAR" type="s:string" />
+                  <s:element minOccurs="0" name="DIRECCION_DESCRIPCION" type="s:string" />
+                  <s:element minOccurs="0" name="REFERENCIA" type="s:string" />
+                  <s:element minOccurs="0" name="DESC_DPTO" type="s:string" />
+                  <s:element minOccurs="0" name="DESC_PROV" type="s:string" />
+                  <s:element minOccurs="0" name="DESC_DIST" type="s:string" />
+                  <s:element minOccurs="0" name="COD_UBIGEO" type="s:string" />
+                  <s:element minOccurs="0" name="LIM_CREDITO" type="s:string" />
+                  <s:element minOccurs="0" name="ESTADO_CUENTA" type="s:string" />
+                  <s:element minOccurs="0" name="RESPONS_PAGO" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="linea" type="tns:lineaType" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="lineaType">
+        <s:sequence>
+          <s:element minOccurs="0" name="NUM_TELEFONO" type="s:string" />
+          <s:element minOccurs="0" name="PLAN" type="s:string" />
+          <s:element minOccurs="0" name="FECHA_ACTIVAC" type="s:string" />
+          <s:element minOccurs="0" name="ESTADO_LINEA" type="s:string" />
+          <s:element minOccurs="0" name="FECHA_CAMB_ESTADO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/activacionespostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" elementFormDefault="unqualified" targetNamespace="http://temp.openuri.org/ocs/callService" version="01">
+      <xsd:element name="callservice">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="header">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="cliente">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="servicio" type="xsd:string" />
+                        <xsd:element name="timeout" type="xsd:integer" />
+                        <xsd:element name="usuario" type="xsd:string" />
+                        <xsd:element name="clave" type="xsd:string" />
+                        <xsd:element name="aplicacion" type="xsd:string" />
+                        <xsd:element name="timestamp" type="xsd:string" />
+                        <xsd:element name="idsrv" type="xsd:string" />
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="filterClass" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="servicio">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="retcode">
+                          <xsd:complexType>
+                            <xsd:attribute name="modo" type="xsd:string" />
+                            <xsd:attribute name="valor" type="xsd:byte" />
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="errdesc" type="xsd:string" />
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" maxOccurs="1" name="datos">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametro">
+                    <xsd:complexType>
+                      <xsd:attribute name="nombre" type="xsd:string" />
+                      <xsd:attribute name="valor" type="xsd:string" />
+                      <xsd:attribute name="modo" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="tabla">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="fila">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" maxOccurs="unbounded" name="parametro">
+                                <xsd:complexType>
+                                  <xsd:attribute name="nombre" type="xsd:string" />
+                                  <xsd:attribute name="valor" type="xsd:string" />
+                                  <xsd:attribute name="modo" type="xsd:string" />
+                                </xsd:complexType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                      <xsd:attribute name="nombre" type="xsd:string" />
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/activacionespostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/activacionespostpago/ws">
+      <xs:import namespace="http://temp.openuri.org/ocs/callService" />
+      <xs:import namespace="wli/activaciones/datosListaCuentas" />
+      <xs:element name="obtieneCuentasCliente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:cal="http://temp.openuri.org/ocs/callService" ref="cal:callservice" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="obtieneCuentasClienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="wli/activaciones/datosListaCuentas" ref="dat:DATOS.LISTA.CUENTA" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </types>
+  <message name="obtieneCuentasCliente">
+    <part name="parameters" element="s2:obtieneCuentasCliente" />
+  </message>
+  <message name="obtieneCuentasClienteResponse">
+    <part name="parameters" element="s2:obtieneCuentasClienteResponse" />
+  </message>
+  <portType name="ObtieneCuentasCliente">
+    <operation name="obtieneCuentasCliente" parameterOrder="parameters">
+      <input message="s2:obtieneCuentasCliente" />
+      <output message="s2:obtieneCuentasClienteResponse" />
+    </operation>
+  </portType>
+  <binding name="ObtieneCuentasClienteServiceSoapBinding" type="s2:ObtieneCuentasCliente">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="obtieneCuentasCliente">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ObtieneCuentasClienteService">
+    <port name="ObtieneCuentasClienteSoapPort" binding="s2:ObtieneCuentasClienteServiceSoapBinding">
+      <soap:address location="http://limdeseaiv06.tim.com.pe:8909/ActivacionesPostpagoProcess/ObtieneCuentasCliente" />
+    </port>
+  </service>
+</definitions>

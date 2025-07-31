@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/">
+      <s:element name="alertaNotificacionRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="s0:audiTypeRequest" />
+            <s:element name="tipoDoc" type="s:string" />
+            <s:element name="nroDoc" type="s:string" />
+            <s:element name="codMensaje" type="s:string" />
+            <s:element name="tipoProducto" type="s:string" />
+            <s:element name="descProducto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="alertaNotificacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlertaNotificacionPorRenovacionRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="s0:audiTypeRequest" />
+            <s:element name="tipoDoc" type="s:string" />
+            <s:element name="nroDoc" type="s:string" />
+            <s:element name="Msisdn" type="s:string" />
+            <s:element name="EquipoComprado" type="s:string" />
+            <s:element name="EquipoPrecio" type="s:string" />
+            <s:element name="TiempoContrato" type="s:string" />
+            <s:element name="idCaso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AlertaNotificacionPorRenovacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="audiTypeRequest">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="ipAplicacion" type="s:string" />
+          <s:element name="nombreAplicacion" type="s:string" />
+          <s:element name="usuario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="alertaNotificacionRequestMsg">
+    <part name="parameters" element="s0:alertaNotificacionRequest" />
+  </message>
+  <message name="alertaNotificacionResponseMsg">
+    <part name="parameters" element="s0:alertaNotificacionResponse" />
+  </message>
+  <message name="AlertaNotificacionPorRenovacionRequestMsg">
+    <part name="parameters" element="s0:AlertaNotificacionPorRenovacionRequest" />
+  </message>
+  <message name="AlertaNotificacionPorRenovacionResponseMsg">
+    <part name="parameters" element="s0:AlertaNotificacionPorRenovacionResponse" />
+  </message>
+  <portType name="ebsAlertaNotificacionPortType">
+    <operation name="alertaNotificacion">
+      <input message="s0:alertaNotificacionRequestMsg" />
+      <output message="s0:alertaNotificacionResponseMsg" />
+    </operation>
+    <operation name="AlertaNotificacionPorRenovacion">
+      <input message="s0:AlertaNotificacionPorRenovacionRequestMsg" />
+      <output message="s0:AlertaNotificacionPorRenovacionResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsAlertaNotificacionPortTypeSOAP12Binding" type="s0:ebsAlertaNotificacionPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="alertaNotificacion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/alertaNotificacion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="AlertaNotificacionPorRenovacion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/alertaNotificacion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ebsAlertaNotificacionPortTypeSOAP11Binding" type="s0:ebsAlertaNotificacionPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="alertaNotificacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/alertaNotificacion" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AlertaNotificacionPorRenovacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/ws/notificacion/AlertaNotificacion/alertaNotificacion" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsAlertaNotificacionService">
+    <port name="ebsAlertaNotificacionSB12" binding="s0:ebsAlertaNotificacionPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiocsv02.tim.com.pe:8909/AlertaNotificacion/ebsAlertaNotificacionSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+    <port name="ebsAlertaNotificacionSB11" binding="s0:ebsAlertaNotificacionPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiocsv02.tim.com.pe:8909/AlertaNotificacion/ebsAlertaNotificacionSB11" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,115 @@
+A:link
+{
+    FONT-SIZE: 11px;
+    COLOR: #000080;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    FONT-SIZE: 11px;
+    COLOR: #000080;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+BODY
+{
+    FONT-FAMILY: Arial
+}
+.tdfavgen
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #000080;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ecf0f9
+}
+.tdTitFav
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #000099;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-ALIGN: center
+}
+.divfav
+{
+    OVERFLOW: auto;
+    SCROLLBAR-BASE-COLOR: #cecfef;
+    HEIGHT: 140px;
+    BACKGROUND-COLOR: #eaf2ff
+}
+.divgrupo
+{
+    OVERFLOW: auto;
+    SCROLLBAR-BASE-COLOR: #cecfef;
+    HEIGHT: 190px;
+    BACKGROUND-COLOR: #eaf2ff
+}
+.tdFav1
+{
+    BORDER-LEFT-WIDTH: 1pt;
+    BORDER-LEFT-COLOR: #000099;
+    BORDER-BOTTOM-COLOR: black;
+    BORDER-TOP-COLOR: black;
+    BORDER-RIGHT-COLOR: black
+}
+.Reporte
+{
+    OVERFLOW: auto;
+    SCROLLBAR-BASE-COLOR: #cecfef;
+    HEIGHT: 400px;
+    BACKGROUND-COLOR: #eaf2ff
+}
+.gen
+{
+    OVERFLOW: auto;
+    SCROLLBAR-BASE-COLOR: #cecfef;
+    HEIGHT: 350px;
+    BACKGROUND-COLOR: #eaf2ff
+}
+.imgInput
+{
+    CURSOR: hand
+}
+INPUT
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TEXTAREA
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+SELECT
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.clsMensaje
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #000080;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.clsFile
+{
+}
+BUTTON
+{
+    BACKGROUND-COLOR: #009999
+}
+.formatomensaje
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: lightblue;
+    FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.gen2
+{
+    HEIGHT: 260px;
+    BACKGROUND-COLOR: #eaf2ff
+}

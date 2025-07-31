@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns="http://claro.com.pe/eai/ws/consultaspostpagows/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/consultaspostpagows/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/ConsultasPostpagoWS/ConsultasPostpagoSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:complexType name="CuentaMadreType">
+    <xsd:sequence>
+      <xsd:element name="idCuentaMadre" type="xsd:string" />
+      <xsd:element name="descripcion" type="xsd:string" />
+      <xsd:element name="nivel" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CuentasMadreType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="CuentaMadreResponseType" type="CuentaMadreType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InformacionBloqueosType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="InformacionBloqueoResponseType" type="InformacionBloqueoType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InformacionBloqueoType">
+    <xsd:sequence>
+      <xsd:element name="cuenta" type="xsd:string" />
+      <xsd:element name="codigoTickler" type="xsd:string" />
+      <xsd:element name="estadoAnotacion" type="xsd:string" />
+      <xsd:element name="prioridad" type="xsd:string" />
+      <xsd:element name="descripcionCorta" type="xsd:string" />
+      <xsd:element name="usuarioSeguimiento" type="xsd:string" />
+      <xsd:element name="fechaSeguimiento" type="xsd:string" />
+      <xsd:element name="accionSeguimiento" type="xsd:string" />
+      <xsd:element name="fechaApertura" type="xsd:string" />
+      <xsd:element name="fechaCierre" type="xsd:string" />
+      <xsd:element name="nroTickler" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LlamadasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="LlamadaResponseType" type="LlamadaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LlamadaType">
+    <xsd:sequence>
+      <xsd:element name="fechaHoraInicio" type="xsd:string" />
+      <xsd:element name="telefonoDestino" type="xsd:string" />
+      <xsd:element name="duracion" type="xsd:string" />
+      <xsd:element name="tipoServicio" type="xsd:string" />
+      <xsd:element name="destino" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IccidsType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="iccidResponseType" type="IccidType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IccidType">
+    <xsd:sequence>
+      <xsd:element name="numeroIccid" type="xsd:string" />
+      <xsd:element name="linea" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="fechaAsignacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SubCuentasType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="SubCuentaResponseType" type="SubCuentaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SubCuentaType">
+    <xsd:sequence>
+      <xsd:element name="cuentaPadre" type="xsd:string" />
+      <xsd:element name="cuenta" type="xsd:string" />
+      <xsd:element name="customerId" type="xsd:string" />
+      <xsd:element name="nombre" type="xsd:string" />
+      <xsd:element name="apellidos" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="nivel" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="datosClienteRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="custcode" type="xsd:string" />
+        <xsd:element name="dnnum" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="datosClienteResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="datosCliente" type="base:datosClienteType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="datosContratoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="p_coid" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="datosContratoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="datosContrato" type="base:datosContratoType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="serviciosLineaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="p_coid" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="serviciosLineaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="datosServicio" type="base:datosServicioType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerCuentasMadreRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="telefono" type="xsd:string" />
+        <xsd:element name="cuenta" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerCuentasMadreResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="listaCuentasMadre" type="CuentasMadreType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDatosBloqueoLineaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="customerId" type="xsd:string" />
+        <xsd:element name="coId" type="xsd:string" />
+        <xsd:element name="cstype" type="xsd:string" />
+        <xsd:element name="ticklerNumber" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDatosBloqueoLineaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="0" maxOccurs="1" name="listaInformacionBloqueos" type="InformacionBloqueosType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDetalleLlamadasNoFacturadoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="tipoConsulta" type="xsd:string" />
+        <xsd:element name="valor" type="xsd:string" />
+        <xsd:element name="fechaInicio" type="xsd:string" />
+        <xsd:element name="fechaFin" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerDetalleLlamadasNoFacturadoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="listaLlamadas" type="LlamadasType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerIccidAsociadosALineaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="numeroIccid" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerIccidAsociadosALineaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="listaIccids" type="IccidsType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerSubCuentasPorCuentaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="numeroCuenta" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="leerSubCuentasPorCuentaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="listaSubCuentas" type="SubCuentasType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

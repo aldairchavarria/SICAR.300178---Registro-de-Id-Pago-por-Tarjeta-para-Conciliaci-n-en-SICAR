@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd4="http://claro.com.pe/esb/data/generico/claroFault/v1/" xmlns:tns="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/obtenerEstadoCP/" xmlns:xsd5="http://claro.com.pe/esb/data/generico/opcionales/v1/" xmlns:xsd3="http://claro.com.pe/esb/data/generico/responseStatus/v1/" xmlns:xsd2="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/obtenerEstadoCP/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FResponseStatus_v1" namespace="http://claro.com.pe/esb/data/generico/responseStatus/v1/" />
+  <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FOpcionales_v1" namespace="http://claro.com.pe/esb/data/generico/opcionales/v1/" />
+  <xsd:element name="obtenerEstadoCPRequest" type="tns:obtenerEstadoCPRequest" />
+  <xsd:complexType name="obtenerEstadoCPRequest">
+    <xsd:sequence>
+      <xsd:element name="nroSecuencial" type="xsd:string" />
+      <xsd:element name="codSolicitud" type="xsd:string" />
+      <xsd:element name="inicioRango" type="xsd:string" />
+      <xsd:element name="flagConsulta" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResquestOpcional" type="xsd5:RequestOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="obtenerEstadoCPResponse" type="tns:obtenerEstadoCPResponse" />
+  <xsd:complexType name="obtenerEstadoCPResponse">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="responseStatus" type="xsd3:ResponseStatus" />
+        <xsd:element name="responseData" type="tns:ResponseData" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="xsd5:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseData">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element minOccurs="1" maxOccurs="1" name="cursorDet" type="tns:CursorDetType" />
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CursorDetType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Cursor">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idSolicitud" type="xsd:string" />
+            <xsd:element name="codSolicitud" type="xsd:string" />
+            <xsd:element name="inicioRango" type="xsd:string" />
+            <xsd:element name="fechActivacion" type="xsd:string" />
+            <xsd:element name="envioCp" type="xsd:string" />
+            <xsd:element name="flagEnvio" type="xsd:string" />
+            <xsd:element name="estadoProcesoCp" type="xsd:string" />
+            <xsd:element name="estadoCp" type="xsd:string" />
+            <xsd:element name="motivoCp" type="xsd:string" />
+            <xsd:element name="descripMotivo" type="xsd:string" />
+            <xsd:element name="deudaCedente" type="xsd:string" />
+            <xsd:element name="numIntentos" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/ebs/ws/venta/MigracionSaldoGSM" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/ebs/ws/venta/MigracionSaldoGSM" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/ebs/ws/venta/MigracionSaldoGSM">
+      <s:element name="transferirSaldoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="s0:auditType" />
+            <s:element name="telefono" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="transferirSaldoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="s0:auditTypeResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="auditType">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="ipAplicacion" type="s:string" />
+          <s:element name="aplicacion" type="s:string" />
+          <s:element name="usrAplicacion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="auditTypeResponse">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="codigoRespuesta" type="s:string" />
+          <s:element name="mensajeRespuesta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="transferirSaldoRequestMsg">
+    <part name="parameters" element="s0:transferirSaldoRequest" />
+  </message>
+  <message name="transferirSaldoResponseMsg">
+    <part name="paramaters" element="s0:transferirSaldoResponse" />
+  </message>
+  <portType name="ebsMigracionSaldoGSMPortType">
+    <operation name="transferirSaldo">
+      <input message="s0:transferirSaldoRequestMsg" />
+      <output message="s0:transferirSaldoResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsMigracionSaldoGSMPortTypeSOAP12Binding" type="s0:ebsMigracionSaldoGSMPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="transferirSaldo">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/ebs/ws/venta/MigracionSaldoGSM/transferirSaldo" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ebsMigracionSaldoGSMPortTypeSOAP11Binding" type="s0:ebsMigracionSaldoGSMPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="transferirSaldo">
+      <soap:operation soapAction="http://claro.com.pe/ebs/ws/venta/MigracionSaldoGSM/transferirSaldo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsMigracionSaldoGSMService">
+    <port name="ebsMigracionSaldoGSMSB12" binding="s0:ebsMigracionSaldoGSMPortTypeSOAP12Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/MigracionSaldoGSM/ebsMigracionSaldoGSMSB12" />
+    </port>
+    <port name="ebsMigracionSaldoGSMSB11" binding="s0:ebsMigracionSaldoGSMPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/MigracionSaldoGSM/ebsMigracionSaldoGSMSB11" />
+    </port>
+  </service>
+</definitions>

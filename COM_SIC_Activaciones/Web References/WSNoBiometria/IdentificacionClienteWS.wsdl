@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/services/identificacionCliente/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/services/identificacionCliente/ws" name="IdentificacionClienteWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv26.tim.com.pe:8909/IdentificacionClienteWS/ebsIdentificacionClienteSB11?xsd=1" namespace="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="obtenerPreguntasRequest">
+    <wsdl:part name="obtenerPreguntasReq" xmlns:q1="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q1:obtenerPreguntasRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerPreguntasResponse">
+    <wsdl:part name="obtenerPreguntasRes" xmlns:q2="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q2:obtenerPreguntasResponse" />
+  </wsdl:message>
+  <wsdl:message name="responderPreguntasRequest">
+    <wsdl:part name="responderPreguntasReq" xmlns:q3="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q3:responderPreguntasRequest" />
+  </wsdl:message>
+  <wsdl:message name="responderPreguntasResponse">
+    <wsdl:part name="responderPreguntasRes" xmlns:q4="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q4:responderPreguntasResponse" />
+  </wsdl:message>
+  <wsdl:message name="confirmarUsoInformacionRequest">
+    <wsdl:part name="confirmarUsoInformacionReq" xmlns:q5="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q5:confirmarUsoInformacionRequest" />
+  </wsdl:message>
+  <wsdl:message name="confirmarUsoInformacionResponse">
+    <wsdl:part name="confirmarUsoInformacionRes" xmlns:q6="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q6:confirmarUsoInformacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="revalidarDatosClienteRequest">
+    <wsdl:part name="revalidarDatosClienteReq" xmlns:q7="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q7:revalidarDatosClienteRequest" />
+  </wsdl:message>
+  <wsdl:message name="notificarRespuestasPendientesRequest">
+    <wsdl:part name="notificarRespuestasPendientesReq" xmlns:q8="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q8:notificarRespuestasPendientesRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarValidacionClienteRequest">
+    <wsdl:part name="actualizarValidacionClienteReq" xmlns:q9="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q9:actualizarValidacionClienteRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarValidacionClienteResponse">
+    <wsdl:part name="actualizarValidacionClienteRes" xmlns:q10="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q10:actualizarValidacionClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarCoberturaRequest">
+    <wsdl:part name="validarCoberturaReq" xmlns:q11="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q11:validarCoberturaRequest" />
+  </wsdl:message>
+  <wsdl:message name="validarCoberturaResponse">
+    <wsdl:part name="validarCoberturaRes" xmlns:q12="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q12:validarCoberturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="guardarCoberturaRequest">
+    <wsdl:part name="guardarCoberturaReq" xmlns:q13="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q13:guardarCoberturaRequest" />
+  </wsdl:message>
+  <wsdl:message name="guardarCoberturaResponse">
+    <wsdl:part name="guardarCoberturaRes" xmlns:q14="http://claro.com.pe/eai/services/identificacionCliente/ws/types/schema" element="q14:guardarCoberturaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IdentificacionClientePortType">
+    <wsdl:operation name="obtenerPreguntas">
+      <wsdl:input message="tns:obtenerPreguntasRequest" />
+      <wsdl:output message="tns:obtenerPreguntasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="responderPreguntas">
+      <wsdl:input message="tns:responderPreguntasRequest" />
+      <wsdl:output message="tns:responderPreguntasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmarUsoInformacion">
+      <wsdl:input message="tns:confirmarUsoInformacionRequest" />
+      <wsdl:output message="tns:confirmarUsoInformacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="revalidarDatosCliente">
+      <wsdl:input message="tns:revalidarDatosClienteRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="notificarRespuestasPendientes">
+      <wsdl:input message="tns:notificarRespuestasPendientesRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarValidacionCliente">
+      <wsdl:input message="tns:actualizarValidacionClienteRequest" />
+      <wsdl:output message="tns:actualizarValidacionClienteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validarCobertura">
+      <wsdl:input message="tns:validarCoberturaRequest" />
+      <wsdl:output message="tns:validarCoberturaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarCobertura">
+      <wsdl:input message="tns:guardarCoberturaRequest" />
+      <wsdl:output message="tns:guardarCoberturaResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="encuestaClienteSOAP11Binding" type="tns:IdentificacionClientePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="obtenerPreguntas">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/obtenerPreguntas" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="responderPreguntas">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/responderPreguntas" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarUsoInformacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/confirmarUsoInformacion" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="revalidarDatosCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/revalidarDatosCliente" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="notificarRespuestasPendientes">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/notificarRespuestasPendientes" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarValidacionCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/actualizarValidacionCliente" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarCobertura">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/validarCobertura" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarCobertura">
+      <soap:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/guardarCobertura" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="encuestaClienteSOAP12Binding" type="tns:IdentificacionClientePortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="obtenerPreguntas">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/obtenerPreguntas" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="responderPreguntas">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/responderPreguntas" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarUsoInformacion">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/confirmarUsoInformacion" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="revalidarDatosCliente">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/revalidarDatosCliente" soapActionRequired="false" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="notificarRespuestasPendientes">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/notificarRespuestasPendientes" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarValidacionCliente">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/actualizarValidacionCliente" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarCobertura">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/validarCobertura" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarCobertura">
+      <soap12:operation soapAction="http://claro.com.pe/eai/services/identificacionCliente/guardarCobertura" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsIdentificacionCliente">
+    <wsdl:port name="ebsIdentificacionClienteSOAP11Port" binding="tns:encuestaClienteSOAP11Binding">
+      <soap:address location="http://limdeseaiv26.tim.com.pe:8909/IdentificacionClienteWS/ebsIdentificacionClienteSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsIdentificacionClienteSOAP12Port" binding="tns:encuestaClienteSOAP12Binding">
+      <soap12:address location="http://limdeseaiv26.tim.com.pe:8909/IdentificacionClienteWS/ebsIdentificacionClienteSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

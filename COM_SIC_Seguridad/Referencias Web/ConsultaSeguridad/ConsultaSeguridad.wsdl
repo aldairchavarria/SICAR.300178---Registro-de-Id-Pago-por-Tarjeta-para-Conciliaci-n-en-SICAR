@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/utilitiesservices/seguridad/consultaseguridad/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/utilitiesservices/seguridad/consultaseguridad/" name="ConsultaSeguridad" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://claro.com.pe/eai/utilitiesservices/seguridad/consultaseguridad/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://claro.com.pe/eai/utilitiesservices/seguridad/consultaseguridad/">
+      <xsd:element name="leerOpcionesMenu">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="ipAplicacion" type="xsd:string" />
+            <xsd:element name="aplicacion" type="xsd:string" />
+            <xsd:element name="usuario" type="xsd:long" />
+            <xsd:element name="appCod" type="xsd:long" />
+            <xsd:element name="nivel" type="xsd:long" />
+            <xsd:element name="opcPadre" type="xsd:long" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="leerOpcionesMenuResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="errorCode" type="xsd:string" />
+            <xsd:element name="errorMsg" type="xsd:string" />
+            <xsd:element name="cursor_Menu" type="tns:cursor_MenuType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="cursor_MenuType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="menu" type="tns:menuType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="verificaUsuario">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="ipAplicacion" type="xsd:string" />
+            <xsd:element name="aplicacion" type="xsd:string" />
+            <xsd:element name="usuarioLogin" type="xsd:string" />
+            <xsd:element name="appCod" type="xsd:long" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verificaUsuarioResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="idTransaccion" type="xsd:string" />
+            <xsd:element name="errorCode" type="xsd:string" />
+            <xsd:element name="errorMsg" type="xsd:string" />
+            <xsd:element name="cursorSeguridad" type="tns:cursor_SeguridadType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="cursor_SeguridadType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="seguridad" type="tns:seguridadType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="menuType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="AplicCod" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcCodPad" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicCod" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicNivPad" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicNiv" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicDes" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicAbrev" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicNomPag" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicNumOrd" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="OpcicD1" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="seguridadType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="UsuacCod" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="PerfcCod" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="UsuacCodVenSap" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </s:schema>
+  </types>
+  <message name="leerOpcionesMenuRequest">
+    <part name="parameters" element="s0:leerOpcionesMenu" />
+  </message>
+  <message name="leerOpcionesMenuResponse">
+    <part name="parameters" element="s0:leerOpcionesMenuResponse" />
+  </message>
+  <message name="verificaUsuarioRequest">
+    <part name="parameters" element="s0:verificaUsuario" />
+  </message>
+  <message name="verificaUsuarioResponse">
+    <part name="parameters" element="s0:verificaUsuarioResponse" />
+  </message>
+  <portType name="ConsultaSeguridad">
+    <operation name="leerOpcionesMenu">
+      <input message="s0:leerOpcionesMenuRequest" />
+      <output message="s0:leerOpcionesMenuResponse" />
+    </operation>
+    <operation name="verificaUsuario">
+      <input message="s0:verificaUsuarioRequest" />
+      <output message="s0:verificaUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="ConsultaSeguridadSOAP" type="s0:ConsultaSeguridad">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="leerOpcionesMenu">
+      <soap:operation soapAction="http://claro.com.pe/eai/utilitiesservices/seguridad/consultaseguridad/leerOpcionesMenu" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificaUsuario">
+      <soap:operation soapAction="http://claro.com.pe/eai/utilitiesservices/seguridad/consultaseguridad/verificaUsuario" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ConsultaSeguridad">
+    <port name="ConsultaSeguridadSOAP" binding="s0:ConsultaSeguridadSOAP">
+      <soap:address location="http://limdesosbv05.tim.com.pe:8909/Utilities_Services/Seguridad/Inquiry/ConsultaSeguridad" />
+    </port>
+  </service>
+</definitions>

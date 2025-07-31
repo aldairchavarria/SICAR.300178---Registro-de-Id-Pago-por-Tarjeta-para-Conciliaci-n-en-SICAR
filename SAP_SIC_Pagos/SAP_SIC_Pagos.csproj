@@ -1,0 +1,726 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{DC977CAD-E3F0-407E-82A9-4D1A223A0E86}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "SAP_SIC_Pagos"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "SAP_SIC_Pagos"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "..\..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "SAP.Connector"
+                    AssemblyName = "SAP.Connector"
+                    HintPath = "E:\Program Files\SAP\SAP .NET Connector for VisualStudio 2003\SAP.Connector.dll"
+                />
+                <Reference
+                    Name = "System.EnterpriseServices"
+                    AssemblyName = "System.EnterpriseServices"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.EnterpriseServices.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Procesa_Pagos"
+                    Project = "{3821587A-01A6-4AF6-A4D5-A5755C99F4F5}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "log4net"
+                    AssemblyName = "log4net"
+                    HintPath = "..\COM_SIC_Log4Net\Log4Net\log4net.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsPagos.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "clsValidar.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CuadreCaja.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Pagos.sapwsdl"
+                    BuildAction = "None"
+                    Generator = "SAPConnectorGenerator"
+                    LastGenOutput = "SAP_SIC_Pagos.cs"
+                />
+                <File
+                    RelPath = "BAPIRET2.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BAPIRET2Table.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Pagos.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "TLINE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "TLINETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZES_PAGOS.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZES_PAGOSTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_CABECERA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_CABECERA_N.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_CABECERA_NTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_CABECERATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_DETALLE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_DETALLE_N.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_DETALLE_NTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZFE_DETALLETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZPV_PRV_CABECERA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZPV_PRV_CABECERATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZPV_ST_LISTA_IMPRESORAS.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZPV_ST_LISTA_IMPRESORASTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZPVU_DETALLE_RECARGA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZPVU_DETALLE_RECARGATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_ACT_CHIP.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_ACT_CHIPTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_DEP_GARANTIA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_DEP_GARANTIATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PRV_DETALLE2.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PRV_DETALLE2Table.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CLIENTE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CLIENTETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_CABECERA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_CABECERATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_CUOTAS.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_CUOTASTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_DETALLE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_DETALLETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_PIE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_COMPRO_PIETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CON_ESTADOS_PCS.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CON_ESTADOS_PCSTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CONSULTA_CONTRATO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CONSULTA_CONTRATOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CUOTA_FACTURA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_CUOTA_FACTURATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DATOS_VENDEDOR.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DATOS_VENDEDORTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DET_ACUERDO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DET_ACUERDOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DISTRITO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DISTRITOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DOCUMENTO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_DOCUMENTOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LIN_DOC_IMEI.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LIN_DOC_IMEITable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LINEA_DOC_VENTA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LINEA_DOC_VENTATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LOG.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LOG_VARIACIO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LOG_VARIACIOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_LOGTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_MATER_FACTURA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_MATER_FACTURATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_MONTOS_CUADRE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_MONTOS_CUADRETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_OFICINA_VENTA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_OFICINA_VENTATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_PARAM_OF_VTA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_PARAM_OF_VTATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_POOL_PAGOS.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_POOL_PAGOSTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_REPLICA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_REPLICATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_SERVI_CONTRA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_SERVI_CONTRATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_SERVICIOS_ACUERDO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_SERVICIOS_ACUERDOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_TIP_DOC_CLIENTE.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_TIP_DOC_CLIENTETable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_TVCINT.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_TVCINTTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_VENDEDOR.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_VENDEDORTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_VIAS_PAGO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PV_VIAS_PAGOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PVU_TRIACIONES.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PVU_TRIACIONES_CONSULTA.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PVU_TRIACIONES_CONSULTATable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_PVU_TRIACIONESTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_USUARIO.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZST_USUARIOTable.cs"
+                    DependentUpon = "SAP_SIC_Pagos.sapwsdl"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAP_SIC_Validacion.sapwsdl"
+                    BuildAction = "None"
+                    Generator = "SAPConnectorGenerator"
+                    LastGenOutput = "SAP_SIC_Validacion.cs"
+                />
+                <File
+                    RelPath = "SAP_SIC_Validacion.cs"
+                    DependentUpon = "SAP_SIC_Validacion.sapwsdl"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "WizardSettings.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\SAP.Connector.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\SAP_SIC_Pagos.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\SAP_SIC_Pagos.pdb"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Release\SAP.Connector.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "obj\Debug\SAP_SIC_Pagos.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "obj\Debug\SAP_SIC_Pagos.pdb"
+                    BuildAction = "Content"
+                />
+                <Folder RelPath = "obj\Debug\temp\" />
+                <Folder RelPath = "obj\Debug\TempPE\" />
+                <Folder RelPath = "obj\Release\temp\" />
+                <Folder RelPath = "obj\Release\TempPE\" />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

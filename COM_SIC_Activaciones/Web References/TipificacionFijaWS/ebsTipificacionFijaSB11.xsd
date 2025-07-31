@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns="http://claro.com.pe/eai/ws/ventas/tipificacionfijaws/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/tipificacionfijaws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.38:20000/TipificacionFijaWS/ebsTipificacionFijaSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="registrarTipiFijaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="idContacto" type="xsd:int" />
+        <xsd:element name="idSite" type="xsd:int" />
+        <xsd:element name="cuenta" type="xsd:string" />
+        <xsd:element name="telefono" type="xsd:string" />
+        <xsd:element name="tipo" type="xsd:string" />
+        <xsd:element name="clase" type="xsd:string" />
+        <xsd:element name="subClase" type="xsd:string" />
+        <xsd:element name="metodoContacto" type="xsd:string" />
+        <xsd:element name="tipoInter" type="xsd:string" />
+        <xsd:element name="agente" type="xsd:string" />
+        <xsd:element name="usrProceso" type="xsd:string" />
+        <xsd:element name="hechoEnUno" type="xsd:int" />
+        <xsd:element name="notas" type="xsd:string" />
+        <xsd:element name="flagCaso" type="xsd:string" />
+        <xsd:element name="resultado" type="xsd:string" />
+        <xsd:element name="servAfect" type="xsd:string" />
+        <xsd:element name="inconven" type="xsd:string" />
+        <xsd:element name="codServAfect" type="xsd:string" />
+        <xsd:element name="codInconven" type="xsd:string" />
+        <xsd:element name="codID" type="xsd:string" />
+        <xsd:element name="codPlano" type="xsd:string" />
+        <xsd:element name="valor1" type="xsd:string" />
+        <xsd:element name="valor2" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="registrarTipiFijaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element name="idInteraccion" type="xsd:string" />
+        <xsd:element name="flagCreacion" type="xsd:string" />
+        <xsd:element name="msgRespuesta" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

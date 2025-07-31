@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/types" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows" name="ProcesaVentaActivacionOloWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/types">
+      <s:import schemaLocation="http://192.168.100.152:8901/ProcesaVentaActivacionOloWS/procesaVentaActivacionOloSOAP11Port?xsd=2" namespace="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/procesaventaactivacion/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="procesarVentaActivacionRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/procesaventaactivacion/" element="q1:procesarVentaActivacionRequest" />
+  </wsdl:message>
+  <wsdl:message name="procesarVentaActivacionResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/procesaventaactivacion/" element="q2:procesarVentaActivacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProcesaVentaActivacionOloWSPortType">
+    <wsdl:operation name="procesarVentaActivacion">
+      <wsdl:input message="tns:procesarVentaActivacionRequestMsg" />
+      <wsdl:output message="tns:procesarVentaActivacionResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcesaVentaActivacionOloWSPortTypeSOAP11Binding" type="tns:ProcesaVentaActivacionOloWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="procesarVentaActivacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/venta/procesaventaactivacionolows/procesarVentaActivacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcesaVentaActivacionOloWSService">
+    <wsdl:port name="procesaVentaActivacionOloSOAP11Port" binding="tns:ProcesaVentaActivacionOloWSPortTypeSOAP11Binding">
+      <soap:address location="http://192.168.100.152:8901/ProcesaVentaActivacionOloWS/procesaVentaActivacionOloSOAP11Port" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

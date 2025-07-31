@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows" name="ActualizaEquipoContratoWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows" />
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv19.tim.com.pe:8909/ActualizaEquipoContratoWS/ActualizaEquipoContratoSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="actualizarEquipoContratoRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows/types" element="q1:actualizarEquipoContratoRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEquipoContratoResponsetMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows/types" element="q2:actualizarEquipoContratoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ActualizaEquipoContratoWSPortType">
+    <wsdl:operation name="actualizarEquipoContrato">
+      <wsdl:input message="tns:actualizarEquipoContratoRequestMsg" />
+      <wsdl:output message="tns:actualizarEquipoContratoResponsetMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActualizaEquipoContratoWSPortTypeSOAP11Binding" type="tns:ActualizaEquipoContratoWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="actualizarEquipoContrato">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows/actualizarEquipoContrato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActualizaEquipoContratoWSPortTypeSOAP12Binding" type="tns:ActualizaEquipoContratoWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="actualizarEquipoContrato">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/actualizaequipocontratows/actualizarEquipoContrato" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActualizaEquipoContratoWSService">
+    <wsdl:port name="ActualizaEquipoContratoSB11" binding="tns:ActualizaEquipoContratoWSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv19.tim.com.pe:8909/ActualizaEquipoContratoWS/ActualizaEquipoContratoSB11" />
+    </wsdl:port>
+    <wsdl:port name="ActualizaEquipoContratoSB12" binding="tns:ActualizaEquipoContratoWSPortTypeSOAP12Binding">
+      <soap:address location="http://limdeseaiv19.tim.com.pe:8909/ActualizaEquipoContratoWS/ActualizaEquipoContratoSB12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

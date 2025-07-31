@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://service.eai.ai.claro.com.pe/CcppWS" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://service.eai.ai.claro.com.pe/CcppWS" name="CcppWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.eai.ai.claro.com.pe/CcppWS">
+      <xsd:element name="buscarCcppPorUbigeoRequest" type="tns:buscarCcppPorUbigeoRequest" />
+      <xsd:element name="buscarCcppPorUbigeoResponse" type="tns:buscarCcppPorUbigeoResponse" />
+      <xsd:element name="buscarCcppPorDistritoCcppRequest" type="tns:buscarCcppPorDistritoCcppRequest" />
+      <xsd:element name="buscarCcppPorDistritoCcppResponse" type="tns:buscarCcppPorDistritoCcppResponse" />
+      <xsd:complexType name="ccppBeanPorDistritoCcpp">
+        <xsd:sequence>
+          <xsd:element name="gid" type="xsd:string" />
+          <xsd:element name="departamen" type="xsd:string" />
+          <xsd:element name="provincia" type="xsd:string" />
+          <xsd:element name="distrito" type="xsd:string" />
+          <xsd:element name="ubigeo" type="xsd:string" />
+          <xsd:element name="ccpp" type="xsd:string" />
+          <xsd:element name="cob2g" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="auditRequest">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="ipAplicacion" type="xsd:string" />
+          <xsd:element name="aplicacion" type="xsd:string" />
+          <xsd:element name="usrAplicacion" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="auditResponse">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="codigoRespuesta" type="xsd:string" />
+          <xsd:element name="mensajeRespuesta" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="parametrosRequest">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoRequestOpcional" type="tns:RequestOpcionalComplextType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RequestOpcionalComplextType">
+        <xsd:sequence>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="parametrosResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="objetoResponseOpcional" type="tns:ResponseOpcionalComplextType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ResponseOpcionalComplextType">
+        <xsd:sequence>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ccppBeanPorUbigeo">
+        <xsd:sequence>
+          <xsd:element name="ccpp" type="xsd:string" />
+          <xsd:element name="cob2g" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="buscarCcppPorUbigeoRequest">
+        <xsd:sequence>
+          <xsd:element name="audit" type="tns:auditRequest" />
+          <xsd:element name="ubigeo" type="xsd:string" />
+          <xsd:element name="listaOpcionalRequest" type="tns:parametrosRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="buscarCcppPorDistritoCcppRequest">
+        <xsd:sequence>
+          <xsd:element name="audit" type="tns:auditRequest" />
+          <xsd:element name="distritoccpp" type="xsd:string" />
+          <xsd:element name="listaOpcionalRequest" type="tns:parametrosRequest" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="buscarCcppPorUbigeoResponse">
+        <xsd:sequence>
+          <xsd:element name="audit" type="tns:auditResponse" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ccppBeanPorUbigeo" type="tns:ccppBeanPorUbigeo" />
+          <xsd:element name="listaOpcionalResponse" type="tns:parametrosResponse" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="buscarCcppPorDistritoCcppResponse">
+        <xsd:sequence>
+          <xsd:element name="audit" type="tns:auditResponse" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ccppBeanPorDistritoCcpp" type="tns:ccppBeanPorDistritoCcpp" />
+          <xsd:element name="listaOpcionalResponse" type="tns:parametrosResponse" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="buscarCcppPorUbigeoRequest">
+    <wsdl:part name="buscarCcppPorUbigeoRequest" element="tns:buscarCcppPorUbigeoRequest" />
+  </wsdl:message>
+  <wsdl:message name="buscarCcppPorUbigeoResponse">
+    <wsdl:part name="buscarCcppPorUbigeoResponse" element="tns:buscarCcppPorUbigeoResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscarCcppPorDistritoCcppRequest">
+    <wsdl:part name="buscarCcppPorDistritoCcppRequest" element="tns:buscarCcppPorDistritoCcppRequest" />
+  </wsdl:message>
+  <wsdl:message name="buscarCcppPorDistritoCcppResponse">
+    <wsdl:part name="buscarCcppPorDistritoCcppResponse" element="tns:buscarCcppPorDistritoCcppResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BuscarCcppWSPortType">
+    <wsdl:operation name="buscarCcppPorUbigeo">
+      <wsdl:input message="tns:buscarCcppPorUbigeoRequest" />
+      <wsdl:output message="tns:buscarCcppPorUbigeoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarCcppPorDistritoCcpp">
+      <wsdl:input message="tns:buscarCcppPorDistritoCcppRequest" />
+      <wsdl:output message="tns:buscarCcppPorDistritoCcppResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BuscarCcppSOAP11Binding" type="tns:BuscarCcppWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="buscarCcppPorDistritoCcpp">
+      <soap:operation soapAction="http://service.eai.ai.claro.com.pe/ccpp/ccpp" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarCcppPorUbigeo">
+      <soap:operation soapAction="http://service.eai.ai.claro.com.pe/ccpp/ccpp" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BuscarCcppSOAP12Binding" type="tns:BuscarCcppWSPortType">
+    <soap12:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="buscarCcppPorDistritoCcpp">
+      <soap12:operation style="document" soapAction="http://service.eai.ai.claro.com.pe/ccpp/ccppr" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarCcppPorUbigeo">
+      <soap12:operation style="document" soapAction="http://service.eai.ai.claro.com.pe/ccpp/ccppr" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BuscarCcppWSService">
+    <wsdl:port name="BuscarCcppPortSB11" binding="tns:BuscarCcppSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/ccppConsultasWS/BuscarCcppPortSB11" />
+    </wsdl:port>
+    <wsdl:port name="BuscarCcppPortSB12" binding="tns:BuscarCcppSOAP12Binding">
+      <soap12:address location="http://localhost:7001/ccppConsultasWS/BuscarCcppPortSB12?WSDL" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

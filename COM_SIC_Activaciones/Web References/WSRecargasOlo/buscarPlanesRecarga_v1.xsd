@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/buscarPlanesRecarga/" xmlns:xsd1="http://claro.com.pe/esb/data/generico/responseStatus/v1/" xmlns:xsd2="http://claro.com.pe/esb/data/generico/opcionales/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/buscarPlanesRecarga/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FResponseStatus_v1" namespace="http://claro.com.pe/esb/data/generico/responseStatus/v1/" />
+  <xsd:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FOpcionales_v1" namespace="http://claro.com.pe/esb/data/generico/opcionales/v1/" />
+  <xsd:element name="buscarPlanesRecargaRequest" type="tns:buscarPlanesRecargaRequestType" />
+  <xsd:complexType name="buscarPlanesRecargaRequestType">
+    <xsd:sequence>
+      <xsd:element name="usuario" type="xsd:string" />
+      <xsd:element name="contrasenia" type="xsd:string" />
+      <xsd:element name="numeroTelefono" type="xsd:string" />
+      <xsd:element name="grupoCanal" type="xsd:string" />
+      <xsd:element name="version" type="xsd:string" />
+      <xsd:element name="codigoCompania" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResquestOpcional" type="xsd2:RequestOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="buscarPlanesRecargaResponse" type="tns:buscarPlanesRecargaResponse" />
+  <xsd:complexType name="buscarPlanesRecargaResponse">
+    <xsd:sequence>
+      <xsd:element name="responseStatus" type="xsd1:ResponseStatus" />
+      <xsd:element name="responseData" type="tns:ReponseBuscarPlanesType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReponseBuscarPlanesType">
+    <xsd:sequence>
+      <xsd:element name="idCliente" type="xsd:string" />
+      <xsd:element name="idTipoDoc" type="xsd:string" />
+      <xsd:element name="descTipoDoc" type="xsd:string" />
+      <xsd:element name="numeroDoc" type="xsd:string" />
+      <xsd:element name="nombreCliente" type="xsd:string" />
+      <xsd:element name="apPaterno" type="xsd:string" />
+      <xsd:element name="apeMaterno" type="xsd:string" />
+      <xsd:element name="idDepa" type="xsd:string" />
+      <xsd:element name="descDepa" type="xsd:string" />
+      <xsd:element name="idProv" type="xsd:string" />
+      <xsd:element name="descProv" type="xsd:string" />
+      <xsd:element name="idDist" type="xsd:string" />
+      <xsd:element name="descDist" type="xsd:string" />
+      <xsd:element name="razonSocial" type="xsd:string" />
+      <xsd:element name="fecNacimiento" type="xsd:string" />
+      <xsd:element name="sexo" type="xsd:string" />
+      <xsd:element name="estado" type="xsd:string" />
+      <xsd:element name="tipoSubscriptor" type="xsd:string" />
+      <xsd:element name="numeroPlanes" type="xsd:string" />
+      <xsd:element name="grupoCanal" type="xsd:string" />
+      <xsd:element name="codigoCompania" type="xsd:string" />
+      <xsd:element name="planesCliente" type="tns:Planes" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="xsd2:ResponseOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Planes">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="plan">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="codigoRecargaRedknee" type="xsd:integer" />
+            <xsd:element name="codigoRecarga" type="xsd:integer" />
+            <xsd:element name="descripcion" type="xsd:string" />
+            <xsd:element name="precio" type="xsd:double" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

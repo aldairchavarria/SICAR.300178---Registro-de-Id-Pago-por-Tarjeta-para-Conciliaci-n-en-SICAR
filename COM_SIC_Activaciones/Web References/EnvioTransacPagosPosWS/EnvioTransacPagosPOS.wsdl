@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/fact/enviotransacpagospos" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/fact/enviotransacpagospos" name="EnvioTransacPagosPOS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/fact/enviotransacpagospos" />
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv19.tim.com.pe:8909/EnvioTransacPagosPOS/EnvioTransacPagosPOSSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="guardarTransacAperturaCierreRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q1:guardarTransacAperturaCierreRequest" />
+  </wsdl:message>
+  <wsdl:message name="guardarTransacAperturaCierreResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q2:guardarTransacAperturaCierreResponse" />
+  </wsdl:message>
+  <wsdl:message name="guardarTransacRequestMsg">
+    <wsdl:part name="request" xmlns:q3="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q3:guardarTransacRequest" />
+  </wsdl:message>
+  <wsdl:message name="guardarTransacResponseMsg">
+    <wsdl:part name="response" xmlns:q4="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q4:guardarTransacResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarTransacRequestMsg">
+    <wsdl:part name="request" xmlns:q5="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q5:actualizarTransacRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarTransacResponseMsg">
+    <wsdl:part name="response" xmlns:q6="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q6:actualizarTransacResponse" />
+  </wsdl:message>
+  <wsdl:message name="detalleReporteTransacRequestMsg">
+    <wsdl:part name="request" xmlns:q7="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q7:detalleReporteTransacRequest" />
+  </wsdl:message>
+  <wsdl:message name="detalleReporteTransacResponseMsg">
+    <wsdl:part name="response" xmlns:q8="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q8:detalleReporteTransacResponse" />
+  </wsdl:message>
+  <wsdl:message name="detaPagoRecTransacRequestMsg">
+    <wsdl:part name="request" xmlns:q9="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q9:detaPagoRecTransacRequest" />
+  </wsdl:message>
+  <wsdl:message name="detaPagoRecTransacResponseMsg">
+    <wsdl:part name="response" xmlns:q10="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/types" element="q10:detaPagoRecTransacResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EnvioTransacPagosPOSPortType">
+    <wsdl:operation name="guardarTransacAperturaCierre">
+      <wsdl:input message="tns:guardarTransacAperturaCierreRequestMsg" />
+      <wsdl:output message="tns:guardarTransacAperturaCierreResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarTransac">
+      <wsdl:input message="tns:guardarTransacRequestMsg" />
+      <wsdl:output message="tns:guardarTransacResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTransac">
+      <wsdl:input message="tns:actualizarTransacRequestMsg" />
+      <wsdl:output message="tns:actualizarTransacResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="detalleReporteTransac">
+      <wsdl:input message="tns:detalleReporteTransacRequestMsg" />
+      <wsdl:output message="tns:detalleReporteTransacResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="detaPagoRecTransac">
+      <wsdl:input message="tns:detaPagoRecTransacRequestMsg" />
+      <wsdl:output message="tns:detaPagoRecTransacResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EnvioTransacPagosPOSPortTypeSOAP11Binding" type="tns:EnvioTransacPagosPOSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="guardarTransacAperturaCierre">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/guardarTransacAperturaCierre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarTransac">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/guardarTransac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTransac">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/actualizarTransac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalleReporteTransac">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/detalleReporteTransac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detaPagoRecTransac">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/detaPagoRecTransac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EnvioTransacPagosPOSPortTypeSOAP12Binding" type="tns:EnvioTransacPagosPOSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="guardarTransacAperturaCierre">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/guardarTransacAperturaCierre" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarTransac">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/guardarTransac" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarTransac">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/actualizarTransac" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detalleReporteTransac">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/detalleReporteTransac" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detaPagoRecTransac">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/fact/enviotransacpagospos/detaPagoRecTransac" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EnvioTransacPagosPOSService">
+    <wsdl:port name="EnvioTransacPagosPOSSB11" binding="tns:EnvioTransacPagosPOSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv19.tim.com.pe:8909/EnvioTransacPagosPOS/EnvioTransacPagosPOSSB11" />
+    </wsdl:port>
+    <wsdl:port name="EnvioTransacPagosPOSSB12" binding="tns:EnvioTransacPagosPOSPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv19.tim.com.pe:8909/EnvioTransacPagosPOS/EnvioTransacPagosPOSSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

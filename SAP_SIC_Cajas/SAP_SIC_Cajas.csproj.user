@@ -1,0 +1,48 @@
+<VisualStudioProject>
+    <CSHARP LastOpenVersion = "7.10.3077" >
+        <Build>
+            <Settings ReferencePath = "E:\Program Files\SAP\SAP .NET Connector for VisualStudio 2003\;F:\SistemaCajas\SAP_SIC_Cajas\bin\Debug\;Z:\SAP_SIC_Cajas\bin\Debug\;\\limappdesv01\SistemaCajas\SAP_SIC_Cajas\bin\Debug\;D:\Intranet\Objects_Fuentes\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\SICAR_PORTABILIDAD\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\-+Aplicaciones+-\Ultima_Fuente_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\PP_32413-2_03052010\SAP_SIC_Cajas\bin\Debug\;F:\BCK E75893\-+Aplicaciones+-\PP_CAMBIO_SIM_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\COMPILADOS\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\E75893\SICAR_DOL_PASE_QA\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\E75893\E75893\QA_DOL\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\a_E75893\Fuentes_SICAR\SAP_SIC_Cajas\bin\Debug\;D:\a_E75893\PP_35802-2_07072010\SAP_SIC_Cajas\bin\Debug\;D:\a_E75893\Registro DNI DOL\PP_35802-2_07072010\SAP_SIC_Cajas\bin\Debug\;D:\1-Luis-Hualtibamba\PP-35802-2-[SICAR]-Adjuntar-imagen-DNI\Fuentes\SAP_SIC_Cajas\bin\Debug\;D:\Pases\PP_xxxx_07082010\SAP_SIC_Cajas\bin\Debug\;D:\Pases\PP_xxxx_07092010\SAP_SIC_Cajas\bin\Debug\;D:\Pases\PP_xxxx_08092010\SAP_SIC_Cajas\bin\Debug\;D:\Pases\PP_33872-2_08092010\SAP_SIC_Cajas\bin\Debug\;D:\1-Luis-Hualtibamba\[SISACT]-[PP-XXXXX-X]-Recarga-Virtual-DTH\QA\Fuentes_dth\SAP_SIC_Cajas\bin\Debug\;D:\MIGUEL_ANGEL\Roaming_desarrollo\SICAR_44839-1_OLD\SistemaCajas\SAP_SIC_Cajas\bin\Debug\;D:\Compartido\Temas_Pendientes\Roaming\Fuentes\SICAR\SAP_SIC_Cajas\bin\Debug\;D:\@Luis_Hualtibamba\Roaming\SICAR_SIN_ROAMING\SAP_SIC_Cajas\bin\Debug\;D:\christian\SICAR\nuevo\SICAR_SIN_ROAMING\SAP_SIC_Cajas\bin\Debug\;D:\christian\SICAR\SICAR_SIN_ROAMING\SAP_SIC_Cajas\bin\Debug\;D:\MIGUEL_ANGEL_CAHUANA\DESARROLLO\20110526_1700_TELMEX_VIAPAGO\PASE\Realineacion\SICAR_FIJA_30062011\SAP_SIC_Cajas\bin\Debug\;D:\Desarrollo\Ger\SICAR_MEJORAS_RECTELMEX\SAP_SIC_Cajas\bin\Debug\;D:\Erick\HARVEST\SICAR\SAP_SIC_Cajas\bin\Debug\;D:\IGNACIO\SICAR_HARVEST_20131122\SICAR\SAP_SIC_Cajas\bin\Debug\;F:\2015.01.12 Cobertura\alineacion SICAR\SICAR\SAP_SIC_Cajas\bin\Debug\;D:\Manuel\2015.01.20 VentaCuotas + Renov Unificada\SICAR\Fuentes\SICAR\SAP_SIC_Cajas\bin\Debug\;C:\Warner\2015.02.16\urgente\f1\Fuentes\SICAR\SAP_SIC_Cajas\bin\Debug\" >
+                <Config
+                    Name = "Debug"
+                    EnableASPDebugging = "false"
+                    EnableASPXDebugging = "false"
+                    EnableUnmanagedDebugging = "false"
+                    EnableSQLServerDebugging = "false"
+                    RemoteDebugEnabled = "false"
+                    RemoteDebugMachine = ""
+                    StartAction = "Project"
+                    StartArguments = ""
+                    StartPage = ""
+                    StartProgram = ""
+                    StartURL = ""
+                    StartWorkingDirectory = ""
+                    StartWithIE = "false"
+                />
+                <Config
+                    Name = "Release"
+                    EnableASPDebugging = "false"
+                    EnableASPXDebugging = "false"
+                    EnableUnmanagedDebugging = "false"
+                    EnableSQLServerDebugging = "false"
+                    RemoteDebugEnabled = "false"
+                    RemoteDebugMachine = ""
+                    StartAction = "Project"
+                    StartArguments = ""
+                    StartPage = ""
+                    StartProgram = ""
+                    StartURL = ""
+                    StartWorkingDirectory = ""
+                    StartWithIE = "false"
+                />
+            </Settings>
+        </Build>
+        <OtherProjectSettings
+            CopyProjectDestinationFolder = ""
+            CopyProjectUncPath = ""
+            CopyProjectOption = "0"
+            ProjectView = "ProjectFiles"
+            ProjectTrust = "0"
+        />
+    </CSHARP>
+</VisualStudioProject>
+

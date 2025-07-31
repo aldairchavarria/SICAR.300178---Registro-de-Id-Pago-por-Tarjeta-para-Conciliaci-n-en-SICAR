@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s1="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" xmlns:s3="java:java.lang" xmlns:s4="java:pe.com.claro.esb.services.clarify.exception" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://pe/com/claro/esb/services/clarify/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/clarify/ws" name="clarifyWSServiceDefinitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:tns="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" xmlns:s1="http://pe/com/claro/esb/services/clarify/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.clarify.exception" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify">
+      <s:complexType name="contractType">
+        <s:sequence>
+          <s:element name="msisdn" type="s:string" />
+          <s:element name="usuario" type="s:string" />
+          <s:element name="nombres" type="s:string" />
+          <s:element name="apellidos" type="s:string" />
+          <s:element name="tipo_doc" type="s:string" />
+          <s:element name="num_doc" type="s:string" />
+          <s:element name="fecha" type="s:string" />
+          <s:element name="tipo" type="s:string" />
+          <s:element name="clase" type="s:string" />
+          <s:element name="subclase" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="interactType">
+        <s:sequence>
+          <s:element name="contactobjid_1" type="s:string" />
+          <s:element name="siteobjid_1" type="s:string" />
+          <s:element name="account" type="s:string" />
+          <s:element name="msisdn" type="s:string" />
+          <s:element name="tipo" type="s:string" />
+          <s:element name="clase" type="s:string" />
+          <s:element name="subclase" type="s:string" />
+          <s:element name="metodo_contacto" type="s:string" />
+          <s:element name="tipo_inter" type="s:string" />
+          <s:element name="agente" type="s:string" />
+          <s:element name="usr_proceso" type="s:string" />
+          <s:element name="hecho_en_uno" type="s:string" />
+          <s:element name="notas" type="s:string" />
+          <s:element name="flag_caso" type="s:string" />
+          <s:element name="resultado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="respuestaType">
+        <s:sequence>
+          <s:element name="codigo" type="s:string" />
+          <s:element name="mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="customerClfyType">
+        <s:sequence>
+          <s:element name="msisdn" type="s:string" />
+          <s:element name="usuario" type="s:string" />
+          <s:element name="nombres" type="s:string" />
+          <s:element name="apellidos" type="s:string" />
+          <s:element name="tipo_doc" type="s:string" />
+          <s:element name="num_doc" type="s:string" />
+          <s:element name="motivo_reg" type="s:string" />
+          <s:element name="modalidad" type="s:string" />
+          <s:element name="fech_act" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="consultaClfyRequestType">
+        <s:sequence>
+          <s:element name="msisdn" type="s:string" />
+          <s:element name="flag_reg" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="consultaClfyResponseType">
+        <s:sequence>
+          <s:element name="codigo" type="s:string" />
+          <s:element name="mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="customerClfyResponse" type="tns:customerClfyType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="interactRequest" type="tns:interactType" />
+      <s:element name="contractRequest" type="tns:contractType" />
+      <s:element name="interactResponse" type="tns:respuestaType" />
+      <s:element name="contractResponse" type="tns:respuestaType" />
+      <s:element name="consultaClfyRequest" type="tns:consultaClfyRequestType" />
+      <s:element name="consultaClfyResponse" type="tns:consultaClfyResponseType" />
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" xmlns:s1="http://pe/com/claro/esb/services/clarify/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.clarify.exception" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd">
+      <xs:element name="InteraccionRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion de una interaccion</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objId" type="xs:string" />
+            <xs:element name="siteObjId" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="clase" type="xs:string" />
+            <xs:element name="subClase" type="xs:string" />
+            <xs:element name="metodoContacto" type="xs:string" />
+            <xs:element name="tipoInteraccion" type="xs:string" />
+            <xs:element name="codigoEmpleado" type="xs:string" />
+            <xs:element name="codigoSistema" type="xs:string" />
+            <xs:element name="hechoEnUno" type="xs:string" />
+            <xs:element name="notas" type="xs:string" />
+            <xs:element name="flagCaso" type="xs:string" />
+            <xs:element name="textResultado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InteraccionTfiRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion de una interaccion de unn TFI</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="texto" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InteraccionResponse">
+        <xs:annotation>
+          <xs:documentation>Registro de cliente en SIAC - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="idInteraccion" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DOLRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion del DOL</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nroTransaccion" type="xs:string" />
+            <xs:element name="msisdn" type="xs:string" />
+            <xs:element name="nombres" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="tipoDocumento" type="xs:string" />
+            <xs:element name="numeroDocumento" type="xs:string" />
+            <xs:element name="telefonoReferencia" type="xs:string" />
+            <xs:element name="fechaNacimiento" type="xs:string" />
+            <xs:element name="lugarNacimiento" type="xs:string" />
+            <xs:element name="motivoRegistro" type="xs:string" />
+            <xs:element name="direccionCompleta" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="codigoEmpleado" type="xs:string" />
+            <xs:element name="codigoSistema" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="texto" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DOLResponse">
+        <xs:annotation>
+          <xs:documentation>Registro de cliente en SIAC - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="descripcion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClienteRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objId" type="xs:string" />
+            <xs:element name="siteObjId" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="nombres" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="tipo_doc" type="xs:string" />
+            <xs:element name="num_doc" type="xs:string" />
+            <xs:element name="sexo" type="xs:string" />
+            <xs:element name="fecha_nac" type="xs:string" />
+            <xs:element name="lugar_nac" type="xs:string" />
+            <xs:element name="telefono_ref" type="xs:string" />
+            <xs:element name="estado_civil" type="xs:string" />
+            <xs:element name="fax" type="xs:string" />
+            <xs:element name="mail" type="xs:string" />
+            <xs:element name="ocupacion" type="xs:string" />
+            <xs:element name="domicilio" type="xs:string" />
+            <xs:element name="distrito" type="xs:string" />
+            <xs:element name="zipcode" type="xs:string" />
+            <xs:element name="urbanizacion" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="departamento" type="xs:string" />
+            <xs:element name="referencia" type="xs:string" />
+            <xs:element name="flag_mail" type="xs:string" />
+            <xs:element name="flag_registrado" type="xs:string" />
+            <xs:element name="motivo_registrado" type="xs:string" />
+            <xs:element name="cargo" type="xs:string" />
+            <xs:element name="funcion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClienteResponse">
+        <xs:annotation>
+          <xs:documentation>Actualización de datos del Cliente - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClientePostpagoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente Postpago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="CustomerID" type="xs:string" />
+            <xs:element name="Direccion" type="xs:string" />
+            <xs:element name="NotasDireccion" type="xs:string" />
+            <xs:element name="Distrito" type="xs:string" />
+            <xs:element name="Provincia" type="xs:string" />
+            <xs:element name="CodigoPostal" type="xs:string" />
+            <xs:element name="Departamento" type="xs:string" />
+            <xs:element name="Pais" type="xs:string" />
+            <xs:element name="Telefono_ref" type="xs:string" />
+            <xs:element name="Contacto_cliente" type="xs:string" />
+            <xs:element name="Email" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaDatosClientePostpagoResponse">
+        <xs:annotation>
+          <xs:documentation>Actualización de datos del Cliente - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrearCasoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente Postpago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="contactobjid1" type="xs:string" />
+            <xs:element name="siteobjid1" type="xs:string" />
+            <xs:element name="account" type="xs:string" />
+            <xs:element name="phone" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="clase" type="xs:string" />
+            <xs:element name="subclase" type="xs:string" />
+            <xs:element name="metodo_contacto" type="xs:string" />
+            <xs:element name="prioridad" type="xs:string" />
+            <xs:element name="severidad" type="xs:string" />
+            <xs:element name="cola" type="xs:string" />
+            <xs:element name="flag_interact" type="xs:string" />
+            <xs:element name="usr_proceso" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="tipo_interaccion" type="xs:string" />
+            <xs:element name="notas" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrearCasoResponse">
+        <xs:annotation>
+          <xs:documentation>Creación de Caso Clarify - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="caso" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="DatosType">
+        <xs:sequence>
+          <xs:element name="objId" type="xs:string" />
+          <xs:element name="siteObjId" type="xs:string" />
+          <xs:element name="telefono" type="xs:string" />
+          <xs:element name="cuenta" type="xs:string" />
+          <xs:element name="modalidad" type="xs:string" />
+          <xs:element name="segmento" type="xs:string" />
+          <xs:element name="rol_contacto" type="xs:string" />
+          <xs:element name="estado_contacto" type="xs:string" />
+          <xs:element name="estado_contrato" type="xs:string" />
+          <xs:element name="estado_site" type="xs:string" />
+          <xs:element name="s_nombres" type="xs:string" />
+          <xs:element name="s_apellidos" type="xs:string" />
+          <xs:element name="nombres" type="xs:string" />
+          <xs:element name="domicilio" type="xs:string" />
+          <xs:element name="urbanizacion" type="xs:string" />
+          <xs:element name="referencia" type="xs:string" />
+          <xs:element name="ciudad" type="xs:string" />
+          <xs:element name="distrito" type="xs:string" />
+          <xs:element name="departamento" type="xs:string" />
+          <xs:element name="zipcode" type="xs:string" />
+          <xs:element name="email" type="xs:string" />
+          <xs:element name="telef_referencia" type="xs:string" />
+          <xs:element name="fax" type="xs:string" />
+          <xs:element name="fecha_nac" type="xs:string" />
+          <xs:element name="sexo" type="xs:string" />
+          <xs:element name="estado_civil" type="xs:string" />
+          <xs:element name="tipo_doc" type="xs:string" />
+          <xs:element name="nro_doc" type="xs:string" />
+          <xs:element name="fecha_act" type="xs:string" />
+          <xs:element name="punto_venta" type="xs:string" />
+          <xs:element name="flag_registrado" type="xs:string" />
+          <xs:element name="ocupacion" type="xs:string" />
+          <xs:element name="cant_reg" type="xs:string" />
+          <xs:element name="flag_email" type="xs:string" />
+          <xs:element name="motivo_registro" type="xs:string" />
+          <xs:element name="funcion" type="xs:string" />
+          <xs:element name="cargo" type="xs:string" />
+          <xs:element name="lugar_nacimiento" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConsultaDatosUsuarioRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la Consulta de datos de usuario</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="contactobjid_1" type="xs:string" />
+            <xs:element name="flag_registrado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaDatosUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="usLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="DatosUsuario" type="tns:DatosType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="CasoType">
+        <xs:sequence>
+          <xs:element name="id_caso" type="xs:string" />
+          <xs:element name="codigo_cliente" type="xs:string" />
+          <xs:element name="sitio" type="xs:string" />
+          <xs:element name="fecha_creacion" type="xs:string" />
+          <xs:element name="telefono" type="xs:string" />
+          <xs:element name="tipificacion" type="xs:string" />
+          <xs:element name="origen" type="xs:string" />
+          <xs:element name="estado" type="xs:string" />
+          <xs:element name="prioridad" type="xs:string" />
+          <xs:element name="severidad" type="xs:string" />
+          <xs:element name="fase" type="xs:string" />
+          <xs:element name="nro_reporte" type="xs:string" />
+          <xs:element name="nro_reclamo" type="xs:string" />
+          <xs:element name="condicion" type="xs:string" />
+          <xs:element name="cola" type="xs:string" />
+          <xs:element name="propietario" type="xs:string" />
+          <xs:element name="nombre_agente" type="xs:string" />
+          <xs:element name="apellido_agente" type="xs:string" />
+          <xs:element name="resultado" type="xs:string" />
+          <xs:element name="resolucion" type="xs:string" />
+          <xs:element name="bandeja" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConsultaCasoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la Consulta de datos de usuario</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="contact_objid1" type="xs:string" />
+            <xs:element name="tipificacion" type="xs:string" />
+            <xs:element name="estado" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaCasoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="casosLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="DatosCaso" type="tns:CasoType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ConsultaEquiposRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la consulta de equipos asociados a una línea</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NroLinea" type="xs:string" />
+            <xs:element name="Transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="InfoType">
+        <xs:sequence>
+          <xs:element name="resultado" type="xs:string" />
+          <xs:element name="transaccion" type="xs:string" />
+          <xs:element name="mensaje" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="EquipoType">
+        <xs:sequence>
+          <xs:element name="IdTerMovimiento" type="xs:string" />
+          <xs:element name="NumeroImei" type="xs:string" />
+          <xs:element name="TerDescripcion" type="xs:string" />
+          <xs:element name="TerEstado" type="xs:string" />
+          <xs:element name="FechaMovimiento" type="xs:string" />
+          <xs:element name="FechaRegistro" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConsultaEquiposResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="equiposLista">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="1" maxOccurs="unbounded" name="Equipos" type="tns:EquipoType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TFIRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para la generacion del TFI</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nroTransaccion" type="xs:string" />
+            <xs:element name="msisdn" type="xs:string" />
+            <xs:element name="nombres" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="apellidosNotes" type="xs:string" />
+            <xs:element name="tipoDocumento" type="xs:string" />
+            <xs:element name="numeroDocumento" type="xs:string" />
+            <xs:element name="telefonoReferencia" type="xs:string" />
+            <xs:element name="fechaNacimiento" type="xs:string" />
+            <xs:element name="lugarNacimiento" type="xs:string" />
+            <xs:element name="motivoRegistro" type="xs:string" />
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="provincia" type="xs:string" />
+            <xs:element name="departamento" type="xs:string" />
+            <xs:element name="codigoPostal" type="xs:string" />
+            <xs:element name="codigoUbigeo" type="xs:string" />
+            <xs:element name="codigoEmpleado" type="xs:string" />
+            <xs:element name="codigoSistema" type="xs:string" />
+            <xs:element name="tipo" type="xs:string" />
+            <xs:element name="texto" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TFIResponse">
+        <xs:annotation>
+          <xs:documentation>Registro de cliente en SIAC - Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+            <xs:element name="descripcion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaContratoTFIRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para Actualizar datos de Cliente TFI</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="objId" type="xs:string" />
+            <xs:element name="siteObjId" type="xs:string" />
+            <xs:element name="cuenta" type="xs:string" />
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+            <xs:element name="nombres" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="apellidosNotes" type="xs:string" />
+            <xs:element name="tipo_doc" type="xs:string" />
+            <xs:element name="num_doc" type="xs:string" />
+            <xs:element name="sexo" type="xs:string" />
+            <xs:element name="fecha_nac" type="xs:string" />
+            <xs:element name="lugar_nac" type="xs:string" />
+            <xs:element name="telefono_ref" type="xs:string" />
+            <xs:element name="estado_civil" type="xs:string" />
+            <xs:element name="fax" type="xs:string" />
+            <xs:element name="mail" type="xs:string" />
+            <xs:element name="ocupacion" type="xs:string" />
+            <xs:element name="domicilio" type="xs:string" />
+            <xs:element name="distrito" type="xs:string" />
+            <xs:element name="zipcode" type="xs:string" />
+            <xs:element name="codigoUbigeo" type="xs:string" />
+            <xs:element name="urbanizacion" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="departamento" type="xs:string" />
+            <xs:element name="provincia" type="xs:string" />
+            <xs:element name="referencia" type="xs:string" />
+            <xs:element name="flag_mail" type="xs:string" />
+            <xs:element name="flag_registrado" type="xs:string" />
+            <xs:element name="motivo_registrado" type="xs:string" />
+            <xs:element name="cargo" type="xs:string" />
+            <xs:element name="funcion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActualizaContratoTFIResponse">
+        <xs:annotation>
+          <xs:documentation>Actualización de datos del Cliente TFI- Response</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/clarify/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.clarify.exception" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/clarify/ws">
+      <xs:import namespace="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" />
+      <xs:import namespace="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" />
+      <xs:element name="nuevoClienteDol">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:DOLRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoClienteDolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:DOLResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creaContactoPORT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:sch="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" ref="sch:contractRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creaContactoPORTResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:sch="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" ref="sch:contractResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoCaso">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:CrearCasoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoCasoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:CrearCasoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creaInteraccionPORT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:InteraccionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="creaInteraccionPORTResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:InteraccionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultarDatosUsuario">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ConsultaDatosUsuarioRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultarDatosUsuarioResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ConsultaDatosUsuarioResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="actualizarDatosCliente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ActualizaDatosClienteRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="actualizarDatosClienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ActualizaDatosClienteResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevaInteraccionTFI">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:InteraccionTfiRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevaInteraccionTFIResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:InteraccionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoCliente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:DOLRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoClienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:DOLResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaContactoPORT">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:sch="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" ref="sch:consultaClfyRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaContactoPORTResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:sch="http://pe.com.claro.ebs.services.clarify.schema/schemaClarify" ref="sch:consultaClfyResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="actualizarDatosClientePostpago">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ActualizaDatosClientePostpagoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="actualizarDatosClientePostpagoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ActualizaDatosClientePostpagoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoClienteTFI">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:TFIRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevoClienteTFIResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:TFIResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultarCaso">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ConsultaCasoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultarCasoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:ConsultaCasoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevaInteraccion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:InteraccionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="nuevaInteraccionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:clar="http://pe/com/claro/esb/services/clarify/schemas/dol/Clarify.xsd" ref="clar:InteraccionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/clarify/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.clarify.exception" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:java.lang">
+      <xs:complexType name="Exception">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:java.lang" base="java:Throwable" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Throwable" />
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/clarify/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.esb.services.clarify.exception" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:pe.com.claro.esb.services.clarify.exception">
+      <xs:import namespace="java:java.lang" />
+      <xs:complexType name="ClarifyClienteNoExisteException">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:pe.com.claro.esb.services.clarify.exception" base="java:BaseException" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="BaseException">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Message" nillable="true" type="xs:string" />
+          <xs:element xmlns:java="java:java.lang" minOccurs="1" name="Exception" nillable="true" type="java:Exception" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ClarifyBDException">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:java="java:pe.com.claro.esb.services.clarify.exception" base="java:BaseException" />
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element xmlns:java="java:pe.com.claro.esb.services.clarify.exception" name="ClarifyClienteNoExisteException" type="java:ClarifyClienteNoExisteException" />
+      <xs:element xmlns:java="java:pe.com.claro.esb.services.clarify.exception" name="ClarifyBDException" type="java:ClarifyBDException" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="nuevoClienteDol">
+    <wsdl:part name="parameters" element="tns:nuevoClienteDol" />
+  </wsdl:message>
+  <wsdl:message name="nuevoClienteDolResponse">
+    <wsdl:part name="parameters" element="tns:nuevoClienteDolResponse" />
+  </wsdl:message>
+  <wsdl:message name="creaContactoPORT">
+    <wsdl:part name="parameters" element="tns:creaContactoPORT" />
+  </wsdl:message>
+  <wsdl:message name="creaContactoPORTResponse">
+    <wsdl:part name="parameters" element="tns:creaContactoPORTResponse" />
+  </wsdl:message>
+  <wsdl:message name="nuevoCaso">
+    <wsdl:part name="parameters" element="tns:nuevoCaso" />
+  </wsdl:message>
+  <wsdl:message name="nuevoCasoResponse">
+    <wsdl:part name="parameters" element="tns:nuevoCasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="creaInteraccionPORT">
+    <wsdl:part name="parameters" element="tns:creaInteraccionPORT" />
+  </wsdl:message>
+  <wsdl:message name="creaInteraccionPORTResponse">
+    <wsdl:part name="parameters" element="tns:creaInteraccionPORTResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosUsuario">
+    <wsdl:part name="parameters" element="tns:consultarDatosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosUsuarioResponse">
+    <wsdl:part name="parameters" element="tns:consultarDatosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDatosCliente">
+    <wsdl:part name="parameters" element="tns:actualizarDatosCliente" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDatosClienteResponse">
+    <wsdl:part name="parameters" element="tns:actualizarDatosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="nuevaInteraccionTFI">
+    <wsdl:part name="parameters" element="tns:nuevaInteraccionTFI" />
+  </wsdl:message>
+  <wsdl:message name="nuevaInteraccionTFIResponse">
+    <wsdl:part name="parameters" element="tns:nuevaInteraccionTFIResponse" />
+  </wsdl:message>
+  <wsdl:message name="nuevoCliente">
+    <wsdl:part name="parameters" element="tns:nuevoCliente" />
+  </wsdl:message>
+  <wsdl:message name="nuevoClienteResponse">
+    <wsdl:part name="parameters" element="tns:nuevoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaContactoPORT">
+    <wsdl:part name="parameters" element="tns:consultaContactoPORT" />
+  </wsdl:message>
+  <wsdl:message name="consultaContactoPORTResponse">
+    <wsdl:part name="parameters" element="tns:consultaContactoPORTResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDatosClientePostpago">
+    <wsdl:part name="parameters" element="tns:actualizarDatosClientePostpago" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDatosClientePostpagoResponse">
+    <wsdl:part name="parameters" element="tns:actualizarDatosClientePostpagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="nuevoClienteTFI">
+    <wsdl:part name="parameters" element="tns:nuevoClienteTFI" />
+  </wsdl:message>
+  <wsdl:message name="nuevoClienteTFIResponse">
+    <wsdl:part name="parameters" element="tns:nuevoClienteTFIResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarCaso">
+    <wsdl:part name="parameters" element="tns:consultarCaso" />
+  </wsdl:message>
+  <wsdl:message name="consultarCasoResponse">
+    <wsdl:part name="parameters" element="tns:consultarCasoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClarifyBDException">
+    <wsdl:part name="ClarifyBDException" element="s4:ClarifyBDException" />
+  </wsdl:message>
+  <wsdl:message name="ClarifyClienteNoExisteException">
+    <wsdl:part name="ClarifyClienteNoExisteException" element="s4:ClarifyClienteNoExisteException" />
+  </wsdl:message>
+  <wsdl:message name="nuevaInteraccion">
+    <wsdl:part name="parameters" element="tns:nuevaInteraccion" />
+  </wsdl:message>
+  <wsdl:message name="nuevaInteraccionResponse">
+    <wsdl:part name="parameters" element="tns:nuevaInteraccionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="clarifyWS">
+    <wsdl:operation name="nuevoClienteDol" parameterOrder="parameters">
+      <wsdl:input message="tns:nuevoClienteDol" />
+      <wsdl:output message="tns:nuevoClienteDolResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="creaContactoPORT" parameterOrder="parameters">
+      <wsdl:input message="tns:creaContactoPORT" />
+      <wsdl:output message="tns:creaContactoPORTResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoCaso" parameterOrder="parameters">
+      <wsdl:input message="tns:nuevoCaso" />
+      <wsdl:output message="tns:nuevoCasoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="creaInteraccionPORT" parameterOrder="parameters">
+      <wsdl:input message="tns:creaInteraccionPORT" />
+      <wsdl:output message="tns:creaInteraccionPORTResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosUsuario" parameterOrder="parameters">
+      <wsdl:input message="tns:consultarDatosUsuario" />
+      <wsdl:output message="tns:consultarDatosUsuarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosCliente" parameterOrder="parameters">
+      <wsdl:input message="tns:actualizarDatosCliente" />
+      <wsdl:output message="tns:actualizarDatosClienteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevaInteraccionTFI" parameterOrder="parameters">
+      <wsdl:input message="tns:nuevaInteraccionTFI" />
+      <wsdl:output message="tns:nuevaInteraccionTFIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoCliente" parameterOrder="parameters">
+      <wsdl:input message="tns:nuevoCliente" />
+      <wsdl:output message="tns:nuevoClienteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaContactoPORT" parameterOrder="parameters">
+      <wsdl:input message="tns:consultaContactoPORT" />
+      <wsdl:output message="tns:consultaContactoPORTResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosClientePostpago" parameterOrder="parameters">
+      <wsdl:input message="tns:actualizarDatosClientePostpago" />
+      <wsdl:output message="tns:actualizarDatosClientePostpagoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoClienteTFI" parameterOrder="parameters">
+      <wsdl:input message="tns:nuevoClienteTFI" />
+      <wsdl:output message="tns:nuevoClienteTFIResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarCaso" parameterOrder="parameters">
+      <wsdl:input message="tns:consultarCaso" />
+      <wsdl:output message="tns:consultarCasoResponse" />
+      <wsdl:fault name="ClarifyBDException" message="tns:ClarifyBDException" />
+      <wsdl:fault name="ClarifyClienteNoExisteException" message="tns:ClarifyClienteNoExisteException" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevaInteraccion" parameterOrder="parameters">
+      <wsdl:input message="tns:nuevaInteraccion" />
+      <wsdl:output message="tns:nuevaInteraccionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="clarifyWSServiceSoapBinding" type="tns:clarifyWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="nuevoClienteDol">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creaContactoPORT">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoCaso">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creaInteraccionPORT">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosUsuario">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosCliente">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevaInteraccionTFI">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoCliente">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaContactoPORT">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDatosClientePostpago">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoClienteTFI">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarCaso">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="ClarifyClienteNoExisteException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+      <wsdl:fault name="ClarifyBDException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nuevaInteraccion">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="clarifyWSService">
+    <wsdl:port name="clarifyWSSoapPort" binding="tns:clarifyWSServiceSoapBinding">
+      <soap:address location="http://limdeseaiv22.tim.com.pe:8909/ClarifyWS/clarifyWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

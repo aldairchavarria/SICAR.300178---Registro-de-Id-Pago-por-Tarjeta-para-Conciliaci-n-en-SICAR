@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://pe/com/claro/esb/services/prepago/in/promociones/schemas/Promociones.xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" xmlns:s3="http://pe/com/claro/esb/services/prepago/in/cambiochip/schemas/CambioChip.xsd" xmlns:s2="http://pe/com/claro/esb/services/prepago/in/bloqueos/schemas/BloqueoDesbloqueo.xsd" xmlns:s4="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" name="ebsTransaccionesServiceDefinitions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" xmlns:s1="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd">
+      <xs:element name="RecargasRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para ejecutar las recargas en la IN</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="bolsa" type="xs:string" />
+            <xs:element name="monto" type="xs:string" />
+            <xs:element name="dias" type="xs:string" />
+            <xs:element name="accion" type="xs:string" />
+            <xs:element name="id" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecargasIntentosRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para resetear el parametro de intento de recargas</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="intentos" type="xs:string" />
+            <xs:element name="id" type="xs:string" />
+            <xs:element name="usuario" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecargasResponse">
+        <xs:annotation>
+          <xs:documentation>Resultado de la ejecucion de la recarga</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/prepago/in/promociones/schemas/Promociones.xsd" xmlns:s1="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/prepago/in/promociones/schemas/Promociones.xsd">
+      <xs:element name="PromocionRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para ejecutar la promocion</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="telefono" type="xs:string" />
+            <xs:element name="bolsa" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PromocionResponse">
+        <xs:annotation>
+          <xs:documentation>Resultado de la ejecucion de la promocion</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/prepago/in/bloqueos/schemas/BloqueoDesbloqueo.xsd" xmlns:s1="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/prepago/in/bloqueos/schemas/BloqueoDesbloqueo.xsd">
+      <xs:element name="BloqueoDesbloqueoRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para ejecutar el Bloqueo Desbloqueo de una Línea Prepago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="msisdn" type="xs:string" />
+            <xs:element name="accion" type="xs:string" />
+            <xs:element name="id" type="xs:string" />
+            <xs:element name="ip" type="xs:string" />
+            <xs:element name="empleado" type="xs:string" />
+            <xs:element name="aplicacion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BloqueoDesbloqueoResponse">
+        <xs:annotation>
+          <xs:documentation>Resultado de Bloqueo Desbloqueo de una Línea Prepago</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://pe/com/claro/esb/services/prepago/in/cambiochip/schemas/CambioChip.xsd" xmlns:s1="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/prepago/in/cambiochip/schemas/CambioChip.xsd">
+      <xs:element name="CambioChipRequest">
+        <xs:annotation>
+          <xs:documentation>Datos requeridos para realizar el Cambio de Chip</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="msisdn" type="xs:string" />
+            <xs:element name="iccidNuevo" type="xs:string" />
+            <xs:element name="id" type="xs:string" />
+            <xs:element name="ip" type="xs:string" />
+            <xs:element name="empleado" type="xs:string" />
+            <xs:element name="aplicacion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CambioChipResponse">
+        <xs:annotation>
+          <xs:documentation>Resultado de la ejecucion del Cambio de Chip</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="resultado" type="xs:string" />
+            <xs:element name="mensaje" type="xs:string" />
+            <xs:element name="transaccion" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/prepago/in/transacciones/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/prepago/in/transacciones/ws">
+      <xs:import namespace="http://pe/com/claro/esb/services/prepago/in/promociones/schemas/Promociones.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/prepago/in/cambiochip/schemas/CambioChip.xsd" />
+      <xs:import namespace="http://pe/com/claro/esb/services/prepago/in/bloqueos/schemas/BloqueoDesbloqueo.xsd" />
+      <xs:element name="ejecutarRecargasBolsas">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:rec="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" ref="rec:RecargasRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarRecargasBolsasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:rec="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" ref="rec:RecargasResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarPromocion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:prom="http://pe/com/claro/esb/services/prepago/in/promociones/schemas/Promociones.xsd" ref="prom:PromocionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarPromocionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:prom="http://pe/com/claro/esb/services/prepago/in/promociones/schemas/Promociones.xsd" ref="prom:PromocionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarBloqueoDesbloqueo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://pe/com/claro/esb/services/prepago/in/bloqueos/schemas/BloqueoDesbloqueo.xsd" ref="bloq:BloqueoDesbloqueoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarBloqueoDesbloqueoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:bloq="http://pe/com/claro/esb/services/prepago/in/bloqueos/schemas/BloqueoDesbloqueo.xsd" ref="bloq:BloqueoDesbloqueoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="resetearIntentos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:rec="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" ref="rec:RecargasIntentosRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="resetearIntentosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:rec="http://pe/com/claro/esb/services/prepago/in/recargas/schemas/Recargas.xsd" ref="rec:RecargasResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarCambioChip">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:cam="http://pe/com/claro/esb/services/prepago/in/cambiochip/schemas/CambioChip.xsd" ref="cam:CambioChipRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ejecutarCambioChipResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:cam="http://pe/com/claro/esb/services/prepago/in/cambiochip/schemas/CambioChip.xsd" ref="cam:CambioChipResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </types>
+  <message name="ejecutarRecargasBolsas">
+    <part name="parameters" element="s4:ejecutarRecargasBolsas" />
+  </message>
+  <message name="ejecutarRecargasBolsasResponse">
+    <part name="parameters" element="s4:ejecutarRecargasBolsasResponse" />
+  </message>
+  <message name="ejecutarPromocion">
+    <part name="parameters" element="s4:ejecutarPromocion" />
+  </message>
+  <message name="ejecutarPromocionResponse">
+    <part name="parameters" element="s4:ejecutarPromocionResponse" />
+  </message>
+  <message name="ejecutarBloqueoDesbloqueo">
+    <part name="parameters" element="s4:ejecutarBloqueoDesbloqueo" />
+  </message>
+  <message name="ejecutarBloqueoDesbloqueoResponse">
+    <part name="parameters" element="s4:ejecutarBloqueoDesbloqueoResponse" />
+  </message>
+  <message name="resetearIntentos">
+    <part name="parameters" element="s4:resetearIntentos" />
+  </message>
+  <message name="resetearIntentosResponse">
+    <part name="parameters" element="s4:resetearIntentosResponse" />
+  </message>
+  <message name="ejecutarCambioChip">
+    <part name="parameters" element="s4:ejecutarCambioChip" />
+  </message>
+  <message name="ejecutarCambioChipResponse">
+    <part name="parameters" element="s4:ejecutarCambioChipResponse" />
+  </message>
+  <portType name="ebsTransacciones">
+    <operation name="ejecutarRecargasBolsas" parameterOrder="parameters">
+      <input message="s4:ejecutarRecargasBolsas" />
+      <output message="s4:ejecutarRecargasBolsasResponse" />
+    </operation>
+    <operation name="ejecutarPromocion" parameterOrder="parameters">
+      <input message="s4:ejecutarPromocion" />
+      <output message="s4:ejecutarPromocionResponse" />
+    </operation>
+    <operation name="ejecutarBloqueoDesbloqueo" parameterOrder="parameters">
+      <input message="s4:ejecutarBloqueoDesbloqueo" />
+      <output message="s4:ejecutarBloqueoDesbloqueoResponse" />
+    </operation>
+    <operation name="resetearIntentos" parameterOrder="parameters">
+      <input message="s4:resetearIntentos" />
+      <output message="s4:resetearIntentosResponse" />
+    </operation>
+    <operation name="ejecutarCambioChip" parameterOrder="parameters">
+      <input message="s4:ejecutarCambioChip" />
+      <output message="s4:ejecutarCambioChipResponse" />
+    </operation>
+  </portType>
+  <binding name="ebsTransaccionesServiceSoapBinding" type="s4:ebsTransacciones">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ejecutarRecargasBolsas">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="ejecutarPromocion">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="ejecutarBloqueoDesbloqueo">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="resetearIntentos">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="ejecutarCambioChip">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsTransaccionesService">
+    <port name="ebsTransaccionesSoapPort" binding="s4:ebsTransaccionesServiceSoapBinding">
+      <soap:address location="http://limdeseaiv03.tim.com.pe:8909/TransaccionesWS/ebsTransacciones" />
+    </port>
+  </service>
+</definitions>

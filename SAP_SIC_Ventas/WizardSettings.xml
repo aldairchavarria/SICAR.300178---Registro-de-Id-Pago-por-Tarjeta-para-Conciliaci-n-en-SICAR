@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ClassName="SAP_SIC_Ventas" TargetDirectory="D:\Manuel\2013.12.27 PROY 10018 - SMS para renovaciones\FuentesQA\SICAR\SAP_SIC_Ventas" Namespace="SAP_SIC_Ventas" Type="JavaMetaDataProvider" ToolsDir="C:\Archivos de programa\SAP\SAP .NET Connector for VisualStudio 2003\" xmlns="http://tempuri.org/ProxyAppInput.xsd">
+  <Destination>
+    <Client>200</Client>
+    <AppServerHost>172.19.43.34</AppServerHost>
+    <Language />
+    <Username>T11498</Username>
+    <SystemNumber>0</SystemNumber>
+    <LogonGroup />
+    <MsgServerHost />
+    <SAPSystemName />
+    <Type>3</Type>
+    <DestinationName>DES : CLARO Development</DestinationName>
+  </Destination>
+  <Modules Name="ZPVU_RFC_MAE_TIP_DOC_CLTE" />
+  <Modules Name="ZPVU_RFC_MAE_CLASE_PEDIDO" />
+  <Modules Name="ZPVU_RFC_MAE_MOTIVO_PEDIDO" />
+  <Modules Name="ZPVU_RFC_MAE_VENDEDOR" />
+  <Modules Name="ZPVU_RFC_MAE_CUOTAS" />
+  <Modules Name="ZPVU_RFC_MAE_ARTICULO" />
+  <Modules Name="ZPVU_RFC_MAE_CAMPANA" />
+  <Modules Name="ZPVU_RFC_MAE_CENTRO_COSTO" />
+  <Modules Name="ZPVU_RFC_MAE_UTILIZACION" />
+  <Modules Name="ZPVU_RFC_MAE_PLAN_TARIFARIO" />
+  <Modules Name="ZPVU_RFC_VAL_SER_TLF_PRE" />
+  <Modules Name="ZPVU_RFC_CON_VERIF_VENDEDOR" />
+  <Modules Name="ZPVU_RFC_CON_CAJA_CERRADA" />
+  <Modules Name="ZPVU_RFC_TRS_PEDIDO" />
+  <Modules Name="ZPVU_RFC_TRS_ACT_ESTADO_PEDIDO" />
+  <Modules Name="ZPVU_RFC_TRS_CLIENTE" />
+  <Modules Name="ZPVU_RFC_CON_IMEIS" />
+  <Modules Name="ZPVU_RFC_CON_GPOS_ARTICULO" />
+  <Modules Name="ZPVU_RFC_MAE_CAMPANA_ASOCIADA" />
+  <Modules Name="ZPVU_RFC_CON_VEND_RECARGA" />
+  <Modules Name="ZPVU_RFC_CON_SALD_RECARGA" />
+  <Modules Name="ZPVU_RFC_TRS_CLIENTE" />
+  <Modules Name="ZPVU_RFC_MAE_DEPARTAMENTO" />
+  <Modules Name="ZPVU_RFC_MAE_PROVINCIA" />
+  <Modules Name="ZPVU_RFC_MAE_DISTRITO" />
+  <Modules Name="ZPVU_RFC_MAE_EST_CIVIL" />
+  <Modules Name="ZPVU_RFC_TRS_DEL_NRO_TEL" />
+  <Modules Name="ZSISA_RFC_CON_MATERIAL" />
+</Settings>

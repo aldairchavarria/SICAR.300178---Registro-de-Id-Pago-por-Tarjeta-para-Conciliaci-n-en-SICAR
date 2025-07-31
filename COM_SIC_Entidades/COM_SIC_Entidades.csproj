@@ -1,0 +1,345 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{293E9D41-E87F-4093-88AA-91B91A36392B}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "COM_SIC_Entidades"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "COM_SIC_Entidades"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "AjaxPro"
+                    AssemblyName = "AjaxPro"
+                    HintPath = "..\COM_SIC_Activaciones\bin\AjaxPro.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Activaciones"
+                    AssemblyName = "COM_SIC_Activaciones"
+                    HintPath = "..\COM_SIC_Activaciones\bin\COM_SIC_Activaciones.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Log4Net"
+                    AssemblyName = "COM_SIC_Log4Net"
+                    HintPath = "..\COM_SIC_Log4Net\bin\Release\COM_SIC_Log4Net.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Seguridad"
+                    AssemblyName = "COM_SIC_Seguridad"
+                    HintPath = "..\COM_SIC_Seguridad\bin\Release\COM_SIC_Seguridad.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "KeySettings.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_post_programacionRepo\Request\MessageRequestProgramarTarea.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro_post_programacionRepo\Response\MessageResponseProgramarTarea.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro-post-notificaTransaccion\consultarNotificaciones\Request\ConsultarNotificaRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "claro-post-notificaTransaccion\consultarNotificaciones\Response\ConsultarNotificaResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\BEAuditoriaRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\BEAuditResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\BEListaOpcional.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\BodyResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\HeaderRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\HeaderResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\HeadersRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\HeadersResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\MessageResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\RespuestaRest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersGenerics\Status.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\BodyRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\BodyResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\GeneraFacturaElectronicaRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\GeneraFacturaElectronicaResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\MessageRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\MessageResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\GeneraFacturaElectronica\OnlineGenerationRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\BECabeceraEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\BodyRequestActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\BodyResponseActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\MessageRequestActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\MessageResponseActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\RequestActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestActualizarEstadoPago\ResponseActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\BECabeceraDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\BEDetalleDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\BodyRequestConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\BodyResponseConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\MessageRequestConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\MessageResponseConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\RequestConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\MethodsRest\ProcesarPagosDelivery\RestConsultarDatosPago\ResponseConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestReferences\CredencialesDPRest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestReferences\GetHeadersDP.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestReferences\PostInvoqueDP.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestReferences\GenerarFacturaElectronica\RestGenerarFacturaElectronica.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestReferences\ProcesarPagosDelivery\ActualizarEstadoPago\RestActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestReferences\ProcesarPagosDelivery\ConsultarDatosPago.cs\RestConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestServices\ProcesarPagosDelivery\ActualizarEstadoPago\RestServiceActualizarEstadoPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestServices\ProcesarPagosDelivery\ConsultarDatosPago.cs\RestServiceConsultarDatosPago.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

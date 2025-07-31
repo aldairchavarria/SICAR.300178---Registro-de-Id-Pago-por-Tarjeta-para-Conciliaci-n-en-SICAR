@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws" name="ConsultaOpcionesAuditoriaService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv26.tim.com.pe:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11?xsd=1" namespace="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws" />
+    </s:schema>
+  </types>
+  <message name="leerPaginaOpcionesPorUsuario">
+    <part name="leerPaginaOpcionesPorUsuario" element="tns:leerPaginaOpcionesPorUsuario" />
+  </message>
+  <message name="leerPaginaOpcionesPorUsuarioResponse">
+    <part name="leerPaginaOpcionesPorUsuarioResponse" element="tns:leerPaginaOpcionesPorUsuarioResponse" />
+  </message>
+  <message name="leerUsuariosPorAppPerfil">
+    <part name="leerUsuariosPorAppPerfil" element="tns:leerUsuariosPorAppPerfil" />
+  </message>
+  <message name="leerUsuariosPorAppPerfilResponse">
+    <part name="leerUsuariosPorAppPerfilResponse" element="tns:leerUsuariosPorAppPerfilResponse" />
+  </message>
+  <message name="leerDatosUsuario">
+    <part name="leerDatosUsuario" element="tns:leerDatosUsuario" />
+  </message>
+  <message name="leerDatosUsuarioResponse">
+    <part name="leerDatosUsuarioResponse" element="tns:leerDatosUsuarioResponse" />
+  </message>
+  <message name="leerDatosEmpleado">
+    <part name="leerDatosEmpleado" element="tns:leerDatosEmpleado" />
+  </message>
+  <message name="leerDatosEmpleadoResponse">
+    <part name="leerDatosEmpleadoResponse" element="tns:leerDatosEmpleadoResponse" />
+  </message>
+  <message name="leerOpcionesPorUsuario">
+    <part name="leerOpcionesPorUsuario" element="tns:leerOpcionesPorUsuario" />
+  </message>
+  <message name="leerOpcionesPorUsuarioResponse">
+    <part name="leerOpcionesPorUsuarioResponse" element="tns:leerOpcionesPorUsuarioResponse" />
+  </message>
+  <portType name="ConsultaOpcionesAuditoriaPortType">
+    <operation name="leerPaginaOpcionesPorUsuario">
+      <input message="tns:leerPaginaOpcionesPorUsuario" />
+      <output message="tns:leerPaginaOpcionesPorUsuarioResponse" />
+    </operation>
+    <operation name="leerUsuariosPorAppPerfil">
+      <input message="tns:leerUsuariosPorAppPerfil" />
+      <output message="tns:leerUsuariosPorAppPerfilResponse" />
+    </operation>
+    <operation name="leerDatosUsuario">
+      <input message="tns:leerDatosUsuario" />
+      <output message="tns:leerDatosUsuarioResponse" />
+    </operation>
+    <operation name="leerDatosEmpleado">
+      <input message="tns:leerDatosEmpleado" />
+      <output message="tns:leerDatosEmpleadoResponse" />
+    </operation>
+    <operation name="leerOpcionesPorUsuario">
+      <input message="tns:leerOpcionesPorUsuario" />
+      <output message="tns:leerOpcionesPorUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="ConsultaOpcionesAuditoriaPortSB11Binding" type="tns:ConsultaOpcionesAuditoriaPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="leerPaginaOpcionesPorUsuario">
+      <soap:operation soapAction="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws/leerPaginaOpcionesPorUsuario" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="leerUsuariosPorAppPerfil">
+      <soap:operation soapAction="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws/leerUsuariosPorAppPerfil" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="leerDatosUsuario">
+      <soap:operation soapAction="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws/leerDatosUsuario" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="leerDatosEmpleado">
+      <soap:operation soapAction="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws/leerDatosEmpleado" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="leerOpcionesPorUsuario">
+      <soap:operation soapAction="http://service.eai.auditoria.claro.com.pe/consultaopcionesauditoriaws/leerOpcionesPorUsuario" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ConsultaOpcionesAuditoriaService">
+    <port name="ConsultaOpcionesAuditoriaPortSB11" binding="tns:ConsultaOpcionesAuditoriaPortSB11Binding">
+      <soap:address location="http://limdeseaiv26.tim.com.pe:8909/ConsultaOpcionesAuditoria/ConsultaOpcionesAuditoriaPortSB11" />
+    </port>
+  </service>
+</definitions>

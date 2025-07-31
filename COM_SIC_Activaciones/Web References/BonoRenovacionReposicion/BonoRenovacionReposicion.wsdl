@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion">
+      <xsd:element name="asignaBono">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="aplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="msisdn" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="imei" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="codArticulo" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="asignaBonoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="codigoRespuesta" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="anulaBono">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ipAplicacion" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="aplicacion" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="msisdn" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="imei" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="anulaBonoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="codigoRespuesta" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+  </types>
+  <message name="asignaBonoMsg">
+    <part name="parameters" element="s0:asignaBono" />
+  </message>
+  <message name="asignaBonoResponseMsg">
+    <part name="parameters" element="s0:asignaBonoResponse" />
+  </message>
+  <message name="anulaBonoMsg">
+    <part name="parameters" element="s0:anulaBono" />
+  </message>
+  <message name="anulaBonoResponseMsg">
+    <part name="parameters" element="s0:anulaBonoResponse" />
+  </message>
+  <portType name="BonoRenovacionReposicionWS">
+    <operation name="asignaBono">
+      <input message="s0:asignaBonoMsg" />
+      <output message="s0:asignaBonoResponseMsg" />
+    </operation>
+    <operation name="anulaBono">
+      <input message="s0:anulaBonoMsg" />
+      <output message="s0:anulaBonoResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="BonoRenovacionReposicionWSSOAP" type="s0:BonoRenovacionReposicionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="asignaBono">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion/asignaBono" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="anulaBono">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion/anulaBono" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BonoRenovacionReposicionWS">
+    <port name="BonoRenovacionReposicionWS" binding="s0:BonoRenovacionReposicionWSSOAP">
+      <soap:address location="http://limdesosbv03.tim.com.pe:7909/Prepaid_Services/Transaction/BonoRenovacionReposicion" />
+    </port>
+  </service>
+</definitions>

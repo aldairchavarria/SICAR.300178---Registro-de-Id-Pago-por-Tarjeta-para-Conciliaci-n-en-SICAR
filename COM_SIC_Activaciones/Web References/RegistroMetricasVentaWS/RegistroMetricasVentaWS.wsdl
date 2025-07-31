@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.eai.ai.claro.com.pe/RegistroMetricasVentaWS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://service.eai.ai.claro.com.pe/RegistroMetricasVentaWS" name="RegistroMetricasVentaWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:complexType name="auditRequest">
+        <xsd:sequence>
+          <xsd:element name="idTransaccion" type="xsd:string" />
+          <xsd:element name="ipAplicacion" type="xsd:string" />
+          <xsd:element name="aplicacion" type="xsd:string" />
+          <xsd:element name="usrAplicacion" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ventaComplexType">
+        <xsd:sequence>
+          <xsd:element name="cuerpoMetrica" type="ListaRequestMetrica" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaRequestMetrica">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcinalCabecera" type="RequestOpcionalCabeceraComplexType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="detalle" type="ListaRequestDetalle" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ListaRequestDetalle">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="RequestOpcionalDetalle" type="RequestOpcionalDetalleComplexType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RequestOpcionalCabeceraComplexType">
+        <xsd:sequence>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RequestOpcionalDetalleComplexType">
+        <xsd:sequence>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="valor" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="registrarMetricaVentasRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="audit" type="auditRequest" />
+            <xsd:element name="idMetrica" type="xsd:string" />
+            <xsd:element name="datosMetrica" type="ventaComplexType" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+  </types>
+  <message name="RegistrarMetricaVentas">
+    <part name="registrarMetricaVentas" element="registrarMetricaVentasRequest" />
+  </message>
+  <message name="RegistrarMetricaVentasResponseMsg" />
+  <portType name="RegistroMetricasVentasWSPortType">
+    <operation name="registrarMetricaVentas">
+      <input message="tns:RegistrarMetricaVentas" />
+      <output message="tns:RegistrarMetricaVentasResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="RegistroMetricasVentasSOAP12Binding" type="tns:RegistroMetricasVentasWSPortType">
+    <WL5G3N2:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="registrarMetricaVentas">
+      <WL5G3N2:operation soapAction="http://service.eai.ai.claro.com.pe/registrarMetricaVentas/registrarMetricaVentas" style="document" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <WL5G3N2:body use="literal" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <WL5G3N2:body use="literal" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="RegistroMetricasVentasSOAP11Binding" type="tns:RegistroMetricasVentasWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="registrarMetricaVentas">
+      <soap:operation soapAction="http://service.eai.ai.claro.com.pe/registrarMetricaVentas/registrarMetricaVentas" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RegistroMetricasVentasWSService">
+    <port name="RegistroMetricasVentasPortSB12" binding="tns:RegistroMetricasVentasSOAP12Binding">
+      <WL5G3N2:address location="http://limdeseaiv28.tim.com.pe:8909/RegistroMetricaVentaWS/RegistroMetricasVentasPortSB12" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+    <port name="RegistroMetricasVentasPortSB11" binding="tns:RegistroMetricasVentasSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/RegistroMetricaVentaWS/RegistroMetricasVentasPortSB11" />
+    </port>
+  </service>
+</definitions>

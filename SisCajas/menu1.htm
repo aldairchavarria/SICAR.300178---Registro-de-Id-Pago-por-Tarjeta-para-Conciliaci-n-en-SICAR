@@ -1,0 +1,684 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+
+<HTML>
+<HEAD>
+<TITLE>Aplicativo TIM</TITLE>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT">
+	<link href="../../estilos/est_General.css" rel="styleSheet" type="text/css">
+</HEAD>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+	<table height="100%" width="100%" ID="Table1"><tbody>
+		<tr>
+			<td width=170 valign=top>
+				
+<link rel="stylesheet" href="http://tim-it2desar/pvu_x/Estilos/estilo.css" type="text/css">
+
+<script language="JavaScript1.2">
+userval=762
+codapp=102
+//Inicio de Variables
+
+if(window.event + "" == "undefined") event = null;
+function HM_f_PopUp(){return false};
+
+function solicitprep(){
+    window.open('http://tim-it2desar/pvu_x/paginas/ventas/prepago/solicitud/SolicitudPrepago.asp','Solicitud',"status=no,resizable=no,toolbar=no,scrollbars=yes,modal=yes,left=100,top=100,width=850,height=300");
+}
+
+function HM_f_PopDown(){return false};
+popUp = HM_f_PopUp;
+popDown = HM_f_PopDown;
+ 
+HM_PG_MenuWidth = 170;
+HM_PG_FontFamily = "Verdana";
+HM_PG_FontSize = 7.5;
+HM_PG_FontBold = 1;
+HM_PG_FontItalic = 0;
+HM_PG_FontColor = "white";
+HM_PG_FontColorOver = "white";
+HM_PG_ItemPadding = 3;
+
+HM_PG_BorderWidth = 1;
+HM_PG_BorderColor = "black";
+HM_PG_BorderStyle = "solid";
+HM_PG_SeparatorSize = 1;
+HM_PG_ImageSrc = "http://tim-it2desar/pvu_x/images/mnu_flecha.gif";
+HM_PG_ImageSrcLeft = "http://tim-it2desar/pvu_x/include/mnu_flecha.gif";
+
+HM_PG_ImageSize = 7;
+HM_PG_ImageHorizSpace = 0;
+HM_PG_ImageVertSpace = 3;
+
+HM_PG_KeepHilite = true; 
+HM_PG_ClickStart = 0;
+HM_PG_ClickKill = false;
+HM_PG_ChildOverlap = 1; //adentro
+HM_PG_ChildOffset = 0; //arriba
+HM_PG_ChildPerCentOver = null;
+HM_PG_TopSecondsVisible = .3;
+HM_PG_StatusDisplayBuild =0;
+HM_PG_StatusDisplayLink = 0;
+HM_PG_UponDisplay = null;
+HM_PG_UponHide = null;
+HM_PG_RightToLeft = false;
+
+HM_PG_ShowLinkCursor = 1;
+HM_PG_NSFontOver = true;
+
+var iWidth= 180;
+var iTopPos= 0;
+var iLeftPos= 0;
+var sFontColor= "#FFFFFF";
+var sFontHighColor= "#FFFFFF";
+var sBackgroundColor= "#FF0000";
+var sBackgroundHighColor= "#00007b";
+var sTableBorderColor= "#EFEFEF";
+var sLineColor= "#FF9369";
+
+var intRows= 13;
+var intHeight= 23.9;
+var iBlankspace= 14;
+//Fin de Variables
+
+HM_DOM = (document.getElementById) ? true : false;
+HM_NS4 = (document.layers) ? true : false;
+HM_IE = (document.all) ? true : false;
+HM_IE4 = HM_IE && !HM_DOM;
+HM_Mac = (navigator.appVersion.indexOf("Mac") != -1);
+HM_IE4M = HM_IE4 && HM_Mac;
+HM_IsMenu = (HM_DOM || HM_NS4 || (HM_IE4 && !HM_IE4M));
+
+HM_BrowserString = HM_NS4 ? "NS4" : HM_DOM ? "DOM" : "IE4";
+
+if(window.event + "" == "undefined") event = null;
+function HM_f_PopUp(){return false};
+function HM_f_PopDown(){return false};
+popUp = HM_f_PopUp;
+popDown = HM_f_PopDown;
+//Response.Write("ImagenIzq=" & ImagenIzq)
+//Response.End()
+
+if(HM_IsMenu) {
+	//Inicio de Opciones
+	HM_Array1= [ [iWidth,  iLeftPos, iTopPos, sFontColor, sFontHighColor, sBackgroundColor, sBackgroundHighColor, sTableBorderColor, sLineColor, 1,	0, 0, 1, 1, 1, "null", "null",
+	],
+	["Mantenimiento de Clientes","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/cliente/BusqCliente.asp?cu=762&co=3338&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Ventas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas/BusqCliente.asp?cu=762&co=3339&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Devolución","",1,0,1]
+,["Venta Rapida","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/VentaR/ventaArticulos.asp?cu=762&co=3341&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Pagos","",1,0,1]
+,["Cuadre de Caja","",1,0,1]
+,["Central de Activaciones","",1,0,1]
+,["Consultas y reportes","",1,0,1]
+,["Sunat","",1,0,1]
+,["Creditos","",1,0,1]
+,["Regul. Venta","",1,0,1]
+,["Despacho y Almacén","",1,0,1]
+,["HelpDesk Comercial","",1,0,1]
+,["Gestión de Carpetas","",1,0,1]
+,["Venta Varios","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/VentaR/VentaArticulos.asp?cu=762&co=3557&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Registro de Clientes - Dealers","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/cliente/dealers/Consulta.asp?cu=762&co=3850&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Detallista","",1,0,1]
+,["PVU - Seguridad","",1,0,1]
+,["Evaluación Crediticia","",1,0,1]
+,["CRM","",1,0,1]
+,["Aprob. PDV","",1,0,1]
+,["Recaudación","",1,0,1]
+,["Descarga de Formatos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/FormatosClaro/FormatosClaro.asp?cu=762&co=7010&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Mantenimiento Formatos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/FormatosClaro/MntFormatosClaro.asp?cu=762&co=7015&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+,["Ventas SubDistribuidor","",1,0,1]
+,["Ventas Unficadas","",1,0,1]
+,["Mantenimiento Impresoras","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/PCCash/MantImpSerieSunat.asp?cu=762&co=7164&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_3 = [
+	[],
+
+["&nbsp;Busq. doc. Identidad","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Devoluciones/BusqClienteDI.asp?cu=762&co=3345&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Busq. doc. venta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Devoluciones/BusqClienteDV.asp?cu=762&co=3346&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Búsqueda por Teléfono","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Devoluciones/BusqClienteTF.asp?cu=762&co=3422&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_5 = [
+	[],
+
+["&nbsp;Doc. por Pagar","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/pagos/Operaciones.asp?codOperacion=01&accionPago=1&cu=762&co=3347&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta de pagos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/pagos/Operaciones.asp?codOperacion=01&accionPago=2&cu=762&co=3349&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Historico de Pago","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/pagos/Operaciones.asp?codOperacion=01&accionPago=3&cu=762&co=3350&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Depósito Garantía","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/pagos/depGaran.asp?cu=762&co=3380&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Devol. Dep. Garantía","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/pagos/devolDepo.asp?cu=762&co=3381&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Devol. Efectivo","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/pagos/devolEfectivo.asp?cu=762&co=3382&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_6 = [
+	[],
+
+["&nbsp;Proceso de Cuadre","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreProceso.asp?cu=762&co=3383&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Ventas Facturadas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreVtasFact.asp?cu=762&co=3384&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Detalle de Ventas Facturadas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreMaterFact.asp?cu=762&co=3385&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Cuadre Diario","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreResumDia.asp?cu=762&co=3386&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Proceso de Cuadre Individual","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreProcesoInd.asp?cu=762&co=6390&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Cuadre Diario Individual","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreResumDiaInd.asp?cu=762&co=6391&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Asignacion de Cajeros","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/asigCajero.asp?cu=762&co=6394&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Ventas Facturadas Individual","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreVtasFactInd.asp?cu=762&co=6531&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Detalle de Ventas Facturadas Individual","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Pagos/repCuadreMaterFactInd.asp?cu=762&co=6532&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_7 = [
+	[],
+
+["&nbsp;Activaciones","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Acuerdos/Operaciones.asp?codOperacion=01&cu=762&co=3351&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Acuerdos/filtroacuerdoPCS.asp?cu=762&co=3352&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte Historico","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Acuerdos/datosHistPCS.asp?cu=762&co=3353&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Activaciones por DSF","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Acuerdos/operaciones.asp?codoperacion=06&cu=762&co=3392&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Solicitud Prepago","javascript:solicitprep(); ",1,0,0]
+
+]
+HM_Array1_8 = [
+	[],
+
+["&nbsp;Consulta de Inventarios","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Consulta/OperacionesInv.asp?codOperacion=01&cu=762&co=3355&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_9 = [
+	[],
+
+["&nbsp;Anulación Preventiva","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Sunat/Anulacion.asp?oper=1&cu=762&co=3366&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Anulación para Reutil","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Sunat/Anulacion.asp?oper=2&cu=762&co=3367&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_10 = [
+	[],
+
+["&nbsp;Autentificacion","",1,0,1]
+
+ , 
+
+["&nbsp;Evaluacion","",1,0,1]
+
+]
+HM_Array1_10_1 = [
+[],
+
+["&nbsp;Consulta total","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Evaluacion/consTotal.asp?cu=762&co=3375&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Essalud","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Evaluacion/essalud.asp?cu=762&co=3376&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Pag Blancas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Evaluacion/pagBlancas.asp?cu=762&co=3377&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Reniec","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Evaluacion/reniec.asp?cu=762&co=3378&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Sunat","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Evaluacion/sunat.asp?cu=762&co=3379&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Asignar Topes","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/Evaluacion/AsignarTope/AsignarTope.asp?cu=762&co=3564&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Infocorp","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/Evaluacion/Infocorp/acceso.asp?cu=762&co=3726&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Consultas","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/Evaluacion/Consulta/ConsultaCreditos.asp?cu=762&co=3735&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Infocorp Nuevo","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/Evaluacion/InfocorpNew/ConsultaCliente.asp?cu=762&co=6297&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_10_2 = [
+[],
+
+["&nbsp;Consulta Existencia de Clientes","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/ClientesDSF/BSQ_DSFClienteBSCS.asp?cu=762&co=3856&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_11 = [
+	[],
+
+["&nbsp;HIstórico","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/VentaH/busqCliente.asp?cu=762&co=3406&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_12 = [
+	[],
+
+["&nbsp;Consulta de Pedidos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Despacho/operaciones.asp?codOperacion=01&cu=762&co=3429&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta de Pedidos Pagados","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Despacho/operaciones.asp?codOperacion=02&cu=762&co=3430&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consultas Guias de Remision","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Guias/PoolConsultaGuias.asp?cu=762&co=3851&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta Cambio de Chip","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/Despacho/PoolConsultaCambioChip.asp?cu=762&co=4096&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_13 = [
+	[],
+
+["&nbsp;Renov. y Reposic.","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/Operaciones.asp?codOperacion=01&cu=762&co=3503&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/filtroAcuerdoPCS.asp?cu=762&co=3504&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte Histórico","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/datosHistPCS.asp?cu=762&co=3505&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_14 = [
+	[],
+
+["&nbsp;Recepción de Carpetas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/GCarpetas.asp?cu=762&co=3914&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Carga Diaria","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/CargaDiaria.asp?cu=762&co=3915&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reportes","",1,0,1]
+
+ , 
+
+["&nbsp;Consulta de Carpetas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/ConsultaGCarpetas.asp?cu=762&co=3970&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Mantenimiento","",1,0,1]
+
+ , 
+
+["&nbsp;Cargos","",1,0,1]
+
+ , 
+
+["&nbsp;Configuración tiempo devolución","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/ConfigTiempos.asp?cu=762&co=5488&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Visualización datos venta grabados","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/VerDatosVenta.asp?cu=762&co=5489&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta Ventas Irregulares","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/ConVentasIrregulares.asp?cu=762&co=5906&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Revisión de Carpetas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/grevcarpetas.asp?cu=762&co=5990&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta de Carpetas a Devolver","javascript:LinkData('http://tim-it2desar/pvu_x/Paginas/GCarpetas/consCarDev.asp?cu=762&co=6093&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_14_3 = [
+[],
+
+["&nbsp;Ventas Irregulares","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/VentasIrregulares.asp?cu=762&co=3917&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;No Revisados","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/VentasNoRevisadas.asp?cu=762&co=3918&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Ventas Comision. y No Comision.","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/VentasCominyNoComin.asp?cu=762&co=6099&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Productividad por Verificador","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/ProductividadxVerificador.asp?cu=762&co=6100&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Devoluciones por Pto Venta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/DevolucionesxPuntoVenta.asp?cu=762&co=6101&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Avance por Pto Venta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/AvancexPuntoVenta.asp?cu=762&co=6102&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Carpetas Faltantes","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/CarpetasFaltantes.asp?cu=762&co=7251&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Ventas Irregulares Fec.Act.","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/GCarpetas/VentasIrregularesActiv.asp?cu=762&co=7252&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_14_5 = [
+[],
+
+["&nbsp;Resultado","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/ResultadosListar.asp?cu=762&co=5490&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Tipificación","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/TipificacionListar.asp?cu=762&co=5491&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Detalle","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/DetalleListar.asp?cu=762&co=5492&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Posible Solución","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/PosSolListar.asp?cu=762&co=5493&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Servicios adicionales","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/ServAdicBuscar.asp?cu=762&co=5494&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Documentos de sustento","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/DocumentoSustento.asp?cu=762&co=5495&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Formatos adjuntos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/FormatoAdjunto.asp?cu=762&co=5496&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Filtros de datos de carga","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/PoolFiltros.asp?cu=762&co=5497&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Periodo de Cierre","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/PeriodoCierre.asp?cu=762&co=5965&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Ubicaciones","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/MantUbicaciones.asp?cu=762&co=5966&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_14_6 = [
+[],
+
+["&nbsp;Crear","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/busqGenCargos.asp?cu=762&co=5498&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Modificar","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/busqCargos.asp?cu=762&co=5499&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Anular","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/CargosAnular.asp?cu=762&co=5500&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Imprimir","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/gcarpetas/ModoImpresion.asp?cu=762&co=5501&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_17 = [
+	[],
+
+["&nbsp;Mantenimiento","",1,0,1]
+
+ , 
+
+["&nbsp;Asignacion de Tarjetas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/detallista/VentAsigna.asp?cu=762&co=4087&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_17_1 = [
+[],
+
+["&nbsp;Clientes","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/detallista/busqCliente.asp?cu=762&co=4089&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Vendedores","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/detallista/MantVendPrin.asp?cu=762&co=4092&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Stocks","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/detallista/MantStock.asp?cu=762&co=4097&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Cartera de Clientes","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/detallista/MantClientesMass.asp?cu=762&co=4155&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_18 = [
+	[],
+
+["&nbsp;Administrador de Mundos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Seguridad/SegAdmMundos.asp?cu=762&co=4147&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Supervisor de Dealers","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Seguridad/SegSupDealers.asp?cu=762&co=4148&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Supervisor de Corners","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Seguridad/SegSupCorners.asp?cu=762&co=4149&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Supervisor Central Activaciones","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Seguridad/SegSupCenActivaciones.asp?cu=762&co=4150&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Supervisor Soporte Comercial","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Seguridad/SegSupSopComercial.asp?cu=762&co=4151&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_19 = [
+	[],
+
+["&nbsp;Nueva Solicitud PDV","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/busqcliente.asp?pvusrc=PDV&cu=762&co=4957&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Nueva Solicitud CRE","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/busqcliente.asp?pvusrc=CRE&cu=762&co=5270&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta Solicitud PDV","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/ConsultaSolicitud.asp?pvusrc=PDV&cu=762&co=4958&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta Solicitud Creditos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/ConsultaSolicitud.asp?pvusrc=CRE&cu=762&co=5271&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Solicitud Evaluación Supervisores","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/PoolSolicitud.asp?pvusrc=PDV&cu=762&co=4959&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Solicitud Evaluación Creditos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/PoolSolicitud.asp?pvusrc=CRE&cu=762&co=5272&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta de Activaciones","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/ActivacionesCon.asp?cu=762&co=5269&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte de Créditos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/RepCreditos.asp?cu=762&co=4960&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte de Tiempos","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/RepTiempos.asp?cu=762&co=4961&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta de Logs","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/ConsultaLog.asp?cu=762&co=4962&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Mantenimiento de Motivos de Rechazo","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/SolCrediticia/MotRechListar.asp?cu=762&co=5276&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_20 = [
+	[],
+
+["&nbsp;Renovaciones","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosCRM/Operaciones.asp?codOperacion=01&cu=762&co=4977&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consultas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosCRM/filtroAcuerdoPCS.asp?cu=762&co=4978&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte Historico","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosCRM/datosHistPCS.asp?cu=762&co=4979&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_21 = [
+	[],
+
+["&nbsp;Renov. y Reposic.","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/Operaciones.asp?OpcOrigen=AprobPDV&codOperacion=01&cu=762&co=6384&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Consulta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/filtroAcuerdoPCS.asp?OpcOrigen=AprobPDV&cu=762&co=6385&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte Historico","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/datosHistPCS.asp?OpcOrigen=AprobPDV&SubMenOrigen=ReporteHistorico&cu=762&co=6386&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Reporte PCS 2","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/AcuerdosHDC/datosHistPCS.asp?OpcOrigen=AprobPDV&SubMenOrigen=ReportePCS&cu=762&co=6387&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_22 = [
+	[],
+
+["&nbsp;Pagar Documento","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Recaudacion/hldBsqDocumentos.asp?cu=762&co=6496&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Pool de Recaudaciones","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Recaudacion/hldGrdDocumentos.asp?cu=762&co=6497&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_25 = [
+	[],
+
+["&nbsp;Mant. de SubDistribuidor","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/RegistroPDV/MantSubOfic.asp?cu=762&co=7134&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Mant. de Vendedores","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/RegistroPDV/MantVend.asp?cu=762&co=7135&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Carga masiva cliente/ventas","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/RegistroPDV/Carga.asp?cu=762&co=7112&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+ , 
+
+["&nbsp;Resultado de la carga masiva","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/RegistroPDV/DesCarga.asp?cu=762&co=7113&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+
+]
+HM_Array1_26 = [
+	[],
+
+["&nbsp;Prepago","",1,0,1]
+
+ , 
+
+["&nbsp;Postpago","",1,0,1]
+
+ , 
+
+["&nbsp;Control","",1,0,1]
+
+]
+HM_Array1_26_1 = [
+[],
+
+["&nbsp;Normal/Alta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPRENOR&cu=762&co=7119&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Reposición","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPREREP&cu=762&co=7120&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Renovación","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPREREN&cu=762&co=7121&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Migración","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPREMIG&cu=762&co=7122&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Chip Repuesto","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPRECHR&cu=762&co=7123&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_26_2 = [
+[],
+
+["&nbsp;Normal Alta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPOSNOR&cu=762&co=7129&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Reposición","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPOSREP&cu=762&co=7130&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Renovación","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPOSREN&cu=762&co=7131&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Migración","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPOSMIG&cu=762&co=7132&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Chip Repuesto","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VPOSCHR&cu=762&co=7133&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+HM_Array1_26_3 = [
+[],
+
+["&nbsp;Normal/Alta","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VCTRNOR&cu=762&co=7124&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Reposicion","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VCTRREP&cu=762&co=7125&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Renovación","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VCTRREN&cu=762&co=7126&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Migración","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VCTRMIG&cu=762&co=7127&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+ , 
+
+["&nbsp;Chip Repuesto","javascript:LinkData('http://tim-it2desar/pvu_x/paginas/Ventas2/BusqCliente.asp?Ori=VCTRCHR&cu=762&co=7128&ca=102&cp=5','http://tim-it2desar/pvu_x')",1,0,0]
+]
+
+	//Fin de Opciones
+	document.write("<SCR" + "IPT LANGUAGE='JavaScript1.2' SRC='http://tim-it2desar/pvu_x/include/incScript"+ HM_BrowserString +".js' TYPE='text/javascript'><\/SCR" + "IPT>");
+}
+</script>
+			</td>			
+			<td width="*">
+				<iframe id="dataFrame" src="about:blank"
+				height="100%" width="100%" frameborder="0" scrolling="auto">
+			</td>				
+		</tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/ventas/envioportaws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/ventas/envioportaws" name="EnvioPortaWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/envioportaws" />
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/EnvioPortaWS/ebsEnvioPortaSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/ventas/envioportaws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="realizarConsultaPreviaRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/ventas/envioportaws/types" element="q1:realizarConsultaPreviaRequest" />
+  </wsdl:message>
+  <wsdl:message name="realizarConsultaPreviaResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/ventas/envioportaws/types" element="q2:realizarConsultaPreviaResponse" />
+  </wsdl:message>
+  <wsdl:message name="realizarSolicitudPortabilidadRequestMsg">
+    <wsdl:part name="request" xmlns:q3="http://claro.com.pe/eai/ws/ventas/envioportaws/types" element="q3:realizarSolicitudPortabilidadRequest" />
+  </wsdl:message>
+  <wsdl:message name="realizarSolicitudPortabilidadResponseMsg">
+    <wsdl:part name="response" xmlns:q4="http://claro.com.pe/eai/ws/ventas/envioportaws/types" element="q4:realizarSolicitudPortabilidadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EnvioPortaWSPortType">
+    <wsdl:operation name="realizarConsultaPrevia">
+      <wsdl:input message="tns:realizarConsultaPreviaRequestMsg" />
+      <wsdl:output message="tns:realizarConsultaPreviaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="realizarSolicitudPortabilidad">
+      <wsdl:input message="tns:realizarSolicitudPortabilidadRequestMsg" />
+      <wsdl:output message="tns:realizarSolicitudPortabilidadResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EnvioPortaWSPortTypeSOAP11Binding" type="tns:EnvioPortaWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="realizarConsultaPrevia">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/envioportaws/realizarConsultaPrevia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarSolicitudPortabilidad">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/envioportaws/realizarSolicitudPortabilidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EnvioPortaWSPortTypeSOAP12Binding" type="tns:EnvioPortaWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="realizarConsultaPrevia">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/envioportaws/realizarConsultaPrevia" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="realizarSolicitudPortabilidad">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/envioportaws/realizarSolicitudPortabilidad" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EnvioPortaWSService">
+    <wsdl:port name="ebsEnvioPortaSB11" binding="tns:EnvioPortaWSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/EnvioPortaWS/ebsEnvioPortaSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsEnvioPortaSB12" binding="tns:EnvioPortaWSPortTypeSOAP12Binding">
+      <soap12:address location="http://limdeseaiv28.tim.com.pe:8909/EnvioPortaWS/ebsEnvioPortaSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

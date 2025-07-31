@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://claro.com.pe/eai/ebs/ws/postventa/ebsMigracionPlanPostpago" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://claro.com.pe/eai/ebs/ws/postventa/ebsMigracionPlanPostpago" name="ebsMigracionPlanPostpago" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>https://limjandesv02.tim.com.pe:6910/soa-infra/services/default/MigracionPlanPostpago!1.0/ebsMigracionPlanPostpago.wsdl</documentation>
+  <types />
+</definitions>

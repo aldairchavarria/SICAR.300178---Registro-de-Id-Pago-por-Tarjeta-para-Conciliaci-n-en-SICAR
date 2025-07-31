@@ -1,0 +1,67 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" xmlns:v11="http://claro.com.pe/generic/messageFormat/v1.0/" xmlns:v12="http://claro.com.pe/esb/message/BSS_RecargaVirtual_v1/crearRecarga/v1/">
+   <soapenv:Header>
+     <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken>
+            <wsse:Username></wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"></wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+      <v1:headerRequest>
+         <v1:canal/>
+         <v1:idAplicacion></v1:idAplicacion>
+         <v1:usuarioAplicacion></v1:usuarioAplicacion>
+         <v1:usuarioSesion/>
+         <v1:idTransaccionESB/>
+         <v1:idTransaccionNegocio></v1:idTransaccionNegocio>
+         <v1:fechaInicio></v1:fechaInicio>
+         <v1:nodoAdicional></v1:nodoAdicional>
+      </v1:headerRequest>
+      <v11:HeaderRequest>
+         <country></country>
+         <language></language>
+         <consumer></consumer>
+         <system></system>
+         <modulo></modulo>
+         <pid></pid>
+         <userId></userId>
+         <dispositivo></dispositivo>
+         <wsIp></wsIp>
+         <operation></operation>
+         <timestamp></timestamp>
+         <msgType></msgType>
+         <!--Optional:-->
+         <VarArg>
+            <!--Zero or more repetitions:-->
+            <Arg>
+               <key>?</key>
+               <value>?</value>
+            </Arg>
+         </VarArg>
+      </v11:HeaderRequest>
+   </soapenv:Header>
+   <soapenv:Body>
+      <v12:CrearRecargaRequest>
+         <v12:linea></v12:linea>
+         <v12:estado></v12:estado>
+         <v12:fecha></v12:fecha>
+         <v12:nombreUsuario></v12:nombreUsuario>
+         <v12:puntoVenta></v12:puntoVenta>
+         <v12:tipoDocumento></v12:tipoDocumento>
+         <v12:numeroDocumento></v12:numeroDocumento>
+         <v12:lineaCliente></v12:lineaCliente>
+         <v12:montoRecarga></v12:montoRecarga>
+         <v12:fechaSwTrx></v12:fechaSwTrx>
+         <v12:valorVenta></v12:valorVenta>
+         <v12:valorDescuento></v12:valorDescuento>
+         <v12:valorSubTotal></v12:valorSubTotal>
+         <v12:valorIGV></v12:valorIGV>
+         <v12:valorTotal></v12:valorTotal>
+         <v12:estadoInsertar></v12:estadoInsertar>
+         <v12:trace></v12:trace>
+         <v12:listaResquestOpcional>
+            <!--1 or more repetitions:-->
+            <v12:requestOpcional campo="?" valor="?"/>
+         </v12:listaResquestOpcional>
+      </v12:CrearRecargaRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

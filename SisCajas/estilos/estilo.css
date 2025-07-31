@@ -1,0 +1,356 @@
+<STYLE>
+BODY
+{
+}
+.clsNormal
+{
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsNormalOpcion
+{
+    FONT-SIZE: 10pt;
+    CURSOR: default;
+    COLOR: #2625a7;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsNormalNegrita
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsDirectorioSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #303094;
+    TEXT-DECORATION: none
+}
+.clsDirectorioNoSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: white
+}
+.clsNormalLink
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsSobreLink
+{
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: darkblue;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: underline
+}
+TR.clsSobrePregunta
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: darkblue;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #dbe9f5;
+    TEXT-DECORATION: none
+}
+TR.clsFueraPregunta
+{
+    FONT-SIZE: 10pt;
+    CURSOR: default;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+.clsMenu
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7pt;
+    COLOR: #2625a7;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsMenuOver
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7pt;
+    COLOR: green;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsArchivo
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsNormalMsj
+{
+    FONT-SIZE: 13pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsNormalLinkSeleccionado
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #303094;
+    TEXT-DECORATION: none
+}
+.clsNormalItalica
+{
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-STYLE: italic;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsNormalRegistroSeleccionado
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #dbe9f5;
+    TEXT-DECORATION: none
+}
+TD.clsDocumentoNoSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence
+}
+TD.clsDocumentoSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #303094
+}
+TD.clsDocumentoSeleccionado A
+{
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsArial10
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial12
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.ClsArial08
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.ClsNormal_1
+{
+    FONT-SIZE: 7pt;
+    COLOR: navy;
+    FONT-FAMILY: ' TheSansCorrespondence'
+}
+.clsArial10b
+{
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial10r
+{
+    FONT-SIZE: 10pt;
+    COLOR: #ff0000;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial10v
+{
+    FONT-SIZE: 10pt;
+    COLOR: #000080;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial10a
+{
+    FONT-SIZE: 10pt;
+    COLOR: #1f3c86;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial12b
+{
+    FONT-SIZE: 12pt;
+    COLOR: white;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsCabCliente
+{
+    FONT-SIZE: 11pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow';
+    BACKGROUND-COLOR: silver
+}
+.SaludoIngreso
+{
+    FONT-SIZE: 13px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.MenuOpciones
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+.TituloConsulta
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial12BldB
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial12B
+{
+    FONT-SIZE: 12px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial13
+{
+    FONT-SIZE: 13px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial11B
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Resaltado
+{
+    BACKGROUND-COLOR: #00007b
+}
+.Resaltado
+{
+    BACKGROUND-COLOR: #00007b
+}
+.ResultadoRes
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #d0d8f0;
+    TEXT-DECORATION: none
+}
+.ArialFrm
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial11Link
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.login01
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #001b78;
+    FONT-FAMILY: Verdana
+}
+INPUT.clsInputDisable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bfbee9
+}
+INPUT.clsInputEnable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+TEXTAREA.clsTextAreaEnable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectDisable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bfbee9
+}
+div.frame {
+        SCROLLBAR-FACE-COLOR: #bfbee9; 
+        SCROLLBAR-HIGHLIGHT-COLOR: #F4D1A7; 
+        SCROLLBAR-SHADOW-COLOR: #C67718; 
+        SCROLLBAR-3DLIGHT-COLOR: #bfbee9;
+        SCROLLBAR-ARROW-COLOR: #ffffff; 
+        SCROLLBAR-TRACK-COLOR: #efefef; 
+        SCROLLBAR-DARKSHADOW-COLOR: #bfbee9;
+}
+</STYLE>

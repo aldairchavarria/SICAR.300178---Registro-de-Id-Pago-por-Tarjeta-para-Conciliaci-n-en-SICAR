@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd4="http://claro.com.pe/esb/data/generico/claroFault/v1/" xmlns:tns="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/comprobarDeuda/" xmlns:xsd5="http://claro.com.pe/esb/data/generico/opcionales/v1/" xmlns:xsd3="http://claro.com.pe/esb/data/generico/responseStatus/v1/" xmlns:xsd2="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/ventas/procesoPortabilidad/sec/v1/comprobarDeuda/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FResponseStatus_v1" namespace="http://claro.com.pe/esb/data/generico/responseStatus/v1/" />
+  <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_ProcesoPortabilidad/SRV_ProcesoPortabilidad/Service/BSS_ProcesoPortabilidad_v1?SCHEMA%2FBSS_ProcesoPortabilidad%2FSRV_ProcesoPortabilidad%2FResources%2FXSD%2FOpcionales_v1" namespace="http://claro.com.pe/esb/data/generico/opcionales/v1/" />
+  <xsd:element name="comprobarDeudaRequest" type="tns:comprobarDeudaRequest" />
+  <xsd:complexType name="comprobarDeudaRequest">
+    <xsd:sequence>
+      <xsd:element name="solinCodigo" type="xsd:string" />
+      <xsd:element name="numLinea" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResquestOpcional" type="xsd5:RequestOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="comprobarDeudaResponse" type="tns:comprobarDeudaResponse" />
+  <xsd:complexType name="comprobarDeudaResponse">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="responseStatus" type="xsd3:ResponseStatus" />
+        <xsd:element name="responseData" type="tns:ResponseData" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="xsd5:ResponseOpcionalType" />
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResponseData">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="solinCodigo" type="xsd:string" />
+        <xsd:element name="deuda" type="xsd:string" />
+        <xsd:element name="moneda" type="xsd:string" />
+        <xsd:element name="numLinea" type="xsd:string" />
+        <xsd:element name="fechVencFactura" type="xsd:string" />
+        <xsd:element name="numSecuencial" type="xsd:string" />
+        <xsd:element name="flagEnvioCp" type="xsd:string" />
+        <xsd:element name="flagEnvioSp" type="xsd:string" />
+        <xsd:element name="tipoProducto" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

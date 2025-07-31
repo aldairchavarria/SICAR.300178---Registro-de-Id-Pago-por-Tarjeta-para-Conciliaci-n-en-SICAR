@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion">
+      <s:element name="asignaBono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="imei" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codArticulo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoVenta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoVentaSinIGV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="origenProceso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asignaBonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoRespuesta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anulaBono">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="imei" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anulaBonoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoRespuesta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asignaBonoRepPre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="imei" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigoArticulo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoVenta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoVentaSinIGV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="origenProceso" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asignaBonoRepPreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoRespuesta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anulaBonoRepPre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipAplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aplicacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="msisdn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="imei" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="anulaBonoRepPreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTransaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoRespuesta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="asignaBonoMsg">
+    <part name="parameters" element="s0:asignaBono" />
+  </message>
+  <message name="asignaBonoResponseMsg">
+    <part name="parameters" element="s0:asignaBonoResponse" />
+  </message>
+  <message name="anulaBonoMsg">
+    <part name="parameters" element="s0:anulaBono" />
+  </message>
+  <message name="anulaBonoResponseMsg">
+    <part name="parameters" element="s0:anulaBonoResponse" />
+  </message>
+  <message name="asignaBonoRepPreMsg">
+    <part name="parameters" element="s0:asignaBonoRepPre" />
+  </message>
+  <message name="asignaBonoRepPreResponseMsg">
+    <part name="parameters" element="s0:asignaBonoRepPreResponse" />
+  </message>
+  <message name="anulaBonoRepPreMsg">
+    <part name="parameters" element="s0:anulaBonoRepPre" />
+  </message>
+  <message name="anulaBonoRepPreResponseMsg">
+    <part name="parameters" element="s0:anulaBonoRepPreResponse" />
+  </message>
+  <portType name="BonoRenovacionReposicionWS">
+    <operation name="asignaBono">
+      <input message="s0:asignaBonoMsg" />
+      <output message="s0:asignaBonoResponseMsg" />
+    </operation>
+    <operation name="anulaBono">
+      <input message="s0:anulaBonoMsg" />
+      <output message="s0:anulaBonoResponseMsg" />
+    </operation>
+    <operation name="asignaBonoRepPre">
+      <input message="s0:asignaBonoRepPreMsg" />
+      <output message="s0:asignaBonoRepPreResponseMsg" />
+    </operation>
+    <operation name="anulaBonoRepPre">
+      <input message="s0:anulaBonoRepPreMsg" />
+      <output message="s0:anulaBonoRepPreResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="BonoRenovacionReposicionWSSOAP" type="s0:BonoRenovacionReposicionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="asignaBono">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion/asignaBono" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="anulaBono">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion/anulaBono" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="asignaBonoRepPre">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion/asignaBonoRepPre" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+    <operation name="anulaBonoRepPre">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/prepago/bonorenovacionreposicion/anulaBonoRepPre" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="BonoRenovacionReposicionWS">
+    <port name="BonoRenovacionReposicionWS" binding="s0:BonoRenovacionReposicionWSSOAP">
+      <soap:address location="http://172.19.74.68:8909/BonoRenovacionReposicionApp/BonoRenovacionReposicionWS" />
+    </port>
+  </service>
+</definitions>

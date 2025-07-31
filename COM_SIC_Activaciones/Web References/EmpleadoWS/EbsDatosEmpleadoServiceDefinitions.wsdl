@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.claro.com.pe/esb/services/datosempleado/schemas/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://pe/com/claro/esb/services/datosempleado/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/datosempleado/ws" name="EbsDatosEmpleadoServiceDefinitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:tns="http://www.claro.com.pe/esb/services/datosempleado/schemas/" xmlns:s1="http://pe/com/claro/esb/services/datosempleado/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.claro.com.pe/esb/services/datosempleado/schemas/">
+      <s:element name="DatosEmpleadoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idUsu" type="s:string" />
+            <s:element name="loginNt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmpleadoType">
+        <s:sequence>
+          <s:element name="idEmp" type="s:string" />
+          <s:element name="login" type="s:string" />
+          <s:element name="nombre" type="s:string" />
+          <s:element name="apellido" type="s:string" />
+          <s:element name="apellidoMaterno" type="s:string" />
+          <s:element name="nomCompleto" type="s:string" />
+          <s:element name="idCodvendedorSap" type="s:string" />
+          <s:element name="idArea" type="s:string" />
+          <s:element name="descArea" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DatosEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="codRes" type="s:string" />
+            <s:element name="mensaje" type="s:string" />
+            <s:element name="empleado" type="tns:EmpleadoType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/esb/services/datosempleado/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/datosempleado/ws">
+      <xs:import namespace="http://www.claro.com.pe/esb/services/datosempleado/schemas/" />
+      <xs:element name="obtenerDatosEmpleadoPorId">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:sch="http://www.claro.com.pe/esb/services/datosempleado/schemas/" ref="sch:DatosEmpleadoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="obtenerDatosEmpleadoPorIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:sch="http://www.claro.com.pe/esb/services/datosempleado/schemas/" ref="sch:DatosEmpleadoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="obtenerDatosEmpleadoPorId">
+    <wsdl:part name="parameters" element="tns:obtenerDatosEmpleadoPorId" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDatosEmpleadoPorIdResponse">
+    <wsdl:part name="parameters" element="tns:obtenerDatosEmpleadoPorIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EbsDatosEmpleado">
+    <wsdl:operation name="obtenerDatosEmpleadoPorId" parameterOrder="parameters">
+      <wsdl:input message="tns:obtenerDatosEmpleadoPorId" />
+      <wsdl:output message="tns:obtenerDatosEmpleadoPorIdResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EbsDatosEmpleadoServiceSoapBinding" type="tns:EbsDatosEmpleado">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="obtenerDatosEmpleadoPorId">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EbsDatosEmpleadoService">
+    <wsdl:port name="EbsDatosEmpleadoSoapPort" binding="tns:EbsDatosEmpleadoServiceSoapBinding">
+      <soap:address location="http://limdeseaiv22.tim.com.pe:8909/DatosEmpleadoWS/EbsDatosEmpleado" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

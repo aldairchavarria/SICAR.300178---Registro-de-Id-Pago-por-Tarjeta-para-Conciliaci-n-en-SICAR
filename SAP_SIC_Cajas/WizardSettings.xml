@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ClassName="SAP_SIC_Cajas" TargetDirectory="D:\Pases\PP_xxxx_07092010\SAP_SIC_Cajas" Namespace="SAP_SIC_Cajas" Type="JavaMetaDataProvider" ToolsDir="C:\Archivos de programa\SAP\SAP .NET Connector for VisualStudio 2003\" xmlns="http://tempuri.org/ProxyAppInput.xsd">
+  <Destination>
+    <Client>200</Client>
+    <AppServerHost>172.19.43.34</AppServerHost>
+    <Language />
+    <Username>usrpvu</Username>
+    <SystemNumber>0</SystemNumber>
+    <LogonGroup />
+    <MsgServerHost />
+    <SAPSystemName />
+    <Type>3</Type>
+    <DestinationName>DES : CLARO Development</DestinationName>
+  </Destination>
+  <Modules Name="ZPVU_RFC_TRS_PAGOS_CAJERO" />
+  <Modules Name="ZPVU_RFC_TRS_CAJ_SET_NRO_SUNAT" />
+  <Modules Name="ZPVU_RFC_TRS_PAGOS_CAJERO_ANUL" />
+  <Modules Name="ZPVU_RFC_CON_ASIG_CAJERO" />
+  <Modules Name="ZPVU_RFC_CON_CAJA_OFICINAS" />
+  <Modules Name="ZPVU_RFC_CON_CAJERO_CAJA_CERRA" />
+  <Modules Name="ZPVU_RFC_CON_USUARIO" />
+  <Modules Name="ZPVU_RFC_REP_ARQUEO_CAJERO" />
+  <Modules Name="ZPVU_RFC_REP_CUADRE_CAJERO" />
+  <Modules Name="ZPVU_RFC_TRS_CAJERO_DIARIO" />
+  <Modules Name="ZPVU_RFC_REGISTRO_REMESA" />
+</Settings>

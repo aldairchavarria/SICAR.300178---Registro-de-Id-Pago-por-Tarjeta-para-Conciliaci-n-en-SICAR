@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<html>
+	<title>Claro</title>
+	<htmlData>
+    <![CDATA[
+        	<!DOCTYPE html PUBLIC "-//W3C//Dth XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dth/xhtml1-transitional.dth">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if gte mso 9]>
+        <style type="text/css">
+            table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; border:0; }
+            table th { border-collapse:collapse; font-size:1px; line-height:1px; } 
+        </style>
+        <![endif]-->
+        <title>Claro</title>
+        <style>
+            * {
+            padding: 0;
+            margin: 0;
+            box-sizing:    border-box;  
+            }
+            th{
+            font-weight: normal;
+            }
+            @media screen and (max-width: 650px) {
+            table,tbody,thead,tr,th {
+            display: block !important;
+            width: auto !important;
+            height: auto !important;
+            }
+            tr,table,th{
+            width: 100% !important;
+            }
+            img {
+            display: block !important;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto !important;
+            width: auto !important;
+            } 
+            table.master {
+            width: 100% !important ;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            }
+            .btn-footer{
+            padding:   5px !important   ;
+            margin-bottom:  5px !important ;
+            }
+            .info{
+            font-size: 14px !important ;
+            }
+            .none{
+            display:    none !important ;
+            }
+            .top-{
+                padding-top: 30px !important;
+            }
+            .titulo{
+            font-size: 15px !important  ; 
+            text-align:  center !important ;   
+            }
+            .sinbr br{
+                display: none !important;
+            }
+            .align-center{
+            text-align:  center !important;   
+            }
+            .padding-image{
+            padding: 40px 5px 5px !important;
+            }
+            .content-data{
+            width:  300px !important;
+            padding: 0 !important;	
+            margin:     auto !important ;   
+            }
+            .table-content{
+                width: 200px !important;
+            }
+            .table-content br{
+                display: none !important;
+            }
+            .content-titutlo{
+                width: 195px !important;
+                margin: auto;
+            }
+            .content-titutlo tr th{
+               padding: 8px !important;
+            }
+            .block-{
+                display: block !important;
+                padding-bottom: 15px !important;
+            }
+            .padding-text{
+                padding: 15px 2px 10px !important;
+                text-align: justify !important;
+                width: 300px !important;
+                margin: auto;
+            }
+            .image_plan{
+                width: 84px !important;
+                height: 71px !important;
+            }
+            .pad-top{
+                padding-top: 40px !important;
+            }
+            .titulo br{
+                display: none !important;
+            }
+            .none--{
+                padding-bottom: 25px !important;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <table class="master" cellpadding="0" cellspacing="0" border="0" align="center" width="650" style="font-family:arial,helvetica,sans-serif;color:#444444;margin:auto;line-height:1.2;">
+            <tbody>
+                <tr>
+                    <th  align="center" style="padding:10px 0;display:block;font-family:arial,helvetica,sans-serif;">
+                        <span style="font-size:9px;display:block;font-family:arial,helvetica,sans-serif;">Si no puedes ver este correo por favor haz click 
+                        <a href="http://static.claro.com.pe/mailing/havas/2019/set/27/Mailing_Alta_nueva_HFC/Mailing_Alta_nueva_HFC.html" target="_blank" style="color:#003bc2;">aquí.</a><br>
+                        Para garantizar la entrega de los e-mails a tu bandeja de entrada, por favor añade a tu libreta de direcciones nuestra dirección:<br> 
+                        <a href="mailto:%%EMAIL_REMITENTE%%" target="_blank" title="%%EMAIL_REMITENTE%%" style="color:#003bc2;">%%EMAIL_REMITENTE%%</a>
+                        </span>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th bgcolor="#ffffff" style="padding-bottom: 0px;">
+                        <img style="display:block;width: 100% !important;" src="http://static.claro.com.pe/mailing/havas/2019/set/27/Mailing_Alta_nueva_HFC/Header.png"  width="650"  border="0">
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #d52b1e; font-family:arial,helvetica,sans-serif;font-size: 19px;text-align: left;font-weight: bold;padding: 20px 14px;text-align: center;">
+                                               ¡Bienvenido(a), %%NOMBRE%%!
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th bgcolor="#ffffff" style="padding-bottom: 0px;">
+                        <img style="display:block; width: 100% !important;" src="%%RUTA_BANNER%%"  width="650"  border="0">
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #000000; font-family:arial,helvetica,sans-serif;font-size: 16px;text-align: left;font-weight: normal;padding: 20px 14px;text-align: center;">
+                                                Queremos compartir contigo información importante sobre tu  <br>    nuevo servicio <b style="color: #d52b1e;"> Claro</b> <b>hogar</b>, el cual adquiriste el día <br>   <b>%%FECHA_ADQUISICION%%</b>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#d52b1e">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #ffffff; font-family:arial,helvetica,sans-serif;font-size: 16px;text-align: left;font-weight: normal;padding: 12px 14px;text-align: center;font-weight: bold;">
+                                                Adjunto encontrarás los documentos emitidos por la transacción realizada.
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #000000; font-family:arial,helvetica,sans-serif;font-size: 16px;text-align: left;font-weight: bold;padding: 30px 14px 10px;text-align: center;">
+                                              <b style="color: #d52b1e;"> Claro</b>  Smart Home
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #000000; font-family:arial,helvetica,sans-serif;font-size: 15px;text-align: left;font-weight: normal;padding: 0px 14px 0px;text-align: center;">
+                                                Ahora podrás conocer y consultar tus servicios fijos <br>    contratados con nuestra nueva aplicación.
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+
+
+
+
+
+                <!-- <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#ffffff" >
+                            <tr>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#7c7c7c">
+                                        <tr>
+                                            <th  class="sinbr" align="center" style="color: #ffffff; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: left;font-weight: normal;padding: 15px 14px;text-align: center;font-weight: normal;">
+                                                Emite documentos electrónicos como facturas, boletas, notas de crédito / débito <br> y guías de remisión con altos estándares de seguridad.
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#ffffff" >
+                            <tr>
+                                <th align="center" style="padding: 20px  0 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th class="titulo"  align="left" style="color: #444444; font-family:arial,helvetica,sans-serif;font-size: 16px;text-align: left;font-weight: normal;padding: 8px 16px;text-align: left;font-weight: bold;">
+                                               Ofrecemos 2 modelos de Factura Electrónica:
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr> -->
+
+
+                <!-- <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#ffffff" >
+                            <tr>
+                                <th width="17" bgcolor="#ffffff" class="none"></th>
+                                <th align="left" style="padding: 20px 0px 0 ;" >
+                                    <table width="198" cellspacing="0" cellpadding="0" border="0"  style=" width: 198px; border-radius: 8px;" bgcolor="#d52b1e" class="content-titutlo">
+                                        <tr>
+                                            <th  align="center" style="color: #ffffff; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: left;font-weight: normal;padding: 8px 14px;text-align: center;font-weight: bold;">
+                                                Factura Electrónica PRO
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#ffffff" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#ffffff" >
+                            <tr>
+                                <th align="left" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th  class='padding-text' align="left" style="color: #000000; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: left;font-weight: normal;padding: 15px 22px 10px;font-weight: normal;">
+                                                Solución a medida para empresas que cuentan con un sistema de Facturación contable o ERP. Te ayudamos a integrar tu sistema de facturación a nuestra plataforma de Factura Electrónica Claro mediante una interface.
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#ffffff" >
+                            <tr>
+                                <th width="17" bgcolor="#ffffff" class="none"></th>
+                                <th align="left" style="padding: 20px 0px 0 ;" >
+                                    <table width="198" cellspacing="0" cellpadding="0" border="0"  style=" width: 198px; border-radius: 8px;" bgcolor="#d52b1e" class="content-titutlo">
+                                        <tr>
+                                            <th  align="center" style="color: #ffffff; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: left;font-weight: normal;padding: 8px 14px;text-align: center;font-weight: bold;">
+                                                Factura Electrónica WEB
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#ffffff" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#ffffff" >
+                            <tr>
+                                <th align="left" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th  class='padding-text' align="left" style="color: #000000; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: left;font-weight: normal;padding: 15px 22px;font-weight: normal;">
+                                                Diseñado para empresas que aún mantienen sus procesos de facturación a mano y necesitan emitir sus documentos electrónicos a través de un portal web fácil, intuitivo y seguro. Contamos con 2 planes:
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr> -->
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" bgcolor="#ffffff" style="padding: 0px 0 10px;">
+                                    <table width="100%" class="content-data" cellspacing="0" cellpadding="0" border="0" style="width: 100%; margin: auto; padding: 0px 15px 0px 15px;">
+                                        <tr>
+                                            <th style="padding: 0px 0px 10px;" >
+                                                <table width="530" cellspacing="0"  cellpadding="0" border="0" style="margin: 0 auto;">
+                                                    <tr>
+                                                        <th align="center">
+                                                            <table width="100%" cellspacing="0" cellpadding="0" border="0" >
+                                                                <tr>
+                                                                    <th valign="top" style="padding: 0px 0px 0px 0px;">
+                                                                        <table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+                                                                            <tr>
+                                                                                <th width="30%" valign="middle" class="list-item">
+                                                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+                                                                                        <tr>
+                                                                                            <th align="center"  style="padding-bottom:20px; padding-top: 40px;text-align: center;" class="align-center top-">
+                                                                                                
+                                                                                                    <img class="image_plan" style="display:inline-block !important;"  src="http://static.claro.com.pe/mailing/havas/2019/set/27/Mailing_Alta_nueva_HFC/icono.png"  border="0"  height="100">
+                                                                                                
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </th>
+
+
+                                                                                <th width="70%" valign="middle" >
+                                                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                                        <tr>
+                                                                                            <th>
+                                                                                                <table width="350" cellspacing="0" cellpadding="0" border="0" style="margin: 0  auto;padding: 0;" class="table-content">
+                                                                                                    <tr>
+                                                                                                        <th valign="top" style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: justify;font-weight: normal; padding: 10px 0px 0; width: auto !important;">
+                                                                                                            &#8226;
+                                                                                                        </th>
+                                                                                                        <th style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 13px;font-weight: normal; padding: 10px 10px 0; width: auto !important;text-align: left;  ">
+                                                                                                            Conoce el detalle de tu plan contratado y equipos instalados.
+                                                                                                        </th>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <th valign="top" style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: justify;font-weight: normal; padding: 10px 0px 0; width: auto !important;">
+                                                                                                            &#8226;
+                                                                                                        </th>
+                                                                                                        <th style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 13px;font-weight: normal; padding: 10px 10px 0; width: auto !important;text-align: left;  ">
+                                                                                                            Consulta tus recibos pendientes de pago y fechas de vencimiento.
+                                                                                                        </th>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <th valign="top" style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: justify;font-weight: normal; padding: 10px 0px 0; width: auto !important;">
+                                                                                                            &#8226;
+                                                                                                        </th>
+                                                                                                        <th style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 13px;font-weight: normal; padding: 10px 10px 0; width: auto !important;text-align: left;  ">
+                                                                                                            Navega por la aplicación sin costo.
+                                                                                                        </th>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <th valign="top" style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 14px;text-align: justify;font-weight: normal; padding: 10px 0px 0; width: auto !important;">
+                                                                                                            &#8226;
+                                                                                                        </th>
+                                                                                                        <th style="display: table-cell !important;color: #000000; font-family:arial,helvetica,sans-serif;font-size: 13px;font-weight: normal; padding: 10px 10px 0; width: auto !important;text-align: left;  ">
+                                                                                                            Revisa los tutoriales y descartes ante fallas.
+                                                                                                        </th>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </th>
+                                                                            </tr>
+
+
+                                                                        </table>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                    </tr>
+                                                </table>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#ffffff">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #000000; font-family:arial,helvetica,sans-serif;font-size: 16px;text-align: left;font-weight: 900;padding: 10px 14px 30px;text-align: center;">
+                                               <b class="block-" style="font-weight: bold;"> Descarga la app en: &nbsp; </b>
+                                                <a href="https://apps.apple.com/pe/app/claro-smart-home/id1462944177" target="_blank" style="text-decoration: none !important;">
+                                                    <img style="display:inline-block !important;vertical-align: bottom; width: 90px !important;" src="http://static.claro.com.pe/mailing/havas/2019/set/27/Mailing_Alta_nueva_HFC/app_store.png"  width="90"  border="0">
+                                                </a> <b style="color: #ffffff;">aa</b> 
+                                                <a href="https://play.google.com/store/apps/details?id=com.claro.smarthome&hl=es_PE" target="_blank" styqle="text-decoration: none !important;">
+                                                   <img style="display:inline-block !important;vertical-align: bottom; width: 80px !important;" src="http://static.claro.com.pe/mailing/havas/2019/set/27/Mailing_Alta_nueva_HFC/play.png"  width="80"  border="0"> 
+                                                </a> 
+
+                                                
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#212121">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #ffffff; font-family:arial,helvetica,sans-serif;font-size: 16px;text-align: left;font-weight: 900;padding: 30px 14px 0px;text-align: center;">
+                                                ¿TIENES ALGUNA PREGUNTA? 
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0"  bgcolor="#d52b1e" >
+                            <tr>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                                <th align="center" style="padding: 0;" >
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"  style="margin: 0 auto !important; border-radius: 0px;" bgcolor="#212121">
+                                        <tr>
+                                            <th class="titulo"  align="center" style="color: #ffffff; font-family:arial,helvetica,sans-serif;font-size: 15px;text-align: bold;font-weight: normal;padding: 10px 14px  30px;text-align: center;">
+                                                Encuentra la respuesta <a href="http://asistencia.claro.com.pe/servicios-fijos/?utm_source=Mailing&utm_medium=aqui_boton&utm_campaign=2019-09-ClaroHogar-alta_nueva_hfc&utm_content=Mailing" target="_blank" style="text-decoration:    none;"><b style="padding:  3px 6px; border-radius: 5px; background:  #d52b1e; color:     white;"   > aquí </b></a>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th width="17" bgcolor="#e3e3e3" class="none"></th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <table class="none--" width="100%" cellspacing="0" cellpadding="0" border="0" style="background: #ffffff !important; padding-top:  0px; padding-bottom: 40px;">
+                            <tr>
+                                <th align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <th  class="none" bgcolor="#e3e3e3" align="center" style="padding-top:2px;padding-bottom:5px; font-size:13px;color:#ffffff; font-family:arial,helvetica,sans-serif;">
+                                                &nbsp; 
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background: #ffffff !important; padding-top:  0px;">
+                            <tr>
+                                <th align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                        <tr>
+                                            <th bgcolor="#d52b1e" align="center" style="padding-top:5px;padding-bottom:5px; font-size:13px;color:#ffffff; font-family:arial,helvetica,sans-serif;">
+                                                Por favor, no responda sobre este correo
+                                            </th>
+                                        </tr>
+                                        <tr bgcolor="white">
+                                            <th style="padding-top:5px;padding-bottom:5px;text-align:justify; font-family:Arial,Helvetica,sans-serif;font-weight: normal; ">
+                                                <span style="font-size:9px;color:#626262;display:block;">
+                                                Válido únicamente para clientes con servicios HFC residenciales. APP disponible para Android 4.4.2 en adelante o iOS 10.0 en adelante. Descarga de la app requiere uso de datos o conexión WiFi. Infórmate más en <a href="http://claro.com.pe/smarthome" target="_blank" style="color:#003bc2;text-decoration:underline;">claro.com.pe/smarthome </a>.
+                                                </span>
+                                            </th>
+                                        </tr>
+
+                                        <tr bgcolor="white">
+                                            <th style="padding-top:5px;padding-bottom:15px;text-align:justify; font-family:Arial,Helvetica,sans-serif;font-weight: normal; ">
+                                                <span style="font-size:9px;color:#626262;display:block;">
+                                                Este e-mail fue enviado a <a href="mailto:%%EMAIL%%>" target="_blank" style="color:#003bc2;text-decoration:underline;">%%EMAIL%%</a>. Si no desea seguir recibiendo promociones o información de Claro haga click <a href="http://www.pages02.net/claro/Desuscripcion_Claro_2/?EMAIL=%%EMAIL%%" target="_blank" style="color:#003bc2;text-decoration:underline;">aquí</a>. Todos los derechos reservados, Claro 2019. América Móvil Perú S.A.C. Av. Nicolás Arriola N° 480, Lima 13 - Perú. Teléfono (511) 613-1000. Su privacidad es importante para nosotros. Por favor revise nuestras <a href="http://www.claro.com.pe/personas/movil/proteccion_datos/" target="_blank" style="color:#003bc2;text-decoration:underline;">Políticas de Privacidad</a>.
+                                                </span>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+
+            </tbody>
+        </table>
+    </body>
+</html>     ]]>
+  </htmlData>
+</html>

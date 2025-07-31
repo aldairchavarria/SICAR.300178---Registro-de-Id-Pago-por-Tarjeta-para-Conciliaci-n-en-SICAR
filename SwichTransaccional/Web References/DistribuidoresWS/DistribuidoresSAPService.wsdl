@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://claro.com.pe/SOA/service/distribuidoresSAP" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://claro.com.pe/SOA/service/distribuidoresSAP" name="DistribuidoresSAPService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:mes="http://claro.com.pe/SOA/message/distribuidores" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" elementFormDefault="qualified">
+      <xsd:import schemaLocation="http://limdeseaiv07.tim.com.pe:8909/SB006_DISTRIBUIDORES/interfaces/proxyServices/PS_DistribuidoresSAP?SCHEMA%2FSB_COMUN%2Fmensajes%2FDistribuidoresMensajes" namespace="http://claro.com.pe/SOA/message/distribuidores" />
+    </s:schema>
+  </types>
+  <message name="txAnulaPedidoVentaRequestMessage">
+    <part name="parttxAnulaPedidoVentaRequest" xmlns:q1="http://claro.com.pe/SOA/message/distribuidores" element="q1:txAnulaPedidoVentaRequest" />
+  </message>
+  <message name="txAnulaPedidoVentaResponseMessage">
+    <part name="parttxAnulaPedidoVentaResponse" xmlns:q2="http://claro.com.pe/SOA/message/distribuidores" element="q2:txAnulaPedidoVentaResponse" />
+  </message>
+  <message name="txGeneraSuministroRequestMessage">
+    <part name="parttxGeneraSuministroRequest" xmlns:q3="http://claro.com.pe/SOA/message/distribuidores" element="q3:txGeneraSuministroRequest" />
+  </message>
+  <message name="txGeneraSuministroResponseMessage">
+    <part name="parttxGeneraSuministroResponse" xmlns:q4="http://claro.com.pe/SOA/message/distribuidores" element="q4:txGeneraSuministroResponse" />
+  </message>
+  <message name="txCreacionPedidoVentaRequestMessage">
+    <part name="parttxCreacionPedidoVentaRequest" xmlns:q5="http://claro.com.pe/SOA/message/distribuidores" element="q5:txCreacionPedidoVentaRequest" />
+  </message>
+  <message name="txCreacionPedidoVentaResponseMessage">
+    <part name="parttxCreacionPedidoVentaResponse" xmlns:q6="http://claro.com.pe/SOA/message/distribuidores" element="q6:txCreacionPedidoVentaResponse" />
+  </message>
+  <message name="consStockAlmacenRequestMessage">
+    <part name="partconsStockAlmacenRequest" xmlns:q7="http://claro.com.pe/SOA/message/distribuidores" element="q7:consStockAlmacenRequest" />
+  </message>
+  <message name="consStockAlmacenResponseMessage">
+    <part name="partconsStockAlmacenResponse" xmlns:q8="http://claro.com.pe/SOA/message/distribuidores" element="q8:consStockAlmacenResponse" />
+  </message>
+  <message name="consCuentaDeudorRequestMessage">
+    <part name="partconsCuentaDeudorRequest" xmlns:q9="http://claro.com.pe/SOA/message/distribuidores" element="q9:consCuentaDeudorRequest" />
+  </message>
+  <message name="consCuentaDeudorResponseMessage">
+    <part name="partconsCuentaDeudorResponse" xmlns:q10="http://claro.com.pe/SOA/message/distribuidores" element="q10:consCuentaDeudorResponse" />
+  </message>
+  <message name="consRatioVentaRequestMessage">
+    <part name="partconsRatioVentaRequest" xmlns:q11="http://claro.com.pe/SOA/message/distribuidores" element="q11:consRatioVentaRequest" />
+  </message>
+  <message name="consRatioVentaResponseMessage">
+    <part name="partconsRatioVentaResponse" xmlns:q12="http://claro.com.pe/SOA/message/distribuidores" element="q12:consRatioVentaResponse" />
+  </message>
+  <message name="consAbonoRequestMessage">
+    <part name="partconsAbonoRequest" xmlns:q13="http://claro.com.pe/SOA/message/distribuidores" element="q13:consAbonoRequest" />
+  </message>
+  <message name="consAbonoResponseMessage">
+    <part name="partconsAbonoResponse" xmlns:q14="http://claro.com.pe/SOA/message/distribuidores" element="q14:consAbonoResponse" />
+  </message>
+  <message name="consultarDeudaRequestMessage">
+    <part name="partconsultarDeudaRequest" xmlns:q15="http://claro.com.pe/SOA/message/distribuidores" element="q15:consultarDeudaRequest" />
+  </message>
+  <message name="consultarDeudaResponseMessage">
+    <part name="partconsultarDeudaResponse" xmlns:q16="http://claro.com.pe/SOA/message/distribuidores" element="q16:consultarDeudaResponse" />
+  </message>
+  <message name="pagarDeudaRequestMessage">
+    <part name="partpagarDeudaRequest" xmlns:q17="http://claro.com.pe/SOA/message/distribuidores" element="q17:pagarDeudaRequest" />
+  </message>
+  <message name="pagarDeudaResponseMessage">
+    <part name="partpagarDeudaResponse" xmlns:q18="http://claro.com.pe/SOA/message/distribuidores" element="q18:pagarDeudaResponse" />
+  </message>
+  <portType name="pt_distribudores">
+    <operation name="anulaPedidoVenta">
+      <input message="tns:txAnulaPedidoVentaRequestMessage" />
+      <output message="tns:txAnulaPedidoVentaResponseMessage" />
+    </operation>
+    <operation name="generaSuministro">
+      <input message="tns:txGeneraSuministroRequestMessage" />
+      <output message="tns:txGeneraSuministroResponseMessage" />
+    </operation>
+    <operation name="pedidoVenta">
+      <input message="tns:txCreacionPedidoVentaRequestMessage" />
+      <output message="tns:txCreacionPedidoVentaResponseMessage" />
+    </operation>
+    <operation name="consultaStockAlmacen">
+      <input message="tns:consStockAlmacenRequestMessage" />
+      <output message="tns:consStockAlmacenResponseMessage" />
+    </operation>
+    <operation name="consultaCuentaDeudor">
+      <input message="tns:consCuentaDeudorRequestMessage" />
+      <output message="tns:consCuentaDeudorResponseMessage" />
+    </operation>
+    <operation name="consultaRatioVenta">
+      <input message="tns:consRatioVentaRequestMessage" />
+      <output message="tns:consRatioVentaResponseMessage" />
+    </operation>
+    <operation name="consultaAbono">
+      <input message="tns:consAbonoRequestMessage" />
+      <output message="tns:consAbonoResponseMessage" />
+    </operation>
+    <operation name="consultarDeuda">
+      <input message="tns:consultarDeudaRequestMessage" />
+      <output message="tns:consultarDeudaResponseMessage" />
+    </operation>
+    <operation name="pagarDeuda">
+      <input message="tns:pagarDeudaRequestMessage" />
+      <output message="tns:pagarDeudaResponseMessage" />
+    </operation>
+  </portType>
+  <binding name="pt_distribudoresSOAP11Binding" type="tns:pt_distribudores">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="anulaPedidoVenta">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/anulaPedidoVenta" style="document" />
+      <input>
+        <soap:body use="literal" parts="parttxAnulaPedidoVentaRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parttxAnulaPedidoVentaResponse" />
+      </output>
+    </operation>
+    <operation name="generaSuministro">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/generaSuministro" style="document" />
+      <input>
+        <soap:body use="literal" parts="parttxGeneraSuministroRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parttxGeneraSuministroResponse" />
+      </output>
+    </operation>
+    <operation name="pedidoVenta">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/pedidoVenta" style="document" />
+      <input>
+        <soap:body use="literal" parts="parttxCreacionPedidoVentaRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parttxCreacionPedidoVentaResponse" />
+      </output>
+    </operation>
+    <operation name="consultaStockAlmacen">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/consultaStockAlmacen" style="document" />
+      <input>
+        <soap:body use="literal" parts="partconsStockAlmacenRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="partconsStockAlmacenResponse" />
+      </output>
+    </operation>
+    <operation name="consultaCuentaDeudor">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/consultaCuentaDeudor" style="document" />
+      <input>
+        <soap:body use="literal" parts="partconsCuentaDeudorRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="partconsCuentaDeudorResponse" />
+      </output>
+    </operation>
+    <operation name="consultaRatioVenta">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/consultaRatioVenta" style="document" />
+      <input>
+        <soap:body use="literal" parts="partconsRatioVentaRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="partconsRatioVentaResponse" />
+      </output>
+    </operation>
+    <operation name="consultaAbono">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/consultaAbono" style="document" />
+      <input>
+        <soap:body use="literal" parts="partconsAbonoRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="partconsAbonoResponse" />
+      </output>
+    </operation>
+    <operation name="consultarDeuda">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/consultarDeuda" style="document" />
+      <input>
+        <soap:body use="literal" parts="partconsultarDeudaRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="partconsultarDeudaResponse" />
+      </output>
+    </operation>
+    <operation name="pagarDeuda">
+      <soap:operation soapAction="http://claro.com.pe/SOA/service/distribuidoresSAP/pagarDeuda" style="document" />
+      <input>
+        <soap:body use="literal" parts="partpagarDeudaRequest" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="partpagarDeudaResponse" />
+      </output>
+    </operation>
+  </binding>
+  <service name="pt_distribudoresSOAP11BindingQSService">
+    <documentation>OSB Service</documentation>
+    <port name="pt_distribudoresSOAP11BindingQSPort" binding="tns:pt_distribudoresSOAP11Binding">
+      <soap:address location="http://limdeseaiv07.tim.com.pe:8909/SB006_DISTRIBUIDORES/interfaces/proxyServices/PS_DistribuidoresSAP" />
+    </port>
+  </service>
+</definitions>

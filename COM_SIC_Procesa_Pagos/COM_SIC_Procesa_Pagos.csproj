@@ -1,0 +1,638 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{3821587A-01A6-4AF6-A4D5-A5755C99F4F5}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "COM_SIC_Procesa_Pagos"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "COM_SIC_Procesa_Pagos"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "log4net"
+                    AssemblyName = "log4net"
+                    HintPath = "..\COM_SIC_Log4Net\Log4Net\log4net.dll"
+                />
+                <Reference
+                    Name = "SAP.Connector"
+                    AssemblyName = "SAP.Connector"
+                    HintPath = "..\..\..\..\..\..\LIB\SAP.Connector.dll"
+                />
+                <Reference
+                    Name = "DAAB"
+                    Project = "{D0401205-6585-43C5-B7A9-C435EA36C3E2}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Seguridad_NET"
+                    Project = "{94E69249-82E1-4E27-9864-5C32A1CA4218}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "SAP_SIC_Recaudacion"
+                    Project = "{6C259589-DF62-464A-A53C-63B25F8753D9}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "SAP_SIC_Cajas"
+                    Project = "{5253303E-CEEA-42C8-B1BB-DFBDB160A797}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "SAP_SIC_Ventas"
+                    Project = "{007AB86A-3735-4CD0-97F6-96C8FCC9DF9F}"
+                    Package = "{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}"
+                />
+                <Reference
+                    Name = "Interop.Scripting"
+                    AssemblyName = "Interop.Scripting"
+                    HintPath = "..\SisCajas\bin\Interop.Scripting.dll"
+                />
+                <Reference
+                    Name = "AjaxPro"
+                    AssemblyName = "AjaxPro"
+                    HintPath = "bin\Debug\AjaxPro.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Activaciones"
+                    AssemblyName = "COM_SIC_Activaciones"
+                    HintPath = "..\COM_SIC_Activaciones\bin\COM_SIC_Activaciones.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Entidades"
+                    AssemblyName = "COM_SIC_Entidades"
+                    HintPath = "..\COM_SIC_Entidades\bin\Release\COM_SIC_Entidades.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Log4Net"
+                    AssemblyName = "COM_SIC_Log4Net"
+                    HintPath = "..\COM_SIC_Log4Net\bin\Release\COM_SIC_Log4Net.dll"
+                />
+                <Reference
+                    Name = "COM_SIC_Seguridad"
+                    AssemblyName = "COM_SIC_Seguridad"
+                    HintPath = "..\COM_SIC_Seguridad\bin\Release\COM_SIC_Seguridad.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "Anulaciones.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AsignacionCajas.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Common.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Extenciones.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "LogError.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PagoFijoPaginas.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Pedido.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PedidoFacturaProxy.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "PedidoProcesar.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SAPDataConnector.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "bin\Debug\Claro.Datos.DAAB.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\COM_SIC_Procesa_Pagos.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\COM_SIC_Procesa_Pagos.pdb"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\log4net.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\SAP.Connector.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\SAP_SIC_Recaudacion.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\Debug\Seguridad_NET.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPABodyRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPABodyResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPAGenericRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPAGenericResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPAMessageRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPAMessageResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPARequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPARequestType.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ActualizaPAResponseType.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\BWCobroAnticipadoInstalacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAGenericRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAGenericResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAMessageRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAMessageResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPARequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPARequestBody.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAResponseBody.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAResponseData.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\ConsultaPAResponseType.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\CredencialesDPRest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\DES.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\PagoAnticipado.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWCobroAnticipadoInstalacion\RestService.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\BodyRequestPagoEnvioSMS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\BodyResponsePagoEnvioSMS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\BWPagoEnvioSMS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\CredencialesDPRest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\MessageRequestPagoEnvioSMS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\MessageResponsePagoEnvioSMS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\PagoEnvioSMSRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BWPagoEnvioSMS\PagoEnvioSMSResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\AuditoriaEWS.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\BEAuditRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\BEAuditResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\ClaroFault.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\DES.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeaderRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeaderResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\HeadersResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\ResponseStatus.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\RestService.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataPowerRest\Status.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\BodyRequestFormasPagoPDV.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\BodyResponseFormasPagoPDV.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\BWFormasPagoPDV.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\FormasPagoPDVRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\FormasPagoPDVResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\listaFormaPagoPDV.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\listaOficinasVenta.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\MessageRequestFormasPagoPDV.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FormasPagoPDVRest\MessageResponseFormasPagoPDV.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\BodyRequestGestionaRecaudacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\BodyResponseGestionaRecaudacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\BWGestionaRecaudacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\GestionaRecaudacionesResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\GestionaRecaudacionRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\GestionaRecaudacionResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\listaArqueoCaja.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\listaDevolucionSaldoBean.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\listaFormaPagoType.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\MessageRequestGestionaRecaudacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "GestionaRecaudacionRest\MessageResponseGestionaRecaudacion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "NotificacionTransaccion\RestNotificacionTransaccion.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "obj\Debug\COM_SIC_Procesa_Pagos.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "obj\Debug\COM_SIC_Procesa_Pagos.pdb"
+                    BuildAction = "Content"
+                />
+                <Folder RelPath = "obj\Debug\temp\" />
+                <Folder RelPath = "obj\Debug\TempPE\" />
+		<File
+                    RelPath = "ProgramarTarea\ProgramarTarea.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\BodyRequestActualizarRecarga.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\BodyRequestRegistrarRecargaPendiente.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\BodyResponseRegistraPedidoRecargaRest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\BWRegistraPedidoRecarga.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\MessageRequestRegistraPedidoRecarga.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\MessageRequestRegistrarPedidoRecargaBody.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\MessageResponseRegistraPedidoRecarga.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\MessageResponseRegistraPedidoRecargaBody.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\MessageResponseRegistraPedidoRecargaStatus.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\RegistraPedidoRecargaRequest.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\RegistraPedidoRecargaResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RegistraPedidoRecargaRest\RegistraPedidoRecargasResponse.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/BonoAnualTFI" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/BonoAnualTFI" name="ebsBonoAnualTFI" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/BonoAnualTFI">
+      <s:element name="bonoAnualReq">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="nombreAplicacion" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bonoAnualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="bonoAnualRequest">
+    <part name="parameters" element="s0:bonoAnualReq" />
+  </message>
+  <message name="bonoAnualResponse">
+    <part name="parameters" element="s0:bonoAnualResponse" />
+  </message>
+  <portType name="ebsBonoAnualTFIPort">
+    <operation name="bonoAnual">
+      <input message="s0:bonoAnualRequest" />
+      <output message="s0:bonoAnualResponse" />
+    </operation>
+  </portType>
+  <binding name="ebsBonoAnualTFISOAPBinding" type="s0:ebsBonoAnualTFIPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="bonoAnual">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsBonoAnualTFIService">
+    <port name="ebsBonoAnualTFI" binding="s0:ebsBonoAnualTFISOAPBinding">
+      <soap:address location="http://limdeseaiv03.tim.com.pe:8909/BonoAnualTFI/ebsBonoAnualTFI" />
+    </port>
+  </service>
+</definitions>

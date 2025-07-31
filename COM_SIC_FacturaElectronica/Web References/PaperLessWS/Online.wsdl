@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://ws.online.asp.core.paperless.cl" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://ws.online.asp.core.paperless.cl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>Online</wsdl:documentation>
+  <wsdl:types>
+    <s:schema xmlns:ns="http://ws.online.asp.core.paperless.cl" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.online.asp.core.paperless.cl">
+      <s:element name="CargaInformeBajas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="docTxt" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="periodo" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargaInformeBajasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineARC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="rucEmisor" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="tipoDoc" type="s:int" />
+            <s:element minOccurs="0" name="folio" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="estado" type="s:int" />
+            <s:element minOccurs="0" name="mensaje" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineARCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineConsultaEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="rucReceptor" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="fechaInicio" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="fechaFin" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="estado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineConsultaEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineEventos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="docTxt" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineEventosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineGeneration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="docTxt" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="tipoFoliacion" type="s:int" />
+            <s:element minOccurs="0" name="tipoRetorno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineGenerationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineRecovery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="tipoDoc" type="s:int" />
+            <s:element minOccurs="0" name="folio" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="tipoRetorno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineRecoveryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineRecoveryRec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="rucEmisor" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="tipoDoc" type="s:int" />
+            <s:element minOccurs="0" name="folio" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="tipoRetorno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineRecoveryRecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineRecoveryRecList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="ruc" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="login" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="clave" nillable="true" type="s:string" />
+            <s:element minOccurs="0" name="fecha" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OnlineRecoveryRecListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="return" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="main">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="args" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="OnlineRecoveryRequest">
+    <wsdl:part name="parameters" element="tns:OnlineRecovery" />
+  </wsdl:message>
+  <wsdl:message name="OnlineRecoveryResponse">
+    <wsdl:part name="parameters" element="tns:OnlineRecoveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargaInformeBajasRequest">
+    <wsdl:part name="parameters" element="tns:CargaInformeBajas" />
+  </wsdl:message>
+  <wsdl:message name="CargaInformeBajasResponse">
+    <wsdl:part name="parameters" element="tns:CargaInformeBajasResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineARCRequest">
+    <wsdl:part name="parameters" element="tns:OnlineARC" />
+  </wsdl:message>
+  <wsdl:message name="OnlineARCResponse">
+    <wsdl:part name="parameters" element="tns:OnlineARCResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineConsultaEstadoRequest">
+    <wsdl:part name="parameters" element="tns:OnlineConsultaEstado" />
+  </wsdl:message>
+  <wsdl:message name="OnlineConsultaEstadoResponse">
+    <wsdl:part name="parameters" element="tns:OnlineConsultaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineRecoveryRecListRequest">
+    <wsdl:part name="parameters" element="tns:OnlineRecoveryRecList" />
+  </wsdl:message>
+  <wsdl:message name="OnlineRecoveryRecListResponse">
+    <wsdl:part name="parameters" element="tns:OnlineRecoveryRecListResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineGenerationRequest">
+    <wsdl:part name="parameters" element="tns:OnlineGeneration" />
+  </wsdl:message>
+  <wsdl:message name="OnlineGenerationResponse">
+    <wsdl:part name="parameters" element="tns:OnlineGenerationResponse" />
+  </wsdl:message>
+  <wsdl:message name="OnlineEventosRequest">
+    <wsdl:part name="parameters" element="tns:OnlineEventos" />
+  </wsdl:message>
+  <wsdl:message name="OnlineEventosResponse">
+    <wsdl:part name="parameters" element="tns:OnlineEventosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mainRequest">
+    <wsdl:part name="parameters" element="tns:main" />
+  </wsdl:message>
+  <wsdl:message name="OnlineRecoveryRecRequest">
+    <wsdl:part name="parameters" element="tns:OnlineRecoveryRec" />
+  </wsdl:message>
+  <wsdl:message name="OnlineRecoveryRecResponse">
+    <wsdl:part name="parameters" element="tns:OnlineRecoveryRecResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OnlinePortType">
+    <wsdl:operation name="OnlineRecovery">
+      <wsdl:input message="tns:OnlineRecoveryRequest" />
+      <wsdl:output message="tns:OnlineRecoveryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CargaInformeBajas">
+      <wsdl:input message="tns:CargaInformeBajasRequest" />
+      <wsdl:output message="tns:CargaInformeBajasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineARC">
+      <wsdl:input message="tns:OnlineARCRequest" />
+      <wsdl:output message="tns:OnlineARCResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineConsultaEstado">
+      <wsdl:input message="tns:OnlineConsultaEstadoRequest" />
+      <wsdl:output message="tns:OnlineConsultaEstadoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRecList">
+      <wsdl:input message="tns:OnlineRecoveryRecListRequest" />
+      <wsdl:output message="tns:OnlineRecoveryRecListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineGeneration">
+      <wsdl:input message="tns:OnlineGenerationRequest" />
+      <wsdl:output message="tns:OnlineGenerationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineEventos">
+      <wsdl:input message="tns:OnlineEventosRequest" />
+      <wsdl:output message="tns:OnlineEventosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <wsdl:input message="tns:mainRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRec">
+      <wsdl:input message="tns:OnlineRecoveryRecRequest" />
+      <wsdl:output message="tns:OnlineRecoveryRecResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OnlineSOAP11Binding" type="tns:OnlinePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="OnlineRecovery">
+      <soap:operation soapAction="urn:OnlineRecovery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaInformeBajas">
+      <soap:operation soapAction="urn:CargaInformeBajas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineARC">
+      <soap:operation soapAction="urn:OnlineARC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineConsultaEstado">
+      <soap:operation soapAction="urn:OnlineConsultaEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRecList">
+      <soap:operation soapAction="urn:OnlineRecoveryRecList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineGeneration">
+      <soap:operation soapAction="urn:OnlineGeneration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineEventos">
+      <soap:operation soapAction="urn:OnlineEventos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <soap:operation soapAction="urn:main" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRec">
+      <soap:operation soapAction="urn:OnlineRecoveryRec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OnlineSOAP12Binding" type="tns:OnlinePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="OnlineRecovery">
+      <soap12:operation soapAction="urn:OnlineRecovery" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaInformeBajas">
+      <soap12:operation soapAction="urn:CargaInformeBajas" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineARC">
+      <soap12:operation soapAction="urn:OnlineARC" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineConsultaEstado">
+      <soap12:operation soapAction="urn:OnlineConsultaEstado" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRecList">
+      <soap12:operation soapAction="urn:OnlineRecoveryRecList" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineGeneration">
+      <soap12:operation soapAction="urn:OnlineGeneration" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineEventos">
+      <soap12:operation soapAction="urn:OnlineEventos" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <soap12:operation soapAction="urn:main" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRec">
+      <soap12:operation soapAction="urn:OnlineRecoveryRec" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OnlineHttpBinding" type="tns:OnlinePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="OnlineRecovery">
+      <http:operation location="Online/OnlineRecovery" />
+      <wsdl:input>
+        <mime:content part="OnlineRecovery" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineRecovery" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargaInformeBajas">
+      <http:operation location="Online/CargaInformeBajas" />
+      <wsdl:input>
+        <mime:content part="CargaInformeBajas" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="CargaInformeBajas" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineARC">
+      <http:operation location="Online/OnlineARC" />
+      <wsdl:input>
+        <mime:content part="OnlineARC" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineARC" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineConsultaEstado">
+      <http:operation location="Online/OnlineConsultaEstado" />
+      <wsdl:input>
+        <mime:content part="OnlineConsultaEstado" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineConsultaEstado" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRecList">
+      <http:operation location="Online/OnlineRecoveryRecList" />
+      <wsdl:input>
+        <mime:content part="OnlineRecoveryRecList" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineRecoveryRecList" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineGeneration">
+      <http:operation location="Online/OnlineGeneration" />
+      <wsdl:input>
+        <mime:content part="OnlineGeneration" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineGeneration" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineEventos">
+      <http:operation location="Online/OnlineEventos" />
+      <wsdl:input>
+        <mime:content part="OnlineEventos" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineEventos" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="main">
+      <http:operation location="Online/main" />
+      <wsdl:input>
+        <mime:content part="main" type="text/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="OnlineRecoveryRec">
+      <http:operation location="Online/OnlineRecoveryRec" />
+      <wsdl:input>
+        <mime:content part="OnlineRecoveryRec" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="OnlineRecoveryRec" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Online">
+    <wsdl:port name="OnlineSOAP11port_http" binding="tns:OnlineSOAP11Binding">
+      <soap:address location="http://172.19.74.198:8080/axis2/services/Online" />
+    </wsdl:port>
+    <wsdl:port name="OnlineSOAP12port_http" binding="tns:OnlineSOAP12Binding">
+      <soap12:address location="http://172.19.74.198:8080/axis2/services/Online" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+    <wsdl:port name="OnlineHttpport" binding="tns:OnlineHttpBinding">
+      <http:address location="http://172.19.74.198:8080/axis2/services/Online" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

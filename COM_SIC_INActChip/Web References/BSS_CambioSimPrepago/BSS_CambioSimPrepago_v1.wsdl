@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://claro.com.pe/esb/ventas/bsscambiosimprepago/v1/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://claro.com.pe/esb/ventas/bsscambiosimprepago/v1/" name="BSS_CambioSimPrepago_v1" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:cf="http://claro.com.pe/esb/data/generico/claroFault/v1/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:he="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:v1="http://claro.com.pe/generic/messageFormat/v1.0/" xmlns:WL5G3N7="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://claro.com.pe/esb/message/bsscambiosimprepago/ejecutarCambioSimPre/v1/">
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService?SCHEMA%2FBSS_CambioSimPrepago%2FSRV_BSS_CambioSimPrepago%2FResources%2FXSD%2FejecutarCambioSimPre" namespace="http://claro.com.pe/esb/message/bsscambiosimprepago/ejecutarCambioSimPre/v1/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService?SCHEMA%2FBSS_CambioSimPrepago%2FSRV_BSS_CambioSimPrepago%2FResources%2FXSD%2FClaroGenericHeaders_V1" namespace="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService?SCHEMA%2FBSS_CambioSimPrepago%2FSRV_BSS_CambioSimPrepago%2FResources%2FXSD%2FClaroFault_v1" namespace="http://claro.com.pe/esb/data/generico/claroFault/v1/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService?SCHEMA%2FBSS_CambioSimPrepago%2FSRV_BSS_CambioSimPrepago%2FResources%2FXSD%2FHeaderGeneric_v1.0" namespace="http://claro.com.pe/generic/messageFormat/v1.0/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService?SCHEMA%2FBSS_CambioSimPrepago%2FSRV_BSS_CambioSimPrepago%2FResources%2FXSD%2FCommonsException" namespace="http://claro.com.pe/eai/ebs/xsd/CommonsException" />
+    </s:schema>
+  </types>
+  <message name="HeaderRequest">
+    <part name="HeaderRequest" xmlns:q1="http://claro.com.pe/generic/messageFormat/v1.0/" element="q1:HeaderRequest" />
+  </message>
+  <message name="HeaderResponse">
+    <part name="HeaderResponse" xmlns:q2="http://claro.com.pe/generic/messageFormat/v1.0/" element="q2:HeaderResponse" />
+  </message>
+  <message name="headerReq">
+    <part name="headerReq" xmlns:q3="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" element="q3:headerReq" />
+  </message>
+  <message name="headerResp">
+    <part name="headerResp" xmlns:q4="http://claro.com.pe/esb/data/generico/claroGenericHeader/v1/" element="q4:headerResp" />
+  </message>
+  <message name="ejecutarCambioSimPreRequestMessage">
+    <part name="ejecutarCambioSimPreRequest" xmlns:q5="http://claro.com.pe/esb/message/bsscambiosimprepago/ejecutarCambioSimPre/v1/" element="q5:ejecutarCambioSimPreRequest" />
+  </message>
+  <message name="ejecutarCambioSimPreResponseMessage">
+    <part name="ejecutarCambioSimPreResponse" xmlns:q6="http://claro.com.pe/esb/message/bsscambiosimprepago/ejecutarCambioSimPre/v1/" element="q6:ejecutarCambioSimPreResponse" />
+  </message>
+  <message name="claroFault">
+    <part name="claroFault" xmlns:q7="http://claro.com.pe/esb/data/generico/claroFault/v1/" element="q7:claroFault" />
+  </message>
+  <portType name="BSS_CambioSimPrepagoPort">
+    <operation name="ejecutarCambioSimPre">
+      <input message="tns:ejecutarCambioSimPreRequestMessage" />
+      <output message="tns:ejecutarCambioSimPreResponseMessage" />
+      <fault name="claroFault" message="tns:claroFault" />
+    </operation>
+  </portType>
+  <binding name="BSS_CambioSimPrepagoSOAP11Binding" type="tns:BSS_CambioSimPrepagoPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ejecutarCambioSimPre">
+      <soap:operation soapAction="http://claro.com.pe/esb/ventas/bsscambiosimprepago/v1/ejecutarCambioSimPre" style="document" />
+      <input>
+        <soap:body use="literal" parts="ejecutarCambioSimPreRequest" />
+        <soap:header message="tns:HeaderRequest" part="HeaderRequest" use="literal" />
+        <soap:header message="tns:headerReq" part="headerReq" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="ejecutarCambioSimPreResponse" />
+        <soap:header message="tns:HeaderResponse" part="HeaderResponse" use="literal" />
+        <soap:header message="tns:headerResp" part="headerResp" use="literal" />
+      </output>
+      <fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="BSS_CambioSimPrepago_WS">
+    <documentation>OSB Service</documentation>
+    <port name="BSS_CambioSimPrepagoSB11" binding="tns:BSS_CambioSimPrepagoSOAP11Binding">
+      <soap:address location="http://172.17.26.51:21000/BSS_CambioSimPrepago/SRV_BSS_CambioSimPrepago/Service/Exposition/BSS_CambioSimPrepagoPipelineProxyService" />
+    </port>
+  </service>
+</definitions>

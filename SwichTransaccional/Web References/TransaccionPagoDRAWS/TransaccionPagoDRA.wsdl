@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/oac/transaccionpagodra/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/oac/transaccionpagodra/" name="TransaccionPagoDRA" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/oac/transaccionpagodra/">
+      <xsd:element name="crearPagoDRA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="COD_APLICACION" type="xsd:string" />
+            <xsd:element name="USUARIO_APLICACION" type="xsd:string" />
+            <xsd:element name="COD_PAGO_DRA" type="xsd:string" />
+            <xsd:element name="TIPO_DOCUMENTO" type="xsd:string" />
+            <xsd:element name="NRO_DOCUMENTO" type="xsd:string" />
+            <xsd:element name="DESCRIPCION_DOCUMENTO" type="xsd:string" />
+            <xsd:element name="COD_MONEDA" type="xsd:string" />
+            <xsd:element name="IMPORTE_PAGO" type="xsd:decimal" />
+            <xsd:element name="FEC_PAGO" type="xsd:dateTime" />
+            <xsd:element name="TRACE_ID" type="xsd:string" />
+            <xsd:element name="NRO_OPE_PAGO" type="xsd:string" />
+            <xsd:element name="COD_BANCO" type="xsd:string" />
+            <xsd:element name="COD_PDV" type="xsd:string" />
+            <xsd:element name="LISTA_MEDIO_PAGO" type="xsd:string" />
+            <xsd:element name="IMPORTE_TOTAL_PAGO" type="xsd:decimal" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="crearPagoDRAResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="NRO_OPE_PAGO_SISACT" type="xsd:string" />
+            <xsd:element name="COD_RPTA" type="xsd:string" />
+            <xsd:element name="MSG_RPTA" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="anularPagoDRA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="COD_APLICACION" type="xsd:string" />
+            <xsd:element name="USUARIO_APLICACION" type="xsd:string" />
+            <xsd:element name="NRO_OPE_PAGO" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="anularPagoDRAResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="NRO_OPE_ANULACION" type="xsd:string" />
+            <xsd:element name="COD_RPTA" type="xsd:string" />
+            <xsd:element name="MSG_RPTA" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="extornoPagoDRA">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="COD_APLICACION" type="xsd:string" />
+            <xsd:element name="USUARIO_APLICACION" type="xsd:string" />
+            <xsd:element name="TRACE_ID" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="extornoPagoDRAResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="txId" type="xsd:string" />
+            <xsd:element name="NRO_OPE_PAGO" type="xsd:string" />
+            <xsd:element name="COD_RPTA" type="xsd:string" />
+            <xsd:element name="MSG_RPTA" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="crearPagoDRARequest">
+    <wsdl:part name="parameters" element="tns:crearPagoDRA" />
+  </wsdl:message>
+  <wsdl:message name="crearPagoDRAResponse">
+    <wsdl:part name="parameters" element="tns:crearPagoDRAResponse" />
+  </wsdl:message>
+  <wsdl:message name="anularPagoDRARequest">
+    <wsdl:part name="parameters" element="tns:anularPagoDRA" />
+  </wsdl:message>
+  <wsdl:message name="anularPagoDRAResponse">
+    <wsdl:part name="parameters" element="tns:anularPagoDRAResponse" />
+  </wsdl:message>
+  <wsdl:message name="extornoPagoDRARequest">
+    <wsdl:part name="parameters" element="tns:extornoPagoDRA" />
+  </wsdl:message>
+  <wsdl:message name="extornoPagoDRAResponse">
+    <wsdl:part name="parameters" element="tns:extornoPagoDRAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TransaccionPagoDRA">
+    <wsdl:operation name="crearPagoDRA">
+      <wsdl:input message="tns:crearPagoDRARequest" />
+      <wsdl:output message="tns:crearPagoDRAResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="anularPagoDRA">
+      <wsdl:input message="tns:anularPagoDRARequest" />
+      <wsdl:output message="tns:anularPagoDRAResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="extornoPagoDRA">
+      <wsdl:input message="tns:extornoPagoDRARequest" />
+      <wsdl:output message="tns:extornoPagoDRAResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransaccionPagoDRA" type="tns:TransaccionPagoDRA">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="crearPagoDRA">
+      <soap:operation soapAction="http://claro.com.pe/eai/oac/transaccionpagodra/crearPagoDRA" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="anularPagoDRA">
+      <soap:operation soapAction="http://claro.com.pe/eai/oac/transaccionpagodra/anularPagoDRA" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extornoPagoDRA">
+      <soap:operation soapAction="http://claro.com.pe/eai/oac/transaccionpagodra/extornoPagoDRA" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransaccionPagoDRA">
+    <wsdl:port name="TransaccionPagoDRA" binding="tns:TransaccionPagoDRA">
+      <soap:address location="http://limdeseaiv15.tim.com.pe:8901/OAC_Services/Transaction/TransaccionPagoDocRentaAdelantada" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

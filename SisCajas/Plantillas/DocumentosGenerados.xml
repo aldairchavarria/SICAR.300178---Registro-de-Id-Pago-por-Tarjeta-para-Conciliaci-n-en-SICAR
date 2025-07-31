@@ -1,0 +1,62 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  
+xmlns:typ="http://claro.com.pe/eai/ws/ventas/documentosgeneradosws/types"
+xmlns:v1="http://claro.com.pe/generic/messageFormat/v1.0/"
+xmlns:bas="http://claro.com.pe/eai/ws/baseschema">
+  <soapenv:Header>
+    
+    <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsse:UsernameToken wsu:Id="UsernameToken-2" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:Username></wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText"></wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+    
+    <v1:HeaderRequest>
+      <country></country>
+      <language></language>
+      <consumer></consumer>
+      <system></system>
+      <modulo></modulo>
+      <pid></pid>
+      <userId></userId>
+      <dispositivo></dispositivo>
+      <wsIp></wsIp>
+      <operation></operation>
+      <timestamp></timestamp>
+      <msgType></msgType>
+      <!--Optional:-->
+      <VarArg>
+        <!--Zero or more repetitions:-->
+        <Arg>
+          <key/>
+          <value/>
+        </Arg>
+      </VarArg>
+    </v1:HeaderRequest>
+  </soapenv:Header>
+  <soapenv:Body>
+    <typ:procesarDocumentosRequest>
+      
+      <typ:auditRequest>
+        <bas:idTransaccion></bas:idTransaccion>
+        <bas:ipAplicacion></bas:ipAplicacion>
+        <bas:nombreAplicacion></bas:nombreAplicacion>
+        <bas:usuarioAplicacion></bas:usuarioAplicacion>
+      </typ:auditRequest>
+      
+      <typ:nroPedido></typ:nroPedido>
+      <typ:idVenta></typ:idVenta>
+      <typ:nroContrato></typ:nroContrato>
+      <typ:nroDocumento></typ:nroDocumento>
+      <typ:tipoDocumento></typ:tipoDocumento>
+      <typ:correo></typ:correo>
+      <typ:tipoOperacion></typ:tipoOperacion>
+      <!--Optional:-->
+      <typ:listaRequestOpcional>
+        <!--1 or more repetitions:-->
+        <bas:objetoOpcional campo="" valor=""/>
+      </typ:listaRequestOpcional>
+    </typ:procesarDocumentosRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

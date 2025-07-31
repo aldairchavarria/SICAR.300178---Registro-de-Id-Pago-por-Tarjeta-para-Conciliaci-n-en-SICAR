@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://pe/com/claro/esb/services/bonoblackberry/ws" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://pe/com/claro/esb/services/bonosblackberryprepago/schemas/DatosBonosBB.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://pe/com/claro/esb/services/bonoblackberry/ws" name="EbsActivacionBonoBBServiceDefinitions" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema xmlns:tns="http://pe/com/claro/esb/services/bonosblackberryprepago/schemas/DatosBonosBB.xsd" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/bonosblackberryprepago/schemas/DatosBonosBB.xsd">
+      <xsd:element name="DatosBlackberryPrepagoRequest">
+        <xsd:annotation>
+          <xsd:documentation>Datos requeridos para activación BlackBerry</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="msisdn" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Número en formato nacional</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="usuario" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>usuario para activación RIM</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="aplicacionRTC" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>valor para poder hacer la activacion en rtc - metodo rtc[addSubscriptionToSubscriber]</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DatosBlackberryPrepagoResponse">
+        <xsd:annotation>
+          <xsd:documentation>Datos de salida de activación BlackBerry</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="resultado" type="xsd:string" />
+            <xsd:element name="mensaje" type="xsd:string" />
+            <xsd:element name="idtransaccion" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/esb/services/bonoblackberry/ws">
+      <xs:import namespace="http://pe/com/claro/esb/services/bonosblackberryprepago/schemas/DatosBonosBB.xsd" />
+      <xs:element name="bonoBlackberryPrepago">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://pe/com/claro/esb/services/bonosblackberryprepago/schemas/DatosBonosBB.xsd" ref="dat:DatosBlackberryPrepagoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="bonoBlackberryPrepagoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://pe/com/claro/esb/services/bonosblackberryprepago/schemas/DatosBonosBB.xsd" ref="dat:DatosBlackberryPrepagoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </types>
+  <message name="bonoBlackberryPrepago">
+    <part name="parameters" element="s1:bonoBlackberryPrepago" />
+  </message>
+  <message name="bonoBlackberryPrepagoResponse">
+    <part name="parameters" element="s1:bonoBlackberryPrepagoResponse" />
+  </message>
+  <portType name="EbsActivacionBonoBB">
+    <operation name="bonoBlackberryPrepago" parameterOrder="parameters">
+      <input message="s1:bonoBlackberryPrepago" />
+      <output message="s1:bonoBlackberryPrepagoResponse" />
+    </operation>
+  </portType>
+  <binding name="EbsActivacionBonoBBServiceSoapBinding" type="s1:EbsActivacionBonoBB">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="bonoBlackberryPrepago">
+      <soap:operation soapAction="" style="document" />
+      <input>
+        <soap:body use="literal" parts="parameters" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="parameters" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EbsActivacionBonoBBService">
+    <port name="EbsActivacionBonoBBSoapPort" binding="s1:EbsActivacionBonoBBServiceSoapBinding">
+      <soap:address location="http://limeaiqav05.tim.com.pe:8909/BonoBlackberryWS/EbsActivacionBonoBB" />
+    </port>
+  </service>
+</definitions>

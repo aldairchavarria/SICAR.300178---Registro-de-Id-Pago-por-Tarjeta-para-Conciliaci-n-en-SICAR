@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://limdeseaiv07.tim.com.pe:8909/SB005_PORTAL/interfaces/proxyServices/PS_PortalSAP?SCHEMA/SB_COMUN/mensajes/PortalMensajes" filename="PortalMensajes.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://limdeseaiv07.tim.com.pe:8909/SB005_PORTAL/interfaces/proxyServices/PS_PortalSAP?SCHEMA/SB_COMUN/data/Comun" filename="Comun.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.74.63:8903/SB005_PORTAL/interfaces/proxyServices/PS_PortalSAP?wsdl" filename="PortalSAPService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

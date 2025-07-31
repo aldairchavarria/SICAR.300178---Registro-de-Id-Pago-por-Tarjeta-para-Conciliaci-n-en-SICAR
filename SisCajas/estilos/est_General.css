@@ -1,0 +1,750 @@
+BODY
+{
+}
+.clsNormal
+{
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsNormalOpcion
+{
+    FONT-SIZE: 10pt;
+    CURSOR: default;
+    COLOR: #2625a7;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsNormalNegrita
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsDirectorioSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #303094;
+    TEXT-DECORATION: none
+}
+.clsDirectorioNoSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: white
+}
+.clsNormalLink
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsSobreLink
+{
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: darkblue;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: underline
+}
+TR.clsSobrePregunta
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: darkblue;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #dbe9f5;
+    TEXT-DECORATION: none
+}
+TR.clsFueraPregunta
+{
+    FONT-SIZE: 10pt;
+    CURSOR: default;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+.clsMenu
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7pt;
+    COLOR: #2625a7;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsMenuOver
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7pt;
+    COLOR: green;
+    FONT-FAMILY: TheSansCorrespondence;
+    TEXT-DECORATION: none
+}
+.clsArchivo
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsNormalMsj
+{
+    FONT-SIZE: 13pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsNormalLinkSeleccionado
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #303094;
+    TEXT-DECORATION: none
+}
+.clsNormalItalica
+{
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-STYLE: italic;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsNormalRegistroSeleccionado
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #dbe9f5;
+    TEXT-DECORATION: none
+}
+TD.clsDocumentoNoSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: #303094;
+    FONT-FAMILY: TheSansCorrespondence
+}
+TD.clsDocumentoSeleccionado
+{
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence;
+    BACKGROUND-COLOR: #303094
+}
+TD.clsDocumentoSeleccionado A
+{
+    COLOR: white;
+    FONT-FAMILY: TheSansCorrespondence
+}
+.clsArial10
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsCourier10
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsCourier10B
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial12
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.ClsArial08
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.ClsArial08S
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow';
+    TEXT-DECORATION: line-through
+}
+.clsArial18
+{
+    FONT-SIZE: 18pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.ClsNormal_1
+{
+    FONT-SIZE: 7pt;
+    COLOR: navy;
+    FONT-FAMILY: ' TheSansCorrespondence'
+}
+.clsArial10b
+{
+    FONT-SIZE: 10pt;
+    COLOR: white;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial10r
+{
+    FONT-SIZE: 10pt;
+    COLOR: #ff0000;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial10v
+{
+    FONT-SIZE: 10pt;
+    COLOR: #000080;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial10a
+{
+    FONT-SIZE: 10pt;
+    COLOR: #1f3c86;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsArial12b
+{
+    FONT-SIZE: 12pt;
+    COLOR: white;
+    FONT-FAMILY: 'Arial Narrow'
+}
+.clsCabCliente
+{
+    FONT-SIZE: 11pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow';
+    BACKGROUND-COLOR: silver
+}
+.SaludoIngreso
+{
+    FONT-SIZE: 13px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.MenuOpciones
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+.TituloConsulta
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial12BldB
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial12B
+{
+    FONT-SIZE: 12px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial13
+{
+    FONT-SIZE: 13px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial11B
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial9B
+{
+    FONT-SIZE: 9px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Resaltado
+{
+    BACKGROUND-COLOR: #00007b
+}
+.Resaltado
+{
+    BACKGROUND-COLOR: #00007b
+}
+.ResultadoRes
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #d0d8f0;
+    TEXT-DECORATION: none
+}
+.ArialFrm
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.Arial11Link
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.login01
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #001b78;
+    FONT-FAMILY: Verdana
+}
+INPUT.clsInputDisable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bfbee9
+}
+INPUT.clsInputDisableB
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bfbee9
+}
+INPUT.clsInputEnable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 150px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnableC
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 190px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable2
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 100px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable2h
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    VISIBILITY: hidden;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 100px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable3
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 500px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable4
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 400px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable4h
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    VISIBILITY: hidden;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 400px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable5
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 200px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectEnable6
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: black 1px solid;
+    WIDTH: 225px;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Arial
+}
+TEXTAREA.clsTextAreaEnable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial
+}
+SELECT.clsSelectDisable
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: #bfbee9 1px solid;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bfbee9
+}
+SELECT.clsSelectDisable4
+{
+    BORDER-RIGHT: #bfbee9 1px solid;
+    BORDER-TOP: #bfbee9 1px solid;
+    FONT-SIZE: 10px;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: #bfbee9 1px solid;
+    WIDTH: 400px;
+    BORDER-BOTTOM: #bfbee9 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bfbee9
+}
+DIV.frame
+{
+    SCROLLBAR-FACE-COLOR: #bfbee9;
+    SCROLLBAR-HIGHLIGHT-COLOR: #f4d1a7;
+    SCROLLBAR-SHADOW-COLOR: #c67718;
+    SCROLLBAR-3DLIGHT-COLOR: #bfbee9;
+    SCROLLBAR-ARROW-COLOR: #ffffff;
+    SCROLLBAR-TRACK-COLOR: #efefef;
+    SCROLLBAR-DARKSHADOW-COLOR: #bfbee9
+}
+DIV.frame2
+{
+    SCROLLBAR-FACE-COLOR: #dbe0f1;
+    SCROLLBAR-HIGHLIGHT-COLOR: #b1c1ff;
+    SCROLLBAR-SHADOW-COLOR: #9ba9d8;
+    SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+    SCROLLBAR-ARROW-COLOR: #3f56a1;
+    SCROLLBAR-TRACK-COLOR: #eaedf7;
+    SCROLLBAR-DARKSHADOW-COLOR: #657bc3;
+    SCROLLBAR-BASE-COLOR: #dbe0f1
+}
+.colorRojo
+{
+    COLOR: red
+}
+.colorVerde
+{
+    COLOR: green
+}
+.colorNegro
+{
+    COLOR: black
+}
+.colorAzul
+{
+    COLOR: darkblue
+}
+.colorNaranja
+{
+    COLOR: orange
+}
+.colorMorado
+{
+    COLOR: purple
+}
+BODY.barra
+{
+    SCROLLBAR-FACE-COLOR: #ffffff;
+    SCROLLBAR-HIGHLIGHT-COLOR: #000000;
+    SCROLLBAR-SHADOW-COLOR: #000000;
+    SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+    SCROLLBAR-ARROW-COLOR: #cc0000;
+    SCROLLBAR-TRACK-COLOR: #ecf0f9;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+    SCROLLBAR-BASE-COLOR: #ffffff
+}
+.Arial14B
+{
+    FONT-SIZE: 14px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.clsCourier10P
+{
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    FONT-FAMILY: 'Arial Narrow'
+}
+DIV.clsGridHeader
+{
+    OVERFLOW: hidden
+}
+DIV.clsGridHeader TABLE
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    POSITION: relative;
+    BORDER-COLLAPSE: separate;
+    CELL-SPACING: 1px
+}
+DIV.clsGridHeader TABLE TR
+{
+    FONT-SIZE: 12px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+DIV.clsGridHeader TABLE TR TD
+{
+    BORDER-RIGHT: #999999 1px solid;
+    BORDER-TOP: #999999 1px solid;
+    BORDER-LEFT: #999999 1px solid;
+    BORDER-BOTTOM: #999999 1px solid
+}
+DIV.clsGridRow
+{
+    OVERFLOW: auto;
+    SCROLLBAR-FACE-COLOR: #ffffff;
+    SCROLLBAR-HIGHLIGHT-COLOR: #000000;
+    SCROLLBAR-SHADOW-COLOR: #000000;
+    SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+    SCROLLBAR-ARROW-COLOR: #cc0000;
+    SCROLLBAR-TRACK-COLOR: #ecf0f9;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+    SCROLLBAR-BASE-COLOR: #ffffff
+}
+DIV.clsGridRow TABLE
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    POSITION: relative;
+    BORDER-COLLAPSE: separate;
+    CELL-SPACING: 1px
+}
+DIV.clsGridRow TABLE TR
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #ecf0f9;
+    TEXT-DECORATION: none
+}
+DIV.clsGridRowLevel2
+{
+    OVERFLOW: auto
+}
+DIV.clsGridRowLevel2 TABLE
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    POSITION: relative;
+    BORDER-COLLAPSE: separate;
+    CELL-SPACING: 1px
+}
+DIV.clsGridRowLevel2 TABLE TR
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #e8e9ea;
+    TEXT-DECORATION: none
+}
+.TituloRConsulta
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #ff0000;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.BotonOptm
+{
+    BORDER-RIGHT: #000080 1px solid;
+    BORDER-TOP: #000080 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #000080 1px solid;
+    CURSOR: hand;
+    COLOR: #000080;
+    BORDER-BOTTOM: #000080 1px solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #bbcaeb;
+    TEXT-ALIGN: center
+}
+.Arial12BR
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ff0000;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.tabla_borde
+{
+    BORDER-RIGHT: #336699 2px solid;
+    BORDER-TOP: #336699 2px solid;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #336699 2px solid;
+    COLOR: #ff0000;
+    BORDER-BOTTOM: #336699 2px solid;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.tabla_interna_borde2
+{
+    BORDER-RIGHT: #999999 1px solid;
+    BORDER-TOP: #999999 1px solid;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #999999 1px solid;
+    COLOR: navy;
+    BORDER-BOTTOM: #999999 1px solid;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+.tabla_interna_borde1
+{
+    BORDER-RIGHT: #ffffff 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #ffffff 1px solid;
+    COLOR: navy;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    FONT-FAMILY: Arial;
+    TEXT-DECORATION: none
+}
+DIV.clsGridRow TABLE TR.clsRowOn
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #e9ebee;
+    TEXT-DECORATION: none
+}
+DIV.clsGridRow TABLE TR.clsRowOff
+{
+    FONT-SIZE: 10px;
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #dddee2;
+    TEXT-DECORATION: none
+}
+
+/* NUEVAS CLASES */
+.RowEven
+{
+	background-color: #dddee2;
+}
+.RowOdd
+{
+	background-color: #e9ebee;
+}
+.ColumnHeader
+{
+	border : 1px solid #999999;
+}
+
+
+.estadoItemOK
+{
+    color: #0066CC;
+    font-weight: bold;
+}
+.estadoItemError
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.labelPaginacion
+{
+	margin-left : 12px;	
+}

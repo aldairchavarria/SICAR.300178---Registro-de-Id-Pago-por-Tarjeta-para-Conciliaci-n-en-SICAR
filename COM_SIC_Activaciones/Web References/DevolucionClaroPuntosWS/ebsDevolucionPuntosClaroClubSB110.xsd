@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:base="http://claro.com.pe/eai/ws/baseschema" xmlns="http://claro.com.pe/eai/ws/ventas/devolucionpuntosclaroclubws/types" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/devolucionpuntosclaroclubws/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv19.tim.com.pe:8909/DevolucionPuntosClaroClubWS/ebsDevolucionPuntosClaroClubSB11?xsd=1" namespace="http://claro.com.pe/eai/ws/baseschema" />
+  <xsd:element name="devolverPuntosClaroClubRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditRequest" type="base:auditRequestType" />
+        <xsd:element name="idSolicitud" type="xsd:string" />
+        <xsd:element name="puntoVenta" type="xsd:string" />
+        <xsd:element name="idVenta" type="xsd:string" />
+        <xsd:element name="proceso" type="xsd:string" />
+        <xsd:element name="linea" type="xsd:string" />
+        <xsd:element name="tipoDoc" type="xsd:string" />
+        <xsd:element name="numDoc" type="xsd:string" />
+        <xsd:element name="ptosDevueltos" type="xsd:string" />
+        <xsd:element name="solesDevueltos" type="xsd:string" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaRequestOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="devolverPuntosClaroClubResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="auditResponse" type="base:auditResponseType" />
+        <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="base:parametrosType" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

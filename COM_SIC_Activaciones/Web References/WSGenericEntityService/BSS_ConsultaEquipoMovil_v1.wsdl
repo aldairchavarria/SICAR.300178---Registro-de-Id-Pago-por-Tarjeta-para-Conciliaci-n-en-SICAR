@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/esb/enterprise/bssConsultaEquipoMovil/v1/types" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/esb/enterprise/bssGenericEntityService/v1/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/esb/enterprise/bssGenericEntityService/v1/" name="BSS_ConsultaEquipoMovil_v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:enmotiv1="http://claro.com.pe/esb/enterprise/bssGenericEntityService/v1/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:entclafau="http://claro.com.pe/esb/data/commonBusinessEntities/claroFault/v2/" xmlns:entclagenhea="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" xmlns:ef="http://claro.com.pe/esb/data/generico/claroFault/v1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:enmticv1="http://claro.com.pe/esb/message/bssGenericEntityService/updateEntity/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/enterprise/bssConsultaEquipoMovil/v1/types">
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA%2FBSS_GenericEntityService%2FSRV_GenericEntityService%2FResources%2FXSD%2FGenericEntityService_v1" namespace="http://claro.com.pe/esb/message/bssGenericEntityService/updateEntity/v1/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FClaroFault_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/claroFault/v2/" />
+      <xsd:import schemaLocation="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA%2FUT_MODELO_ONTOLOGICO_V2%2Fv2%2FEntidades%2FCommonBusinessEntities%2FClaroGenericHeaders_v2" namespace="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateEntitytRequestMessage">
+    <wsdl:part name="updateEntityRequest1" xmlns:q1="http://claro.com.pe/esb/message/bssGenericEntityService/updateEntity/v1/" element="q1:updateEntityRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEntityResponseMessage">
+    <wsdl:part name="updateEntityResponse" xmlns:q2="http://claro.com.pe/esb/message/bssGenericEntityService/updateEntity/v1/" element="q2:updateEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="claroFault">
+    <wsdl:part name="claroFault" xmlns:q3="http://claro.com.pe/esb/data/commonBusinessEntities/claroFault/v2/" element="q3:claroFault" />
+  </wsdl:message>
+  <wsdl:message name="requestHeaderMessage">
+    <wsdl:part name="headerReq" xmlns:q4="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" element="q4:headerRequest" />
+  </wsdl:message>
+  <wsdl:message name="responseHeaderMessage">
+    <wsdl:part name="headerResp" xmlns:q5="http://claro.com.pe/esb/data/commonBusinessEntities/claroGenericHeaders/v2/" element="q5:headerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BSS_ConsultaEquipoMovilPort">
+    <wsdl:operation name="updateEntity">
+      <wsdl:input message="tns:UpdateEntitytRequestMessage" />
+      <wsdl:output message="tns:UpdateEntityResponseMessage" />
+      <wsdl:fault name="claroFault" message="tns:claroFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BSS_ConsultaEquipoMovilSOAP11Binding" type="tns:BSS_ConsultaEquipoMovilPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="updateEntity">
+      <soap:operation soapAction="http://claro.com.pe/esb/enterprise/bssConsultaEquipoMovil/v1/updateEntity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="updateEntityRequest1" />
+        <soap:header message="tns:requestHeaderMessage" part="headerReq" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="updateEntityResponse" />
+        <soap:header message="tns:responseHeaderMessage" part="headerResp" use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="claroFault">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BSS_ConsultaEquipoMovil">
+    <WL5G3N0:documentation xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">OSB Service</WL5G3N0:documentation>
+    <wsdl:port name="BSS_ConsultaEquipoMovilPort" binding="tns:BSS_ConsultaEquipoMovilSOAP11Binding">
+      <soap:address location="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

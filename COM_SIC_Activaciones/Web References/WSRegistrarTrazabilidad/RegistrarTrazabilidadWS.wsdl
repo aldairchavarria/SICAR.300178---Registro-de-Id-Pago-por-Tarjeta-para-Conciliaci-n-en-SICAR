@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/RegistrarTrazabilidad/ws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/RegistrarTrazabilidad/ws" name="RegistrarTrazabilidadWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv19.tim.com.pe:8909/RegistrarTrazabilidadWS/ebsRegistrarTrazabilidadSB11?xsd=1" namespace="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="registrarInput">
+    <wsdl:part name="registrarInput" xmlns:q1="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/types" element="q1:registrarRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarOutput">
+    <wsdl:part name="registrarOutput" xmlns:q2="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/types" element="q2:registrarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="registrarTrazabilidadPortType">
+    <wsdl:operation name="registrarTrazabilidad">
+      <wsdl:input message="tns:registrarInput" />
+      <wsdl:output message="tns:registrarOutput" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ebsRegistrarTrazabilidadBindingSOAP11" type="tns:registrarTrazabilidadPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="registrarTrazabilidad">
+      <soap:operation soapAction="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/registrar" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ebsRegistrarTrazabilidadBindingSOAP12" type="tns:registrarTrazabilidadPortType">
+    <soap12:binding style="document" transport="http://www.w3.org/2003/05/soap/bindings/HTTP/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="registrarTrazabilidad">
+      <soap12:operation soapAction="http://claro.com.pe/eai/RegistrarTrazabilidad/ws/registrar" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ebsRegistrarTrazabilidadService">
+    <wsdl:port name="ebsRegistrarTrazabilidadSB11" binding="tns:ebsRegistrarTrazabilidadBindingSOAP11">
+      <soap:address location="http://limdeseaiv19.tim.com.pe:8909/RegistrarTrazabilidadWS/ebsRegistrarTrazabilidadSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsRegistrarTrazabilidadSB12" binding="tns:ebsRegistrarTrazabilidadBindingSOAP12">
+      <soap12:address location="http://limdeseaiv19.tim.com.pe:8909/RegistrarTrazabilidadWS/ebsRegistrarTrazabilidadSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

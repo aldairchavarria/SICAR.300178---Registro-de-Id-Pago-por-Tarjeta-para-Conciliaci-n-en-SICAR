@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<ListaRecarga>
+  <recargas>
+    <valor>3</valor>
+    <descripcion>Recarga S/ 3</descripcion>
+  </recargas>
+  <recargas>
+    <valor>5</valor>
+    <descripcion>Recarga S/ 5</descripcion>
+  </recargas>
+  <recargas>
+    <valor>10</valor>
+    <descripcion>Recarga S/ 10</descripcion>
+  </recargas>
+  <recargas>
+    <valor>20</valor>
+    <descripcion>Recarga S/ 20</descripcion>
+  </recargas>
+  <recargas>
+    <valor>30</valor>
+    <descripcion>Recarga S/ 30</descripcion>
+  </recargas>
+  <recargas>
+    <valor>40</valor>
+    <descripcion>Recarga S/ 40</descripcion>
+  </recargas>
+  <recargas>
+    <valor>60</valor>
+    <descripcion>Recarga S/ 60</descripcion>
+  </recargas>
+  <recargas>
+    <valor>100</valor>
+    <descripcion>Recarga S/ 100</descripcion>
+  </recargas>
+</ListaRecarga>

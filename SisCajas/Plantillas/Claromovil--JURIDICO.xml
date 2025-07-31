@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<html>
+	<title>Claro</title>
+	<htmlData>
+    <![CDATA[
+        	<html xmlns='http://www.w3.org/1999/xhtml'>
+          <head>
+			<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+			<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0,' />
+			<title>Claro</title>
+			<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			.linea {
+
+				border-bottom: 1px solid #c1c1c1;
+				min-height: 51px;
+				max-height:  51px;
+			}
+
+			.box_1 {
+
+				    padding-right: 10px;
+    				padding-left: 10px;
+    				margin-top: 20px;
+    				margin-bottom: 20px;
+
+			}
+
+			.rem {
+
+				width: 500px ;
+			}
+
+
+			.paddingtexto {
+
+					    width: 172px;
+   						 text-align: right;
+
+				}
+
+
+
+
+			@media screen and (max-width: 650px) {
+
+				table,tbody,thead,tr,td {
+					display: block !important;
+					width: auto !important;
+					height: auto !important;
+				}
+
+				.hidden {
+
+					display: none !important;
+				}
+
+				.sinpadding {
+
+					padding-top: 0 !important;
+				}
+
+				.rem {
+
+				width: auto !important;
+				padding-left: 10px !important;
+				padding-right: 10px !important;
+			}
+
+
+				.hidden-2 {
+
+					display: none !important;
+				}
+
+				.centrarT p{
+
+					text-align: center !important;
+				}
+
+				.paddingtexto {
+
+					width: auto !important;
+   					text-align: center !important;
+				}
+				.paddingMas {
+
+					padding: 8px 10px !important; 
+				}
+
+
+				.lineanaranja {
+
+					border-right: none !important;
+					border-bottom: 1px solid #f28100 !important;
+				}
+					
+				.sloganDerecha {
+
+					padding: 10px 30px 30px 30px !important;
+				}
+
+				.tablacenter tr td p {
+
+					text-align: center !important;
+				}
+
+				.sinSaldo_2 {
+
+					margin-top: 20px !important;
+				}
+
+				.movilimg {
+
+					padding-top: 40px;
+				}
+
+
+				.box_3 , .box_4 {
+
+					padding: 0 10px !important; 
+				}
+
+				.marginT {
+
+					margin-top: 0 !important;
+				}
+
+
+				.box_3 {
+
+					border-right: none !important; 
+				}
+				
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+					margin: auto;
+					width: auto !important;
+				} 
+
+				.imgpunto {
+
+					display: inline !important;
+				}
+
+				.marginBtt {
+
+					margin-bottom: 8px !important;
+				}
+				table.master {
+					margin-left: 10px !important;
+					margin-right: 10px !important;
+				}
+				td.foobox {
+					margin-bottom: 5px;
+				}
+				td.foobox br {display: none}
+				br.none,
+				td.none {
+					display: none !important;
+				}
+				td.show {
+					display: block !important;
+				}
+				td.padding {
+					padding: 10px 0 !important;
+				}
+				td.center {
+					text-align: center;
+				}
+				td.cta {
+					width: 200px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				td.brands {
+					text-align: center;
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+
+				.marginBot {
+
+					margin-bottom: 35px;
+				}
+				td.brands td,
+				td.header td {
+					display: inline-block;
+				}
+
+				.sinbr__ br {
+
+					display: none !important;
+				}
+
+				.width100 {
+
+					width: 100% !important;
+				}
+
+				.fsmv {
+
+					font-size: 15px !important;
+				}
+
+				.sinbr  {
+
+					display: none !important;
+				}
+
+				.rem {
+
+					font-size: 15px;
+				}
+
+				.str_ {
+
+					padding-top: 0 !important;
+				}
+
+				.fsmv2 {
+
+					font-size: 	22px !important	;
+				}
+
+				.imgp {
+
+					padding-top: 	0 !important	;
+				}
+
+				.ptr_ {
+
+					padding-top: 0 !important;
+				}
+
+				.pb-{
+
+					padding-bottom: 0 !important;
+				}
+
+				.pt2 {
+
+					padding-top: 	5px !important;
+					width: 	100% !important	;
+					text-align: 	center !important;
+					font-size: 	16px;	
+				}
+		 
+				.font-title {
+					font-size: 16px !important;
+					letter-spacing: normal !important;
+					padding: 15px 5px !important;
+				}
+				.font-title br{ display: none !important; }
+			   
+				.border-none{ border-right: 0 !important; padding-bottom: 15px !important; }
+				.felicita{ padding: 0 10px; font-size: 13px !important }
+				
+				.none{ display: none !important; }
+				.yo-soy-claro{ font-size: 14px !important }
+				.participa{ font-size: 15px !important }
+
+				.linea {
+
+				border-bottom: none !important;
+				min-height: auto !important;
+				max-height: auto !important;
+			}
+
+			.participa br {
+
+				display: none !important;
+			}
+
+			.pt-{
+
+				padding-top: 	0 !important;
+			}
+
+			.ptimg-{
+
+				padding-top: 	40px !important	;
+			}
+
+		}
+			
+		</style>
+		</head>
+          <body>
+		<table class="master" cellpadding="0" cellspacing="0" border="0" align="center" width="650" style="font-family:arial,helvetica,sans-serif;color:#000000;margin:auto;line-height:1.2;">
+			<tbody><tr>
+				<td class="header" align="center" style="padding:10px 0;display:block;">
+					<span style="font-size:9px;display:block;">Si no puedes ver este correo por favor haz click 
+						<a href="http://static.claro.com.pe/mailing/havas/2018/10/26/SISAC/index.html" target="_blank" style="color:#003bc2;">aquí.</a><br>
+						Para garantizar la entrega de los e-mails a tu bandeja de entrada, por favor a&ntilde;ade a tu libreta de direcciones nuestra direcci&oacute;n:<br> 
+						<a href="mailto:newsletter@claro.com.pe" target="_blank" title="newsletter@claro.com.pe" style="color:#003bc2;">newsletter@claro.com.pe</a>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#D52B1E">
+					<img style="display:block;" src="http://static.claro.com.pe/mailing/havas/2018/10/26/SISAC/Header.png" alt="Claro Club" width="650" height="58" border="0">
+				</td>
+			</tr>
+			<tr>
+				<td  class="font-title" bgcolor="#FFFFFF" align="center" style=" padding: 30px 10px; font-size:21px;font-family:arial,helvetica,sans-serif;color:#da272c; text-transform: uppercase; letter-spacing: 0.2px; font-weight: 	bold; ">
+					<strong style="color:#da272c;">¡HOLA, </strong><strong style="color:#da272c;">%%DATOS_CLIENTE%%</strong><strong>!</strong>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="http://www.claro.com.pe/personas/movil/postpago/?utm_source=MiClaro&utm_medium=email&utm_campaign=2018-10-ClaroMovil-Sisact_Postpago_Renovacion&utm_content=Mailing" target="_blank">
+					<img style="display:block;" src='%%RUTA_BANNER%%'  width="650"  border="0" /></a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td width="17" bgcolor="#e3e3e3"></td>
+							<td align="center">
+								<table width="100%" cellspacing="0" cellpadding="0" border="0" >
+									<tr>
+										<td class="participa sinb" style=" text-align:  center; color: #000; padding: 25px 10px 25px 10px; margin: 0 auto; font-size: 17px;  font-family:arial,helvetica,sans-serif; ">
+											¡Gracias por confiar en nosotros! <br style="display: block !important;">
+											Queremos compartir contigo informaci&oacute;n importante sobre la  <br>
+											operaci&oacute;n que realizaste el d&iacute;a %%FECHA%%
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="17" bgcolor="#e3e3e3" class="hidden-2">
+								&nbsp;
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td width="17" bgcolor="#e3e3e3"></td>
+							<td align="center">
+								<table width="100%" cellspacing="0" cellpadding="0" border="0">
+									<tr bgcolor="#d52b1e">
+										<td  class="fsmv sinbr__" style=" text-align:  center; color: #000; padding: 15px 10px 15px 10px; margin: 0 auto; font-size: 16px; font-weight: bold; color:white;  font-family:arial,helvetica,sans-serif;">
+											Adjunto encontrar&aacute;s los documentos emitidos por la transacci&oacute;n realizada.
+										</td>
+									</tr>
+
+								</table>
+							</td>
+							<td width="17" bgcolor="#e3e3e3"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td width="17" bgcolor="#e3e3e3"></td>
+							<td align="center">
+								<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f6f6f6" style="padding: 25px 0;">	
+									<tr>
+										<td align="center">
+											<br>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<img style="display:block !important; padding-top: 20px !important; margin: 0 !important;" src="http://static.claro.com.pe/mailing/havas/2018/10/26/SISAC/miClaro2--.png" width="150"  border="0">
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<p class="rem" style=" padding: 20px 4px; font-weight: bold; text-align: center;">
+												Conoce el detalle de tus consumos, tu saldo y realiza tus operaciones de pago en l&iacute;nea y mucho m&aacute;s en Mi Claro.
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<p class="rem" style=" padding: 20px 4px; font-weight: bold; text-align: center;">
+												Descarga la nueva app <span style="color: #d52b1e;">MiClaro</span>
+											</p>
+											<p>
+												<a class="img_" href="https://play.google.com/store/apps/details?id=com.claro.pe.miclaro&hl=es_419?utm_source=MiClaro&utm_medium=email&utm_campaign=2018-10-ClaroMovil-Babysitting_Prepagoapp_Googleplaymiclaro&utm_content=Mailing" target="_blank" style="font-size: 0; padding-right: 10px;padding-left: 10px; padding-bottom: 20px;display: inline-block;">
+													<img  src="http://static.claro.com.pe/mailing/havas/2018/10/26/SISAC/google.png" width="100"  border="0">
+												</a>
+												<a class="img_" href="https://itunes.apple.com/pe/app/mi-claro-per%C3%BA/id785700933?mt=8?utm_source=MiClaro&utm_medium=email&utm_campaign=2018-10-ClaroMovil-Babysitting_Prepagoapp_Iosmiclaro&utm_content=Mailing" target="_blank" style="font-size: 0; padding-right: 10px;padding-left: 10px; padding-bottom: 20px;display: inline-block;">
+													<img  src="http://static.claro.com.pe/mailing/havas/2018/10/26/SISAC/apple.png" width="100"  border="0">
+												</a>
+											</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="17" bgcolor="#e3e3e3">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#212121" align="center" style="padding: 30px 10px 30px 10px;">
+					<span style="font-size:14px;color:#ffffff;">
+						<p style="margin-bottom: 15px;" class="marginBtt">
+							<strong style="font-size:18px;">¿TIENES ALGUNA PREGUNTA?</strong> 
+						</p>
+						<br>
+						Encuentra la respuesta <a href="http://asistencia.claro.com.pe/servicios-moviles/postpago/?utm_source=MiClaro&utm_medium=email&utm_campaign=2018-10-ClaroMovil-Sisact_Postpago_Renovacion_Asistencia&utm_content=Mailing" target="_blank" style="text-decoration: none;">
+							<strong style="background: #d52b1e; padding: 5px 10px; margin-left: 10px; border-radius: 5px; color: white;">aqu&iacute;</strong></a>
+					</span>
+				</td>
+			</tr>
+			<tr>	
+				<td style="height: 	10px !important	;"	></td>
+			</tr>
+		</tbody>
+	</table>
+	</body>
+</html>     ]]>
+  </htmlData>
+</html>

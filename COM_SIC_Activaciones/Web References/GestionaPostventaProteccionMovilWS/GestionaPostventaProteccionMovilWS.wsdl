@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws" name="GestionaPostventaProteccionMovilWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws" />
+    <s:schema>
+      <s:import schemaLocation="http://limdeseaiv28.tim.com.pe:8909/GestionaPostventaProteccionMovilWS/ebsGestionaPostventaProteccionMovilSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="consultarLineasClienteRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q1:consultarLineasClienteRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarLineasClienteResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q2:consultarLineasClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosSeguroRequestMsg">
+    <wsdl:part name="consultarDatosSeguroRequest" xmlns:q3="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q3:consultarDatosSeguroRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarDatosSeguroResponseMsg">
+    <wsdl:part name="consultarDatosSeguroResponse" xmlns:q4="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q4:consultarDatosSeguroResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistoricoPolizaRequestMsg">
+    <wsdl:part name="consultarHistoricoPolizaRequest" xmlns:q5="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q5:consultarHistoricoPolizaRequest" />
+  </wsdl:message>
+  <wsdl:message name="consultarHistoricoPolizaResponseMsg">
+    <wsdl:part name="consultarHistoricoPolizaResponse" xmlns:q6="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q6:consultarHistoricoPolizaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mostrarGrillaSiniestrosRequestMSg">
+    <wsdl:part name="mostrarGrillaSiniestrosRequest" xmlns:q7="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q7:mostrarGrillaSiniestrosRequest" />
+  </wsdl:message>
+  <wsdl:message name="mostrarGrillaSiniestrosResponseMsg">
+    <wsdl:part name="mostrarGrillaSiniestrosResponse" xmlns:q8="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q8:mostrarGrillaSiniestrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarSolicitudCancelacionRequestMsg">
+    <wsdl:part name="registrarSolicitudCancelacionRequest" xmlns:q9="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q9:registrarSolicitudCancelacionRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarSolicitudCancelacionResponseMsg">
+    <wsdl:part name="registrarSolicitudCancelacionResponse" xmlns:q10="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q10:registrarSolicitudCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEstadoSeguroRequestMsg">
+    <wsdl:part name="actualizarEstadoSeguroRequest" xmlns:q11="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q11:actualizarEstadoSeguroRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEstadoSeguroResponseMsg">
+    <wsdl:part name="actualizarEstadoSeguroResponse" xmlns:q12="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q12:actualizarEstadoSeguroResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerSECPedidoRequestMsg">
+    <wsdl:part name="obtenerSECPedidoRequest" xmlns:q13="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q13:obtenerSECPedidoRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerSECPedidoResponseMsg">
+    <wsdl:part name="obtenerSECPedidoResponse" xmlns:q14="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q14:obtenerSECPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerInformacionPorPedidoRequestMsg">
+    <wsdl:part name="obtenerInformacionPorPedidoRequest" xmlns:q15="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q15:obtenerInformacionPorPedidoRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerInformacionPorPedidoResponseMsg">
+    <wsdl:part name="obtenerInformacionPorPedidoResponse" xmlns:q16="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q16:obtenerInformacionPorPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerFechaFinCoberturaRequestMsg">
+    <wsdl:part name="obtenerFechaFinCoberturaRequest" xmlns:q17="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q17:obtenerFechaFinCoberturaRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerFechaFinCoberturaResponseMsg">
+    <wsdl:part name="obtenerFechaFinCoberturaResponse" xmlns:q18="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q18:obtenerFechaFinCoberturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEstadoAltaRequestMsg">
+    <wsdl:part name="actualizarEstadoAltaRequest" xmlns:q19="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q19:actualizarEstadoAltaRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEstadoAltaResponseMsg">
+    <wsdl:part name="actualizarEstadoAltaResponse" xmlns:q20="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q20:actualizarEstadoAltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarAltaAsurionRequestMsg">
+    <wsdl:part name="registrarAltaAsurionRequest" xmlns:q21="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q21:registrarAltaAsurionRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarAltaAsurionResponseMsg">
+    <wsdl:part name="registrarAltaAsurion" xmlns:q22="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q22:registrarAltaAsurionResponse" />
+  </wsdl:message>
+  <wsdl:message name="tipificarProteccionMovilRequestMsg">
+    <wsdl:part name="tipificarProteccionMovilRequest" xmlns:q23="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q23:tipificarProteccionMovilRequest" />
+  </wsdl:message>
+  <wsdl:message name="tipificarProteccionMovilResponseMsg">
+    <wsdl:part name="tipificarProteccionMovilResponse" xmlns:q24="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q24:tipificarProteccionMovilResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEstadoPagoSiniestroRequestMsg">
+    <wsdl:part name="actualizarEstadoPagoSiniestroRequest" xmlns:q25="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q25:actualizarEstadoPagoSiniestroRequest" />
+  </wsdl:message>
+  <wsdl:message name="actualizarEstadoPagoSiniestroResponseMsg">
+    <wsdl:part name="actualizarEstadoPagoSiniestroResponse" xmlns:q26="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q26:actualizarEstadoPagoSiniestroResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDetalleSiniestroRequestMsg">
+    <wsdl:part name="obtenerDetalleSiniestroRequest" xmlns:q27="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q27:obtenerDetalleSiniestroRequest" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDetalleSiniestroResponseMsg">
+    <wsdl:part name="obtenerDetalleSiniestroResponse" xmlns:q28="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q28:obtenerDetalleSiniestroResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarAltaSiniestroAsurionRequestMsg">
+    <wsdl:part name="registrarAltaSiniestroAsurionRequest" xmlns:q29="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q29:registrarAltaSiniestroAsurionRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarAltaSiniestroAsurionResponseMsg">
+    <wsdl:part name="registrarAltaSiniestroAsurionResponse" xmlns:q30="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q30:registrarAltaSiniestroAsurionResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarSeguroCanjeRequestMsg">
+    <wsdl:part name="registrarSeguroCanjeRequest" xmlns:q31="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q31:registrarSeguroCanjeRequest" />
+  </wsdl:message>
+  <wsdl:message name="registrarSeguroCanjeResponseMsg">
+    <wsdl:part name="registrarSeguroCanje" xmlns:q32="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q32:registrarSeguroCanjeResponse" />
+  </wsdl:message>
+  <wsdl:message name="buscarSeguroCanjeRequestMsg">
+    <wsdl:part name="request" xmlns:q33="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q33:buscarSeguroCanjeRequest" />
+  </wsdl:message>
+  <wsdl:message name="buscarSeguroCanjeResponseMsg">
+    <wsdl:part name="response" xmlns:q34="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/types" element="q34:buscarSeguroCanjeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GestionaPostventaProteccionMovilWSPortType">
+    <wsdl:operation name="consultarLineasCliente">
+      <wsdl:input message="tns:consultarLineasClienteRequestMsg" />
+      <wsdl:output message="tns:consultarLineasClienteResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosSeguro">
+      <wsdl:input message="tns:consultarDatosSeguroRequestMsg" />
+      <wsdl:output message="tns:consultarDatosSeguroResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoPoliza">
+      <wsdl:input message="tns:consultarHistoricoPolizaRequestMsg" />
+      <wsdl:output message="tns:consultarHistoricoPolizaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="mostrarGrillaSiniestros">
+      <wsdl:input message="tns:mostrarGrillaSiniestrosRequestMSg" />
+      <wsdl:output message="tns:mostrarGrillaSiniestrosResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarSolicitudCancelacion">
+      <wsdl:input message="tns:registrarSolicitudCancelacionRequestMsg" />
+      <wsdl:output message="tns:registrarSolicitudCancelacionResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoSeguro">
+      <wsdl:input message="tns:actualizarEstadoSeguroRequestMsg" />
+      <wsdl:output message="tns:actualizarEstadoSeguroResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerSECPedido">
+      <wsdl:input message="tns:obtenerSECPedidoRequestMsg" />
+      <wsdl:output message="tns:obtenerSECPedidoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerInformacionPorPedido">
+      <wsdl:input message="tns:obtenerInformacionPorPedidoRequestMsg" />
+      <wsdl:output message="tns:obtenerInformacionPorPedidoResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerFechaFinCobertura">
+      <wsdl:input message="tns:obtenerFechaFinCoberturaRequestMsg" />
+      <wsdl:output message="tns:obtenerFechaFinCoberturaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoAlta">
+      <wsdl:input message="tns:actualizarEstadoAltaRequestMsg" />
+      <wsdl:output message="tns:actualizarEstadoAltaResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarAltaAsurion">
+      <wsdl:input message="tns:registrarAltaAsurionRequestMsg" />
+      <wsdl:output message="tns:registrarAltaAsurionResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="tipificarProteccionMovil">
+      <wsdl:input message="tns:tipificarProteccionMovilRequestMsg" />
+      <wsdl:output message="tns:tipificarProteccionMovilResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoPagoSiniestro">
+      <wsdl:input message="tns:actualizarEstadoPagoSiniestroRequestMsg" />
+      <wsdl:output message="tns:actualizarEstadoPagoSiniestroResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDetalleSiniestro">
+      <wsdl:input message="tns:obtenerDetalleSiniestroRequestMsg" />
+      <wsdl:output message="tns:obtenerDetalleSiniestroResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarAltaSiniestroAsurion">
+      <wsdl:input message="tns:registrarAltaSiniestroAsurionRequestMsg" />
+      <wsdl:output message="tns:registrarAltaSiniestroAsurionResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarSeguroCanje">
+      <wsdl:input message="tns:registrarSeguroCanjeRequestMsg" />
+      <wsdl:output message="tns:registrarSeguroCanjeResponseMsg" />
+    </wsdl:operation>
+    <wsdl:operation name="buscarSeguroCanje">
+      <wsdl:input message="tns:buscarSeguroCanjeRequestMsg" />
+      <wsdl:output message="tns:buscarSeguroCanjeResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GestionaPostventaProteccionMovilWSPortTypeSOAP11Binding" type="tns:GestionaPostventaProteccionMovilWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="consultarLineasCliente">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/consultarLineasCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosSeguro">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/consultarDatosSeguro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="consultarDatosSeguroRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="consultarDatosSeguroResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoPoliza">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/consultarHistoricoPoliza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="consultarHistoricoPolizaRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="consultarHistoricoPolizaResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mostrarGrillaSiniestros">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/mostrarGrillaSiniestros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="mostrarGrillaSiniestrosRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="mostrarGrillaSiniestrosResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarSolicitudCancelacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarSolicitudCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="registrarSolicitudCancelacionRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="registrarSolicitudCancelacionResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoSeguro">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/actualizarEstadoSeguro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="actualizarEstadoSeguroRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="actualizarEstadoSeguroResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerSECPedido">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerSECPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="obtenerSECPedidoRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="obtenerSECPedidoResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerInformacionPorPedido">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerInformacionPorPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="obtenerInformacionPorPedidoRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="obtenerInformacionPorPedidoResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerFechaFinCobertura">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerFechaFinCobertura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="obtenerFechaFinCoberturaRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="obtenerFechaFinCoberturaResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoAlta">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/actualizarEstadoAlta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="actualizarEstadoAltaRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="actualizarEstadoAltaResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarAltaAsurion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarAltaAsurion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="registrarAltaAsurionRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="registrarAltaAsurion" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipificarProteccionMovil">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/tipificarProteccionMovil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="tipificarProteccionMovilRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="tipificarProteccionMovilResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoPagoSiniestro">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/actualizarEstadoPagoSiniestro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="actualizarEstadoPagoSiniestroRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="actualizarEstadoPagoSiniestroResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDetalleSiniestro">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerDetalleSiniestro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="obtenerDetalleSiniestroRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="obtenerDetalleSiniestroResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarAltaSiniestroAsurion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarAltaSiniestroAsurion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="registrarAltaSiniestroAsurionRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="registrarAltaSiniestroAsurionResponse" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarSeguroCanje">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarSeguroCanje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="registrarSeguroCanjeRequest" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="registrarSeguroCanje" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarSeguroCanje">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/buscarSeguroCanje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GestionaPostventaProteccionMovilWSPortTypeSOAP12Binding" type="tns:GestionaPostventaProteccionMovilWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="consultarLineasCliente">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/consultarLineasCliente" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarDatosSeguro">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/consultarDatosSeguro" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="consultarDatosSeguroRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="consultarDatosSeguroResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarHistoricoPoliza">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/consultarHistoricoPoliza" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="consultarHistoricoPolizaRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="consultarHistoricoPolizaResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mostrarGrillaSiniestros">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/mostrarGrillaSiniestros" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="mostrarGrillaSiniestrosRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="mostrarGrillaSiniestrosResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarSolicitudCancelacion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarSolicitudCancelacion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="registrarSolicitudCancelacionRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="registrarSolicitudCancelacionResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoSeguro">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/actualizarEstadoSeguro" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="actualizarEstadoSeguroRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="actualizarEstadoSeguroResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerSECPedido">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerSECPedido" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="obtenerSECPedidoRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="obtenerSECPedidoResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerInformacionPorPedido">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerInformacionPorPedido" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="obtenerInformacionPorPedidoRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="obtenerInformacionPorPedidoResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerFechaFinCobertura">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerFechaFinCobertura" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="obtenerFechaFinCoberturaRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="obtenerFechaFinCoberturaResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoAlta">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/actualizarEstadoAlta" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="actualizarEstadoAltaRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="actualizarEstadoAltaResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarAltaAsurion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarAltaAsurion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="registrarAltaAsurionRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="registrarAltaAsurion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipificarProteccionMovil">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/tipificarProteccionMovil" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="tipificarProteccionMovilRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="tipificarProteccionMovilResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarEstadoPagoSiniestro">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/actualizarEstadoPagoSiniestro" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="actualizarEstadoPagoSiniestroRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="actualizarEstadoPagoSiniestroResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDetalleSiniestro">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/obtenerDetalleSiniestro" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="obtenerDetalleSiniestroRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="obtenerDetalleSiniestroResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarAltaSiniestroAsurion">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarAltaSiniestroAsurion" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="registrarAltaSiniestroAsurionRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="registrarAltaSiniestroAsurionResponse" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarSeguroCanje">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/registrarSeguroCanje" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="registrarSeguroCanjeRequest" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="registrarSeguroCanje" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarSeguroCanje">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/gestionapostventaproteccionmovilws/buscarSeguroCanje" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GestionaPostventaProteccionMovilWS">
+    <wsdl:port name="ebsGestionaPostventaProteccionMovilSB11" binding="tns:GestionaPostventaProteccionMovilWSPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/GestionaPostventaProteccionMovilWS/ebsGestionaPostventaProteccionMovilSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsGestionaPostventaProteccionMovilSB12" binding="tns:GestionaPostventaProteccionMovilWSPortTypeSOAP12Binding">
+      <soap:address location="http://limdeseaiv28.tim.com.pe:8909/GestionaPostventaProteccionMovilWS/ebsGestionaPostventaProteccionMovilSB12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

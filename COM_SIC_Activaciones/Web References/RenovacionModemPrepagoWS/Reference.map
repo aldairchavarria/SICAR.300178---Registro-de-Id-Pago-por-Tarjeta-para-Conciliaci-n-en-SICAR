@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.19.74.118:7909/RenovacionModemPrepagoWS/ebsRenovacionModemPrepago?wsdl" filename="ebsRenovacionModemPrepago.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

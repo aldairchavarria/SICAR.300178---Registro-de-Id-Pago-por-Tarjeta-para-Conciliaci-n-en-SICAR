@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:MgPort="http://claro.com.pe/SOA/message/portal" xmlns:Q1="http://claro.com.pe/xsd/comun" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/SOA/message/portal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://limdeseaiv07.tim.com.pe:8909/SB005_PORTAL/interfaces/proxyServices/PS_PortalSAP?SCHEMA%2FSB_COMUN%2Fdata%2FComun" namespace="http://claro.com.pe/xsd/comun" />
+  <xsd:complexType name="AsientoBean">
+    <xsd:sequence>
+      <xsd:element name="tipoRegistro" type="xsd:string" />
+      <xsd:element name="fechaDocumento" type="xsd:string" />
+      <xsd:element name="claseDocumento" type="xsd:string" />
+      <xsd:element name="sociedad" type="xsd:string" />
+      <xsd:element name="fechaContabilizacion" type="xsd:string" />
+      <xsd:element name="fechaConversion" type="xsd:string" />
+      <xsd:element name="claveMoneda" type="xsd:string" />
+      <xsd:element name="numeroDocRef" type="xsd:string" />
+      <xsd:element name="textoCabecera" type="xsd:string" />
+      <xsd:element name="claveContabilizacion" type="xsd:string" />
+      <xsd:element name="cuenta" type="xsd:string" />
+      <xsd:element name="indicador" type="xsd:string" />
+      <xsd:element name="importe" type="xsd:string" />
+      <xsd:element name="claveCondicion" type="xsd:string" />
+      <xsd:element name="fechaBase" type="xsd:string" />
+      <xsd:element name="claveBloqueo" type="xsd:string" />
+      <xsd:element name="numeroAsignacion" type="xsd:string" />
+      <xsd:element name="textoPosicion" type="xsd:string" />
+      <xsd:element name="centroCoste" type="xsd:string" />
+      <xsd:element name="centroBeneficio" type="xsd:string" />
+      <xsd:element name="numeroOrden" type="xsd:string" />
+      <xsd:element name="tipoCambio" type="xsd:string" />
+      <xsd:element name="calcImpuesto" type="xsd:string" />
+      <xsd:element name="indIVA" type="xsd:string" />
+      <xsd:element name="indRetencion" type="xsd:string" />
+      <xsd:element name="posicionPresupuestaria" type="xsd:string" />
+      <xsd:element name="mesContable" type="xsd:string" />
+      <xsd:element name="viaPago" type="xsd:string" />
+      <xsd:element name="centroGestor" type="xsd:string" />
+      <xsd:element name="division" type="xsd:string" />
+      <xsd:element name="importeLocal" type="xsd:string" />
+      <xsd:element name="importeCtaMayor" type="xsd:string" />
+      <xsd:element name="elementoPlanEstructura" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AsientoAFBean">
+    <xsd:sequence>
+      <xsd:element name="tipoRegistro" type="xsd:string" />
+      <xsd:element name="fechaDocumento" type="xsd:string" />
+      <xsd:element name="claseDocumento" type="xsd:string" />
+      <xsd:element name="sociedad" type="xsd:string" />
+      <xsd:element name="fechaContabilizacion" type="xsd:string" />
+      <xsd:element name="fechaConversion" type="xsd:string" />
+      <xsd:element name="claveMoneda" type="xsd:string" />
+      <xsd:element name="numeroDocRef" type="xsd:string" />
+      <xsd:element name="textoCabecera" type="xsd:string" />
+      <xsd:element name="claveContabilizacion" type="xsd:string" />
+      <xsd:element name="cuenta" type="xsd:string" />
+      <xsd:element name="indicador" type="xsd:string" />
+      <xsd:element name="importe" type="xsd:string" />
+      <xsd:element name="claveCondicion" type="xsd:string" />
+      <xsd:element name="fechaBase" type="xsd:string" />
+      <xsd:element name="claveBloqueo" type="xsd:string" />
+      <xsd:element name="numeroAsignacion" type="xsd:string" />
+      <xsd:element name="textoPosicion" type="xsd:string" />
+      <xsd:element name="centroCoste" type="xsd:string" />
+      <xsd:element name="centroBeneficio" type="xsd:string" />
+      <xsd:element name="numeroOrden" type="xsd:string" />
+      <xsd:element name="tipoCambio" type="xsd:string" />
+      <xsd:element name="calcImpuesto" type="xsd:string" />
+      <xsd:element name="indIVA" type="xsd:string" />
+      <xsd:element name="indRetencion" type="xsd:string" />
+      <xsd:element name="posicionPresupuestaria" type="xsd:string" />
+      <xsd:element name="mesContable" type="xsd:string" />
+      <xsd:element name="viaPago" type="xsd:string" />
+      <xsd:element name="centroGestor" type="xsd:string" />
+      <xsd:element name="division" type="xsd:string" />
+      <xsd:element name="importeLocal" type="xsd:string" />
+      <xsd:element name="importeCtaMayor" type="xsd:string" />
+      <xsd:element name="elementoPlanEstructura" type="xsd:string" />
+      <xsd:element name="numeroPrincipalActivoFijo" type="xsd:string" />
+      <xsd:element name="subNumeroActivoFijo" type="xsd:string" />
+      <xsd:element name="claseCuenta" type="xsd:string" />
+      <xsd:element name="referenciaFactura" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerarAsientoRequest">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZOAC_GENERA_ASIENTO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element name="listaAsiento">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaAsientoBean" type="MgPort:AsientoBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerarAsientoResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZOAC_GENERA_ASIENTO</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="claveReferencia" type="xsd:string" />
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="Q1:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerarAsientoAFRequest">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZOAC_GENERA_ASIENTO_AF</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditRequest" type="Q1:AuditType" />
+      <xsd:element minOccurs="1" name="version" type="xsd:string" />
+      <xsd:element name="listaAsientoAF">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="listaAsientoAFBean" type="MgPort:AsientoAFBean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerarAsientoAFResponse">
+    <xsd:annotation>
+      <xsd:documentation>RFC ZOAC_GENERA_ASIENTO_AF</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="auditResponse" type="Q1:AuditResponseType" />
+      <xsd:element name="claveReferencia" type="xsd:string" />
+      <xsd:element name="listaBapiret2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="listaBapiret2Bean" type="Q1:Bapiret2Bean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="generarAsientoRequest" type="MgPort:GenerarAsientoRequest" />
+  <xsd:element name="generarAsientoResponse" type="MgPort:GenerarAsientoResponse" />
+  <xsd:element name="generarAsientoAFRequest" type="MgPort:GenerarAsientoAFRequest" />
+  <xsd:element name="generarAsientoAFResponse" type="MgPort:GenerarAsientoAFResponse" />
+</xsd:schema>

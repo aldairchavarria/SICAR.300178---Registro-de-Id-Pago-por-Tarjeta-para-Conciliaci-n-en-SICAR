@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/consultarRecarga/" xmlns:xsd1="http://claro.com.pe/esb/data/generico/responseStatus/v1/" xmlns:xsd2="http://claro.com.pe/esb/data/generico/opcionales/v1/" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/esb/data/ventas/recargasOlo/sec/v1/consultarRecarga/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FResponseStatus_v1" namespace="http://claro.com.pe/esb/data/generico/responseStatus/v1/" />
+  <xsd:import schemaLocation="http://172.17.26.51:21000/MED_RecargasOlo/SRV_RecargasOlo/Service/Mediation/MED_RecargasOlo?SCHEMA%2FMED_RecargasOlo%2FSRV_RecargasOlo%2FResources%2FXSD%2FOpcionales_v1" namespace="http://claro.com.pe/esb/data/generico/opcionales/v1/" />
+  <xsd:element name="consultarRecargaRequest" type="tns:consultarRecargaRequestType" />
+  <xsd:element name="consultarRecargaResponse" type="tns:consultarRecargaResponseType" />
+  <xsd:complexType name="consultarRecargaRequestType">
+    <xsd:sequence>
+      <xsd:element name="usuario" type="xsd:string" />
+      <xsd:element name="contrasenia" type="xsd:string" />
+      <xsd:element name="numeroTelefono" type="xsd:string" />
+      <xsd:element name="grupoCanal" type="xsd:string" />
+      <xsd:element name="fecha" type="xsd:string" />
+      <xsd:element name="codigoCompania" type="xsd:string" />
+      <xsd:element name="idTransaccionCompania" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResquestOpcional" type="xsd2:RequestOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="consultarRecargaResponseType">
+    <xsd:sequence>
+      <xsd:element name="responseStatus" type="xsd1:ResponseStatus" />
+      <xsd:element name="responseData" type="tns:ReponseConsultarRecargaType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ReponseConsultarRecargaType">
+    <xsd:sequence>
+      <xsd:element name="idTransaccionesTerceros" type="xsd:string" />
+      <xsd:element name="grupoCanal" type="xsd:string" />
+      <xsd:element name="codigoCompania" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="listaResponseOpcional" type="xsd2:ResponseOpcionalType" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA/UT_MODELO_ONTOLOGICO_V2/v2/Entidades/CommonBusinessEntities/ClaroFault_v2" filename="ClaroFault_v2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?wsdl" filename="BSS_ConsultaEquipoMovil_v1.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA/BSS_GenericEntityService/SRV_GenericEntityService/Resources/XSD/GenericEntityService_v1" filename="GenericEntityService_v1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA/UT_MODELO_ONTOLOGICO_V2/v2/Entidades/CommonBusinessEntities/BaseTypes_v2" filename="BaseTypes_v2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA/UT_MODELO_ONTOLOGICO_V2/v2/Entidades/CommonBusinessEntities/ClaroGenericHeaders_v2" filename="ClaroGenericHeaders_v2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.26.51:21000/BSS_GenericEntityService/SRV_GenericEntityService/Service/GenericEntityService_v1?SCHEMA/UT_MODELO_ONTOLOGICO_V2/v2/Entidades/CommonBusinessEntities/ResponseStatus_v2" filename="ResponseStatus_v2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

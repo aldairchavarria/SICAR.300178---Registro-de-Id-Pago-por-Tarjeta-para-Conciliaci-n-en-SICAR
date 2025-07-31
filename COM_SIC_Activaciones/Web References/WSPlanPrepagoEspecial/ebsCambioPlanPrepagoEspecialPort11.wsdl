@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/postventa/cambioplanprepagoespecial" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/postventa/cambioplanprepagoespecial" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/postventa/cambioplanprepagoespecial">
+      <s:element name="cambiarPlanPrepagoEspecialRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="audit" type="s0:AuditType" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="offer" type="s:string" />
+            <s:element name="subscriberStatus" type="s:string" />
+            <s:element name="listaRequestOpcional" type="s0:ListaOpcionalType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cambiarPlanPrepagoEspecialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRetorno" type="s:string" />
+            <s:element name="descripcionRetorno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuditType">
+        <s:sequence>
+          <s:element name="idTransaccion" type="s:string" />
+          <s:element name="ipAplicacion" type="s:string" />
+          <s:element name="nombreAplicacion" type="s:string" />
+          <s:element name="usuarioAplicacion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ListaOpcionalType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="listaOpcional">
+            <s:complexType>
+              <s:attribute name="clave" type="s:string" />
+              <s:attribute name="valor" type="s:string" />
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="cambiarPlanPrepagoEspecialRequestMsg">
+    <part name="request" element="s0:cambiarPlanPrepagoEspecialRequest" />
+  </message>
+  <message name="cambiarPlanPrepagoEspecialResponseMsg">
+    <part name="response" element="s0:cambiarPlanPrepagoEspecialResponse" />
+  </message>
+  <portType name="ebsCambioPlanPrepagoEspecialPortType">
+    <operation name="cambiarPlanPrepagoEspecial">
+      <input message="s0:cambiarPlanPrepagoEspecialRequestMsg" />
+      <output message="s0:cambiarPlanPrepagoEspecialResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsCambioPlanPrepagoEspecialPortTypeSOAP11Binding" type="s0:ebsCambioPlanPrepagoEspecialPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="cambiarPlanPrepagoEspecial">
+      <soap:operation soapAction="http://claro.com.pe/eai/postventa/cambioplanprepagoespecial/cambiarPlanPrepagoEspecial" style="document" />
+      <input>
+        <soap:body use="literal" parts="request" />
+      </input>
+      <output>
+        <soap:body use="literal" parts="response" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsCambioPlanPrepagoEspecialService">
+    <port name="ebsCambioPlanPrepagoEspecialPort11" binding="s0:ebsCambioPlanPrepagoEspecialPortTypeSOAP11Binding">
+      <soap:address location="http://limdeseaiv13.tim.com.pe:7909/CambioPlanPrepagoEspecialWS/ebsCambioPlanPrepagoEspecialPort11" />
+    </port>
+  </service>
+</definitions>

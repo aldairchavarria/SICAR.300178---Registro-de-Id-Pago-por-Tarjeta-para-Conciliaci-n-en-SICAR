@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///c:/documents and settings/e701670/desktop/datapower security/esquemas/wsesoapheader.xsd" filename="WSESoapHeader.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///c:/documents and settings/e701670/desktop/datapower security/contratos/serviciosybonosmigrar.wsdl" filename="ServiciosyBonosMigrarWS.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///c:/documents and settings/e701670/desktop/datapower security/esquemas/commonsexception.xsd" filename="CommonsException.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///c:/documents and settings/e701670/desktop/datapower security/esquemas/headergeneric_v1.0.xsd" filename="HeaderGeneric_v1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///c:/documents and settings/e701670/desktop/datapower security/esquemas/baseschema.xsd" filename="BaseSchema.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///c:/documents and settings/e701670/desktop/datapower security/esquemas/serviciosybonosmigrar.xsd" filename="ServiciosyBonosMigrar.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://brokerivr.claro.com.pe/" targetNamespace="http://brokerivr.claro.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AltaPrepago" type="tns:AltaPrepago" />
+  <xs:element name="AltaPrepagoResponse" type="tns:AltaPrepagoResponse" />
+  <xs:element name="consulta" type="tns:consulta" />
+  <xs:element name="consultaResponse" type="tns:consultaResponse" />
+  <xs:complexType name="AltaPrepago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqAltaPrePago" type="tns:reqAltaPrePago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reqAltaPrePago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="binCanalInterno" type="xs:string" />
+      <xs:element minOccurs="0" name="canal" type="xs:string" />
+      <xs:element minOccurs="0" name="car1" type="xs:string" />
+      <xs:element minOccurs="0" name="car2" type="xs:string" />
+      <xs:element minOccurs="0" name="car3" type="xs:string" />
+      <xs:element minOccurs="0" name="car4" type="xs:string" />
+      <xs:element minOccurs="0" name="car5" type="xs:string" />
+      <xs:element minOccurs="0" name="car6" type="xs:string" />
+      <xs:element minOccurs="0" name="car7" type="xs:string" />
+      <xs:element minOccurs="0" name="car8" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoProceso" type="xs:string" />
+      <xs:element minOccurs="0" name="comercio" type="xs:string" />
+      <xs:element minOccurs="0" name="correlativo" type="xs:string" />
+      <xs:element minOccurs="0" name="departamento" type="xs:string" />
+      <xs:element minOccurs="0" name="iccid" type="xs:string" />
+      <xs:element minOccurs="0" name="numOperacionClaro" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="pdv" type="xs:string" />
+      <xs:element minOccurs="0" name="plan" type="xs:string" />
+      <xs:element minOccurs="0" name="producto" type="xs:string" />
+      <xs:element minOccurs="0" name="serie" type="xs:string" />
+      <xs:element minOccurs="0" name="servicioAdicional1" type="xs:string" />
+      <xs:element minOccurs="0" name="servicioAdicional2" type="xs:string" />
+      <xs:element minOccurs="0" name="servicioAdicional3" type="xs:string" />
+      <xs:element minOccurs="0" name="servicioAdicional4" type="xs:string" />
+      <xs:element minOccurs="0" name="servicioAdicional5" type="xs:string" />
+      <xs:element minOccurs="0" name="terminalID" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="trace" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AltaPrepagoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:respOperacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respOperacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="errorSecundario" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoActivacion" type="xs:string" />
+      <xs:element minOccurs="0" name="hlr" type="xs:string" />
+      <xs:element minOccurs="0" name="identificadorOperacion" type="xs:string" />
+      <xs:element minOccurs="0" name="identificadorSIX" type="xs:string" />
+      <xs:element minOccurs="0" name="imsi" type="xs:string" />
+      <xs:element minOccurs="0" name="msisdn" type="xs:string" />
+      <xs:element minOccurs="0" name="numOperacionClaro" type="xs:string" />
+      <xs:element minOccurs="0" name="origenRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="routingCategory" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqConsulta" type="tns:reqConsulta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reqConsulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="binCanalInterno" type="xs:string" />
+      <xs:element minOccurs="0" name="canal" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoProceso" type="xs:string" />
+      <xs:element minOccurs="0" name="comercio" type="xs:string" />
+      <xs:element minOccurs="0" name="flagTipo" type="xs:string" />
+      <xs:element minOccurs="0" name="numOperacionClaro" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroConsulta" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="pdv" type="xs:string" />
+      <xs:element minOccurs="0" name="terminalID" type="xs:string" />
+      <xs:element minOccurs="0" name="trace" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:respOperacion" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

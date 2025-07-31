@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows" name="DesactivacionContratoCBIOWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows" />
+    <s:schema>
+      <s:import schemaLocation="http://localhost:20000/DesactivacionContratoCBIOWS/ebsDesactivacionContratoCBIOSB11?xsd=2" namespace="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/types" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="desactivarContratoWSRequestMsg">
+    <wsdl:part name="request" xmlns:q1="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/types" element="q1:desactivarContratoWSRequest" />
+  </wsdl:message>
+  <wsdl:message name="desactivarContratoWSResponseMsg">
+    <wsdl:part name="response" xmlns:q2="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/types" element="q2:desactivarContratoWSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DesactivacionContratoCBIOWSPortType">
+    <wsdl:operation name="desactivarContratoWS">
+      <wsdl:input message="tns:desactivarContratoWSRequestMsg" />
+      <wsdl:output message="tns:desactivarContratoWSResponseMsg" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DesactivacionContratoCBIOWSPortTypeSOAP11Binding" type="tns:DesactivacionContratoCBIOWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="desactivarContratoWS">
+      <soap:operation soapAction="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/desactivarContratoWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="request" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="response" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DesactivacionContratoCBIOWSPortTypeSOAP12Binding" type="tns:DesactivacionContratoCBIOWSPortType">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="desactivarContratoWS">
+      <soap12:operation style="document" soapAction="http://claro.com.pe/eai/ws/ventas/desactivacioncontratocbiows/desactivarContratoWS" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="request" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" parts="response" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DesactivacionContratoCBIOWSService">
+    <wsdl:port name="ebsDesactivacionContratoCBIOSB11" binding="tns:DesactivacionContratoCBIOWSPortTypeSOAP11Binding">
+      <soap:address location="http://localhost:20000/DesactivacionContratoCBIOWS/ebsDesactivacionContratoCBIOSB11" />
+    </wsdl:port>
+    <wsdl:port name="ebsDesactivacionContratoCBIOSB12" binding="tns:DesactivacionContratoCBIOWSPortTypeSOAP12Binding">
+      <soap12:address location="http://localhost:20000/DesactivacionContratoCBIOWS/ebsDesactivacionContratoCBIOSB12" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

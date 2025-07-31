@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s9="http://claro.com/SIACPostpago/DatosContrato" xmlns:s8="http://claro.com/SIACPostpago/siga_penalidad_request.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://claro.com/SIACPostpago/HistCambioSIMLinea" xmlns:s0="http://claro.com/SIACPostpago/ListaServicios" xmlns:s3="http://claro.com/SIACPostpago/ConsultaTriados" xmlns:s2="http://claro.com/SIACPostpago/DatosCliente" xmlns:s5="http://claro.com/SIACPostpago/HistEstadosLinea" xmlns:s4="http://claro.com/SIACPostpago/obtenerDatosBscsExt" xmlns:s7="http://claro.com/SIACPostpago/historicoAcciones" xmlns:s6="http://claro.com/SIACPostpago/ServiciosLinea" xmlns:s10="http://claro.com/SIACPostpago/siga_penalidad_response.xsd" xmlns:s11="http://claro.com/SIACPostpago/HistPlanLinea" xmlns:s12="http://claro.com/SIACPostpago/compromisoPago" xmlns:s13="http://claro.com/SIACPostpago/ListaFechaFactura" xmlns:s14="java:pe.com.claro.siacpostpago.exceptions" xmlns:s15="java:java.lang" xmlns:tns="http://pe/com/claro/siacpostpago/ws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://pe/com/claro/siacpostpago/ws" name="SIACPostpagoConsultasWSServiceDefinitions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/ListaServicios" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/ListaServicios">
+      <s:element name="ListaServiciosResponse">
+        <s:annotation>
+          <s:documentation>pp004_siac_consultas.sp_lista_servicios</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ListaServicios" type="tns:ListaServicios" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListaServicios">
+        <s:sequence>
+          <s:element name="codigo" type="s:int" />
+          <s:element name="servicio" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/HistCambioSIMLinea" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/HistCambioSIMLinea">
+      <s:element name="HistCambioSIMLineaResponse">
+        <s:annotation>
+          <s:documentation>pp004_siac_consultas.sp_historial_cambio_sim</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="HistCambioSIMLinea" type="tns:HistCambioSIMLinea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HistCambioSIMLinea">
+        <s:sequence>
+          <s:element name="estado" type="s:string" />
+          <s:element name="motivo" type="s:string" />
+          <s:element name="valido_desde" type="s:dateTime" />
+          <s:element name="imsi" type="s:string" />
+          <s:element name="iccid" type="s:string" />
+          <s:element name="introducido_el" type="s:dateTime" />
+          <s:element name="modificado_el" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/DatosCliente" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/DatosCliente">
+      <s:element name="datosClienteResponse">
+        <s:annotation>
+          <s:documentation>Comment describing your root element</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="cliente" type="tns:cliente" />
+            <s:element name="errorsql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="cliente">
+        <s:sequence>
+          <s:element name="customerId" type="s:int" />
+          <s:element name="cuenta" type="s:string" />
+          <s:element name="nombre" type="s:string" />
+          <s:element name="apellidos" type="s:string" />
+          <s:element name="razonSocial" type="s:string" />
+          <s:element name="tip_doc" type="s:string" />
+          <s:element name="num_doc" type="s:string" />
+          <s:element name="titulo" type="s:string" />
+          <s:element name="telef_principal" type="s:string" />
+          <s:element name="estado_civil" type="s:string" />
+          <s:element name="fecha_nac" type="s:date" />
+          <s:element name="lug_nac" type="s:string" />
+          <s:element name="ruc_dni" type="s:string" />
+          <s:element name="nomb_comercial" type="s:string" />
+          <s:element name="contacto_cliente" type="s:string" />
+          <s:element name="rep_legal" type="s:string" />
+          <s:element name="telef_contacto" type="s:string" />
+          <s:element name="fax" type="s:string" />
+          <s:element name="email" type="s:string" />
+          <s:element name="cargo" type="s:string" />
+          <s:element name="consultor" type="s:string" />
+          <s:element name="asesor" type="s:string" />
+          <s:element name="direccion_fac" type="s:string" />
+          <s:element name="urbanizacion_fac" type="s:string" />
+          <s:element name="distrito_fac" type="s:string" />
+          <s:element name="provincia_fac" type="s:string" />
+          <s:element name="cod_postal_fac" type="s:string" />
+          <s:element name="departamento_fac" type="s:string" />
+          <s:element name="pais_fac" type="s:string" />
+          <s:element name="direccion_leg" type="s:string" />
+          <s:element name="urbanizacion_leg" type="s:string" />
+          <s:element name="distrito_leg" type="s:string" />
+          <s:element name="provincia_leg" type="s:string" />
+          <s:element name="cod_postal_leg" type="s:string" />
+          <s:element name="departamento_leg" type="s:string" />
+          <s:element name="pais_leg" type="s:string" />
+          <s:element name="co_id" type="s:int" />
+          <s:element name="nicho_id" type="s:string" />
+          <s:element name="num_cuentas" type="s:int" />
+          <s:element name="num_lineas" type="s:int" />
+          <s:element name="ciclo_fac" type="s:string" />
+          <s:element name="status_cuenta" type="s:string" />
+          <s:element name="modalidad" type="s:string" />
+          <s:element name="tipo_cliente" type="s:string" />
+          <s:element name="fecha_act" type="s:dateTime" />
+          <s:element name="limite_credito" type="s:float" />
+          <s:element name="segmento" type="s:string" />
+          <s:element name="respon_pago" type="s:string" />
+          <s:element name="credit_score" type="s:string" />
+          <s:element name="forma_pago" type="s:string" />
+          <s:element name="codigo_tipo_cliente" type="s:string" />
+          <s:element name="sexo" type="s:string" />
+          <s:element name="nacionalidad" type="s:int" />
+          <s:element name="estado_civil_id" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/ConsultaTriados" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/ConsultaTriados">
+      <s:element name="ConsultaTriadosResponse">
+        <s:annotation>
+          <s:documentation>tim.pp004_siac_consultas.sp_triados</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ConsultaTriados" type="tns:ConsultaTriados" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaTriados">
+        <s:sequence>
+          <s:element name="tipo_triado" type="s:string" />
+          <s:element name="num_trio" type="s:int" />
+          <s:element name="telefono" type="s:string" />
+          <s:element name="factor" type="s:string" />
+          <s:element name="dest_trio" type="s:string" />
+          <s:element name="Cod_Tipo_Destino" type="s:string" />
+          <s:element name="Tipo_Destino" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/obtenerDatosBscsExt" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/obtenerDatosBscsExt">
+      <s:element name="obtenerDatosBscsExtResponse">
+        <s:annotation>
+          <s:documentation>tim116_pkg_siga.sssiga_obtener_datos_bscs_ext</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element name="p_num_fact" type="s:float" />
+            <s:element name="p_cargo_fijo_act" type="s:float" />
+            <s:element name="p_cargo_fijo_men" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/HistEstadosLinea" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/HistEstadosLinea">
+      <s:element name="HistEstadosLineaResponse">
+        <s:annotation>
+          <s:documentation>pp004_siac_consultas.sp_historial_linea</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="HistEstadosLinea" type="tns:HistEstadosLinea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HistEstadosLinea">
+        <s:sequence>
+          <s:element name="estado" type="s:string" />
+          <s:element name="motivo" type="s:string" />
+          <s:element name="valido_desde" type="s:dateTime" />
+          <s:element name="introducido_el" type="s:dateTime" />
+          <s:element name="introducido_por" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/ServiciosLinea" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/ServiciosLinea">
+      <s:element name="ServiciosLineaResponse">
+        <s:annotation>
+          <s:documentation>pp004_siac_consultas.sp_servicios_contrato</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ServiciosLinea" type="tns:ServiciosLinea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServiciosLinea">
+        <s:sequence>
+          <s:element name="codigo" type="s:string" />
+          <s:element name="descripcion" type="s:string" />
+          <s:element name="estado" type="s:string" />
+          <s:element name="fecha_estado" type="s:dateTime" />
+          <s:element name="fecha_solicitud" type="s:dateTime" />
+          <s:element name="cuota" type="s:string" />
+          <s:element name="paquete" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/historicoAcciones" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/historicoAcciones">
+      <s:element name="historicoAccionesResponse">
+        <s:annotation>
+          <s:documentation>TIM.TIM004_PKG_HISTORICO_ACCIONES.sp_hist_accions_bscs</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="historicoAcciones" type="tns:historicoAcciones" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="historicoAcciones">
+        <s:sequence>
+          <s:element name="contrato" type="s:int" />
+          <s:element name="descripcion" type="s:string" />
+          <s:element name="servicio" type="s:string" />
+          <s:element name="fecha" type="s:string" />
+          <s:element name="hora" type="s:string" />
+          <s:element name="usuario" type="s:string" />
+          <s:element name="fech_orde" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/siga_penalidad_request.xsd" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/siga_penalidad_request.xsd">
+      <s:element name="penalidad_request">
+        <s:annotation>
+          <s:documentation>pkg_siga_acuerdo.sssiga_obtener_penalidad_ext</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element name="p_acuerdo_id" type="s:float" />
+            <s:element name="p_nro_telefono" type="s:string" />
+            <s:element name="p_fecha_penalidad" type="s:dateTime" />
+            <s:element name="p_numero_facturas" type="s:float" />
+            <s:element name="p_cargo_fijo_act" type="s:float" />
+            <s:element name="p_cargo_fijo_inf" type="s:float" />
+            <s:element name="p_diasxmes" type="s:float" />
+            <s:element name="p_codigo_plan_nuevo" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/DatosContrato" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/DatosContrato">
+      <s:element name="datosContratoResponse">
+        <s:annotation>
+          <s:documentation>sp_datos_linea</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="contrato" type="tns:contrato" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="contrato">
+        <s:sequence>
+          <s:element name="telefono" type="s:string" />
+          <s:element name="estado" type="s:string" />
+          <s:element name="motivo" type="s:string" />
+          <s:element name="fec_estado" type="s:dateTime" />
+          <s:element name="plan" type="s:string" />
+          <s:element name="plazo_contrato" type="s:string" />
+          <s:element name="iccid" type="s:string" />
+          <s:element name="imsi" type="s:string" />
+          <s:element name="campania" type="s:string" />
+          <s:element name="p_venta" type="s:string" />
+          <s:element name="vendedor" type="s:string" />
+          <s:element name="co_id" type="s:int" />
+          <s:element name="fecha_act" type="s:dateTime" />
+          <s:element name="flag_plataforma" type="s:string" />
+          <s:element name="pin1" type="s:string" />
+          <s:element name="puk1" type="s:string" />
+          <s:element name="pin2" type="s:string" />
+          <s:element name="puk2" type="s:string" />
+          <s:element name="codigo_plan_tarifario" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/siga_penalidad_response.xsd" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/siga_penalidad_response.xsd">
+      <s:element name="penalidad_response">
+        <s:annotation>
+          <s:documentation>pkg_siga_acuerdo.sssiga_obtener_penalidad_ext</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element name="p_acuerdo_id_salida" type="s:float" />
+            <s:element name="p_dias_pendientes" type="s:float" />
+            <s:element name="p_cargo_fijo_diario" type="s:float" />
+            <s:element name="p_precio_lista" type="s:float" />
+            <s:element name="p_precio_venta" type="s:float" />
+            <s:element name="p_monto_pcs" type="s:float" />
+            <s:element name="p_monto_apadece" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/HistPlanLinea" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/HistPlanLinea">
+      <s:element name="HistPlanLineaResponse">
+        <s:annotation>
+          <s:documentation>pp004_siac_consultas.sp_historial_plan</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="HistPlanLinea" type="tns:HistPlanLinea" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HistPlanLinea">
+        <s:sequence>
+          <s:element name="valido_desde" type="s:dateTime" />
+          <s:element name="plan_tarifa" type="s:string" />
+          <s:element name="cambiado_por" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/compromisoPago" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/compromisoPago">
+      <s:element name="compromisoPagoResponse">
+        <s:annotation>
+          <s:documentation>pp004_siac_consultas.sp_listar_compromiso_pago</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="compromisoPago" type="tns:compromisoPago" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="compromisoPago">
+        <s:sequence>
+          <s:element name="importe" type="s:float" />
+          <s:element name="fecha_expiracion" type="s:dateTime" />
+          <s:element name="usuario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:tns="http://claro.com/SIACPostpago/ListaFechaFactura" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://claro.com/SIACPostpago/ListaFechaFactura">
+      <s:element name="ListaFechaFacturaResponse">
+        <s:annotation>
+          <s:documentation>TIM.PP004_SIAC_CONSULTAS.SP_LISTAR_FECHA_FACTURACION</s:documentation>
+        </s:annotation>
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ListaFechaFactura" type="tns:ListaFechaFactura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListaFechaFactura">
+        <s:sequence>
+          <s:element name="fec_emision" type="s:dateTime" />
+          <s:element name="fecha_inicio" type="s:dateTime" />
+          <s:element name="fecha_final" type="s:dateTime" />
+          <s:element name="flag_facturado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:pe.com.claro.siacpostpago.exceptions">
+      <xs:import namespace="java:java.lang" />
+      <xs:complexType name="SIACPoException" />
+      <xs:element xmlns:java="java:pe.com.claro.siacpostpago.exceptions" name="SIACPoException" type="java:SIACPoException" />
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:java.lang">
+      <xs:complexType name="Throwable" />
+    </s:schema>
+    <s:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://pe/com/claro/siacpostpago/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s2="java:pe.com.claro.siacpostpago.exceptions" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://pe/com/claro/siacpostpago/ws">
+      <xs:import namespace="http://claro.com/SIACPostpago/siga_penalidad_response.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/DatosCliente" />
+      <xs:import namespace="http://claro.com/SIACPostpago/HistPlanLinea" />
+      <xs:import namespace="http://claro.com/SIACPostpago/DatosContrato" />
+      <xs:import namespace="http://claro.com/SIACPostpago/siga_penalidad_request.xsd" />
+      <xs:import namespace="http://claro.com/SIACPostpago/historicoAcciones" />
+      <xs:import namespace="http://claro.com/SIACPostpago/ServiciosLinea" />
+      <xs:import namespace="http://claro.com/SIACPostpago/HistEstadosLinea" />
+      <xs:import namespace="http://claro.com/SIACPostpago/ListaFechaFactura" />
+      <xs:import namespace="http://claro.com/SIACPostpago/compromisoPago" />
+      <xs:import namespace="http://claro.com/SIACPostpago/HistCambioSIMLinea" />
+      <xs:import namespace="http://claro.com/SIACPostpago/obtenerDatosBscsExt" />
+      <xs:import namespace="http://claro.com/SIACPostpago/ConsultaTriados" />
+      <xs:import namespace="http://claro.com/SIACPostpago/ListaServicios" />
+      <xs:element name="compromisoPago">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_csid" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="compromisoPagoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:com="http://claro.com/SIACPostpago/compromisoPago" ref="com:compromisoPagoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaTriados">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="consultaTriadosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:con="http://claro.com/SIACPostpago/ConsultaTriados" ref="con:ConsultaTriadosResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="historicoPlanLinea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="historicoPlanLineaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:his="http://claro.com/SIACPostpago/HistPlanLinea" ref="his:HistPlanLineaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ObtenerDatosBscsExt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_msisdn" type="xs:string" />
+            <xs:element name="p_tmcode" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ObtenerDatosBscsExtResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:obt="http://claro.com/SIACPostpago/obtenerDatosBscsExt" ref="obt:obtenerDatosBscsExtResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="historicoAcciones">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_msisdn" type="xs:string" />
+            <xs:element name="p_fecini" type="xs:string" />
+            <xs:element name="p_fecfin" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="historicoAccionesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:his="http://claro.com/SIACPostpago/historicoAcciones" ref="his:historicoAccionesResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="datosContrato">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="datosContratoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://claro.com/SIACPostpago/DatosContrato" ref="dat:datosContratoResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listaFechaFactura">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_csid" type="xs:int" />
+            <xs:element name="p_ciclos" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listaFechaFacturaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:lis="http://claro.com/SIACPostpago/ListaFechaFactura" ref="lis:ListaFechaFacturaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="serviciosLinea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="serviciosLineaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:ser="http://claro.com/SIACPostpago/ServiciosLinea" ref="ser:ServiciosLineaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Penalidad">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:siga="http://claro.com/SIACPostpago/siga_penalidad_request.xsd" ref="siga:penalidad_request" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PenalidadResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:siga="http://claro.com/SIACPostpago/siga_penalidad_response.xsd" ref="siga:penalidad_response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listaServicios">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listaServiciosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:lis="http://claro.com/SIACPostpago/ListaServicios" ref="lis:ListaServiciosResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="histCambioSIMLinea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="histCambioSIMLineaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:his="http://claro.com/SIACPostpago/HistCambioSIMLinea" ref="his:HistCambioSIMLineaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="datosCliente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="custcode" type="xs:string" />
+            <xs:element name="dnnum" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="datosClienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:dat="http://claro.com/SIACPostpago/DatosCliente" ref="dat:datosClienteResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="historicoEstadoLinea">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="p_coid" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="historicoEstadoLineaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:his="http://claro.com/SIACPostpago/HistEstadosLinea" ref="his:HistEstadosLineaResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="compromisoPago">
+    <wsdl:part name="parameters" element="tns:compromisoPago" />
+  </wsdl:message>
+  <wsdl:message name="compromisoPagoResponse">
+    <wsdl:part name="parameters" element="tns:compromisoPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SIACPoException">
+    <wsdl:part name="SIACPoException" element="s14:SIACPoException" />
+  </wsdl:message>
+  <wsdl:message name="consultaTriados">
+    <wsdl:part name="parameters" element="tns:consultaTriados" />
+  </wsdl:message>
+  <wsdl:message name="consultaTriadosResponse">
+    <wsdl:part name="parameters" element="tns:consultaTriadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="historicoPlanLinea">
+    <wsdl:part name="parameters" element="tns:historicoPlanLinea" />
+  </wsdl:message>
+  <wsdl:message name="historicoPlanLineaResponse">
+    <wsdl:part name="parameters" element="tns:historicoPlanLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosBscsExt">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosBscsExt" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosBscsExtResponse">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosBscsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="historicoAcciones">
+    <wsdl:part name="parameters" element="tns:historicoAcciones" />
+  </wsdl:message>
+  <wsdl:message name="historicoAccionesResponse">
+    <wsdl:part name="parameters" element="tns:historicoAccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="datosContrato">
+    <wsdl:part name="parameters" element="tns:datosContrato" />
+  </wsdl:message>
+  <wsdl:message name="datosContratoResponse">
+    <wsdl:part name="parameters" element="tns:datosContratoResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaFechaFactura">
+    <wsdl:part name="parameters" element="tns:listaFechaFactura" />
+  </wsdl:message>
+  <wsdl:message name="listaFechaFacturaResponse">
+    <wsdl:part name="parameters" element="tns:listaFechaFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="serviciosLinea">
+    <wsdl:part name="parameters" element="tns:serviciosLinea" />
+  </wsdl:message>
+  <wsdl:message name="serviciosLineaResponse">
+    <wsdl:part name="parameters" element="tns:serviciosLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Penalidad">
+    <wsdl:part name="parameters" element="tns:Penalidad" />
+  </wsdl:message>
+  <wsdl:message name="PenalidadResponse">
+    <wsdl:part name="parameters" element="tns:PenalidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaServicios">
+    <wsdl:part name="parameters" element="tns:listaServicios" />
+  </wsdl:message>
+  <wsdl:message name="listaServiciosResponse">
+    <wsdl:part name="parameters" element="tns:listaServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="histCambioSIMLinea">
+    <wsdl:part name="parameters" element="tns:histCambioSIMLinea" />
+  </wsdl:message>
+  <wsdl:message name="histCambioSIMLineaResponse">
+    <wsdl:part name="parameters" element="tns:histCambioSIMLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="datosCliente">
+    <wsdl:part name="parameters" element="tns:datosCliente" />
+  </wsdl:message>
+  <wsdl:message name="datosClienteResponse">
+    <wsdl:part name="parameters" element="tns:datosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="historicoEstadoLinea">
+    <wsdl:part name="parameters" element="tns:historicoEstadoLinea" />
+  </wsdl:message>
+  <wsdl:message name="historicoEstadoLineaResponse">
+    <wsdl:part name="parameters" element="tns:historicoEstadoLineaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SIACPostpagoConsultasWS">
+    <wsdl:operation name="compromisoPago" parameterOrder="parameters">
+      <wsdl:input message="tns:compromisoPago" />
+      <wsdl:output message="tns:compromisoPagoResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="consultaTriados" parameterOrder="parameters">
+      <wsdl:input message="tns:consultaTriados" />
+      <wsdl:output message="tns:consultaTriadosResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="historicoPlanLinea" parameterOrder="parameters">
+      <wsdl:input message="tns:historicoPlanLinea" />
+      <wsdl:output message="tns:historicoPlanLineaResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosBscsExt" parameterOrder="parameters">
+      <wsdl:input message="tns:ObtenerDatosBscsExt" />
+      <wsdl:output message="tns:ObtenerDatosBscsExtResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="historicoAcciones" parameterOrder="parameters">
+      <wsdl:input message="tns:historicoAcciones" />
+      <wsdl:output message="tns:historicoAccionesResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="datosContrato" parameterOrder="parameters">
+      <wsdl:input message="tns:datosContrato" />
+      <wsdl:output message="tns:datosContratoResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="listaFechaFactura" parameterOrder="parameters">
+      <wsdl:input message="tns:listaFechaFactura" />
+      <wsdl:output message="tns:listaFechaFacturaResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="serviciosLinea" parameterOrder="parameters">
+      <wsdl:input message="tns:serviciosLinea" />
+      <wsdl:output message="tns:serviciosLineaResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="Penalidad" parameterOrder="parameters">
+      <wsdl:input message="tns:Penalidad" />
+      <wsdl:output message="tns:PenalidadResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="listaServicios" parameterOrder="parameters">
+      <wsdl:input message="tns:listaServicios" />
+      <wsdl:output message="tns:listaServiciosResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="histCambioSIMLinea" parameterOrder="parameters">
+      <wsdl:input message="tns:histCambioSIMLinea" />
+      <wsdl:output message="tns:histCambioSIMLineaResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="datosCliente" parameterOrder="parameters">
+      <wsdl:input message="tns:datosCliente" />
+      <wsdl:output message="tns:datosClienteResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+    <wsdl:operation name="historicoEstadoLinea" parameterOrder="parameters">
+      <wsdl:input message="tns:historicoEstadoLinea" />
+      <wsdl:output message="tns:historicoEstadoLineaResponse" />
+      <wsdl:fault name="SIACPoException" message="tns:SIACPoException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SIACPostpagoConsultasWSServiceSoapBinding" type="tns:SIACPostpagoConsultasWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="compromisoPago">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaTriados">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="historicoPlanLinea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosBscsExt">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="historicoAcciones">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="datosContrato">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listaFechaFactura">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="serviciosLinea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Penalidad">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listaServicios">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="histCambioSIMLinea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="datosCliente">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="historicoEstadoLinea">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:output>
+      <wsdl:fault name="SIACPoException">
+        <soap:fault use="literal" namespace="" encodingStyle="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SIACPostpagoConsultasWSService">
+    <wsdl:port name="SIACPostpagoConsultasWSSoapPort" binding="tns:SIACPostpagoConsultasWSServiceSoapBinding">
+      <soap:address location="http://limdeseaiv22.tim.com.pe:8909/SIACPostpagoWS/SIACPostpagoConsultasWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

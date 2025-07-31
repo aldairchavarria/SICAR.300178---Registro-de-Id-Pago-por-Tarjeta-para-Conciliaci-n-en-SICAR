@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://claro.com.pe/xsd/comun" elementFormDefault="qualified" targetNamespace="http://claro.com.pe/xsd/comun" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="AuditType">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="ipApplicacion" type="xsd:string" />
+      <xsd:element name="nombreAplicacion" type="xsd:string" />
+      <xsd:element name="usuarioAplicacion" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AuditResponseType">
+    <xsd:sequence>
+      <xsd:element name="idTransaccion" type="xsd:string" />
+      <xsd:element name="codigoRespuesta" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>                  
+                  [se poblará con el error del servicio invocado o con el error arrojado por OSB]
+                  </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="mensajeRespuesta" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Bapiret2Bean">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="type" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="id" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="number" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="message" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="logNo" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="logMsgNo" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV1" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV2" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV3" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="messageV4" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="parameter" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="row" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="field" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="system" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

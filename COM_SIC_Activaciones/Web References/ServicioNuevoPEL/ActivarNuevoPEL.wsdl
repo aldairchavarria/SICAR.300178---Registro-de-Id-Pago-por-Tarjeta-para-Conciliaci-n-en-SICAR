@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://claro.com.pe/eai/ebs/services/nuevopel/ws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://claro.com.pe/eai/ebs/services/nuevopel/ws" name="ActivarNuevoPEL" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema targetNamespace="http://claro.com.pe/eai/ebs/services/nuevopel/ws">
+      <s:element name="ejecutarActivacionRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="usrAplicacion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="iccid" type="s:string" />
+            <s:element name="imsi" type="s:string" />
+            <s:element name="imei" type="s:string" />
+            <s:element name="tipoPreActivacion" type="s:string" />
+            <s:element name="tipoActivacion" type="s:string" />
+            <s:element name="promocion" type="s:string" />
+            <s:element name="tipoAlta" type="s:string" />
+            <s:element name="appOrigen" type="s:string" />
+            <s:element name="codigoMaterial" type="s:string" />
+            <s:element name="puntoVenta" type="s:string" />
+            <s:element name="flujoActivacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejecutarActivacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarReservaRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="usrAplicacion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="iccid" type="s:string" />
+            <s:element name="imei" type="s:string" />
+            <s:element name="tipoPreactivacion" type="s:string" />
+            <s:element name="promocion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+            <s:element name="llaveAUC" nillable="true" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejecutarActivacionRTCRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="usrAplicacion" type="s:string" />
+            <s:element name="ipAplicacion" type="s:string" />
+            <s:element name="msisdn" type="s:string" />
+            <s:element name="imei" type="s:string" />
+            <s:element name="imsi" type="s:string" />
+            <s:element name="offerPRE" type="s:string" />
+            <s:element name="suscriberPRE" type="s:string" />
+            <s:element name="offerACT" type="s:string" />
+            <s:element name="suscriberACT" type="s:string" />
+            <s:element name="numReintentos" type="s:int" />
+            <s:element name="opcion" type="s:string" />
+            <s:element name="tipoActivacion" type="s:string" />
+            <s:element name="claveRTC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejecutarActivacionRTCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="idTransaccion" type="s:string" />
+            <s:element name="codigoRespuesta" type="s:string" />
+            <s:element name="mensajeRespuesta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="ejecutarActivacionRequestMsg">
+    <part name="parameters" element="s0:ejecutarActivacionRequest" />
+  </message>
+  <message name="ejecutarActivacionResponseMsg">
+    <part name="parameters" element="s0:ejecutarActivacionResponse" />
+  </message>
+  <message name="validarReservaRequestMsg">
+    <part name="parameters" element="s0:validarReservaRequest" />
+  </message>
+  <message name="validarReservaResponseMsg">
+    <part name="parameters" element="s0:validarReservaResponse" />
+  </message>
+  <message name="ejecutarReactivacionRTCRequestMsg">
+    <part name="parameters" element="s0:ejecutarActivacionRTCRequest" />
+  </message>
+  <message name="ejecutarReactivacionRTCResponseMsg">
+    <part name="parameters" element="s0:ejecutarActivacionRTCResponse" />
+  </message>
+  <portType name="ebsActivacionPortType">
+    <operation name="ejecutarActivacion">
+      <input message="s0:ejecutarActivacionRequestMsg" />
+      <output message="s0:ejecutarActivacionResponseMsg" />
+    </operation>
+    <operation name="validarReserva">
+      <input message="s0:validarReservaRequestMsg" />
+      <output message="s0:validarReservaResponseMsg" />
+    </operation>
+    <operation name="ejecutarReactivacionRTC">
+      <input message="s0:ejecutarReactivacionRTCRequestMsg" />
+      <output message="s0:ejecutarReactivacionRTCResponseMsg" />
+    </operation>
+  </portType>
+  <binding name="ebsActivacionPortTypeSOAPBinding" type="s0:ebsActivacionPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ejecutarActivacion">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/nuevopel/ws/activacion" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarReserva">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/nuevopel/ws/reserva" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ejecutarReactivacionRTC">
+      <soap:operation soapAction="http://claro.com.pe/eai/ebs/services/nuevopel/ws/activacion" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ebsActivacionNuevoPELService">
+    <port name="ebsActivacionNuevoPELSOAP" binding="s0:ebsActivacionPortTypeSOAPBinding">
+      <soap:address location="http://limjandesv02.tim.com.pe:6909/NuevoPELWS/ebsActivacionNuevoPELSOAP" />
+    </port>
+  </service>
+</definitions>
